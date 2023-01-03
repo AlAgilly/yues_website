@@ -11,7 +11,7 @@ const Hero = () => {
     <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
     <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 mt-5`}>
       <div className='flex flex-row justify-between items-center w-full title'>
-        <h1 className='flex-1 font-bebasneue md:text-[120px] sm:text-[100px] ss:text-[90px] text-[60px] text-red ss:leading-10 md:leading-3 leading-1'>
+        <h1 className='flex-1 font-bignoodle md:text-[120px] sm:text-[100px] ss:text-[90px] text-[60px] text-red ss:leading-10 md:leading-3 leading-1'>
           York University
           <br />
           <br className={`md:flex hidden`} />
@@ -38,7 +38,7 @@ const Hero = () => {
       </Button>
           // <li 
           //   key={nav.id} 
-          //   className={`font-bebasneue font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} `}
+          //   className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} `}
           // >
           //   <a href={`${nav.id}`}>
           //     {nav.title}

@@ -1,5 +1,6 @@
 {
   "name": "yues_website",
+  "homepage": "https://yues.alagilly.dev",
   "private": true,
   "version": "0.0.0",
   "type": "module",

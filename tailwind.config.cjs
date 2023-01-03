@@ -15,6 +15,7 @@ module.exports = {
         heynovember: ["HeyNovember", "serif"],
         bebasneue: ["BebasNeue-Regular", "sans-serif"],
         bevietnampro:["BeVietnamPro-Black", "sans-serif"],
+        bignoodle:["big_noodle_titling", "sans-serif"],
       }
     },
     screens: {
