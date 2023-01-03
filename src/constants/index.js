@@ -195,3 +195,18 @@ export const clients = [
     logo: dropbox,
   },
 ];
+
+export const buttons = [
+  {
+    id: "button1",
+    title: "Learn More",
+    link: "about",
+    style: "btn--primary"
+  },
+  {
+    id: "button2",
+    title: "Upcoming Events",
+    link: "events",
+    style: "btn--outline"
+  },
+];

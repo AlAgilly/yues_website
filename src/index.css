@@ -49,7 +49,7 @@
 .hero br {
   user-select: none;
 }
-.hundo {
+/* .hundo {
   width: 100%;
   background-color: var(--red);
   position: absolute;
@@ -59,12 +59,43 @@
 
   position: relative;
 
+} */
+.btn {
+  font-family: 'BebasNeue-Regular';
+  padding: 3px 60px;
+  font-size: 30px;
+  letter-spacing: 1px;
 }
-.text-gradient {
-  color: var(--red);
+.btn--primary {
+  background-color: var(--red);
+  color: #fff;
+  border: 3px solid var(--red);
+  
+}
+.btn--outline {
+  background: none;
+  color: #fff;
+  border: 3px solid #fff;
+}
+.btn--test {
+
+}
+.btn--medium {
+
+}
+.btn--large {
+
+}
+.text-november {
   font-family: 'HeyNovember', serif;
 }
-
+.title {
+  padding: 70px 0 70px 0;
+}
+.title-p {
+  font-size: 18px;
+  padding: 20px 10px 40px;
+}
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
