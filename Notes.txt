@@ -19,5 +19,4 @@ Suggestions:
 
 To do:
 - Clean up assets and assets/index.js
-- fix mobile nav
 - fix xs hero

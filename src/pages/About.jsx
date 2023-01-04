@@ -29,7 +29,7 @@ function Contact (){
                     </div>
                 </div>
             </div>
-            <div className='w-full overflow-hidden bg-white'>
+            <div className='w-full overflow-hidden bg-black'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
                        <Footer />

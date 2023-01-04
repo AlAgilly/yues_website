@@ -11,6 +11,8 @@ import Title from '../components/Title'
 function Home (){
     return (
         <>
+        
+
             <div className='w-full overflow-hidden bg-red'>
               <div className={`${styles.paddingX} ${styles.flexCenter}`}>
                 <div className={`${styles.boxWidth}`}>
@@ -18,6 +20,7 @@ function Home (){
                 </div>
               </div>
             </div>
+            <div className='content'>
           <div className={`bg-black ${styles.flexStart} hero`}>
             <div className={`${styles.boxWidth}`}>
               <Hero />
@@ -50,6 +53,7 @@ function Home (){
                        <Footer />
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )
