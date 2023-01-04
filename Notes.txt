@@ -1,0 +1,20 @@
+Questions:
+- How would it look with a 7 player roster? (5 players 1 coach 1 sub)
+- clarify the sticky socials (where do u want it to stick?)
+- I gonna need the team buttons to be pngs
+- do we want the games in alphabetical order?
+- do we want an active navbar?
+- how can I see you desired hover effects?
+
+Suggestions:
+- We need more call to action buttons on the home page.
+- Can we move about us to first nav child
+- Can we add a home nav child
+- Can we add 3 recent matches?
+- can we up the # of rows in teams
+- can we have the hover state for teams be animated? nothing crazy, maybe move the swirls in the bg a bit and make the swirls more prominent?
+
+To do:
+- Clean up assets and assets/index.js
+- fix mobile nav
+- fix xs hero

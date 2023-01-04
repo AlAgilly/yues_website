@@ -5,11 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#111111",
-        secondary: "#00f6ff",
-        dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
-        red: "#E21A37"
+        // primary: "#111111",
+        // secondary: "#00f6ff",
+        red: "#E21A37",
+        darkRed: "#BB152D",
+        black: "#000000",
+        darkGrey: "#CACACA",
+        grey: "#D9D9D9",
+        white: "#ffffff",
       },
       fontFamily: {
         heynovember: ["HeyNovember", "serif"],

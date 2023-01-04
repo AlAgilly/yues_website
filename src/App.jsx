@@ -51,9 +51,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Navbar, Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA, Footer } from './components'
 
-import Home from './components/pages/Home';
-import About from './components/pages/about';
-import Contact from './components/pages/contact';
+import Home from './pages/Home';
+import About from './pages/about';
+import Contact from './pages/contact';
 import './index.css';
 import styles from './style'
 

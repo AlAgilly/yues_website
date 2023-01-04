@@ -1,6 +1,7 @@
 import React from 'react'
-import Hero from '../Hero'
-import styles from '../../style'
+import Hero from '../components/Hero'
+import Team from '../components/Team'
+import styles from '../style'
   
 function Home (){
     return (
@@ -8,6 +9,11 @@ function Home (){
            <div className={`bg-primary ${styles.flexStart} hero`}>
             <div className={`${styles.boxWidth}`}>
               <Hero />
+            </div>
+          </div>
+          <div className={`bg-primary ${styles.flexStart}`}>
+            <div className={`${styles.boxWidth}`}>
+              <Team />
             </div>
           </div>
         </>
