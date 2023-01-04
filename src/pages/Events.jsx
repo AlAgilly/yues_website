@@ -1,49 +1,35 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import Team from '../components/Team'
 import styles from '../style'
 import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
-import AboutSnip from '../components/AboutSnip'
-import EventSnip from '../components/EventSnip'
-import Title from '../components/Title'
   
-function Home (){
+function Events (){
     return (
         <>
-            <div className='w-full overflow-hidden bg-red'>
+            <div className='w-full overflow-hidden bg-black'>
               <div className={`${styles.paddingX} ${styles.flexCenter}`}>
                 <div className={`${styles.boxWidth}`}>
                   <Navbar />
                 </div>
               </div>
             </div>
-          <div className={`bg-black ${styles.flexStart} hero`}>
-            <div className={`${styles.boxWidth}`}>
-              <Hero />
-            </div>
-          </div>
-          <div className='w-full overflow-hidden bg-white'>
+            <div className='w-full overflow-hidden bg-red'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
-                       <AboutSnip />
+                       <Header />
                     </div>
                 </div>
             </div>
-          <div className='w-full overflow-hidden bg-red'>
+            <div className='w-full overflow-hidden bg-white'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
-                       <Title />
+                       <Team />
                     </div>
                 </div>
-          </div>
-          <div className='w-full overflow-hidden bg-white'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
-                       <EventSnip />
-                    </div>
-                </div>
-          </div>
+            </div>
+
             <div className='w-full overflow-hidden bg-black'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
@@ -51,8 +37,9 @@ function Home (){
                     </div>
                 </div>
             </div>
+
         </>
     )
 }
   
-export default Home;
+export default Events;

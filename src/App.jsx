@@ -49,11 +49,13 @@
 
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Navbar, Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA, Footer } from './components'
+import { Navbar, Footer } from './components'
 
 import Home from './pages/Home';
 import About from './pages/about';
 import Contact from './pages/contact';
+import Teams from './pages/Teams';
+import Events from './pages/Events';
 import './index.css';
 import styles from './style'
 
@@ -63,17 +65,12 @@ class App extends Component {
     return (
        <Router>
            <div className="App">
-           <div className='w-full overflow-hidden bg-red'>
-              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-                <div className={`${styles.boxWidth}`}>
-                  <Navbar />
-                </div>
-              </div>
-            </div>
            <Routes>
                  <Route exact path='/' element={< Home />}></Route>
                  <Route exact path='/about' element={< About />}></Route>
                  <Route exact path='/contact' element={< Contact />}></Route>
+                 <Route exact path='/teams' element={< Teams />}></Route>
+                 <Route exact path='/events' element={< Events />}></Route>
           </Routes>
           </div>
        </Router>

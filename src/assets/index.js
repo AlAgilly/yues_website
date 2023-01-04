@@ -26,6 +26,7 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import dota2 from "./games/dota2.png";
 import dota2a from "./games/dota2-active.png";
+import dota2g from "./games/dota2-grey.png";
 
 
 export {
@@ -56,4 +57,5 @@ export {
   people03,
   dota2,
   dota2a,
+  dota2g,
 };

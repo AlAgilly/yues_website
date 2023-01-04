@@ -5,6 +5,7 @@ Questions:
 - do we want the games in alphabetical order?
 - do we want an active navbar?
 - how can I see you desired hover effects?
+- how do you get rid of the grid lines on figma (pls send help)
 
 Suggestions:
 - We need more call to action buttons on the home page.
@@ -13,6 +14,8 @@ Suggestions:
 - Can we add 3 recent matches?
 - can we up the # of rows in teams
 - can we have the hover state for teams be animated? nothing crazy, maybe move the swirls in the bg a bit and make the swirls more prominent?
+- Make the prehover games fully grey and white
+- Lets add a nice scroll bar!
 
 To do:
 - Clean up assets and assets/index.js
