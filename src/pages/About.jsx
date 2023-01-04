@@ -1,13 +1,43 @@
-import React from 'react';
+import React from 'react'
+import Team from '../components/Team'
+import styles from '../style'
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
   
-function About () {
-    return <div>
-        <h2>GeeksforGeeks is a computer science portal for geeks!</h2>
-  
-        Read more about us at : 
-        <a href="https://www.geeksforgeeks.org/about/">
-            https://www.geeksforgeeks.org/about/
-        </a>
-    </div>
+function Contact (){
+    return (
+        <>
+            <div className='w-full overflow-hidden bg-black'>
+              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                <div className={`${styles.boxWidth}`}>
+                  <Navbar />
+                </div>
+              </div>
+            </div>
+            <div className='w-full overflow-hidden bg-white'>
+                <div className={`bg-primary ${styles.flexStart}`}>
+                   <div className={`${styles.boxWidth}`}>
+                       <Header />
+                    </div>
+                </div>
+            </div>
+            <div className='w-full overflow-hidden bg-white'>
+                <div className={`bg-primary ${styles.flexStart}`}>
+                   <div className={`${styles.boxWidth}`}>
+                       <Team />
+                    </div>
+                </div>
+            </div>
+            <div className='w-full overflow-hidden bg-white'>
+                <div className={`bg-primary ${styles.flexStart}`}>
+                   <div className={`${styles.boxWidth}`}>
+                       <Footer />
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
-export default About;
+  
+export default Contact;
