@@ -20,7 +20,7 @@ function Home (){
                 </div>
               </div>
             </div>
-            <div className='content'>
+            {/* <div className='content'> */}
           <div className={`bg-black ${styles.flexStart} hero`}>
             <div className={`${styles.boxWidth}`}>
               <Hero />
@@ -54,7 +54,7 @@ function Home (){
                     </div>
                 </div>
             </div>
-            </div>
+            {/* </div> */}
         </>
     )
 }

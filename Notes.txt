@@ -4,8 +4,10 @@ Questions:
 - I gonna need the team buttons to be pngs
 - do we want the games in alphabetical order?
 - do we want an active navbar?
+    - Slide
 - how can I see you desired hover effects?
 - how do you get rid of the grid lines on figma (pls send help)
+- Can we make the min height of each page 1920 LOL
 
 Suggestions:
 - We need more call to action buttons on the home page.
@@ -20,3 +22,30 @@ Suggestions:
 To do:
 - Clean up assets and assets/index.js
 - fix xs hero
+
+- Google Calendar
+- IG post 
+- Database
+
+
+MongoDB
+- Users
+    - Permisions (Role based)
+    - Name
+    - Email
+    - Discord
+    - Student Number
+- Match History
+    - Game
+    - Team
+    - Score
+    - Links
+        - Twitch
+        - Stats
+- Team
+    - players
+    - subs
+    - Managers
+    - Coaches
+    - Competitive directors
+    - Game
