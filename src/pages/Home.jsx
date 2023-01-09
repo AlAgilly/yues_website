@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Team from '../components/Team'
 import styles from '../style'
 import Navbar from '../components/Navbar'
+import SocialBar from '../components/SocialBar'
 import Footer from '../components/Footer'
 import AboutSnip from '../components/AboutSnip'
 import EventSnip from '../components/EventSnip'
@@ -15,8 +16,15 @@ function Home (){
 
             <div className='w-full overflow-hidden bg-red'>
               <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-                <div className={`${styles.boxWidth}`}>
+                <div className={`w-full`}>
                   <Navbar />
+                </div>
+              </div>
+            </div>
+            <div className='w-full overflow-hidden bg-black border-b-[3px] border-red'>
+              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                <div className={`w-full`}>
+                  <SocialBar />
                 </div>
               </div>
             </div>

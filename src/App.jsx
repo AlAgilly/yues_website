@@ -51,6 +51,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Navbar, Footer } from './components'
 
+
 import Home from './pages/Home';
 import About from './pages/about';
 import Contact from './pages/contact';

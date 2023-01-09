@@ -13,6 +13,11 @@
   );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
   --red: #E21A37;
+  --darkred: #BB152D;
+  --black: #111111;
+  --darkgrey: #CACACA;
+  --grey: #D9D9D9;
+  --white: #ffffff;
 
 }
 html, body {
@@ -89,15 +94,37 @@ h3 {
 }
 .btn--primary {
   background-color: var(--red);
-  color: #fff;
+  color: var(--white);
+  border: 3px solid var(--red);
+  transition: 0.3s ease-in-out;
+}
+.btn--primary:hover {
+  background-color: var(--darkred);
+  color: var(--white);
+  border: 3px solid var(--darkred);
+}
+.btn--primary:active {
+  background: none;
+  color: var(--white);
+  border: 3px solid var(--white);
+}
+.btn--secondary {
+  background: none;
+  color: var(--white);
+  border: 3px solid var(--white);
+  transition: 0.3s ease-in-out;
+
+}
+.btn--secondary:hover {
+  background: none;
+  color: var(--red);
   border: 3px solid var(--red);
 }
-.btn--outline {
-  background: none;
-  color: #fff;
-  border: 3px solid #fff;
+.btn--secondary:active {
+  background: var(--white);
+  color: var(--red);
+  border: 3px solid var(--white);
 }
-
 .text-november {
   font-family: 'HeyNovember', serif;
 }

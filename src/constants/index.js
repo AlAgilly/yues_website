@@ -1,4 +1,6 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { faTwitter  } from '@fortawesome/fontawesome-free-brands'
+
 
 export const navLinks = [
   {
@@ -211,6 +213,19 @@ export const buttons = [
     id: "button2",
     title: "Upcoming Events",
     link: "events",
-    style: "btn--outline"
+    style: "btn--secondary"
   },
+];
+
+export const sociallinks = [
+  {
+    id: "twitter",
+    title: {faTwitter},
+    link: "https://twitter.com/YorkEsports",
+  },
+  // {
+  //   id: "twitch",
+  //   // title: `faTwitter`,
+  //   link: "https://www.twitch.tv/yuesports",
+  // },
 ];

@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
         <div className='flex md:flex-row flex-col items-left w-full'>
           <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
-          <Button buttonStyle="btn--outline" children="Upcoming Events" link="/about"/>
+          <Button buttonStyle="btn--secondary" children="Upcoming Events" link="/about"/>
         </div>
       </div>
       {/* <div className={`${styles.flexStart} xl:px-0 sm:px-16 px-6 mt-5 hidden lg:flex`}>
