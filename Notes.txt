@@ -49,3 +49,8 @@ MongoDB
     - Coaches
     - Competitive directors
     - Game
+
+--------------------------------------
+Minor Details:
+- Cant make Discord icon new ??
+- Cant make active navbar :((

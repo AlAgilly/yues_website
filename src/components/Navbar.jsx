@@ -2,10 +2,22 @@ import React from 'react'
 import { useState } from 'react'
 import { close, logo, menu } from '../assets'
 import { navLinks } from '../constants'
+import { NavLink } from "react-router-dom"
+import styles from '../style'
+import { useLocation } from "react-router-dom";
+
 
 const Navbar = () => {
 
   const [toggle, setToggle] = useState(false)
+      //assigning location variable
+      const location = useLocation();
+
+      //destructuring pathname from location
+      const { pathname } = location;
+  
+      //Javascript split method to get the name of the path in array
+      const splitLocation = pathname.split("/");
 
   return (
     <nav className='w-full flex py-3 justify-end items-center navbar'>
@@ -14,12 +26,13 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li 
             key={nav.id} 
-            className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-16'} `}
+            className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-16'} ${splitLocation[1] === navLinks.id ? "active" : navLinks.id}`}
           >
             <a href={`${nav.id}`}>
               {nav.title}
             </a>
           </li>
+          
         ))}
       </ul>
 

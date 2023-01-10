@@ -5,7 +5,8 @@ import { sociallinks } from '../constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { faDiscord, faInstagram, faTwitter, faYoutube, faTwitch } from '@fortawesome/fontawesome-free-brands'
-// import { faCoffee  } from '@fortawesome/fontawesome-free-solid'
+import { faCoffee  } from '@fortawesome/fontawesome-free-solid'
+// import { faCoffee  } from '@fortawesome/fontawesome-free-regular'
 
 const SocialBar = () => {
 
@@ -48,6 +49,11 @@ const SocialBar = () => {
         <li className={`font-normal cursor-pointer text-[18px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faTwitch} />
+          </a>
+        </li>
+        <li className={`text-bebasneue font-normal cursor-pointer text-[18px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            YUConnect
           </a>
         </li> 
       </ul>

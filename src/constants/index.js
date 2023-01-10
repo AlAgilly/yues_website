@@ -4,6 +4,10 @@ import { faTwitter  } from '@fortawesome/fontawesome-free-brands'
 
 export const navLinks = [
   {
+    id: "/",
+    title: "Home",
+  },
+  {
     id: "teams",
     title: "Our Teams",
   },
@@ -18,10 +22,6 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
-  },
-  {
-    id: "login",
-    title: "Login",
   },
 ];
 

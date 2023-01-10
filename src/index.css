@@ -125,8 +125,15 @@ h3 {
   color: var(--red);
   border: 3px solid var(--white);
 }
+.active{
+  background-color: red;
+  color: #fff;
+}
 .text-november {
   font-family: 'HeyNovember', serif;
+}
+.text-bebasneue {
+  font-family: 'BebasNeue-Regular', sans-serif;
 }
 .title {
   padding: 70px 0 70px 0;

@@ -57,7 +57,7 @@ function Home (){
           </div>
             <div className='w-full overflow-hidden bg-black'>
                 <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
+                   <div className={`w-full px-10`}>
                        <Footer />
                     </div>
                 </div>
