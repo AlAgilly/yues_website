@@ -18,6 +18,7 @@ To do:
     - change the border pics
     - add the lion to the bg img
     - fix other screen sizes
+- Add media queries to about snip
 
 LATER:
 - Google Calendar

@@ -34,7 +34,7 @@ function Home (){
               <Hero />
             </div>
           </div>
-                <div className={`bg-primary ${styles.flexStart}`}>
+                <div className={`bg-primary ${styles.flexStart} aboutsec`}>
 
 
                   <div className={`${styles.boxWidth}`}>

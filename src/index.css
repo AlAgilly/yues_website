@@ -142,7 +142,7 @@ h3 {
 }
 .title-p {
   font-size: 18px;
-  padding: 20px 10px 40px;
+  padding: 20px 10px;
 }
 .lion {
   position:absolute;
@@ -303,4 +303,25 @@ h3 {
   .heroborder  {
     position: relative;
     margin: 40px 0;
+  }
+  .aboutimg .left {
+    position: absolute;
+    float: center;
+    left: calc(-50vw - 150px);
+  }
+  .aboutimg .right {
+    position: absolute;
+    float: center;
+    right: calc(-50vw - 150px);
+  }
+  .aboutimg  {
+    position: relative;
+    /* margin: 40px 0; */
+    max-height: 100%;
+    z-index: -2 !important;
+    background: var(--black);
+  }
+  .aboutsec {
+    background-image: url(./assets/airbnb.png);
+    background-size: cover;
   }
