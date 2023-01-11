@@ -51,6 +51,14 @@ MongoDB
     - Game
 
 --------------------------------------
-Minor Details:
+Minor Details and restraints for the first itteration:
 - Cant make Discord icon new ??
 - Cant make active navbar :((
+- No aboutus snippet bg img
+
+Requests
+- Can the bg image be more gamer-y?
+
+Things to look for when testing:
+- the URL for all the pages
+- make sure all the links work for each page

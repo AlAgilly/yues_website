@@ -56,6 +56,7 @@ import Home from './pages/Home';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Teams from './pages/Teams';
+import CSGO from './pages/teams/CSGO';
 import Events from './pages/Events';
 import './index.css';
 import styles from './style'
@@ -71,6 +72,7 @@ class App extends Component {
                  <Route exact path='/about' element={< About />}></Route>
                  <Route exact path='/contact' element={< Contact />}></Route>
                  <Route exact path='/teams' element={< Teams />}></Route>
+                 {/* <Route exact path="/teams/csgo" element={< CSGO /> }></Route> */}
                  <Route exact path='/events' element={< Events />}></Route>
           </Routes>
           </div>

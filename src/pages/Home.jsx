@@ -34,13 +34,13 @@ function Home (){
               <Hero />
             </div>
           </div>
-          <div className='w-full overflow-hidden bg-white'>
                 <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
+
+
+                  <div className={`${styles.boxWidth}`}>
                        <AboutSnip />
-                    </div>
+                       </div>
                 </div>
-            </div>
           <div className='w-full overflow-hidden bg-red'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>

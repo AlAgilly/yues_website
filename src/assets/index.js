@@ -1,4 +1,5 @@
 import airbnb from "./airbnb.png";
+import about from "./about.png";
 import bill from "./bill.png";
 import binance from "./binance.png";
 import card from "./card.png";
@@ -60,4 +61,5 @@ export {
   dota2a,
   dota2g,
   logooutline,
+  about,
 };

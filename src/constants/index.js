@@ -229,3 +229,46 @@ export const sociallinks = [
   //   link: "https://www.twitch.tv/yuesports",
   // },
 ];
+
+export const gameLinks = [
+  {
+    id: "/teams/apex",
+    title: "Apex Legends",
+  },
+  {
+    id: "/teams/cod",
+    title: "Call of Duty",
+  },
+  {
+    id: "/teams/csgo",
+    title: "Counter-Strike: Global Offensive",
+  },
+  {
+    id: "/teams/dota2",
+    title: "Dota 2",
+  },
+  {
+    id: "/teams/hearthstone",
+    title: "Hearthstone",
+  },
+  {
+    id: "/teams/lol",
+    title: "League of Legends",
+  },
+  {
+    id: "/teams/ow",
+    title: "Overwatch",
+  },
+  {
+    id: "/teams/r6s",
+    title: "Rainbow 6 Seige",
+  },
+  {
+    id: "/teams/rl",
+    title: "Rocket League",
+  },
+  {
+    id: "valorant",
+    title: "Valorant",
+  },
+];

@@ -27,6 +27,7 @@ html, body {
 * {
   scroll-behavior: smooth;
   /* border: 1px solid #000; */
+  z-index: 1;
 }
 
 @font-face {
@@ -59,6 +60,7 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: -1;
 }
 .hero br {
   user-select: none;
@@ -142,7 +144,16 @@ h3 {
   font-size: 18px;
   padding: 20px 10px 40px;
 }
-
+.lion {
+  position:absolute;
+  width: calc(40vw);
+  max-width: 750px;
+  min-width: 300px;
+  top: calc(75px - 10vw);
+  left: calc(51vw + 10px);
+  z-index: 0;
+  opacity: 0.3;
+}
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -249,3 +260,33 @@ h3 {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+/* TESTING */
+
+.image-container {
+  /* overflow:hidden;
+  min-height: 500px;
+  height: 100%;
+  max-width: 100%;
+  display:block;
+  float: right;
+  background-clip: border-box;
+  position: relative;
+  right: 0; */
+  width: 100%;
+  }
+  .image-container > img {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  float: right;
+  }
+
+  .heroborder .center {
+    position: absolute;
+    top: 600px;
+    float: center;
+    left: calc(50vw - 140px);
+  }
+  .heroborder  {
+    position: relative;
+  }
