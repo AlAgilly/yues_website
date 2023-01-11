@@ -8,16 +8,16 @@ export const navLinks = [
     title: "Home",
   },
   {
-    id: "teams",
-    title: "Our Teams",
+    id: "about",
+    title: "About Us",
   },
   {
     id: "events",
     title: "Upcoming Events",
   },
   {
-    id: "about",
-    title: "About Us",
+    id: "teams",
+    title: "Our Teams",
   },
   {
     id: "contact",
