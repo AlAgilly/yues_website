@@ -1,16 +1,9 @@
 Questions:
-- How would it look with a 7 player roster? (5 players 1 coach 1 sub)
-- clarify the sticky socials (where do u want it to stick?)
-- I gonna need the team buttons to be pngs
-- do we want the games in alphabetical order?
-- do we want an active navbar?
-    - Slide
 - how can I see you desired hover effects?
-- how do you get rid of the grid lines on figma (pls send help)
-- Can we make the min height of each page 1920 LOL
 
 Suggestions:
 - We need more call to action buttons on the home page.
+    - Add a button under about section?
 - Can we move about us to first nav child
 - Can we add a home nav child
 - Can we add 3 recent matches?
@@ -22,7 +15,11 @@ Suggestions:
 To do:
 - Clean up assets and assets/index.js
 - fix xs hero
+    - change the border pics
+    - add the lion to the bg img
+    - fix other screen sizes
 
+LATER:
 - Google Calendar
 - IG post 
 - Database
@@ -55,9 +52,10 @@ Minor Details and restraints for the first itteration:
 - Cant make Discord icon new ??
 - Cant make active navbar :((
 - No aboutus snippet bg img
+- cant have the lion be a separate img
 
 Requests
-- Can the bg image be more gamer-y?
+
 
 Things to look for when testing:
 - the URL for all the pages

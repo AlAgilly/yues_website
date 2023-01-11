@@ -60,7 +60,7 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .hero br {
   user-select: none;
@@ -283,10 +283,24 @@ h3 {
 
   .heroborder .center {
     position: absolute;
-    top: 600px;
     float: center;
-    left: calc(50vw - 140px);
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 280px;
+  }
+  .heroborder .right {
+    position: absolute;
+    float: center;
+    right: -20vw;
+  }
+  .heroborder .left {
+    position: absolute;
+    float: center;
+    left: -20vw;
   }
   .heroborder  {
     position: relative;
+    margin: 40px 0;
   }
