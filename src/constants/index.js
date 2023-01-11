@@ -272,3 +272,34 @@ export const gameLinks = [
     title: "Valorant",
   },
 ];
+
+export const eventsList = [
+  {
+    id: "event1",
+    title: "Event Name",
+    link: "https://twitter.com/YorkEsports",
+    time: "Time",
+    description: "hello",
+  },
+  {
+    id: "event2",
+    title: "Event Name",
+    link: "https://twitter.com/YorkEsports",
+    time: "Time",
+    description: "hello",
+  },
+  {
+    id: "event3",
+    title: "Event Name",
+    link: "https://twitter.com/YorkEsports",
+    time: "Time",
+    description: "hello",
+  },
+  {
+    id: "event4",
+    title: "Event Name",
+    link: "https://twitter.com/YorkEsports",
+    time: "Time",
+    description: "hello",
+  },
+];

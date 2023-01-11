@@ -83,9 +83,14 @@ html, body {
   position: relative;
   height: 100vh;
 }
-h3 {
-  border-left: 5px solid var(--red);
+.leftborder {
+  border-left: 6px solid var(--red);
   border-radius: 1px;
+}
+.bottomborder {
+  border-bottom: 6px solid var(--red);
+  border-radius: 1px;
+  width: 10px;
 }
 .btn {
   font-family: 'big_noodle_titling';
