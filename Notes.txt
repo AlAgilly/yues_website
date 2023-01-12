@@ -13,7 +13,6 @@ To do:
 - Clean up assets and assets/index.js
 - fix xs hero
     - change the border pics
-    - Get rid of overflow
     - add the lion to the bg img
     - fix other screen sizes
 - Add media queries to about snip
