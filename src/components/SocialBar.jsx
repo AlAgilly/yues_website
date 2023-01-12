@@ -13,7 +13,7 @@ const SocialBar = () => {
   const [toggle, setToggle] = useState(false)
 
   return (
-    <nav className='w-full flex py-1 items-center navbar'>
+    <nav className='w-full flex py-1 items-center'>
       <ul className='list-none flex justify-center items-center flex-1'>
         <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
