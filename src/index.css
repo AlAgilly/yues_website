@@ -348,10 +348,11 @@ html, body {
     width: 27vw;
     opacity: 1;
   }
+
   .fadeleft {
   background-image: linear-gradient(to right, var(--black) 2vw, rgba(0,0,0,0));
     position: absolute;
-    z-index: 50;
+    z-index: 20;
     left: 0;
     height: 572px;
     width: 10vw;
@@ -374,7 +375,7 @@ html, body {
   .faderight {
   background-image: linear-gradient(to left, var(--black) 2vw, rgba(0,0,0,0));
     position: absolute;
-    z-index: 50;
+    z-index: 20;
     right: 0;
     height: 616px;
     width: 10vw;

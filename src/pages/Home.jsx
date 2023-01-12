@@ -15,7 +15,9 @@ function Home (){
         <>
         
 
-            <div className='w-full overflow-hidden bg-red'>
+<div className='relative'>
+<div className='fixed top-0 left-0 right-0 z-50'>
+        <div className='w-full overflow-hidden bg-red'>
               <div className={`px-16 ${styles.flexCenter}`}>
                 <div className={`w-full`}>
                   <Navbar />
@@ -29,6 +31,8 @@ function Home (){
                 </div>
               </div>
             </div>
+        </div>
+</div>
             {/* <div className='content'> */}
           <div className={`bg-black ${styles.flexStart} hero overflow-hidden z-10`}>
             <div className={`${styles.boxWidth}`}>
@@ -49,7 +53,7 @@ function Home (){
                     </div>
                 </div>
           </div>
-          <div className={`bg-primary ${styles.flexStart} aboutsec overflow-hidden`}>
+          <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
 
 
 <div className={`${styles.boxWidth}`}>
