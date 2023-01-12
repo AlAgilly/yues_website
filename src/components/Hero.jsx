@@ -29,7 +29,7 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur. At eget habitant vitae sodales pharetra nunc tellus parturient ultrices. Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
-        <div className='grid sm:grid-cols-2 grid-rows-2 sm:gap-4 gap-0 items-left w-full mm:w-1/2'>
+        <div className='grid sm:grid-cols-2 grid-rows-2 sm:gap-4 gap-0 items-left w-full mm:w-1/2 heroo'>
           <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
           <Button buttonStyle="btn--secondary" children="Upcoming Events" link="/about"/>
         </div>
@@ -41,7 +41,7 @@ const Hero = () => {
               <img src={ card } alt="" />
             </div>
             <div className='right sm:flex hidden'>
-                <img src={ dropbox } alt="" />
+                <img src={ binance } alt="" />
             </div>
       </div>
       </div>
