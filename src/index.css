@@ -27,7 +27,7 @@ html, body {
 * {
   scroll-behavior: smooth;
   /* border: 1px solid #000; */
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 @font-face {
@@ -60,7 +60,7 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .hero br {
   user-select: none;
@@ -84,8 +84,14 @@ html, body {
   height: 100vh;
 }
 .leftborder {
-  border-left: 6px solid var(--red);
+  border-left: 6px solid;
   border-radius: 1px;
+}
+.redborder {
+  border-color: var(--red);
+}
+.blackborder {
+  border-color: var(--black);
 }
 .bottomborder {
   border-bottom: 5px solid var(--red);
@@ -100,7 +106,6 @@ html, body {
   padding: 3px 60px;
   font-size: 30px;
   letter-spacing: 1px;
-  /* margin: 10px; */
 }
 .btn--primary {
   background-color: var(--red);
@@ -114,8 +119,8 @@ html, body {
   border: 3px solid var(--darkred);
 }
 .btn--primary:active {
-  background: none;
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
   border: 3px solid var(--white);
 }
 .btn--secondary {
@@ -148,10 +153,6 @@ html, body {
 .title {
   padding: 70px 0 70px 0;
 }
-.title-p {
-  font-size: 18px;
-  padding: 20px 10px;
-}
 .lion {
   position:absolute;
   width: calc(40vw);
@@ -159,7 +160,7 @@ html, body {
   min-width: 300px;
   top: calc(75px - 10vw);
   left: calc(51vw + 10px);
-  z-index: 0;
+  /* z-index: 0; */
   opacity: 0.3;
 }
 .bg-blue-gradient {
@@ -204,9 +205,9 @@ html, body {
 }
 
 .sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  z-index: 99;
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  /* z-index: 99; */
 }
 .footer {
   position:relative;
@@ -215,28 +216,30 @@ html, body {
   right:0;
 }
 
-@-webkit-keyframes slide-top {
+@-webkit-keyframes slide-left {
   0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
-@keyframes slide-top {
+@keyframes slide-left {
   0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
+.borderb {
+  border-bottom: 1px solid var(--grey);
+}
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
@@ -300,17 +303,17 @@ html, body {
   }
 .left {
     position: absolute;
-    left: -22vw;
+    left: -85%;
   }
    .right {
     position: absolute;
-    right: -22vw;
+    right: -85%;
   }
   .idk {
     background-image: url(./assets/people01.png);
-    min-height: 100px;
+    /* min-height: 100px; */
     background-repeat: no-repeat;
-    background-position:  top 40%  left 10%;
+    background-position:  top 40%  left 0%;
     background-size: 50%;
   }
   .aboutimg .left {
@@ -327,7 +330,7 @@ html, body {
     position: relative;
     /* margin: 40px 0; */
     max-height: 100%;
-    z-index: -2 !important;
+    /* z-index: -2 !important; */
     background: var(--black);
   }
   .aboutsec {

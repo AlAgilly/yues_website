@@ -16,12 +16,13 @@ const EventSnip = () => {
           </div>
       </div>
     <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12`}>
-      <div className={`flex-1 mm:${styles.flexStart} flex-col mt-5 ${styles.paddingX}`}>
-        <div className='grid grid-cols-2 justify-between gap-x-24 gap-y-10 items-left w-full mm:w-1/2'>
+      <div className={`flex-1 mm:${styles.flexStart} flex-col ${styles.paddingX}`}>
+        <div className='grid grid-cols-2 justify-between gap-x-24 gap-y-10 items-left w-full mm:w-1/2 my-4'>
         {eventsList.map((events) => (
             <TinyEvent key={events.id} title={ events.title } time={events.time} description={events.description} />
         ))}
         </div>
+        
         <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
       </div>
     </section>

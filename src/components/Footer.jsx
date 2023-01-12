@@ -1,6 +1,11 @@
 import React from 'react'
 import {logo} from '../assets'
 import { gameLinks } from '../constants'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { faDiscord, faInstagram, faTwitter, faYoutube, faTwitch } from '@fortawesome/fontawesome-free-brands'
+import { faCoffee  } from '@fortawesome/fontawesome-free-solid'
+// import { faCoffee  } from '@fortawesome/fontawesome-free-regular'
 
 const Footer = () => {
   return (
@@ -14,17 +19,33 @@ const Footer = () => {
           Socials
         </h6>
         <div className='grid grid-cols-4'>
-            {gameLinks.map((game) => (
-          <div 
-            key={game.id} 
-            className={``}
-          >
-            <a href={`${game.id}`}>
-              {game.title}
-            </a>
+        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          </div>        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          </div>        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            <FontAwesomeIcon icon={faDiscord} />
+          </a>
+          </div>        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
           </div>
-          
-        ))}
+        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            <FontAwesomeIcon icon={faTwitch} />
+          </a>
+          </div>
+        <div className={`text-bebasneue font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
+          <a href="https://twitter.com/YorkEsports">
+            YUConnect
+          </a>
+          </div>
         </div>
       </div>
       <div className='col-span-2'>
@@ -32,20 +53,6 @@ const Footer = () => {
           Teams
         </h6>
         <div className='grid grid-cols-1 mm:grid-cols-2'>
-            {/* <ul className='grid grid-row'>
-                <li>Apex</li>
-                <li>Call of Duty</li>
-                <li>CS:GO</li>
-                <li>Dota 2</li>
-                <li>Hearthstone</li>
-            </ul>
-            <ul className='grid grid-row'>
-                <li>League of Legends</li>
-                <li>Overwatch</li>
-                <li>Rainbow 6 Seige</li>
-                <li>Rocket League</li>
-                <li>Valorant</li>
-            </ul> */}
             {gameLinks.map((game) => (
           <div 
             key={game.id} 
@@ -64,20 +71,6 @@ const Footer = () => {
           Useful Links
         </h6>
         <div className='grid grid-cols-1'>
-            {/* <ul className='grid grid-row'>
-                <li>Apex</li>
-                <li>Call of Duty</li>
-                <li>CS:GO</li>
-                <li>Dota 2</li>
-                <li>Hearthstone</li>
-            </ul>
-            <ul className='grid grid-row'>
-                <li>League of Legends</li>
-                <li>Overwatch</li>
-                <li>Rainbow 6 Seige</li>
-                <li>Rocket League</li>
-                <li>Valorant</li>
-            </ul> */}
             {gameLinks.map((game) => (
           <div 
             key={game.id} 

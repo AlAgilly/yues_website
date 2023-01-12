@@ -6,8 +6,23 @@
 - We need more call to action buttons on the home page.
     - Add a button under about section?
 - Make the prehover games fully grey and white
-- Lets add a nice scroll bar!
--
+- Actually maybe we dont add a Home navlink (im so sorry)
+
+### Restraints for the first itteration:
+- Cant make Discord icon new ??
+- Cant make active navbar :((
+- cant have the lion be a separate img in hero (unless navbar is fixed i think)
+- the aboutus and event img has to be added to assets already cropped 
+
+### Requests
+- can you make the hero border imgs/svgs a 850 x 10 (the center one should stay 280 x 10)
+    - Make them have an end pls
+* refer to Figma for more
+
+### Things to look for when testing:
+- the URL for all the pages
+- make sure all the links work for each page
+- Check all size screens
 
 ### To do:
 - Clean up assets and assets/index.js
@@ -21,6 +36,7 @@
 - add favicon
 - move the teams to pages 
 
+--------------------------------------
 
 ### LATER:
 - Google Calendar
@@ -63,17 +79,3 @@
     - Coaches
     - Competitive directors
     - Game
-
---------------------------------------
-### Minor Details and restraints for the first itteration:
-- Cant make Discord icon new ??
-- Cant make active navbar :((
-- No aboutus snippet bg img
-- cant have the lion be a separate img
-
-### Requests
-* refer to Figma
-
-### Things to look for when testing:
-- the URL for all the pages
-- make sure all the links work for each page

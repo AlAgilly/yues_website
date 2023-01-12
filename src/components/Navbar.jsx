@@ -20,7 +20,7 @@ const Navbar = () => {
       const splitLocation = pathname.split("/");
 
   return (
-    <nav className='w-full flex py-3 justify-end items-center navbar'>
+    <nav className='w-full flex py-2 justify-end items-center'>
       <a href="/"><img src={ logo } alt="YUES" className='w-[40px] h-[41px]'/></a>
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
@@ -44,24 +44,13 @@ const Navbar = () => {
             onClick={() => setToggle((prev) => !prev)}
           />
         <div
-          className={`${ !toggle ? "hidden" : "flex" } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          className={`${ !toggle ? "hidden" : "flex" } textp-6 bg-white absolute top-14 right-0 min-w-[140px] sidebar z-50`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
-          {/* {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-bignoodle font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
-              >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))} */
-            navLinks.map((nav, index) => (
+          {navLinks.map((nav, index) => (
               <li 
                 key={nav.id} 
-                className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} `}
+                className={`font-bignoodle font-normal py-1 px-6 cursor-pointer text-[23px] hov text-black hover:text-white hover:bg-black ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10 borderb'} w-full`}
               >
                 <a href={`${nav.id}`}>
                   {nav.title}

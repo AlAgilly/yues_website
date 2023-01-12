@@ -30,13 +30,15 @@ const AboutSnip = () => {
           </div>
       </div>
     <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12`}>
-      <div className={`flex-1 mm:${styles.flexEnd} flex-col mt-5 ${styles.paddingX}`}>
+      <div className={`flex-1 mm:${styles.flexEnd} flex-col ${styles.paddingX}`}>
         {/* <div className='flex flex-row justify-between items-left lg:w-full w-1/2'> */}
         <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
-          <h3 className='font-bignoodle text-[60px] leading-10 mt-5 p-3'>Who We Are</h3>
-          <p className='title-p'>Hello! we are York University’s Esports club, we host community events and are home to York University’s esports teams!</p>
-          <p className='title-p'>This club is open to students of all interest levels in gaming. If you’d like to learn more about our team, feel free to check out our about us page!</p>
-
+          <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Who We Are</h3>
+          <div className='my-4'>
+          <p className='mb-4 text-[18px]'>Hello! we are York University’s Esports club, we host community events and are home to York University’s esports teams!</p>
+          <p className='text-[18px]'>This club is open to students of all interest levels in gaming. If you’d like to learn more about our team, feel free to check out our about us page!</p>
+          </div>
+          
         </div>
           <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
       </div>

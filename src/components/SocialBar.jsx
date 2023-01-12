@@ -14,7 +14,7 @@ const SocialBar = () => {
 
   return (
     <nav className='w-full flex py-1 items-center navbar'>
-      <ul className='list-none sm:flex hidden justify-center items-center flex-1'>
+      <ul className='list-none flex justify-center items-center flex-1'>
         {/* I really want the following code to work eventually */}
         {/* {sociallinks.map((sociallinks) => (
           <li 
@@ -26,7 +26,7 @@ const SocialBar = () => {
             </a>
           </li>
         ))} */}
-        <li className={`font-normal cursor-pointer text-[18px] text-white mx-3 p-0 `}>
+        <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faInstagram} />
           </a>

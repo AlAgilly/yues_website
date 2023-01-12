@@ -15,7 +15,7 @@ function Home (){
         
 
             <div className='w-full overflow-hidden bg-red'>
-              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+              <div className={`px-16 ${styles.flexCenter}`}>
                 <div className={`w-full`}>
                   <Navbar />
                 </div>
@@ -29,7 +29,7 @@ function Home (){
               </div>
             </div>
             {/* <div className='content'> */}
-          <div className={`bg-black ${styles.flexStart} hero overflow-hidden`}>
+          <div className={`bg-black ${styles.flexStart} hero overflow-hidden z-10`}>
             <div className={`${styles.boxWidth}`}>
               <Hero />
             </div>

@@ -8,8 +8,8 @@ const styles = {
     flexStart: "flex justify-center items-start",
     flexEnd: "flex justify-center items-end",
   
-    paddingX: "sm:px-16 px-6",
-    paddingY: "sm:py-16 py-6",
+    paddingX: "mm:px-16 px-24",
+    paddingY: "py-24",
     padding: "sm:px-16 px-6 sm:py-12 py-4",
   
     marginX: "sm:mx-16 mx-6",
@@ -18,7 +18,7 @@ const styles = {
     titleLineLeft: "leading-10 p-3 leftborder",
     titleLineBottom: "bottomborder",
 
-    titleH3: "font-bignoodle text-[60px]",
+    titleH3: "font-bignoodle text-[50px] my-4 py-2 px-5",
     titleH4: "font-bignoodle text-[40px] m-0 p-0",
 
   };

@@ -2,13 +2,13 @@ import React from 'react'
 import styles from '../style'
 import { Button } from './Button';
 import About from '../pages/about';
-import { binance, card, logooutline } from '../assets';
+import { binance, card, dropbox, logooutline } from '../assets';
 
 const Hero = () => {
   return (
     <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12`}>
-      <div className={`flex-1 mm:${styles.flexStart} flex-col mt-5`}>
-        <div className={`flex flex-row justify-between items-center w-full mm:pr-12 title`}>
+      <div className={`flex-1 mm:${styles.flexStart} flex-col p-16 mm:p-0`}>
+        <div className={`flex flex-row justify-between items-center w-full title`}>
           <h1 className='flex-1 font-bignoodle mm:text-[120px] sm:text-[100px] ss:text-[90px] text-[60px] text-red ss:leading-10 mm:leading-3 leading-1'>
             York&nbsp;University
             <br />
@@ -20,8 +20,8 @@ const Hero = () => {
           </h1>
         </div>
         {/* <div className='flex flex-row justify-between items-left lg:w-full w-1/2'> */}
-        <div className='flex flex-row justify-between items-left w-1/2'>
-          <p className='title-p text-white'>
+        <div className='flex flex-row justify-between items-left w-full mm:w-1/2'>
+          <p className=' my-4 text-white'>
           Lorem ipsum dolor sit amet consectetur. At eget habitant vitae sodales pharetra nunc tellus parturient ultrices. Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
@@ -37,7 +37,7 @@ const Hero = () => {
               <img src={ card } alt="" />
             </div>
             <div className='right '>
-                <img src={ card } alt="" />
+                <img src={ dropbox } alt="" />
             </div>
       </div>
       </div>
