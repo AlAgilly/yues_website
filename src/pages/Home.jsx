@@ -8,13 +8,16 @@ import Footer from '../components/Footer'
 import AboutSnip from '../components/AboutSnip'
 import EventSnip from '../components/EventSnip'
 import Title from '../components/Title'
+import IgPosts from '../components/IgPosts'
   
 function Home (){
     return (
         <>
         
 
-            <div className='w-full overflow-hidden bg-red'>
+<div className='relative'>
+<div className='fixed top-0 left-0 right-0 z-50'>
+        <div className='w-full overflow-hidden bg-red'>
               <div className={`px-16 ${styles.flexCenter}`}>
                 <div className={`w-full`}>
                   <Navbar />
@@ -28,6 +31,8 @@ function Home (){
                 </div>
               </div>
             </div>
+        </div>
+</div>
             {/* <div className='content'> */}
           <div className={`bg-black ${styles.flexStart} hero overflow-hidden z-10`}>
             <div className={`${styles.boxWidth}`}>
@@ -43,15 +48,29 @@ function Home (){
                 </div>
           <div className='w-full overflow-hidden bg-red'>
                 <div className={`idk ${styles.flexStart} `}>
-                   <div className={`${styles.boxWidth}`}>
+                   <div className={`${styles.boxWidth}`}> 
                        <Title />
                     </div>
                 </div>
           </div>
+          <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
+
+
+<div className={`${styles.boxWidth}`}>
+     <EventSnip />
+     </div>
+</div>
+          <div className='w-full overflow-hidden bg-black'>
+                <div className={`${styles.flexStart} `}>
+                   <div className={`max-w-[1340px] w-full`}> 
+                       <IgPosts />
+                    </div>
+                </div>
+          </div>
           <div className='w-full overflow-hidden bg-white'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
-                       <EventSnip />
+                <div className={`${styles.flexStart} `}>
+                   <div className={`${styles.boxWidth}`}> 
+                       <IgPosts />
                     </div>
                 </div>
           </div>

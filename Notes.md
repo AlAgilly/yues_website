@@ -7,6 +7,7 @@
     - Add a button under about section?
 - Make the prehover games fully grey and white
 - Actually maybe we dont add a Home navlink (im so sorry)
+- Want to add a hover effect to the ig posts? maybe b&w to color on hover?
 
 ### Restraints for the first itteration:
 - Cant make Discord icon new ??

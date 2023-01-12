@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { post1, post2, people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
 import { faTwitter  } from '@fortawesome/fontawesome-free-brands'
 
 
@@ -301,5 +301,48 @@ export const eventsList = [
     link: "https://twitter.com/YorkEsports",
     time: "Time",
     description: "hello",
+  },
+];
+
+export const igpost = [
+  {
+    id: "post1",
+    link: "https://twitter.com/YorkEsports",
+    img: { post1 },
+  },
+  {
+    id: "post2",
+    link: "https://twitter.com/YorkEsports",
+    img: "Time",
+  },
+  {
+    id: "post3",
+    link: "https://twitter.com/YorkEsports",
+    img: "Time",
+  },
+  {
+    id: "post4",
+    link: "https://twitter.com/YorkEsports",
+    img: "../assets/post1.png",
+  },
+  {
+    id: "post5",
+    link: "https://twitter.com/YorkEsports",
+    img: "Time",
+  },
+  {
+    id: "post6",
+    link: "https://twitter.com/YorkEsports",
+    img: "Time",
+  },
+  {
+    id: "post7",
+    link: "https://twitter.com/YorkEsports",
+    img: "Time",
+  },
+  {
+    id: "post8",
+    link: "https://twitter.com/YorkEsports",
+    img: "Time",
   },
 ];
