@@ -23,15 +23,28 @@ LATER:
 - Google Calendar
 - IG post 
 - Database
+- Auto post to socials
 
 
 MongoDB
 - Users
     - Permisions (Role based)
+        - Player
+        - Coach
+        - Manager
+        - Member
+        - Comp Directer
+        - Exec (do we want to specify?)
+        - Marketing Team member
+        - Website Team member
+        - Graphics Team member
+        - Sponsorships Team member
     - Name
     - Email
     - Discord
     - Student Number
+    - twitch
+    - Twitter
 - Match History
     - Game
     - Team
