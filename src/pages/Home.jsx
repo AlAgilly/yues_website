@@ -29,7 +29,7 @@ function Home (){
               </div>
             </div>
             {/* <div className='content'> */}
-          <div className={`bg-black ${styles.flexStart} hero`}>
+          <div className={`bg-black ${styles.flexStart} hero overflow-hidden`}>
             <div className={`${styles.boxWidth}`}>
               <Hero />
             </div>
@@ -42,7 +42,7 @@ function Home (){
                        </div>
                 </div>
           <div className='w-full overflow-hidden bg-red'>
-                <div className={`bg-primary ${styles.flexStart}`}>
+                <div className={`idk ${styles.flexStart} `}>
                    <div className={`${styles.boxWidth}`}>
                        <Title />
                     </div>

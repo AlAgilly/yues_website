@@ -306,6 +306,13 @@ html, body {
     position: absolute;
     right: -22vw;
   }
+  .idk {
+    background-image: url(./assets/people01.png);
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-position:  top 40%  left 10%;
+    background-size: 50%;
+  }
   .aboutimg .left {
     position: absolute;
     float: center;
