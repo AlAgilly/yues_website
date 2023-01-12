@@ -1,15 +1,15 @@
-Questions:
+ ### Questions:
 - how can I see you desired hover effects?
 - Do we want the nav bar to be sticky?
 
-Suggestions:
+### Suggestions:
 - We need more call to action buttons on the home page.
     - Add a button under about section?
 - Make the prehover games fully grey and white
 - Lets add a nice scroll bar!
 -
 
-To do:
+### To do:
 - Clean up assets and assets/index.js
 - fix xs hero
     - change the border pics
@@ -18,15 +18,18 @@ To do:
 - Add media queries to about snip
 - Clean up finished files and add comments
 - document steps to do shit
+- add favicon
+- move the teams to pages 
 
-LATER:
+
+### LATER:
 - Google Calendar
 - IG post 
 - Database
 - Auto post to socials
+- change the teams dir
 
-
-MongoDB
+### MongoDB
 - Users
     - Permisions (Role based)
         - Player
@@ -48,6 +51,7 @@ MongoDB
 - Match History
     - Game
     - Team
+    - Opposition 
     - Score
     - Links
         - Twitch
@@ -61,15 +65,15 @@ MongoDB
     - Game
 
 --------------------------------------
-Minor Details and restraints for the first itteration:
+### Minor Details and restraints for the first itteration:
 - Cant make Discord icon new ??
 - Cant make active navbar :((
 - No aboutus snippet bg img
 - cant have the lion be a separate img
 
-Requests
+### Requests
+* refer to Figma
 
-
-Things to look for when testing:
+### Things to look for when testing:
 - the URL for all the pages
 - make sure all the links work for each page
