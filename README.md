@@ -1,2 +1,4 @@
 # yues_website
- YUES
+ ## how to set up local environment
+ 
+ ## how to edit constants
