@@ -336,7 +336,7 @@ html, body {
   }
   .leftimg {
     position: absolute;
-    left: -800px;
+    left: -900px;
     z-index: 6 !important;
   }
   .b4left{
@@ -345,7 +345,7 @@ html, body {
     z-index: 2;
     left: 0;
     height: 572px;
-    width: 30vw;
+    width: 27vw;
     opacity: 1;
   }
   .fadeleft {
@@ -359,7 +359,7 @@ html, body {
   }
     .rightimg {
     position: absolute;
-    right: -800px;
+    right: -900px;
     z-index: 6 !important;
   }
   .b4right{
@@ -368,7 +368,7 @@ html, body {
     z-index: 2;
     right: 0;
     height: 616px;
-    width: 30vw;
+    width: 27vw;
     opacity: 1;
   }
   .faderight {
@@ -382,11 +382,11 @@ html, body {
   }
 .left {
     position: absolute;
-    left: -900px;
+    left: -800px;
   }
    .right {
     position: absolute;
-    right: -900px;
+    right: -800px;
   }
   @media screen and (max-width: 1430px) {
     .left {

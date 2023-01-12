@@ -8,7 +8,7 @@ import TinyEvent from './TinyEvent'
 const EventSnip = () => {
   return (
     <>
-        <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
+  <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
           <div className='aboutimg grid grid-cols-3 w-full'>
             <div className='rightimg hidden mm:flex'>
               <img src={ coinbase } alt="" />

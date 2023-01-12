@@ -49,7 +49,7 @@ function Home (){
                     </div>
                 </div>
           </div>
-          <div className={`bg-primary ${styles.flexStart} aboutsec`}>
+          <div className={`bg-primary ${styles.flexStart} aboutsec overflow-hidden`}>
 
 
 <div className={`${styles.boxWidth}`}>
