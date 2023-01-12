@@ -25,20 +25,22 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur. At eget habitant vitae sodales pharetra nunc tellus parturient ultrices. Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
-        <div className='flex mm:flex-row flex-col items-left w-full'>
+        <div className='flex mm:flex-row flex-col space-x-8 items-left w-full'>
           <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
           <Button buttonStyle="btn--secondary" children="Upcoming Events" link="/about"/>
         </div>
         <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
-          <div className='heroborder grid grid-cols-3 w-full'>
+          <div className='heroborder w-full'>
             <div className='left'>
             <img src={ binance } alt="" />
             </div>
             <div className='center'>
               <img src={ card } alt="" />
             </div>
-            <div className='right'>
-            <img src={ card } alt="" />
+            <div className='right overflow-hidden'>
+              <div className='overflow-hidden'>
+                <img src={ card } alt="" />
+              </div>
             </div>
           </div>
       </div>

@@ -7,14 +7,17 @@ export const TinyEvent = ({
     title,
     link,
     time,
+    location,
     description, 
   }) => {
   return (
     <>
     <div className='w-full'>
-          <h3 className={`${styles.titleH4} ${styles.titleLineBottom}`}><a href={ link }>{title}</a> </h3>
-          <p className='title-p'>Hello! we are York University’s Esports club, we host community events and are home to York University’s esports teams!</p>
-          <p className='title-p'>This club is open to students of all interest levels in gaming. If you’d like to learn more about our team, feel free to check out our about us page!</p>
+          <h4 className={`${styles.titleH4}`}><a href={ link }>{title}</a> </h4>
+          <div className={`${styles.titleLineBottom}`}>-</div>
+          <p className='date'> {time}</p>
+          <p className='location'> {location}</p>
+          <p className='description'> {description}</p>
     </div>
     </>
   )

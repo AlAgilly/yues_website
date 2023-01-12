@@ -88,16 +88,19 @@ html, body {
   border-radius: 1px;
 }
 .bottomborder {
-  border-bottom: 6px solid var(--red);
+  border-bottom: 5px solid var(--red);
   border-radius: 1px;
-  width: 10px;
+  width: 45px;
+  height: 0;
+  overflow: hidden;
+  margin: 0px 0 10px 0;
 }
 .btn {
   font-family: 'big_noodle_titling';
   padding: 3px 60px;
   font-size: 30px;
   letter-spacing: 1px;
-  margin: 10px;
+  /* margin: 10px; */
 }
 .btn--primary {
   background-color: var(--red);
@@ -295,18 +298,19 @@ html, body {
     margin-right: auto; 
     width: 280px;
   }
-  .heroborder .right {
-    position: absolute;
-    float: center;
-    right: -20vw;
-  }
   .heroborder .left {
     position: absolute;
     float: center;
     left: -20vw;
   }
+  .heroborder .right {
+    position: absolute;
+    float: center;
+    right: -9vw;
+    /* white-space: nowrap; */
+  }
   .heroborder  {
-    position: relative;
+    position: relative !important;
     margin: 40px 0;
   }
   .aboutimg .left {

@@ -15,11 +15,11 @@ const styles = {
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
 
-    titleLineLeft: "leading-10 mt-5 p-3 leftborder",
-    titleLineBottom: "leading-10 mt-5 p-3 bottomborder",
+    titleLineLeft: "leading-10 p-3 leftborder",
+    titleLineBottom: "bottomborder",
 
     titleH3: "font-bignoodle text-[60px]",
-    titleH4: "font-bignoodle text-[50px]",
+    titleH4: "font-bignoodle text-[40px] m-0 p-0",
 
   };
   

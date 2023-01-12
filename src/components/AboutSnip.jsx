@@ -24,7 +24,7 @@ const AboutSnip = () => {
       </section> */}
         <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
           <div className='aboutimg grid grid-cols-3 w-full'>
-            <div className='left'>
+            <div className='left hidden mm:flex'>
               <img src={ about } alt="" />
             </div>
           </div>

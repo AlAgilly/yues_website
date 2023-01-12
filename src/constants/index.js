@@ -279,7 +279,7 @@ export const eventsList = [
     title: "Event Name",
     link: "https://twitter.com/YorkEsports",
     time: "Time",
-    description: "hello",
+    description: "Lorem ipsum, description of event wow",
   },
   {
     id: "event2",
