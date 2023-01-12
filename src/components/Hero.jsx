@@ -29,20 +29,16 @@ const Hero = () => {
           <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
           <Button buttonStyle="btn--secondary" children="Upcoming Events" link="/about"/>
         </div>
-        <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
-          <div className='heroborder w-full'>
+        <div className={`flex-row w-full items-center ${styles.flexCenter} relative mt-20 h-[30px]`}>
             <div className='left'>
             <img src={ binance } alt="" />
             </div>
             <div className='center'>
               <img src={ card } alt="" />
             </div>
-            <div className='right overflow-hidden'>
-              <div className='overflow-hidden'>
+            <div className='right '>
                 <img src={ card } alt="" />
-              </div>
             </div>
-          </div>
       </div>
       </div>
       {/* <div className={`${styles.flexStart} xl:px-0 sm:px-0 px-6 mt-5 hidden mm:flex`}>

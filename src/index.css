@@ -289,7 +289,7 @@ html, body {
   float: right;
   }
 
-  .heroborder .center {
+.center {
     position: absolute;
     float: center;
     left: 0; 
@@ -298,20 +298,13 @@ html, body {
     margin-right: auto; 
     width: 280px;
   }
-  .heroborder .left {
+.left {
     position: absolute;
-    float: center;
-    left: -20vw;
+    left: -22vw;
   }
-  .heroborder .right {
+   .right {
     position: absolute;
-    float: center;
-    right: -9vw;
-    /* white-space: nowrap; */
-  }
-  .heroborder  {
-    position: relative !important;
-    margin: 40px 0;
+    right: -22vw;
   }
   .aboutimg .left {
     position: absolute;
