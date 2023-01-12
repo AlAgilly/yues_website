@@ -1,11 +1,8 @@
 # yues_website
  ### Questions:
 - how can I see you desired hover effects?
-- Do we want the nav bar to be sticky?
 
 ### Suggestions:
-- We need more call to action buttons on the home page.
-    - Add a button under about section?
 - Make the prehover games fully grey and white
 - Actually maybe we dont add a Home navlink (im so sorry)
 - Want to add a hover effect to the ig posts? maybe b&w to color on hover?
