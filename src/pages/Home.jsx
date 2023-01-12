@@ -49,13 +49,13 @@ function Home (){
                     </div>
                 </div>
           </div>
-          <div className='w-full overflow-hidden bg-white'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
-                       <EventSnip />
-                    </div>
-                </div>
-          </div>
+          <div className={`bg-primary ${styles.flexStart} aboutsec`}>
+
+
+<div className={`${styles.boxWidth}`}>
+     <EventSnip />
+     </div>
+</div>
           <div className='w-full overflow-hidden bg-black'>
                 <div className={`${styles.flexStart} `}>
                    <div className={`max-w-[1340px] w-full`}> 

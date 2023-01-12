@@ -41,7 +41,7 @@ const Hero = () => {
               <img src={ card } alt="" />
             </div>
             <div className='right sm:flex hidden'>
-                <img src={ dropbox } alt="" />
+                <img src={ binance } alt="" />
             </div>
       </div>
       </div>
