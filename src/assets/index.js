@@ -29,6 +29,14 @@ import dota2 from "./games/dota2.png";
 import dota2a from "./games/dota2-active.png";
 import dota2g from "./games/dota2-grey.png";
 import logooutline from "./logo-outline.svg";
+import post1 from "./post1.png";
+import post2 from "./post2.png";
+import post3 from "./post3.png";
+import post4 from "./post4.png";
+import post5 from "./post5.png";
+import post6 from "./post6.png";
+import post7 from "./post7.png";
+import post8 from "./post8.png";
 
 
 export {
@@ -62,4 +70,12 @@ export {
   dota2g,
   logooutline,
   about,
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,
+  post8,
 };

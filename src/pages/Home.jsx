@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import AboutSnip from '../components/AboutSnip'
 import EventSnip from '../components/EventSnip'
 import Title from '../components/Title'
+import IgPosts from '../components/IgPosts'
   
 function Home (){
     return (
@@ -43,7 +44,7 @@ function Home (){
                 </div>
           <div className='w-full overflow-hidden bg-red'>
                 <div className={`idk ${styles.flexStart} `}>
-                   <div className={`${styles.boxWidth}`}>
+                   <div className={`${styles.boxWidth}`}> 
                        <Title />
                     </div>
                 </div>
@@ -52,6 +53,20 @@ function Home (){
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
                        <EventSnip />
+                    </div>
+                </div>
+          </div>
+          <div className='w-full overflow-hidden bg-black'>
+                <div className={`${styles.flexStart} `}>
+                   <div className={`max-w-[1340px] w-full`}> 
+                       <IgPosts />
+                    </div>
+                </div>
+          </div>
+          <div className='w-full overflow-hidden bg-white'>
+                <div className={`${styles.flexStart} `}>
+                   <div className={`${styles.boxWidth}`}> 
+                       <IgPosts />
                     </div>
                 </div>
           </div>
