@@ -381,6 +381,12 @@ html, body {
     width: 10vw;
     opacity: .5;
   }
+  .footer {
+    color: var(--grey);
+  }
+  .footer h6{
+    color: var(--white);
+  }
 .left {
     position: absolute;
     left: -800px;

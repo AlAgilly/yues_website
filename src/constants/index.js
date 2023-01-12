@@ -241,7 +241,7 @@ export const gameLinks = [
   },
   {
     id: "/teams/csgo",
-    title: "Counter-Strike: Global Offensive",
+    title: "CS:GO",
   },
   {
     id: "/teams/dota2",

@@ -3,7 +3,7 @@ import { eventsList } from '../constants'
 import styles from '../style'
 
 export const TinyEvent = ({
-    id,
+    className,
     title,
     link,
     time,
@@ -12,7 +12,7 @@ export const TinyEvent = ({
   }) => {
   return (
     <>
-    <div className='w-full'>
+    <div className={`w-full ${ className}`}>
           <h4 className={`${styles.titleH4}`}><a href={ link }>{title}</a> </h4>
           <div className={`${styles.titleLineBottom}`}>-</div>
           <p className='date'> {time}</p>
