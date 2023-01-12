@@ -103,9 +103,10 @@ html, body {
 }
 .btn {
   font-family: 'big_noodle_titling';
-  padding: 3px 60px;
-  font-size: 30px;
+  padding: 3px 50px;
+  font-size: 25px;
   letter-spacing: 1px;
+  width: 100%;
 }
 .btn--primary {
   background-color: var(--red);
@@ -151,7 +152,7 @@ html, body {
   font-family: 'BebasNeue-Regular', sans-serif;
 }
 .title {
-  padding: 70px 0 70px 0;
+  padding: 70px 0;
 }
 .lion {
   position:absolute;
@@ -215,6 +216,32 @@ html, body {
   bottom:0;
   right:0;
 }
+@media screen and (max-width: 580px) {
+  .title2 {
+    margin-top: -125px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 581px) {
+  .title2 {
+    margin-top: -130px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 844px) {
+  .title2 {
+    margin-top: -115px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1155px) {
+  .title2 {
+    margin-top: -80px;
+    padding: 0;
+  }
+}
+
+
 
 @-webkit-keyframes slide-left {
   0% {
@@ -303,11 +330,27 @@ html, body {
   }
 .left {
     position: absolute;
-    left: -85%;
+    left: -900px;
   }
    .right {
     position: absolute;
-    right: -85%;
+    right: -900px;
+  }
+  @media screen and (max-width: 1430px) {
+    .left {
+      position: absolute;
+      left: -700px;
+    }
+     .right {
+      position: absolute;
+      right: -700px;
+    }
+  }
+  @media screen and (max-width: 844px) {
+    .left {
+      position: absolute;
+      left: -600px;
+    }
   }
   .idk {
     background-image: url(./assets/people01.png);

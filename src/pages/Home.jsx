@@ -22,7 +22,7 @@ function Home (){
               </div>
             </div>
             <div className='w-full overflow-hidden bg-black border-b-[3px] border-red'>
-              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+              <div className={`px-0 ${styles.flexCenter}`}>
                 <div className={`w-full`}>
                   <SocialBar />
                 </div>
