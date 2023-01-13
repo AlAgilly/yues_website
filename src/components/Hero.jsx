@@ -24,13 +24,13 @@ const Hero = () => {
           </h1>
         </div>
         <div className='flex flex-row justify-between items-left w-full mm:w-1/2'>
-          <p className=' my-4 text-white'>
+          <p className='m-4 text-white'>
           Lorem ipsum dolor sit amet consectetur. At eget habitant vitae sodales pharetra nunc tellus parturient ultrices. Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
         <div className='grid xm:grid-cols-2 grid-cols-2 xm:gap-4 gap-4 items-center ss:items-left w-full'>
 
-            <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
+            <Button buttonStyle="btn--primary" children="Our Teams" link="/about"/>
             <Button buttonStyle="btn--secondary" children="Upcoming Events" link="/about"/>
         </div>
         <div className={`flex-row w-full items-center ${styles.flexCenter} relative mt-20 h-[20px]`}>

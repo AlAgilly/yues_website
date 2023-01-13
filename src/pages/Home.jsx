@@ -20,7 +20,7 @@ function Home (){
 <div className='relative'>
 <div className='fixed top-0 left-0 right-0 z-50'>
         <div className='w-full overflow-hidden bg-red'>
-              <div className={`px-8 xs:px-16 ${styles.flexCenter}`}>
+              <div className={`px-8 xs:px-10 ${styles.flexCenter}`}>
                 <div className={`w-full`}>
                   <Navbar />
                 </div>
@@ -70,7 +70,7 @@ function Home (){
           </div>
           <div className='w-full overflow-hidden bg-white'>
                 <div className={`${styles.flexStart} `}>
-                   <div className={`${styles.boxWidth}`}> 
+                   <div className={`${styles.boxWidth} ${styles.paddingY}`}> 
                    <UpcomingGames />
                    <RecentResults />
                     </div>

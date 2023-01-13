@@ -13,10 +13,10 @@ const SocialBar = () => {
   const [toggle, setToggle] = useState(false)
 
   return (
-    <nav className='w-full flex py-1 items-center'>
+    <nav className='w-full flex py-2 items-center'>
       <ul className='list-none flex justify-center items-center flex-1'>
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://www.instagram.com/yorkesports/">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </li>
@@ -26,7 +26,7 @@ const SocialBar = () => {
           </a>
         </li>
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://discord.com/invite/yorkesports">
             <FontAwesomeIcon icon={faDiscord} />
           </a>
         </li>
@@ -36,12 +36,12 @@ const SocialBar = () => {
           </a>
         </li> 
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://www.twitch.tv/yuesports">
             <FontAwesomeIcon icon={faTwitch} />
           </a>
         </li>
-        <li className={`text-bebasneue font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+        <li className={`text-bebasneue font-normal cursor-pointer xm:text-[16px] text-[25px] text-white mx-3 p-0 mt-[7px]`}>
+          <a href="https://yorku.campuslabs.ca/engage/organization/yorkesports">
             YUConnect
           </a>
         </li> 

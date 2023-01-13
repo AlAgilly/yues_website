@@ -20,13 +20,13 @@ const Navbar = () => {
       const splitLocation = pathname.split("/");
 
   return (
-    <nav className='w-full flex py-2 justify-end items-center'>
+    <nav className='w-full flex py-4 justify-end items-center'>
       <a href="/"><img src={ logo } alt="YUES" className='w-[40px] h-[41px]'/></a>
       <ul className='list-none xm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
           <li 
             key={nav.id} 
-            className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-16'} ${splitLocation[1] === navLinks.id ? "active" : navLinks.id}`}
+            className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-12'} ${splitLocation[1] === navLinks.id ? "active" : navLinks.id}`}
           >
             <a href={`${nav.id}`}>
               {nav.title}

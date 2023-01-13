@@ -12,6 +12,8 @@
 - document steps to do shit
 
 ### Questions:
+- What is our youtube channel?
+- Can we not include our facebook?
 
 ### Suggestions:
 - Make the prehover games fully grey and white
@@ -40,7 +42,7 @@
 
 ### Figma Prototype
 
-Link to prototype: [Figma](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189)
+[Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189)
 
 --------------------------------------
 
