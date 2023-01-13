@@ -1,14 +1,24 @@
 # yues_website
- ### Questions:
-- how can I see you desired hover effects?
+
+### To do:
+- Clean up assets and assets/index.js
+- Clean up finished files and add comments
+- add proper links to socials
+- fix hero btn on mobile
+- fix hero btn on desktop
+- add favicon
+- Add all the required pages with the "under construction" component
+- move the teams to pages 
+- document steps to do shit
+
+### Questions:
 
 ### Suggestions:
 - Make the prehover games fully grey and white
-- Actually maybe we dont add a Home navlink (im so sorry)
-- Want to add a hover effect to the ig posts? maybe b&w to color on hover?
 
 ### Restraints for the first itteration:
 - Cant make Discord icon new ??
+    - get SVG
 - Cant make active navbar :((
 - cant have the lion be a separate img in hero (unless navbar is fixed i think)
 - the aboutus and event img has to be added to assets already cropped 
@@ -22,29 +32,28 @@
 - the URL for all the pages
 - make sure all the links work for each page
 - Check all size screens
-
-### To do:
-- Clean up assets and assets/index.js
-- fix xs hero
-    - change the border pics
-    - add the lion to the bg img
-    - fix other screen sizes
-- Add media queries to about snip
-- Clean up finished files and add comments
-- document steps to do shit
-- add favicon
-- move the teams to pages 
+- Keep design in mind
 
 --------------------------------------
 
-### LATER:
+## Steps and Tutorials
+
+### Figma Prototype
+
+Link to prototype: (Figma)[https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189]
+
+--------------------------------------
+
+## LATER
+
+### Things to look into:
 - Google Calendar
 - IG post 
 - Database
 - Auto post to socials
 - change the teams dir
 
-### MongoDB
+### MongoDB structure?
 - Users
     - Permisions (Role based)
         - Player

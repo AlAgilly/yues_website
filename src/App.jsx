@@ -72,9 +72,10 @@ class App extends Component {
                  <Route exact path='/about' element={< About />}></Route>
                  <Route exact path='/contact' element={< Contact />}></Route>
                  <Route exact path='/teams' element={< Teams />}></Route>
-                 {/* <Route exact path="/teams/csgo" element={< CSGO /> }></Route> */}
+                 <Route exact path="/teams/csgo" element={< CSGO /> }></Route>
                  <Route exact path='/events' element={< Events />}></Route>
           </Routes>
+          <div className='version'>Version: 1.0.0</div>
           </div>
        </Router>
    );

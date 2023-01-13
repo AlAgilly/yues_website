@@ -29,12 +29,6 @@ const AboutSnip = () => {
         </div>
           <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
       </div> 
-      {/* <div className={`${styles.flexStart} xl:px-0 sm:px-0 px-6 mt-5 hidden mm:flex`}>
-        <img src={ logooutline } alt="logo" />
-      </div> */}
-      {/* <div className={`${styles.flexStart} xl:px-0 sm:px-0 px-6 mt-5 lion`}>
-        <img src={ logooutline } alt="logo" />
-      </div> */}
     </section>
 
     </>

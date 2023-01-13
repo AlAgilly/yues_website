@@ -15,32 +15,32 @@ const SocialBar = () => {
   return (
     <nav className='w-full flex py-1 items-center'>
       <ul className='list-none flex justify-center items-center flex-1'>
-        <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </li>
-        <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
         </li>
-        <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faDiscord} />
           </a>
         </li>
-        <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </li> 
-        <li className={`font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faTwitch} />
           </a>
         </li>
-        <li className={`text-bebasneue font-normal cursor-pointer sm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
+        <li className={`text-bebasneue font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
           <a href="https://twitter.com/YorkEsports">
             YUConnect
           </a>

@@ -10,10 +10,10 @@ const styles = {
   
     paddingX: "mm:px-16 px-24",
     paddingY: "py-24",
-    padding: "sm:px-16 px-6 sm:py-12 py-4",
+    padding: "xm:px-16 px-6 xm:py-12 py-4",
   
-    marginX: "sm:mx-16 mx-6",
-    marginY: "sm:my-16 my-6",
+    marginX: "xm:mx-16 mx-6",
+    marginY: "xm:my-16 my-6",
 
     titleLineLeft: "leading-10 p-3 leftborder",
     titleLineBottom: "bottomborder",
