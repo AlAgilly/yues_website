@@ -41,8 +41,20 @@
 ## Steps and Tutorials
 
 ### Figma Prototype
+#### IN PROGRESS
 
 [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189)
+1. 
+### Running the project on your local machine
+#### IN PROGRESS
+
+1. Download the code
+2. Download node
+3. `npm run dev`
+
+### Upload the files to the server
+
+1. `npm run build`
 
 --------------------------------------
 
