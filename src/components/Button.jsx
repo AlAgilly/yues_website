@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const STYLES = ['btn--primary', 'btn--secondary'];
+const STYLES = ['btn--primary', 'btn--secondary', 'btn--primarysmall'];
 const SIZES = ['btn--medium', 'btn--large'];
 
 export const Button = ({
@@ -10,8 +10,7 @@ export const Button = ({
   onClick,
   buttonStyle,
   buttonSize, 
-  link,
-  otherstyles
+  link
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -19,11 +18,10 @@ export const Button = ({
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
   const checkLink = link;
-  const more = otherstyles;
   return (
     <Link to={`${checkLink}`} className='my-4'>
       <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize} w-full ${otherstyles}`}
+        className={`btn ${checkButtonStyle} ${checkButtonSize} w-full`}
         onClick={onClick}
         type={type}
       >

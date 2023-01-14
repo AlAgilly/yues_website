@@ -26,7 +26,7 @@ const AboutSnip = () => {
           <p className='text-[18px]'>This club is open to students of all interest levels in gaming. If you’d like to learn more about our team, feel free to check out our about us page!</p>
           </div>
         </div>
-          <Button buttonStyle="btn--primary" children="Learn More" link="/about" otherstyles="px-10"/>
+          <Button buttonStyle="btn--primarysmall" children="Learn More" link="/about"/>
       </div> 
     </section>
 

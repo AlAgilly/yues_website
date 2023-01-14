@@ -76,17 +76,9 @@ html, body {
 .hero br {
   user-select: none;
 }
-/* .hundo {
-  width: 100%;
-  background-color: var(--red);
-  position: absolute;
-  left: 0;
+.date{
+  font-weight: bold;
 }
-.hundo * {
-
-  position: relative;
-
-} */
 .teams * {
   padding: 8px;
 }
@@ -130,6 +122,13 @@ html, body {
   color: var(--white);
   border: 3px solid var(--red);
   transition: 0.3s ease-in-out;
+}
+.btn--primarysmall {
+  background-color: var(--red);
+  color: var(--white);
+  border: 3px solid var(--red);
+  transition: 0.3s ease-in-out;
+  padding: 0 40px;
 }
 .btn--primary:hover {
   background-color: var(--darkred);

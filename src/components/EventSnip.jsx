@@ -16,7 +16,7 @@ const EventSnip = () => {
           </div>
       </div>
       <div className='b4right xl:block hidden'></div>
-      <div className='faderight mm:block hidden'></div>
+    <div className='faderight mm:block hidden'></div>
 
     <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12`}>
       <div className={`flex-1 mm:${styles.flexStart} flex-col ${styles.paddingX}`}>
@@ -26,7 +26,7 @@ const EventSnip = () => {
         ))}
         </div>
         
-        <Button buttonStyle="btn--primary" children="See More Events" link="/about"/>
+        <Button buttonStyle="btn--primarysmall" children="See More Events" link="/about"/>
       </div>
     </section>
 

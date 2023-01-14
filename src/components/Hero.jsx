@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
         <div className='flex flex-row justify-between items-left w-full mm:w-1/2'>
           <p className='m-3 ml-5 pb-5 text-white text-[15px] leading-5'>
-          Lorem ipsum dolor sit amet consectetur. At eget habitant vitae sodales pharetra nunc tellus parturient ultrices. Lorem ipsum dolor sit amet consectetur.
+          Welcome to York University’s Hub for esports, gaming, and club events! We welcome everyone interested of all levels in gaming. We are also home to esports teams including Valorant, CS:GO, League of Legends and much more!
           </p>
         </div>
         <div className='grid grid-rows-1 mm:w-1/2 w-full grid-cols-2 xm:gap-6 gap-4 items-center'>
