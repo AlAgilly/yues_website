@@ -14,24 +14,6 @@ import UpcomingGames from '../components/UpcomingGames'
 function Home (){
     return (
         <>
-          <div className='relative'>
-            <div className='fixed top-0 left-0 right-0 z-50'>
-              <div className='w-full overflow-hidden bg-red'>
-                <div className={`px-8 xs:px-10 ${styles.flexCenter}`}>
-                  <div className={`w-full`}>
-                    <Navbar />
-                  </div>
-                </div>
-              </div>
-              <div className='w-full overflow-hidden bg-black border-b-[3px] border-red'>
-                <div className={`px-0 xs:px-16 ${styles.flexCenter}`}>
-                  <div className={`w-full`}>
-                    <SocialBar />
-                  </div>
-                </div>
-              </div>
-          </div>
-          </div>
           <div className={`bg-black ${styles.flexStart} hero overflow-hidden z-10`}>
             <div className={`px-6 xs:px-16 max-w-[1140px] xs:w-full`}>
               <Hero />
@@ -44,7 +26,7 @@ function Home (){
           </div>
           <div className='w-full overflow-hidden bg-red'>
                 <div className={`idk ${styles.flexStart} `}>
-                   <div className={`${styles.boxWidth}`}> 
+                   <div className={`p-0 ${styles.boxWidth}`}> 
                        <Title />
                     </div>
                 </div>
@@ -56,7 +38,7 @@ function Home (){
           </div>
           <div className='w-full overflow-hidden bg-black'>
                 <div className={`${styles.flexStart} `}>
-                   <div className={`max-w-[1340px] w-full`}> 
+                   <div className={`p-0 max-w-[1340px] w-full`}> 
                        <IgPosts />
                     </div>
                 </div>

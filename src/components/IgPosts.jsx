@@ -18,7 +18,7 @@ const IgPosts = () => {
     <>
 
     <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 mm:${styles.flexStart} flex-col mx-20 ss:mx-24`}>    
+      <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
 
         <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>

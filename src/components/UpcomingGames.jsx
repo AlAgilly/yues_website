@@ -13,21 +13,21 @@ const UpcomingGames = () => {
         <div className='flex flex-col justify-between items-left w-full'>
           <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Upcoming Games</h3>
           <div className='my-4 grid grid-cols-1'>
-          {upcoming.map((up, index) => (
-                <div className={`w-full grid grid-cols-9 items-center ${index === upcoming.length - 1 ? 'mr-0' : 'mr-10 borderb'}`}>
-                <div>
-                  <h2>Game</h2>
-                  <h3>Team A</h3>
-                </div>
-                <h4 className={`${styles.titleH4} col-span-2`}>{up.time}</h4>
-                <img src={ team1 } alt="" className={index % 2 === 0 ? "hidden" : "flex p-5"}/>
-                <img src={ up.opp } alt="" className={index % 2 === 1 ? "hidden" : "flex p-5"}/>
-                <p className={`${styles.titleH4} text-[50px] p-5`}> vs. </p>
-                <img src={ team1 } alt="" className={index % 2 === 1 ? "hidden" : "flex p-5"}/>
-                <img src={ up.opp } alt="" className={index % 2 === 0 ? "hidden" : "flex p-5"}/>
-                <p className='location col-span-3'> {up.title}</p>
-          </div>
-        ))}
+            {upcoming.map((up, index) => (
+            <div className={`w-full grid grid-cols-3 mm:grid-cols-9 items-center justify-self-center ${index === upcoming.length - 1 ? '' : 'borderb'}`}>
+              <div className='justify-self-center'>
+                <h2>Game</h2>
+                <h3>Team A</h3>
+              </div>
+              <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center`}>{up.time}</h4>
+              <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
+              <img src={ up.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
+              <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> {up.score} </p>
+              <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
+              <img src={ up.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
+              <p className='location mm:col-span-3 col-span-1 justify-self-center'> {up.title}</p>
+            </div>
+            ))}
                   </div>
         </div>
           <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
