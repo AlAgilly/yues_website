@@ -16,9 +16,8 @@ const AboutSnip = () => {
       <div className='b4left xl:block hidden'></div>
 
       <div className='fadeleft mm:block hidden'></div>
-    <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12`}>
+    <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12 px-0`}>
       <div className={`flex-1 ${styles.flexEnd} flex-col ${styles.paddingX}`}>
-        {/* <div className='flex flex-row justify-between items-left lg:w-full w-1/2'> */}
         <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
           <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Who We Are</h3>
           <div className='my-4'>

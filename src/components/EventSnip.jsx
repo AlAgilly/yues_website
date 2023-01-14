@@ -26,7 +26,7 @@ const EventSnip = () => {
         ))}
         </div>
         
-        <Button buttonStyle="btn--primarysmall" children="See More Events" link="/about"/>
+        <Button buttonStyle="btn--primarysmall" children="Learn More" link="/about"/>
       </div>
     </section>
 
