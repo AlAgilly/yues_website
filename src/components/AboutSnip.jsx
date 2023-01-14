@@ -25,9 +25,8 @@ const AboutSnip = () => {
           <p className='mb-4 text-[18px]'>Hello! we are York University’s Esports club, we host community events and are home to York University’s esports teams!</p>
           <p className='text-[18px]'>This club is open to students of all interest levels in gaming. If you’d like to learn more about our team, feel free to check out our about us page!</p>
           </div>
-          
         </div>
-          <Button buttonStyle="btn--primary" children="Learn More" link="/about"/>
+          <Button buttonStyle="btn--primary" children="Learn More" link="/about" otherstyles="px-10"/>
       </div> 
     </section>
 

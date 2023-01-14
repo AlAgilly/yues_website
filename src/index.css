@@ -114,7 +114,7 @@ html, body {
 }
 .btn {
   font-family: 'big_noodle_titling';
-  padding: 3px 50px;
+  padding: 3px 0;
   font-size: 25px;
   letter-spacing: 1px;
   /* width: 100%; */
@@ -253,7 +253,8 @@ html, body {
 }
 @media screen and (min-width: 1155px) {
   .title2 {
-    margin-top: -80px;
+    margin-top: -87px;
+    margin-left: 13px;
     padding: 0;
   }
 }
