@@ -22,17 +22,15 @@ const UpcomingGames = () => {
                 <h4 className={`${styles.titleH4} col-span-2`}>{up.time}</h4>
                 <img src={ team1 } alt="" className={index % 2 === 0 ? "hidden" : "flex p-5"}/>
                 <img src={ up.opp } alt="" className={index % 2 === 1 ? "hidden" : "flex p-5"}/>
-                <p className={`${styles.titleH4} text-[50px] p-5`}> {up.score}</p>
+                <p className={`${styles.titleH4} text-[50px] p-5`}> vs. </p>
                 <img src={ team1 } alt="" className={index % 2 === 1 ? "hidden" : "flex p-5"}/>
                 <img src={ up.opp } alt="" className={index % 2 === 0 ? "hidden" : "flex p-5"}/>
-                <p className='location col-span-2'> {up.title}</p>
-                <p className='description'> {up.twitch}</p>
+                <p className='location col-span-3'> {up.title}</p>
           </div>
         ))}
                   </div>
-          
         </div>
-          <Button buttonStyle="btn--primarysmall" children="Learn More" link="/about"/>
+          <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
       </div> 
     </section>
     </>

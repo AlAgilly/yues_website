@@ -286,6 +286,9 @@ html, body {
 .borderb {
   border-bottom: 1px solid var(--grey);
 }
+.bordert {
+  border-top: 1px solid var(--grey);
+}
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
