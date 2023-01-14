@@ -124,6 +124,42 @@ export const eventsList = [
   },
 ];
 
+export const upcoming = [
+  {
+    id: "event1",
+    team: "Lorem ipsum, description of event wow",
+    // Come up with distinct format
+    time: "Jan 13 | 10:30AM",
+    score: "3 - 2",
+    opp: "",
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+  {
+    id: "event1",
+    team: "Lorem ipsum, description of event wow",
+    // Come up with distinct format
+    time: "Jan 13 | 10:30AM",
+    score: "3 - 2",
+    opp: "",
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+  {
+    id: "event1",
+    team: "Lorem ipsum, description of event wow",
+    // Come up with distinct format
+    time: "Jan 13 | 10:30AM",
+    score: "3 - 2",
+    opp: "",
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+];
+
 export const igpost = [
   {
     id: "post1",

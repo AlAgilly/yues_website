@@ -37,6 +37,7 @@ import post5 from "./post5.png";
 import post6 from "./post6.png";
 import post7 from "./post7.png";
 import post8 from "./post8.png";
+import team1 from "./team1.png";
 
 
 export {
@@ -78,4 +79,5 @@ export {
   post6,
   post7,
   post8,
+  team1,
 };
