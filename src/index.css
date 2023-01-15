@@ -284,19 +284,31 @@ html, body {
 }
 @media screen and (max-width: 580px) {
   .title2 {
-    margin-top: -125px;
+    margin-top: -135px;
     padding: 0;
   }
 }
 @media screen and (min-width: 581px) {
   .title2 {
-    margin-top: -130px;
+    margin-top: -140px;
+    margin-left: 13px;
+
     padding: 0;
   }
 }
 @media screen and (min-width: 844px) {
   .title2 {
-    margin-top: -115px;
+    margin-top: -135px;
+    margin-left: 13px;
+
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .title2 {
+    margin-top: -85px;
+    margin-left: 13px;
+
     padding: 0;
   }
 }

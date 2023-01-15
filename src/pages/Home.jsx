@@ -142,18 +142,18 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Upcoming Games</h3>
                       <div className='my-4 grid grid-cols-1'>
                         {upcoming.map((up, index) => (
-                          <div className={`w-full grid grid-cols-3 mm:grid-cols-9 items-center justify-self-center ${index === upcoming.length - 1 ? '' : 'borderb'}`}>
-                            <div className='justify-self-center'>
+                        <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className='justify-self-center'>
                               <h2>Game</h2>
                               <h3>Team A</h3>
                             </div>
-                            <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center`}>{up.time}</h4>
+                            <h4 className={`${styles.titleH4} xm:col-span-2 justify-self-center xm:flex hidden`}>{up.time}</h4>
                             <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                             <img src={ up.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
-                            <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> {up.score} </p>
+                            <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> vs. </p>
                             <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                             <img src={ up.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
-                            <p className='location mm:col-span-3 col-span-1 justify-self-center'> {up.title}</p>
+                            <p className='location mm:col-span-3 col-span-1 xs:col-span-2 justify-self-center'> {up.title}</p>
                           </div>
                         ))}
                       </div>
@@ -167,20 +167,20 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Recent Results</h3>
                       <div className='my-4 grid grid-cols-1'>
                       {recent.map((rec, index) => (
-                        <div className={`w-full grid grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                           <div className='justify-self-center text-center'>
                             <a href="">
                               <h2>Game</h2>
                               <h3>Team A</h3>
                             </a>
                           </div>
-                          <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center`}>{rec.time}</h4>
+                          <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center mm:flex hidden`}>{rec.time}</h4>
                           <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                           <img src={ rec.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
-                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> vs. </p>
+                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center `}> {rec.score} </p>
                           <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                           <img src={ rec.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
-                          <p className='location mm:col-span-2 col-span-1 justify-self-center'> {rec.title}</p>
+                          <p className='location mm:col-span-2 col-span-1 justify-self-center xs:flex hidden'> {rec.title}</p>
                           <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden'>
                             <p>Twitch VOD <FontAwesomeIcon icon={faUnlink} /> </p>
                             <a href="">Stats Page <FontAwesomeIcon icon={faLink} /> </a>
