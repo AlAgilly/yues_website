@@ -68,25 +68,25 @@ class App extends Component {
   render() {
     return (
        <Router>
-           <div className="App">
-           <div className='relative'>
-            <div className='fixed top-0 left-0 right-0 z-50'>
-              <div className='w-full overflow-hidden bg-red'>
-                <div className={`px-8 xs:px-10 ${styles.flexCenter}`}>
-                  <div className={`w-full`}>
-                    <Navbar />
+          <div className="App">
+            <div className='relative'>
+              <div className='fixed top-0 left-0 right-0 z-50'>
+                <div className='w-full overflow-hidden bg-red'>
+                  <div className={`px-8 xs:px-10 ${styles.flexCenter}`}>
+                    <div className={`w-full`}>
+                      <Navbar />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className='w-full overflow-hidden bg-black border-b-[3px] border-red'>
-                <div className={`px-0 xs:px-16 ${styles.flexCenter}`}>
-                  <div className={`w-full`}>
-                    <SocialBar />
+                <div className='w-full overflow-hidden bg-black border-b-[3px] border-red'>
+                  <div className={`px-0 xs:px-16 ${styles.flexCenter}`}>
+                    <div className={`w-full`}>
+                      <SocialBar />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
            <Routes>
                  <Route exact path='/' element={< Home />}></Route>
                  <Route exact path='/about' element={< About />}></Route>

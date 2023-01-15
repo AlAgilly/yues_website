@@ -37,10 +37,14 @@ html, body {
   box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.1);
 
 }
+.shad {
+  box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
 * {
   scroll-behavior: smooth;
   /* border: 1px solid #000; */
   /* z-index: 1; */
+
 }
 
 @font-face {
@@ -58,7 +62,11 @@ html, body {
     font-weight: 900;
     src: url("assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: 'BeVietnamPro';
+  font-weight: 100;
+  src: url("assets/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+}
 @font-face {
   font-family: 'big_noodle_titling';
   font-weight: 900;
@@ -399,9 +407,15 @@ html, body {
   }
   .footer {
     color: var(--grey);
+    font-family: 'BeVietnamPro';
+    font-weight: 100;
   }
   .footer h6{
     color: var(--white);
+  }
+  p {
+    font-family: 'BeVietnamPro';
+    font-weight: 100;
   }
 .left {
     position: absolute;
