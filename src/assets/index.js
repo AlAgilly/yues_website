@@ -7,6 +7,7 @@ import headerimg from './headerimg.png'
 import herobg from './herobg.png'
 import swirl from './swirl.png'
 import team1 from './team1.png'
+import team2 from './team2.png'
 import whitelion from './whitelion.png'
 import yulion from './yulion.png'
 import instagram1 from "./instagram1.png";
@@ -17,6 +18,14 @@ import instagram5 from "./instagram5.png";
 import instagram6 from "./instagram6.png";
 import instagram7 from "./instagram7.png";
 import instagram8 from "./instagram8.png";
+import instagram1g from "./instagram1g.png";
+import instagram2g from "./instagram2g.png";
+import instagram3g from "./instagram3g.png";
+import instagram4g from "./instagram4g.png";
+import instagram5g from "./instagram5g.png";
+import instagram6g from "./instagram6g.png";
+import instagram7g from "./instagram7g.png";
+import instagram8g from "./instagram8g.png";
 import dota2 from './games/dota2.png'
 import dota2a from './games/dota2-active.png'
 import dota2g from './games/dota2-grey.png'
@@ -40,6 +49,7 @@ export {
   herobg,
   swirl,
   team1,
+  team2,
   whitelion,
   yulion,
   instagram1,
@@ -50,6 +60,14 @@ export {
   instagram6,
   instagram7,
   instagram8,
+  instagram1g,
+  instagram2g,
+  instagram3g,
+  instagram4g,
+  instagram5g,
+  instagram6g,
+  instagram7g,
+  instagram8g,
   dota2,
   dota2a,
   arrowup,

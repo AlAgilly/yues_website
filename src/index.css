@@ -5,12 +5,6 @@
 @tailwind utilities;
 
 :root {
-  --black-gradient: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
   --red: #E21A37;
   --darkred: #BB152D;
@@ -145,6 +139,16 @@ html, body {
   border: 3px solid var(--darkred);
 }
 .btn--primary:active {
+  background: var(--white);
+  color: var(--black);
+  border: 3px solid var(--white);
+}
+.btn--primarysmall:hover {
+  background-color: var(--darkred);
+  color: var(--white);
+  border: 3px solid var(--darkred);
+}
+.btn--primarysmall:active {
   background: var(--white);
   color: var(--black);
   border: 3px solid var(--white);
@@ -459,6 +463,19 @@ html, body {
     font-family: 'BeVietnamPro-black';
   }
   p a:hover {
+    color: var(--darkred);
+    text-decoration: underline;
+  }
+  .description p {
+    font-size: 15px;
+    color: var(--darkgrey);
+    font-family: 'BeVietnamPro-black';
+  }
+  .description a {
+    color: var(--red);
+    font-family: 'BeVietnamPro-black';
+  }
+  .description a:hover {
     color: var(--darkred);
     text-decoration: underline;
   }

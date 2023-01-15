@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from '../style'
-import { Button, TinyEvent } from '../components';
+import { Button, HoverImage, TinyEvent } from '../components';
 import { eventsList, upcoming, recent } from '../constants';
-import { bordercenter, borderline, eventsnip, yulion, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, aboutsnip, team1, out } from '../assets'
-  
+import { bordercenter, borderline, eventsnip, yulion, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, instagram1g, instagram2g, instagram3g, instagram4g, instagram5g, instagram6g, instagram7g, instagram8g, aboutsnip, team1, out } from '../assets'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
+
+
 function Home (){
     return (
         <>
@@ -116,14 +119,14 @@ function Home (){
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
                     <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
                     <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
-                      <img src={instagram1} alt="" />
-                      <img src={instagram2} alt="" />
-                      <img src={instagram3} alt="" />
-                      <img src={instagram4} alt="" />
-                      <img src={instagram5} alt="" className='hidden ss:flex' />
-                      <img src={instagram6} alt="" className='hidden ss:flex' />
-                      <img src={instagram7} alt="" className='hidden mm:flex xl:hidden' />
-                      <img src={instagram8} alt="" className='hidden mm:flex xl:hidden' />
+                      <a target="_blank" href="https://www.instagram.com/p/CnPrYfAul11/"><HoverImage src={instagram1g} hoverSrc={instagram1} /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/CnAqsmXJnpb/"><HoverImage src={instagram2g} hoverSrc={instagram2} /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/CmNEEbEuymF/"><HoverImage src={instagram3g} hoverSrc={instagram3} /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/Cl7DLdXu_cl/"><HoverImage src={instagram4g} hoverSrc={instagram4} /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/Cle2GCeLV5n/"><HoverImage src={instagram5g} hoverSrc={instagram5} className='hidden ss:flex' /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/ClMLGX8Ohbj/"><HoverImage src={instagram6g} hoverSrc={instagram6} className='hidden ss:flex' /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/CktqTDCOr-i/"><HoverImage src={instagram7g} hoverSrc={instagram7} className='hidden mm:flex xl:hidden' /></a>
+                      <a target="_blank" href="https://www.instagram.com/p/Cj3I_7TrzpP/"><HoverImage src={instagram8g} hoverSrc={instagram8} className='hidden mm:flex xl:hidden' /></a>
                     </div>
                   </div>
                 </section>
@@ -145,11 +148,11 @@ function Home (){
                               <h3>Team A</h3>
                             </div>
                             <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center`}>{up.time}</h4>
-                            <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
-                            <img src={ up.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
+                            <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
+                            <img src={ up.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                             <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> {up.score} </p>
-                            <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
-                            <img src={ up.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
+                            <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
+                            <img src={ up.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                             <p className='location mm:col-span-3 col-span-1 justify-self-center'> {up.title}</p>
                           </div>
                         ))}
@@ -164,19 +167,24 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Recent Results</h3>
                       <div className='my-4 grid grid-cols-1'>
                       {recent.map((rec, index) => (
-                        <div className={`w-full grid grid-cols-3 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
-                          <div className='justify-self-center'>
-                            <h2>Game</h2>
-                            <h3>Team A</h3>
+                        <div className={`w-full grid grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                          <div className='justify-self-center text-center'>
+                            <a href="">
+                              <h2>Game</h2>
+                              <h3>Team A</h3>
+                            </a>
                           </div>
-                          <h4 className={`${styles.titleH4} col-span-2 mm:flex hidden justify-self-center`}>{rec.time}</h4>
-                          <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
-                          <img src={ rec.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
-                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center`}> {rec.score} </p>
-                          <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
-                          <img src={ rec.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "flex p-5"} mm:flex hidden justify-self-center`}/>
-                          <p className='location col-span-3 mm:flex hidden justify-self-center'> {rec.title}</p>
-                          <p className='description justify-self-center'> {rec.twitch}</p>
+                          <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center`}>{rec.time}</h4>
+                          <img src={ team1 } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
+                          <img src={ rec.opp } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
+                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> vs. </p>
+                          <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
+                          <img src={ rec.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
+                          <p className='location mm:col-span-2 col-span-1 justify-self-center'> {rec.title}</p>
+                          <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden'>
+                            <p>Twitch VOD <FontAwesomeIcon icon={faUnlink} /> </p>
+                            <a href="">Stats Page <FontAwesomeIcon icon={faLink} /> </a>
+                          </div>
                         </div>
                       ))}
                     </div>

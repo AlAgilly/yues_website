@@ -1,3 +1,5 @@
+import { team2 } from "../assets";
+
 export const navLinks = [
   {
     id: "/",
@@ -127,9 +129,9 @@ export const upcoming = [
     id: "event1",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
-    time: "Jan 13 | 10:30AM",
+    time: "Jan 13 • 10:30AM",
     score: "3 - 2",
-    opp: "",
+    opp: team2,
     title: "Event Name",
     twitch: "events",
     vod: "events",
@@ -138,9 +140,9 @@ export const upcoming = [
     id: "event1",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
-    time: "Jan 13 | 10:30AM",
+    time: "Jan 13 • 10:30AM",
     score: "3 - 2",
-    opp: "",
+    opp: team2,
     title: "Event Name",
     twitch: "events",
     vod: "events",
@@ -149,9 +151,9 @@ export const upcoming = [
     id: "event1",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
-    time: "Jan 13 | 10:30AM",
+    time: "Jan 13 • 10:30AM",
     score: "3 - 2",
-    opp: "",
+    opp: team2,
     title: "Event Name",
     twitch: "events",
     vod: "events",
@@ -163,9 +165,9 @@ export const recent = [
     id: "event1",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
-    time: "Jan 13 | 10:30AM",
+    time: "Jan 13 • 10:30AM",
     score: "3 - 2",
-    opp: "",
+    opp: team2,
     title: "Event Name",
     twitch: "events",
     vod: "events",
@@ -174,9 +176,9 @@ export const recent = [
     id: "event1",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
-    time: "Jan 13 | 10:30AM",
+    time: "Jan 13 • 10:30AM",
     score: "3 - 2",
-    opp: "",
+    opp: team2,
     title: "Event Name",
     twitch: "events",
     vod: "events",
@@ -185,9 +187,9 @@ export const recent = [
     id: "event1",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
-    time: "Jan 13 | 10:30AM",
+    time: "Jan 13 • 10:30AM",
     score: "3 - 2",
-    opp: "",
+    opp: team2,
     title: "Event Name",
     twitch: "events",
     vod: "events",

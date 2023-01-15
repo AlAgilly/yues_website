@@ -82,6 +82,11 @@ const Footer = () => {
           </div>
           
         ))}
+          <div className={``}>
+            <a href="/documents">
+              Documents
+            </a>
+          </div>
         </div>
       </div>
       <div className='col-span-2'>
@@ -104,7 +109,7 @@ const Footer = () => {
   </div>
   <div class="text-center p-6 bg-black">
     <span>© 2023 Copyright: </span>
-    <a class="text-white font-semibold" href="#/">York University Esports</a>
+    <a class="text-white font-semibold" href="/">York University Esports</a>
   </div>
 </footer>
 
