@@ -54,14 +54,13 @@
 1. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
 2. Click the play triangle located on the top left of the prototype screen.
 
-### Running the project on your local machine
-#### IN PROGRESS
+### Running the project on your local machine (In Progress...)
 
 1. Download the code
 2. Download node
 3. `npm run dev`
 
-### Upload the files to the server
+### Upload the files to the server (In Progress...)
 
 1. `npm run build`
 

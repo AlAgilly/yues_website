@@ -34,6 +34,7 @@ import dota2g from './games/dota2-grey.png'
 import arrowup from "./arrow-up.svg"
 import close from "./close.svg"
 import logo from "./logo.svg"
+import greyoutline from "./greyoutline.svg"
 import logoline from "./logoline.svg"
 import outline from "./logo-outline.svg"
 import mainlogo from "./mainlogo.svg"
@@ -52,6 +53,7 @@ export {
   team2,
   whitelion,
   yulion,
+  greyoutline,
   instagram1,
   instagram2,
   instagram3,

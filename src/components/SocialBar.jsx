@@ -16,32 +16,32 @@ const SocialBar = () => {
     <nav className='w-full flex py-2 items-center'>
       <ul className='list-none flex justify-center items-center flex-1'>
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://www.instagram.com/yorkesports/">
+          <a target="_blank" href="https://www.instagram.com/yorkesports/">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </li>
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a target="_blank" href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
         </li>
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://discord.com/invite/yorkesports">
+          <a target="_blank" href="https://discord.com/invite/yorkesports">
             <FontAwesomeIcon icon={faDiscord} />
           </a>
         </li>
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a target="_blank" href="https://twitter.com/YorkEsports">
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </li> 
         <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://www.twitch.tv/yuesports">
+          <a target="_blank" href="https://www.twitch.tv/yuesports">
             <FontAwesomeIcon icon={faTwitch} />
           </a>
         </li>
         <li className={`text-bebasneue font-normal cursor-pointer xm:text-[16px] text-[25px] text-white mx-3 p-0 mt-[7px]`}>
-          <a href="https://yorku.campuslabs.ca/engage/organization/yorkesports">
+          <a target="_blank" href="https://yorku.campuslabs.ca/engage/organization/yorkesports">
             YUConnect
           </a>
         </li> 

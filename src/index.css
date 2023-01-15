@@ -67,14 +67,11 @@ html, body {
 }
 
 .hero {
-  /* padding-top: 25px; */
-  /* min-height: 700px; */
   background-image: url("./assets/herobg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* z-index: 1; */
 }
 .hero br {
   user-select: none;
@@ -186,7 +183,6 @@ html, body {
 .lion {
   position:absolute;
   opacity: 0.3;
-  z-index: -1;
 }
 @media screen and (max-width: 843px) {
   .lion {
@@ -229,7 +225,51 @@ html, body {
     width: 650px;
   }
 }
-
+.lion2 {
+  position:absolute;
+  opacity: 0.3;
+}
+@media screen and (max-width: 843px) {
+  .lion2 {
+    top: -20px;
+    right: -500px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 844px) {
+  .lion2 {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .lion2 {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 950px;
+  }
+}
+/* @media screen and (min-width: 844px) {
+  .lion {
+    top: -100px;
+    right: 500px;
+    width: 500px;
+  }
+} */
+@media screen and (min-width: 1155px) {
+  .lion2 {
+    top: -100px;
+    right: -100px;
+    left: 0;
+    margin: auto;
+    width: 950px;
+  }
+}
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -319,7 +359,43 @@ html, body {
     padding: 0;
   }
 }
+@media screen and (max-width: 580px) {
+  .title3 {
+    margin-top: -135px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 581px) {
+  .title3 {
+    margin-top: -140px;
+    margin-left: 13px;
 
+    padding: 0;
+  }
+}
+@media screen and (min-width: 844px) {
+  .title3 {
+    margin-top: -135px;
+    margin-left: 13px;
+
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .title3 {
+    margin-top: -85px;
+    margin-left: 13px;
+
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1155px) {
+  .title3 {
+    margin-top: -87px;
+    margin-left: 13px;
+    padding: 0;
+  }
+}
 
 
 @-webkit-keyframes slide-left {
@@ -495,22 +571,42 @@ html, body {
     position: absolute;
     left: -800px;
   }
+  .left2 {
+    position: absolute;
+    left: -950px;
+  }
    .right {
     position: absolute;
     right: -800px;
+  }
+  .right2 {
+    position: absolute;
+    right: -500px;
   }
   @media screen and (max-width: 1430px) {
     .left {
       position: absolute;
       left: -700px;
     }
+    .left2 {
+      position: absolute;
+      left: -860px;
+    }
      .right {
       position: absolute;
       right: -700px;
     }
+    .right2 {
+      position: absolute;
+      right: -400px;
+    }
   }
   @media screen and (max-width: 844px) {
     .left {
+      position: absolute;
+      left: -600px;
+    }
+    .left2 {
       position: absolute;
       left: -600px;
     }
