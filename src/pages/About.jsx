@@ -8,13 +8,6 @@ import Footer from '../components/Footer'
 function Contact (){
     return (
         <>
-            <div className='w-full overflow-hidden bg-black'>
-              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-                <div className={`${styles.boxWidth}`}>
-                  <Navbar />
-                </div>
-              </div>
-            </div>
             <div className='w-full overflow-hidden bg-white'>
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
@@ -26,13 +19,6 @@ function Contact (){
                 <div className={`bg-primary ${styles.flexStart}`}>
                    <div className={`${styles.boxWidth}`}>
                        <Team />
-                    </div>
-                </div>
-            </div>
-            <div className='w-full overflow-hidden bg-black'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
-                       <Footer />
                     </div>
                 </div>
             </div>
