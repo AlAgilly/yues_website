@@ -1,9 +1,7 @@
 # yues_website
 
 ### To do:
-- Clean up assets and assets/index.js
 - Clean up finished files and add comments
-- add proper links to socials
 - fix hero btn on mobile
 - fix hero btn on desktop
 - add favicon
@@ -11,18 +9,21 @@
 - move the teams to pages 
 - document steps to do shit
 
-### Questions:
+### Questions for Sasha and Sarah
 - What is our youtube channel?
 - Can we not include our facebook?
+- What do we want our emails to be?
+
+### Need from Roslyn
+- About us image (1400+ x 595)px
+- Events image (1400+ x 720)px
 
 ### Suggestions:
 - Make the prehover games fully grey and white
 
 ### Restraints for the first itteration:
 - Cant make Discord icon new ??
-    - get SVG
 - Cant make active navbar :((
-- cant have the lion be a separate img in hero (unless navbar is fixed i think)
 - the aboutus and event img has to be added to assets already cropped 
 
 ### Requests

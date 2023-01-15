@@ -35,7 +35,6 @@ html, body {
   font-size: 15px;
   padding: 5px 20px;
   box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.1);
-
 }
 .shad {
   box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -50,33 +49,33 @@ html, body {
 @font-face {
     font-family: 'HeyNovember';
     font-weight: 900;
-    src: url("assets/fonts/HeyNovember.ttf") format("truetype");
+    src: url("assets/HeyNovember.ttf") format("truetype");
 }
 @font-face {
     font-family: 'BebasNeue-Regular';
     font-weight: 900;
-    src: url("assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+    src: url("assets/BebasNeue-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: 'BeVietnamPro-Black';
     font-weight: 900;
-    src: url("assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
+    src: url("assets/BeVietnamPro-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-family: 'BeVietnamPro';
   font-weight: 100;
-  src: url("assets/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+  src: url("assets/BeVietnamPro-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: 'big_noodle_titling';
   font-weight: 900;
-  src: url("assets/fonts/big_noodle_titling.ttf") format("truetype");
+  src: url("assets/big_noodle_titling.ttf") format("truetype");
 }
 
 .hero {
-  padding-top: 25px;
-  min-height: 700px;
-  background-image: url("assets/bg.png");
+  /* padding-top: 25px; */
+  /* min-height: 700px; */
+  background-image: url("./assets/herobg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -182,14 +181,51 @@ html, body {
 }
 .lion {
   position:absolute;
-  width: calc(40vw);
-  max-width: 750px;
-  min-width: 300px;
-  top: calc(75px - 10vw);
-  left: calc(51vw + 10px);
-  /* z-index: 0; */
   opacity: 0.3;
+  z-index: -1;
 }
+@media screen and (max-width: 843px) {
+  .lion {
+    top: -20px;
+    right: -500px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 844px) {
+  .lion {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .lion {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 600px;
+  }
+}
+/* @media screen and (min-width: 844px) {
+  .lion {
+    top: -100px;
+    right: 500px;
+    width: 500px;
+  }
+} */
+@media screen and (min-width: 1155px) {
+  .lion {
+    top: -100px;
+    right: -600px;
+    left: 0;
+    margin: auto;
+    width: 650px;
+  }
+}
+
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -416,6 +452,15 @@ html, body {
   p {
     font-family: 'BeVietnamPro';
     font-weight: 100;
+    font-size: 17px;
+  }
+  p a {
+    color: var(--red);
+    font-family: 'BeVietnamPro-black';
+  }
+  p a:hover {
+    color: var(--darkred);
+    text-decoration: underline;
   }
 .left {
     position: absolute;
@@ -442,11 +487,12 @@ html, body {
     }
   }
   .idk {
-    background-image: url(./assets/people01.png);
+    background-image: url(./assets/headerimg.png);
     /* min-height: 100px; */
     background-repeat: no-repeat;
     background-position:  top 40%  left 0%;
     background-size: 50%;
+    z-index: 99 !important;
   }
   .aboutimg .left {
     position: absolute;
@@ -466,6 +512,7 @@ html, body {
     background: var(--black);
   }
   .aboutsec {
-    background-image: url(./assets/airbnb.png);
+    background-image: url(./assets/swirl.png);
     background-size: cover;
+    z-index: 10;
   }

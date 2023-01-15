@@ -1,11 +1,15 @@
 import Navbar from "./Navbar";
+import SocialBar from "./SocialBar";
 import Footer from "./Footer";
-import Hero from "./Hero";
-import Team from "./Team";
+import Button from "./Button";
+import HoverImage from "./HoverImage"
+import TinyEvent from './TinyEvent'
 
 export {
   Navbar,
+  SocialBar,
   Footer,
-  Hero,
-  Team,
+  Button,
+  HoverImage,
+  TinyEvent,
 };

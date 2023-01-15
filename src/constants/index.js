@@ -1,7 +1,3 @@
-import { post1, post2, people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
-import { faTwitter  } from '@fortawesome/fontawesome-free-brands'
-
-
 export const navLinks = [
   {
     id: "/",
@@ -25,6 +21,7 @@ export const navLinks = [
   },
 ];
 
+// NOT USED?
 export const buttons = [
   {
     id: "about",
@@ -40,10 +37,11 @@ export const buttons = [
   },
 ];
 
+// NOT USED
 export const sociallinks = [
   {
     id: "twitter",
-    title: faTwitter,
+    title: "faTwitter",
     link: "https://twitter.com/YorkEsports",
   },
 
@@ -51,43 +49,43 @@ export const sociallinks = [
 
 export const gameLinks = [
   {
-    id: "/teams/apex",
+    id: "/apexlegends",
     title: "Apex Legends",
   },
   {
-    id: "/teams/cod",
+    id: "/callofduty",
     title: "Call of Duty",
   },
   {
-    id: "/teams/csgo",
+    id: "/csgo",
     title: "CS:GO",
   },
   {
-    id: "/teams/dota2",
+    id: "/dota2",
     title: "Dota 2",
   },
   {
-    id: "/teams/hearthstone",
+    id: "/hearthstone",
     title: "Hearthstone",
   },
   {
-    id: "/teams/lol",
+    id: "/leagueoflegends",
     title: "League of Legends",
   },
   {
-    id: "/teams/ow",
+    id: "/overwatch",
     title: "Overwatch",
   },
   {
-    id: "/teams/r6s",
+    id: "/rainbowsixsiege",
     title: "Rainbow 6: Siege",
   },
   {
-    id: "/teams/rl",
+    id: "/rocketleague",
     title: "Rocket League",
   },
   {
-    id: "valorant",
+    id: "/valorant",
     title: "Valorant",
   },
 ];
@@ -160,11 +158,48 @@ export const upcoming = [
   },
 ];
 
+export const recent = [
+  {
+    id: "event1",
+    team: "Lorem ipsum, description of event wow",
+    // Come up with distinct format
+    time: "Jan 13 | 10:30AM",
+    score: "3 - 2",
+    opp: "",
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+  {
+    id: "event1",
+    team: "Lorem ipsum, description of event wow",
+    // Come up with distinct format
+    time: "Jan 13 | 10:30AM",
+    score: "3 - 2",
+    opp: "",
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+  {
+    id: "event1",
+    team: "Lorem ipsum, description of event wow",
+    // Come up with distinct format
+    time: "Jan 13 | 10:30AM",
+    score: "3 - 2",
+    opp: "",
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+];
+
+// NOT USED
 export const igpost = [
   {
     id: "post1",
     link: "https://twitter.com/YorkEsports",
-    img: { post1 },
+    img: "{ post1 }",
   },
   {
     id: "post2",
