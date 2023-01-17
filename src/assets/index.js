@@ -41,11 +41,16 @@ import outline from "./logo-outline.svg"
 import mainlogo from "./mainlogo.svg"
 import menu from "./menu.svg"
 import out from "./outt.svg"
+import yuesports from "./yuesports.svg"
+import bordercenters from './bordercenters.svg'
+import borderlines from './borderlines.svg'
 
 export {
   aboutsnip,
   bordercenter,
   borderline,
+  bordercenters,
+  borderlines,
   eventsnip,
   headerimg,
   herobg,
@@ -83,4 +88,5 @@ export {
   dota2g,
   out,
   grey,
+  yuesports,
 };

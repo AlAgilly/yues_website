@@ -7,7 +7,8 @@
 :root {
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
   --red: #E21A37;
-  --darkred: #BB152D;
+  /* --darkred: #BB152D; */
+  --darkred: #810001;
   --black: #111111;
   --darkgrey: #CACACA;
   --grey: #D9D9D9;
@@ -65,7 +66,26 @@ html, body {
   font-weight: 900;
   src: url("assets/big_noodle_titling.ttf") format("truetype");
 }
-
+.navbar li:hover {
+  background-color: var(--darkred);
+  transition: 0.3s ease-in-out;
+}
+.navbar li {
+  background-color: var(--red);
+  transition: 0.3s ease-in-out;
+}
+.social {
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+.social a:hover {
+  color: var(--red);
+  transition: 0.3s ease-in-out;
+}
+.footer a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
 .hero {
   background-image: url("./assets/herobg.png");
   background-position: center;
@@ -512,7 +532,7 @@ html, body {
   }
     .rightimg {
     position: absolute;
-    right: -900px;
+    right: -1000px;
     z-index: 6 !important;
   }
   .b4right{

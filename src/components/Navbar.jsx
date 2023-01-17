@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { close, logo, menu } from '../assets'
+import { close, logo, menu, yuesports } from '../assets'
 import { navLinks } from '../constants'
 import { NavLink } from "react-router-dom"
 import styles from '../style'
@@ -20,13 +20,13 @@ const Navbar = () => {
       const splitLocation = pathname.split("/");
 
   return (
-    <nav className='w-full flex py-4 justify-end items-center'>
-      <a href="/"><img src={ logo } alt="YUES" className='w-[40px] h-[41px]'/></a>
+    <nav className='w-full flex justify-end items-center navbar'>
+      <a href="/"><img src={ yuesports } alt="YUES" className='w-[42px] h-[44px]'/></a>
       <ul className='list-none xm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
           <li 
             key={nav.id} 
-            className={`font-bignoodle font-normal cursor-pointer text-[23px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-12'} ${splitLocation[1] === navLinks.id ? "active" : navLinks.id}`}
+            className={`py-4 px-4 font-bignoodle font-normal cursor-pointer text-[23px] text-white`}
           >
             <a href={`${nav.id}`}>
               {nav.title}
@@ -40,7 +40,7 @@ const Navbar = () => {
           <img 
             src={toggle ? close : menu } 
             alt="menu" 
-            className='w=[25px] h-[25px] object-contain'
+            className='w=[35px] h-[35px] object-contain my-4'
             onClick={() => setToggle((prev) => !prev)}
           />
         <div
