@@ -2,11 +2,7 @@
 
 ### To do:
 - Clean up finished files and add comments
-- fix hero btn on mobile
-- fix hero btn on desktop
 - add favicon
-- Add all the required pages with the "under construction" component
-- move the teams to pages 
 - document steps to do shit
 
 ### Questions for Sasha and Sarah and others

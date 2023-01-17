@@ -619,6 +619,15 @@ html, body {
     background-size: 50%;
     z-index: 99 !important;
   }
+    .idk2 {
+    background-image: url(./assets/grey.png);
+    /* min-height: 100px; */
+    background-repeat: no-repeat;
+    background-position:  top 60%  right 40%;
+    background-size: 30%;
+    z-index: 99 !important;
+    border-bottom: 1px solid var(--grey);
+  }
   .aboutimg .left {
     position: absolute;
     float: center;
