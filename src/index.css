@@ -204,7 +204,7 @@ html, body {
   position:absolute;
   opacity: 0.3;
 }
-@media screen and (max-width: 843px) {
+@media screen and (max-width: 844px) {
   .lion {
     top: -20px;
     right: -500px;

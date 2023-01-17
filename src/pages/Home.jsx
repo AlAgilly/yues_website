@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../style'
 import { Button, HoverImage, TinyEvent } from '../components';
 import { eventsList, upcoming, recent } from '../constants';
-import { bordercenter, borderline, eventsnip, yulion, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, instagram1g, instagram2g, instagram3g, instagram4g, instagram5g, instagram6g, instagram7g, instagram8g, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
+import { bordercenter, borderline, borderlines2, eventsnip, yulion, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, instagram1g, instagram2g, instagram3g, instagram4g, instagram5g, instagram6g, instagram7g, instagram8g, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
 
@@ -172,7 +172,7 @@ function Home (){
                     <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
                     <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px] mb-10`}>
                     <div className='left flex'>
-                      <img src={ borderlines } alt="" />
+                      <img src={ borderlines2 } alt="" />
                     </div>
                   </div>
                   </div> 
@@ -181,7 +181,7 @@ function Home (){
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}> 
                   <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px]`}>
                     <div className='right mm:flex hidden'>
-                      <img src={ borderlines } alt="" />
+                      <img src={ borderlines2 } alt="" />
                     </div>
                   </div>
                     <div className='flex flex-col justify-between items-left w-full'>

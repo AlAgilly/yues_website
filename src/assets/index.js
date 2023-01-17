@@ -44,6 +44,7 @@ import out from "./outt.svg"
 import yuesports from "./yuesports.svg"
 import bordercenters from './bordercenters.svg'
 import borderlines from './borderlines.svg'
+import borderlines2 from './borderlines2.svg'
 
 export {
   aboutsnip,
@@ -51,6 +52,7 @@ export {
   borderline,
   bordercenters,
   borderlines,
+  borderlines2,
   eventsnip,
   headerimg,
   herobg,
