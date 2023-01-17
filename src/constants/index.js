@@ -94,41 +94,43 @@ export const gameLinks = [
 
 export const eventsList = [
   {
-    id: "event1",
-    title: "Event Name",
-    link: "events",
-    // Come up with distinct format
-    time: "Monday Janurary 13th 2023 @ 10:30AM",
-    description: "Lorem ipsum, description of event wow",
+    id: "frosh",
+    title: "Frosh Week Tabling",
+    date: "Wednesday Jan 18",
+    time: "10:00 - 4:00",
   },
   {
-    id: "event2",
-    title: "Event Name",
-    link: "events",
-    time: "Time",
-    description: "hello",
+    id: "cozy",
+    title: "Cozy Chill Nite",
+    date: "Friday Jan 20",
+    time: "6:30 - 9:30",
   },
   {
-    id: "event3",
-    title: "Event Name",
-    link: "events",
-    time: "Time",
-    description: "hello",
+    id: "paint",
+    title: "Painting chill Nite",
+    date: "Friday Jan 27",
+    time: "6:30 - 9:30",
   },
   {
-    id: "event4",
-    title: "Event Name",
-    link: "events",
-    time: "Time",
-    description: "hello",
+    id: "league",
+    title: "League tourney",
+    date: "Saturday Jan 28",
+    time: "6:00 - 11:00",
   },
 ];
 
 export const upcoming = [
   {
+    id: "game1",
+    team: "Lorem ipsum, description of event wow",
+    time: "Jan 13 • 10:30AM",
+    score: "3 - 2",
+    opp: team2,
+    title: "Event Name",
+  },
+  {
     id: "event1",
     team: "Lorem ipsum, description of event wow",
-    // Come up with distinct format
     time: "Jan 13 • 10:30AM",
     score: "3 - 2",
     opp: team2,
@@ -139,18 +141,6 @@ export const upcoming = [
   {
     id: "event1",
     team: "Lorem ipsum, description of event wow",
-    // Come up with distinct format
-    time: "Jan 13 • 10:30AM",
-    score: "3 - 2",
-    opp: team2,
-    title: "Event Name",
-    twitch: "events",
-    vod: "events",
-  },
-  {
-    id: "event1",
-    team: "Lorem ipsum, description of event wow",
-    // Come up with distinct format
     time: "Jan 13 • 10:30AM",
     score: "3 - 2",
     opp: team2,

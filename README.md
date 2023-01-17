@@ -5,18 +5,14 @@
 - add favicon
 - document steps to do shit
 
-### Questions for Sasha and Sarah and others
+### Requests for Sasha and Sarah and others
 - What is our youtube channel?
-- Can we not include our facebook?
+    -  https://youtube.com/@YorkEsports
 - What do we want our emails to be?
-- Need event info
 - Need some recent games and upcoming games (3 each at least)
     - Team pictures for opponent of each game too!
 
-### Need from Roslyn
-- About us image (1400+ x 595)px
-- Events image (1700+ x 720)px
-- What format do we want for events time/date
+### Requests for Roslyn
 
 ### Suggestions:
 - Make the prehover games fully grey and white
