@@ -126,7 +126,6 @@ html, body {
 }
 .btn {
   font-family: 'big_noodle_titling';
-  padding: 3px 0;
   font-size: 25px;
   letter-spacing: 1px;
   /* width: 100%; */
@@ -508,7 +507,7 @@ html, body {
   }
   .leftimg {
     position: absolute;
-    left: -900px;
+    left: -875px;
     z-index: 6 !important;
   }
   .b4left{
@@ -516,8 +515,8 @@ html, body {
     position: absolute;
     z-index: 2;
     left: 0;
-    height: 572px;
-    width: 27vw;
+    height: 595px;
+    width: calc(50vw - 500px);
     opacity: 1;
   }
 
@@ -526,13 +525,13 @@ html, body {
     position: absolute;
     z-index: 20;
     left: 0;
-    height: 572px;
+    height: 595px;
     width: 10vw;
     opacity: .5;
   }
     .rightimg {
     position: absolute;
-    right: -1000px;
+    right: -1100px;
     z-index: 6 !important;
   }
   .b4right{
@@ -540,8 +539,8 @@ html, body {
     position: absolute;
     z-index: 2;
     right: 0;
-    height: 616px;
-    width: 27vw;
+    height: 720px;
+    width: calc(50vw - 500px);
     opacity: 1;
   }
   .faderight {
@@ -549,7 +548,7 @@ html, body {
     position: absolute;
     z-index: 20;
     right: 0;
-    height: 616px;
+    height: 720px;
     width: 10vw;
     opacity: .5;
   }
@@ -670,3 +669,13 @@ html, body {
     background-size: cover;
     z-index: 10;
   }
+  .ig:hover a {
+    opacity: 0.7;
+  }
+
+  .ig a:hover {
+    opacity: 1;
+  }
+a {
+  z-index: 20;
+}

@@ -98,24 +98,28 @@ export const eventsList = [
     title: "Frosh Week Tabling",
     date: "Wednesday Jan 18",
     time: "10:00 - 4:00",
+    location: "Second student center",
   },
   {
     id: "cozy",
     title: "Cozy Chill Nite",
     date: "Friday Jan 20",
     time: "6:30 - 9:30",
+    location: "First student center Room 313",
   },
   {
     id: "paint",
     title: "Painting chill Nite",
     date: "Friday Jan 27",
     time: "6:30 - 9:30",
+    location: "First student center Room 313",
   },
   {
     id: "league",
     title: "League tourney",
     date: "Saturday Jan 28",
     time: "6:00 - 11:00",
+    location: "Online",
   },
 ];
 
@@ -129,7 +133,7 @@ export const upcoming = [
     title: "Event Name",
   },
   {
-    id: "event1",
+    id: "game2",
     team: "Lorem ipsum, description of event wow",
     time: "Jan 13 • 10:30AM",
     score: "3 - 2",
@@ -139,7 +143,7 @@ export const upcoming = [
     vod: "events",
   },
   {
-    id: "event1",
+    id: "game3",
     team: "Lorem ipsum, description of event wow",
     time: "Jan 13 • 10:30AM",
     score: "3 - 2",
@@ -152,7 +156,18 @@ export const upcoming = [
 
 export const recent = [
   {
-    id: "event1",
+    id: "game4",
+    game: "Rocket League",
+    team: "YorkU A",
+    time: "Jan 8 • 10:30AM",
+    score: "3 - 2",
+    opp: team2,
+    title: "Event Name",
+    twitch: "events",
+    vod: "events",
+  },
+  {
+    id: "game5",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
     time: "Jan 13 • 10:30AM",
@@ -163,18 +178,7 @@ export const recent = [
     vod: "events",
   },
   {
-    id: "event1",
-    team: "Lorem ipsum, description of event wow",
-    // Come up with distinct format
-    time: "Jan 13 • 10:30AM",
-    score: "3 - 2",
-    opp: team2,
-    title: "Event Name",
-    twitch: "events",
-    vod: "events",
-  },
-  {
-    id: "event1",
+    id: "game6",
     team: "Lorem ipsum, description of event wow",
     // Come up with distinct format
     time: "Jan 13 • 10:30AM",

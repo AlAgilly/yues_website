@@ -6,6 +6,7 @@ export const TinyEvent = ({
     className,
     title,
     link,
+    date,
     time,
     location,
     description, 
@@ -13,11 +14,13 @@ export const TinyEvent = ({
   return (
     <>
     <div className={`w-full ${ className}`}>
-          <h4 className={`${styles.titleH4}`}><a href={ link }>{title}</a> </h4>
+      {/* <h4 className={`${styles.titleH4}`}><a href={ link }>{title}</a> </h4> */}
+      <h4 className={`${styles.titleH4}`}>{title}</h4>
           <div className={`${styles.titleLineBottom}`}>-</div>
-          <p className='date'> {time}</p>
+          <p className='date'> {date}</p>
+          <p className='time'> {time}</p>
           <p className='location'> {location}</p>
-          <p className='description'> {description}</p>
+          {/* <p className='description'> {description}</p> */}
     </div>
     </>
   )
