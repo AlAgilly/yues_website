@@ -48,7 +48,11 @@
 
 ### Running the project on your local machine (In Progress...)
 
-1. Download the code
+1. Make a github account
+download github desktop
+download node
+copy the 
+Download the code
 2. Download node
 3. `npm run dev`
 
