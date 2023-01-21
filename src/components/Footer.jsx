@@ -71,7 +71,7 @@ const Footer = () => {
           Useful Links
         </h6>
         <div className='grid grid-cols-1'>
-            {navLinks.map((nav) => (
+            {/* {navLinks.map((nav) => (
           <div 
             key={nav.id} 
             className={``}
@@ -81,10 +81,15 @@ const Footer = () => {
             </a>
           </div>
           
-        ))}
+        ))} */}
           <div className={``}>
-            <a href="/documents">
-              Documents
+            <a href="/constitution">
+              Our Constitution
+            </a>
+          </div>
+          <div className={``}>
+            <a href="/rules">
+              Rules
             </a>
           </div>
         </div>
@@ -95,13 +100,13 @@ const Footer = () => {
         </h6>
         <div className='grid grid-cols-1 mm:grid-cols-2 lg:grid-cols-1'>
             <div><a href="https://www.google.com/maps/place/Second+Student+Centre/@43.7714923,-79.5037118,15z/data=!4m2!3m1!1s0x0:0x55e10c9ba7b8b997?sa=X&ved=2ahUKEwigwqiAisP8AhWnkYkEHSWlB_EQ_BJ6BAhlEAg">Second Student Center</a> <br />Room 316 </div>
-            <div>
+            <div><br className='flex mm:hidden lg:flex' />
             <strong> Community: </strong><br />
-            <a href="mailto:yorkesports@gmail.com">yorkesports@gmail.com</a> <br />
+            <a href="mailto:yorkesports@gmail.com">yorkesports@gmail.com</a> <br /><br />
             <strong> Competitive: </strong><br />
-            <a href="mailto:esports@my.yorku.ca">esports@my.yorku.ca</a> <br />
+            <a href="mailto:esports@my.yorku.ca">esports@my.yorku.ca</a> <br /><br />
             <strong> Sponsorships: </strong><br />
-            <a href="mailto:hello@yorkesports.ca">hello@yorkesports.ca</a> <br />
+            <a href="mailto:hello@yorkesports.ca">hello@yorkesports.ca</a> <br /><br />
             </div>
         </div>
       </div>

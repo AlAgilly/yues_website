@@ -157,9 +157,9 @@ function Home (){
                       {recent.map((rec, index) => (
                         <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                           <div className='justify-self-center text-center'>
-                            <a href="">
-                              <h2>Game</h2>
-                              <h3>Team A</h3>
+                            <a href={`/${rec.gameid}`}>
+                              <h2>{rec.game}</h2>
+                              <h3>{rec.team}</h3>
                             </a>
                           </div>
                           <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center mm:flex hidden`}>{rec.time}</h4>
@@ -169,9 +169,11 @@ function Home (){
                           <img src={ team1 } alt="" className={`${index % 2 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                           <img src={ rec.opp } alt="" className={`${index % 2 === 0 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`}/>
                           <p className='location mm:col-span-2 col-span-1 justify-self-center xs:flex hidden'> {rec.title}</p>
-                          <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden'>
-                            <p>Twitch VOD <FontAwesomeIcon icon={faUnlink} /> </p>
-                            <a href="">Stats Page <FontAwesomeIcon icon={faLink} /> </a>
+                          <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
+                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.twitch == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /> </a></p>
+                            <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /> </p>
+                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /> </a></p>
                           </div>
                         </div>
                       ))}

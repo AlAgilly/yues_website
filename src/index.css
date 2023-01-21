@@ -671,10 +671,18 @@ html, body {
   }
   .ig:hover a {
     opacity: 0.7;
+    transition: 0.3s ease-in-out;
   }
 
   .ig a:hover {
     opacity: 1;
+    transition: 0.3s ease-in-out;
+
+  }
+  .ig a{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+
   }
 a {
   z-index: 20;
