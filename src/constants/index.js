@@ -237,14 +237,7 @@ export const igpost = [
 
 //yues val historical results
 
-export const results = [
-  {
-    month:"December",
-    datetime: "12th DEC | 2:00",
-    score: "3-2",
-    event:"Insert event name here",
-    opp: "team2"
-  },
+export const resultsDec = [
   {
     datetime: "12th DEC | 2:00",
     score: "3-2",
@@ -263,30 +256,37 @@ export const results = [
     event:"Insert event name here",
     opp: "team2"
   },
-
   {
-    month:"October",
-    datetime: "12th OCT | 2:00",
-    score: "3-2",
-    event:"Insert event name here",
-    opp: "team2"
-  },
-  {
-    datetime: "12th OCT | 2:00",
-    score: "3-2",
-    event:"Insert event name here",
-    opp: "team2"
-  },
-  {
-    datetime: "12th OCT | 2:00",
-    score: "3-2",
-    event:"Insert event name here",
-    opp: "team2"
-  },
-  {
-    datetime: "12th OCT | 2:00",
+    datetime: "12th DEC | 2:00",
     score: "3-2",
     event:"Insert event name here",
     opp: "team2"
   }
+];
+
+  export const resultsOct = [
+    {
+      datetime: "12th OCT | 2:00",
+      score: "3-2",
+      event:"Insert event name here",
+      opp: "team2"
+    },
+    {
+      datetime: "12th OCT | 2:00",
+      score: "3-2",
+      event:"Insert event name here",
+      opp: "team2"
+    },
+    {
+      datetime: "12th OCT | 2:00",
+      score: "3-2",
+      event:"Insert event name here",
+      opp: "team2"
+    },
+    {
+      datetime: "12th OCT | 2:00",
+      score: "3-2",
+      event:"Insert event name here",
+      opp: "team2"
+    },
 ];
