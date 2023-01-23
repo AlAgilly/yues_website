@@ -242,25 +242,37 @@ export const resultsDec = [
     datetime: "12th DEC | 2:00",
     score: "3-2",
     event:"Insert event name here",
-    opp: "team2"
+    opp: team2,
+    //links
+    twitch: "",
+    stats: "",
   },
   {
     datetime: "12th DEC | 2:00",
     score: "3-2",
     event:"Insert event name here",
-    opp: "team2"
+    opp: team2,
+    //links
+    //twitch: "",
+    stats: "",
   },
   {
     datetime: "12th DEC | 2:00",
     score: "3-2",
     event:"Insert event name here",
-    opp: "team2"
+    opp: team2,
+    //links
+    twitch: "",
+    //stats: "",
   },
   {
     datetime: "12th DEC | 2:00",
     score: "3-2",
     event:"Insert event name here",
-    opp: "team2"
+    opp: team2,
+    //links
+    //twitch: "",
+    //stats: "",
   }
 ];
 
@@ -269,24 +281,36 @@ export const resultsDec = [
       datetime: "12th OCT | 2:00",
       score: "3-2",
       event:"Insert event name here",
-      opp: "team2"
+      opp: team2,
+      //links
+      //twitch: "",
+      //stats: "",
     },
     {
       datetime: "12th OCT | 2:00",
       score: "3-2",
       event:"Insert event name here",
-      opp: "team2"
+      opp: team2,
+      //links
+      twitch: "",
+      //stats: "",
     },
     {
       datetime: "12th OCT | 2:00",
       score: "3-2",
       event:"Insert event name here",
-      opp: "team2"
+      opp: team2,
+      //links
+      //twitch: "",
+      stats: "",
     },
     {
       datetime: "12th OCT | 2:00",
       score: "3-2",
       event:"Insert event name here",
-      opp: "team2"
+      opp: team2,
+    //links
+    twitch: "",
+    stats: "",
     },
 ];

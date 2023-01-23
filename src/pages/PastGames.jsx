@@ -30,10 +30,10 @@ function PastGames() {
                         <img src={rec.opp} alt="" className={`${index % 1 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`} />
                         <p className='location mm:col-span-2 col-span-1 justify-self-center xs:flex hidden'> {rec.event}</p>
                         <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
-                          <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                          <p className={`${rec.twitch = null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /> </a></p>
-                          <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /> </p>
-                          <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /> </a></p>
+                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.twitch == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /> </a></p>
+                            <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /> </p>
+                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /> </a></p>
                         </div>
                       </div>
                       </div>
@@ -51,10 +51,10 @@ function PastGames() {
                         <img src={rec.opp} alt="" className={`${index % 1 === 1 ? "hidden" : "mm:flex hidden p-5"} justify-self-center`} />
                         <p className='location mm:col-span-2 col-span-1 justify-self-center xs:flex hidden'> {rec.event}</p>
                         <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
-                          <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                          <p className={`${rec.twitch = null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /> </a></p>
-                          <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /> </p>
-                          <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /> </a></p>
+                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.twitch == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /> </a></p>
+                            <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /> </p>
+                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /> </a></p>
                         </div>
                       </div>
                       </div>
