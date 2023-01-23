@@ -159,7 +159,7 @@ export const recent = [
     id: "game4",
     game: "Rocket League",
     gameid: "rocketleague", 
-    team: "YorkU A",
+    teamname: "YorkU A",
     time: "Jan 8",
     score: "4 - 1",
     opp: team2,
@@ -233,4 +233,60 @@ export const igpost = [
     link: "https://twitter.com/YorkEsports",
     img: "Time",
   },
+];
+
+//yues val historical results
+
+export const results = [
+  {
+    month:"December",
+    datetime: "12th DEC | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+  {
+    datetime: "12th DEC | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+  {
+    datetime: "12th DEC | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+  {
+    datetime: "12th DEC | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+
+  {
+    month:"October",
+    datetime: "12th OCT | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+  {
+    datetime: "12th OCT | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+  {
+    datetime: "12th OCT | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  },
+  {
+    datetime: "12th OCT | 2:00",
+    score: "3-2",
+    event:"Insert event name here",
+    opp: "team2"
+  }
 ];
