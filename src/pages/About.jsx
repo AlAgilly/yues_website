@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../style";
-import { eventsnip } from "../assets";
+//import { rec50, coprez1, coprez2 } from "../assets";
+import { eventsnip, swirl, team1 } from "../assets";
 
 function Contact() {
   return (
@@ -43,7 +44,7 @@ function Contact() {
               </p>
             </div>
           </div>
-          <img src={eventsnip} alt="" /> {/*image placeholder*/}
+          <img src={eventsnip} alt="" />
         </div>
       </div>
       {/* our staff 2023 snip */}
@@ -55,10 +56,74 @@ function Contact() {
             see last year's staff here
           </a>
         </p>
-        <div className={`${styles.titleH4}`}>
+        <div className={`${styles.titleH4}  `}>
           <br />
           <br />
           Co-presidents
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
+          <br />
+        </div>
+        <div className={`${styles.titleH4}  `}>
+          <br />
+          <br />
+          Executives
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
+          <br />
+        </div>
+        <div className={`${styles.titleH4}  `}>
+          <br />
+          <br />
+          operations department
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
+          <br />
+        </div>
+        <div className={`${styles.titleH4}  `}>
+          <br />
+          <br />
+          partnership department
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
+          <br />
+        </div>
+        <div className={`${styles.titleH4}  `}>
+          <br />
+          <br />
+          marketing department
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
+          <br />
+        </div>
+        <div className={`${styles.titleH4}  `}>
+          <br />
+          <br />
+          finance department
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
+          <br />
+        </div>
+        <div className={`${styles.titleH4}  `}>
+          <br />
+          <br />
+          Human resources department
+          <div className={`grid grid-cols-6`}>
+            <img src={team1} alt="" />
+            <img src={team1} alt="" />
+          </div>
           <br />
         </div>
       </div>
