@@ -21,6 +21,8 @@ const styles = {
     titleH3: "font-bignoodle text-[50px] my-4 py-2 px-5",
     titleH4: "font-bignoodle text-[40px] m-0 p-0",
 
+    img: "idk2",
+
   };
   
   export const layout = {

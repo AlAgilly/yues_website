@@ -1,36 +1,71 @@
-import React from 'react'
-import Team from '../components/Team'
-import styles from '../style'
-import Navbar from '../components/Navbar'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-  
-function Contact (){
-    return (
-        <>
-                  <div className='w-full overflow-hidden bg-red z-20'>
-            <div className={`idk ${styles.flexStart} z-20`}>
-              <div className={`p-0 ${styles.boxWidth} z-20`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white mx-8 ss:mx-24 z-20`}>Upcoming Events</h3>
-              </div>
+import React from "react";
+import styles from "../style";
+import { eventsnip } from "../assets";
+
+function Contact() {
+  return (
+    <>
+      <div className="w-full overflow-hidden bg-white z-20 ">
+        <div
+          className={`idk2 , ${styles.flexStart} z-20 py-7 grid grid-cols-1`}
+        >
+          <div className={`flex justify-start pl-40 ml-40`}>
+            <h3
+              className={`flex mr-20 ${styles.titleH3} leftborder redborder leading-10 `}
+            >
+              About Us
+            </h3>
           </div>
+        </div>
+        {/* our club snip */}
+        <div className={`grid grid-cols-2 grid-flow-col `}>
+          <div
+            className={`${styles.titleH3} leading-10 text-black pl-40 ml-40`}
+          >
+            Our club
+            <div className={`${styles.titleLineBottom} p-1`}></div>
+            <div className={``}>
+              <p className={``}>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et
+                ratione doloribus omnis earum. Facere qui, ab ipsam tempora
+                veniam, culpa ea ipsum accusantium eligendi repellat saepe
+                soluta corporis ad dolor nulla molestias? Aperiam obcaecati
+                exercitationem ullam quae modi perferendis soluta alias
+                nesciunt! Unde hic voluptate facere dolorem placeat eaque <br />
+                <br />
+                accusantium consequatur provident quis. Magni veritatis ab nisi
+                magnam cumque, corporis repellendus quod sint quasi officiis,
+                quae officia repellat suscipit cum et dolorum reprehenderit
+                dignissimos distinctio voluptatum fugit laborum sunt autem.
+                Excepturi, cumque? Illum sequi dignissimos molestias unde
+                consequatur aliquam neque nemo iusto, at eligendi, nam quas nisi
+                dolorum placeat.
+              </p>
+            </div>
           </div>
-            <div className='w-full overflow-hidden bg-white'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
-                       <Header />
-                    </div>
-                </div>
-            </div>
-            <div className='w-full overflow-hidden bg-white'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`${styles.boxWidth}`}>
-                       <Team />
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+          <img src={eventsnip} alt="" /> {/*image placeholder*/}
+        </div>
+      </div>
+      {/* our staff 2023 snip */}
+      <div className={`${styles.titleH3} leading-10 text-black pl-40 ml-40`}>
+        2023 staff
+        <div className={`${styles.titleLineBottom} p-1`}></div>
+        <p>
+          <a href="" class="underline">
+            see last year's staff here
+          </a>
+        </p>
+        <div className={`${styles.titleH4}`}>
+          <br />
+          <br />
+          Co-presidents
+          <br />
+        </div>
+      </div>
+      <br />
+      <br />
+    </>
+  );
 }
-  
+
 export default Contact;
