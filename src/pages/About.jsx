@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../style";
 //import { rec50, coprez1, coprez2 } from "../assets";
-import { eventsnip, swirl, team1 } from "../assets";
+import { borderlines2, eventsnip, swirl, team1 } from "../assets";
 
 function Contact() {
   return (
@@ -20,6 +20,9 @@ function Contact() {
         </div>
         {/* our club snip */}
         <div className={`grid grid-cols-2 grid-flow-col `}>
+          <div className={`left pt-40 pl-36`}>
+            <img src={borderlines2} alt="" />
+          </div>
           <div
             className={`${styles.titleH3} leading-10 text-black pl-40 ml-40`}
           >
