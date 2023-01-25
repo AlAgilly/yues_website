@@ -5,11 +5,9 @@ import styles from '../style'
 export const TinyEvent = ({
     className,
     title,
-    link,
     date,
     time,
     location,
-    description, 
   }) => {
   return (
     <>
