@@ -46,11 +46,17 @@
 1. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
 2. Click the play triangle located on the top left of the prototype screen.
 
-### Running the project on your local machine (In Progress...)
+### Setting up and running the project on your local machine (In Progress...)
 
-1. Download the code
-2. Download node
-3. `npm run dev`
+1. Make a github account and a figma account 
+2. Request access to this repository (from now on referred to as repo)
+3. Download:
+    - git bash (https://git-scm.com/downloads)
+    - github desktop (https://desktop.github.com)
+    - Visual Studio Code (https://code.visualstudio.com)
+    - node (https://nodejs.org/en/download/)
+4. Open github desktop and click "Clone Repository" (or hold ctrl+shift+o). Click the "URL" tab and paste `https://github.com/AlAgilly/yues_website.git` in the input 
+
 
 ### Upload the files to the server (In Progress...)
 
