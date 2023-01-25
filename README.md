@@ -3,7 +3,7 @@
 ### To do:
 - Clean up finished files and add comments
 - add favicon
-- document steps to do shit
+- document steps to do shit!
 
 ### Requests for Sasha and Sarah and others
 - What is our youtube channel?

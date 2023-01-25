@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Navbar, SocialBar, Footer } from './components'
-import { Home, About, Contact, NotFound, UnderConstruction } from './pages/index';
+import { Home, About, Contact, PastGames, NotFound, UnderConstruction } from './pages/index';
 import './index.css';
 import styles from './style'
 
@@ -36,6 +36,7 @@ class App extends Component {
                 <Route exact path='/' element={< Home />}></Route>
                 <Route exact path='/about' element={< About />}></Route>
                 <Route exact path='/contact' element={< Contact />}></Route>
+                <Route exact path='/pastgames' element={< PastGames/>}></Route>
                 {/* Underconstruction Pages */}
                 <Route exact path='/events' element={< UnderConstruction />}></Route>
                 <Route exact path='/teams' element={< UnderConstruction />}></Route>
