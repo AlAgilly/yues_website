@@ -687,3 +687,12 @@ html, body {
 a {
   z-index: 20;
 }
+
+.staff {
+  background-image: url(../src/assets/base.png);
+  width: 350px;
+  min-height: 165px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 10px 1px 10px var(--black);
+}

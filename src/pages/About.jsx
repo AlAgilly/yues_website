@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../style";
 //import { rec50, coprez1, coprez2 } from "../assets";
-import { borderlines2, eventsnip, swirl, team1 } from "../assets";
+import { borderlines2, eventsnip, swirl, base } from "../assets";
 
 function Contact() {
   return (
@@ -51,9 +51,11 @@ function Contact() {
         </div>
       </div>
       {/* our staff 2023 snip */}
-      <div className={`${styles.titleH3} leading-10 text-black pl-40 ml-40`}>
-        2023 staff
-        <div className={`${styles.titleLineBottom} p-1`}></div>
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`p-0 ${styles.boxWidth}`}>
+          <div className={`flex-row w-full items-center `}>
+          <h3 className={`${styles.titleH3}`}>2023 Staff</h3>
+          <div className={`${styles.titleLineBottom} redborder`}>-</div>
         <p>
           <a href="" class="underline">
             see last year's staff here
@@ -63,19 +65,24 @@ function Contact() {
           <br />
           <br />
           Co-presidents
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-x-8`}>
+            {/* <img src={base} alt="" />
+            <img src={base} alt="" /> */}
+            <div className="staff">
+
+            </div>
+            <div className="staff">
+              
+            </div>
           </div>
-          <br />
         </div>
         <div className={`${styles.titleH4}  `}>
           <br />
           <br />
           Executives
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-8`}>
+            <img src={base} alt="" />
+            <img src={base} alt="" />
           </div>
           <br />
         </div>
@@ -83,9 +90,9 @@ function Contact() {
           <br />
           <br />
           operations department
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-8`}>
+            <img src={base} alt="" />
+            <img src={base} alt="" />
           </div>
           <br />
         </div>
@@ -93,9 +100,9 @@ function Contact() {
           <br />
           <br />
           partnership department
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-8`}>
+            <img src={base} alt="" />
+            <img src={base} alt="" />
           </div>
           <br />
         </div>
@@ -103,9 +110,9 @@ function Contact() {
           <br />
           <br />
           marketing department
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-8`}>
+            <img src={base} alt="" />
+            <img src={base} alt="" />
           </div>
           <br />
         </div>
@@ -113,9 +120,9 @@ function Contact() {
           <br />
           <br />
           finance department
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-8`}>
+            <img src={base} alt="" />
+            <img src={base} alt="" />
           </div>
           <br />
         </div>
@@ -123,15 +130,15 @@ function Contact() {
           <br />
           <br />
           Human resources department
-          <div className={`grid grid-cols-6`}>
-            <img src={team1} alt="" />
-            <img src={team1} alt="" />
+          <div className={`grid grid-cols-3 gap-8`}>
+            <img src={base} alt="" />
+            <img src={base} alt="" />
           </div>
           <br />
         </div>
+        </div>
       </div>
-      <br />
-      <br />
+      </div>
     </>
   );
 }
