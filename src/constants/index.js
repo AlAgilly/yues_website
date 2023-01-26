@@ -326,3 +326,67 @@ export const coprezpanel =[
     name: "Sarah Miller",
   },
 ];
+
+export const execpanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
+];
+
+export const oppanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
+];
+
+export const partpanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
+];
+
+export const marketpanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
+];
+export const finpanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
+];
+export const hrpanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
+];

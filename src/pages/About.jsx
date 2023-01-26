@@ -1,12 +1,20 @@
 import React from "react";
 import styles from "../style";
 import { borderlines2, rec50 } from "../assets";
-import { coprezpanel } from "../constants";
+import {
+  coprezpanel,
+  execpanel,
+  finpanel,
+  hrpanel,
+  marketpanel,
+  oppanel,
+  partpanel,
+} from "../constants";
 
 function Contact() {
   return (
     <>
-      <div className="w-full overflow-hidden bg-white z-20 ">
+      <div className="w-full overflow-hidden bg-white z-20">
         <div className={`idk2 ${styles.flexStart} `}>
           <div className={`p-0 max-w-[1340px] w-full py-10`}>
             <div
@@ -99,7 +107,7 @@ function Contact() {
                 <br />
                 Executives
                 <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
+                  {execpanel.map((stf, index) => (
                     <div className={`staff pl-12 pt-14`}>
                       <p className={``}>{stf.pos}</p>
                       <h1 className={` text-red `}>{stf.name}</h1>
@@ -111,7 +119,7 @@ function Contact() {
                 <br />
                 Operations Department
                 <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
+                  {oppanel.map((stf, index) => (
                     <div className={`staff pl-12 pt-14`}>
                       <p className={``}>{stf.pos}</p>
                       <h1 className={` text-red `}>{stf.name}</h1>
@@ -123,7 +131,7 @@ function Contact() {
                 <br />
                 Parternerships Department
                 <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
+                  {partpanel.map((stf, index) => (
                     <div className={`staff pl-12 pt-14`}>
                       <p className={``}>{stf.pos}</p>
                       <h1 className={` text-red `}>{stf.name}</h1>
@@ -135,7 +143,7 @@ function Contact() {
                 <br />
                 Marketing department
                 <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
+                  {marketpanel.map((stf, index) => (
                     <div className={`staff pl-12 pt-14`}>
                       <p className={``}>{stf.pos}</p>
                       <h1 className={` text-red `}>{stf.name}</h1>
@@ -147,7 +155,7 @@ function Contact() {
                 <br />
                 Finance Department
                 <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
+                  {finpanel.map((stf, index) => (
                     <div className={`staff pl-12 pt-14`}>
                       <p className={``}>{stf.pos}</p>
                       <h1 className={` text-red `}>{stf.name}</h1>
@@ -159,7 +167,7 @@ function Contact() {
                 <br />
                 Human resources department
                 <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
+                  {hrpanel.map((stf, index) => (
                     <div className={`staff pl-12 pt-14`}>
                       <p className={``}>{stf.pos}</p>
                       <h1 className={` text-red `}>{stf.name}</h1>
