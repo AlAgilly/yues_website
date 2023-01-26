@@ -30,6 +30,8 @@ import dota2 from './games/dota2.png'
 import dota2a from './games/dota2-active.png'
 import dota2g from './games/dota2-grey.png'
 import grey from './grey.png'
+import base from './base.png'
+import rec50 from './rec50.png'
 
 // SVGs - Vectors
 import arrowup from "./arrow-up.svg"
@@ -91,4 +93,6 @@ export {
   out,
   grey,
   yuesports,
+  base,
+  rec50,
 };
