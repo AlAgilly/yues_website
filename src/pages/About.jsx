@@ -14,8 +14,8 @@ import {
 function Contact() {
   return (
     <>
-      <div className="w-full overflow-hidden bg-white z-20`">
-        <div className={`idk2 ${styles.flexStart} `}>
+      <div className="w-full bg-white z-20 overflow-hidden`">
+        <div className={`idk2 ${styles.flexStart}`}>
           <div className={`p-0 max-w-[1340px] w-full py-10`}>
             <div
               className={` flex-1 mm:${styles.flexEnd} flex-col mx-8 xs:mx-20 ss:mx-24`}
@@ -30,13 +30,14 @@ function Contact() {
             </div>
           </div>
         </div>
-        {/* our club snip */}
-
+      </div>
+      {/* our club snip */}
+      <div className="w-full bg-white z-20 overflow-hidden`">
         <div className={`grid grid-row-2 grid-flow-row `}>
-          <div className={`left pt-40 pl-96`}>
+          <div className={`left xl:pt-40 xl:pl-96 mm:pt-50 mm:pl-10`}>
             <img src={borderlines2} alt="" />
           </div>
-          <div className={`right pt-[30px] pr-[620px]`}>
+          <div className={`right xl:pt-[30px] xl:pr-[580px] mm:pr-[300px]`}>
             <img src={rec50} alt="" className={``} />
           </div>
 
@@ -67,102 +68,103 @@ function Contact() {
             </div>
           </div>
         </div>
+      </div>
+      {/* our staff 2023 snip */}
 
-        {/* our staff 2023 snip */}
-
+      <div className="w-full bg-white z-20 overflow-hidden`">
         <div className={`${styles.flexStart}`}>
           <div className={`${styles.boxWidth}`}>
-            <div className={` `}>
+            <div
+              className={`${styles.titleH3} leading-10 text-black -ml-[20px]`}
+            >
+              2023 staff
+              <div className={`${styles.titleLineBottom} pt-2`}></div>
+            </div>
+            <p>
+              <a href="" class="underline">
+                see last year's staff here
+              </a>
+            </p>
+            {/* panel format */}
+            <div className={`${styles.titleH4}  pt-10`}>
+              co-presidents
               <div
-                className={`${styles.titleH3} leading-10 text-black -ml-[20px]`}
+                className={`grid xl:grid-cols-3 mm:grid-cols-2  gap-36 pb-10`}
               >
-                2023 staff
-                <div className={`${styles.titleLineBottom} pt-2`}></div>
+                {coprezpanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
               </div>
-              <p>
-                <a href="" class="underline">
-                  see last year's staff here
-                </a>
-              </p>
-              {/* panel format */}
-              <div className={`${styles.titleH4}  pt-10`}>
-                co-presidents
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {coprezpanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
+            </div>
+            {/* panel format */}
+            <div className={`${styles.titleH4}  `}>
+              Executives
+              <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                {execpanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
               </div>
-              {/* panel format */}{" "}
-              <div className={`${styles.titleH4}  `}>
-                Executives
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {execpanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
-              </div>{" "}
-              <div className={`${styles.titleH4}  `}>
-                Operations Department
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {oppanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
-              </div>{" "}
-              <div className={`${styles.titleH4}  `}>
-                Parternerships Department
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {partpanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
-              </div>{" "}
-              <div className={`${styles.titleH4}  `}>
-                Marketing department
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {marketpanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
-              </div>{" "}
-              <div className={`${styles.titleH4}  `}>
-                <br />
-                Finance Department
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {finpanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
-              </div>{" "}
-              <div className={`${styles.titleH4}  `}>
-                Human resources department
-                <div className={`grid grid-cols-3 gap-36 pb-10`}>
-                  {hrpanel.map((stf, index) => (
-                    <div className={`staff pl-12 pt-14`}>
-                      <p className={``}>{stf.pos}</p>
-                      <h1 className={` text-red `}>{stf.name}</h1>
-                    </div>
-                  ))}
-                </div>
+            </div>
+            <div className={`${styles.titleH4}  `}>
+              Operations Department
+              <div className={`grid grid-cols-3 gap-x-36 gap-y-10 pb-10 `}>
+                {oppanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`${styles.titleH4}  `}>
+              Parternerships Department
+              <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                {partpanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`${styles.titleH4}  `}>
+              Marketing department
+              <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                {marketpanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`${styles.titleH4}  `}>
+              <br />
+              Finance Department
+              <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                {finpanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`${styles.titleH4}  `}>
+              Human resources department
+              <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                {hrpanel.map((stf, index) => (
+                  <div className={`staff pl-12 pt-14`}>
+                    <p className={``}>{stf.pos}</p>
+                    <h1 className={` text-red `}>{stf.name}</h1>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

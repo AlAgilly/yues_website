@@ -695,6 +695,8 @@ a {
   height: 100%;
   min-height: 181px;
   min-width: 387px;
+  max-height: 181px;
+  max-width: 387px;
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
@@ -706,7 +708,10 @@ a {
   height: 100%;
   min-height: 181px;
   min-width: 387px;
+  max-height: 181px;
+  max-width: 387px;
   background-size: contain;
   background-repeat: no-repeat;
+  box-shadow: none;
 }
 

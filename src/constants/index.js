@@ -315,7 +315,8 @@ export const resultsDec = [
     },
     
 ];
-
+  
+//staff panel section
 export const coprezpanel =[
   {
     pos:"Co-President//",
@@ -339,6 +340,14 @@ export const execpanel =[
 ];
 
 export const oppanel =[
+  {
+    pos:"position",
+    name: "name",
+  },
+  {
+    pos:"position",
+    name: "name",
+  },
   {
     pos:"position",
     name: "name",
@@ -390,3 +399,4 @@ export const hrpanel =[
     name: "name",
   },
 ];
+//staff panel section end
