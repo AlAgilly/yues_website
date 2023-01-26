@@ -313,4 +313,16 @@ export const resultsDec = [
     twitch: "",
     stats: "",
     },
+    
+];
+
+export const coprezpanel =[
+  {
+    pos:"Co-President//",
+    name: "Alexander Saiko",
+  },
+  {
+    pos:"Co-President//",
+    name: "Sarah Miller",
+  },
 ];

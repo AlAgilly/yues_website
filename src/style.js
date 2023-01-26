@@ -33,4 +33,6 @@ const styles = {
     sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
   };
   
+
+  
   export default styles;

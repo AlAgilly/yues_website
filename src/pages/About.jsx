@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../style";
 import { borderlines2, rec50 } from "../assets";
+import { coprezpanel } from "../constants";
 
 function Contact() {
   return (
@@ -28,7 +29,7 @@ function Contact() {
             <div className={`left pt-40 pl-96`}>
               <img src={borderlines2} alt="" />
             </div>
-            <div className={`right pt-[30px] pr-[780px]`}>
+            <div className={`right pt-[30px] pr-[620px]`}>
               <img src={rec50} alt="" className={``} />
             </div>
 
@@ -84,14 +85,88 @@ function Contact() {
               <div className={`${styles.titleH4}  `}>
                 <br />
                 co-presidents
-                <div className={`grid grid-cols-3 gap-8 pb-10`}>
-                  <div class="staff">
-                    <p>hi</p>
-                    <h1 className={` text-red `}>name</h1>
-                  </div>
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
                 </div>
               </div>
-              {/* panel format */}
+              {/* panel format */}{" "}
+              <div className={`${styles.titleH4}  `}>
+                <br />
+                Executives
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
+                </div>
+              </div>{" "}
+              <div className={`${styles.titleH4}  `}>
+                <br />
+                Operations Department
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
+                </div>
+              </div>{" "}
+              <div className={`${styles.titleH4}  `}>
+                <br />
+                Parternerships Department
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
+                </div>
+              </div>{" "}
+              <div className={`${styles.titleH4}  `}>
+                <br />
+                Marketing department
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
+                </div>
+              </div>{" "}
+              <div className={`${styles.titleH4}  `}>
+                <br />
+                Finance Department
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
+                </div>
+              </div>{" "}
+              <div className={`${styles.titleH4}  `}>
+                <br />
+                Human resources department
+                <div className={`grid grid-cols-3 gap-36 pb-10`}>
+                  {coprezpanel.map((stf, index) => (
+                    <div className={`staff pl-12 pt-14`}>
+                      <p className={``}>{stf.pos}</p>
+                      <h1 className={` text-red `}>{stf.name}</h1>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
