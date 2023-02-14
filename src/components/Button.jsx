@@ -21,7 +21,7 @@ export const Button = ({
   return (
     <Link to={`${checkLink}`} className='my-4'>
       <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize} w-full mm:py-0 py-2`}
+        className={`btn ${checkButtonStyle} ${checkButtonSize} ${ checkButtonStyle != "btn--primarysmall"  ? "w-full" : "" }  mm:py-0 py-2`}
         onClick={onClick}
         type={type}
       >

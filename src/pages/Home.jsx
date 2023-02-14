@@ -77,7 +77,10 @@ function Home (){
                   <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <a href='/teams'>competitive teams</a>, and also facilitate <a href='/events'>in-person and online events</a>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
                   </div>
                 </div>
-                  <Button buttonStyle="btn--primarysmall" children="Learn More" link="/about"/>
+                <div className='grid mm:grid-cols-2 grid-cols-1 mm:w-1/2 w-full'>
+                <Button buttonStyle="btn--primarysmall" children="Learn More" link="/about"/>
+                <div></div>
+                </div>
               </div> 
             </section>
             </div>
