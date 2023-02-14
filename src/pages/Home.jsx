@@ -25,12 +25,12 @@ function Home (){
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full title`}>
                     <h1 className='flex-1 font-bignoodle mm:text-[109px] xm:text-[100px] ss:text-[90px] text-[90px] text-red leading-[80px] mm:leading-3'>
-                      York University
+                      York Gaming
                     </h1>
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full`}>
                     <h1 className='title2'>
-                      <span className='text-november text-white mm:text-[80px] xm:text-[70px] text-[60px]'>Esports</span>
+                      <span className='text-november text-white mm:text-[80px] xm:text-[70px] text-[60px]'>& Esports</span>
                     </h1>
                   </div>
                   <div className='flex flex-row justify-between items-left w-full mm:w-1/2'>
@@ -74,8 +74,7 @@ function Home (){
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
                   <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Who We Are</h3>
                   <div className='my-4'>
-                  <p className='mb-4'>Hi we are York University’s Esports club, we host <a href='/events'>community events</a> and are home to York University’s <a href='/teams'>esports teams</a> as well!</p>
-                  <p>This club is open to students of all interest levels in gaming and we strive to create a comfortable space for.</p>
+                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <a href='/teams'>competitive teams</a>, and also facilitate <a href='/events'>in-person and online events</a>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
                   </div>
                 </div>
                   <Button buttonStyle="btn--primarysmall" children="Learn More" link="/about"/>
