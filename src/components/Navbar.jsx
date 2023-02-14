@@ -24,14 +24,15 @@ const Navbar = () => {
       <a href="/"><img src={ yuesports } alt="YUES" className='w-[42px] h-[44px]'/></a>
       <ul className='list-none xm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
+          <a href={`${nav.id}`}>
           <li 
             key={nav.id} 
             className={`py-4 px-4 font-bignoodle font-normal cursor-pointer text-[23px] text-white`}
           >
-            <a href={`${nav.id}`}>
               {nav.title}
-            </a>
+            
           </li>
+          </a>
           
         ))}
       </ul>
