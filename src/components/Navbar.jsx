@@ -45,13 +45,13 @@ const Navbar = () => {
             onClick={() => setToggle((prev) => !prev)}
           />
         <div
-          className={`${ !toggle ? "hidden" : "flex" } textp-6 bg-white absolute top-16 right-0 min-w-[140px] sidebar z-50`}
+          className={`${ !toggle ? "hidden" : "flex" } textp-6 bg-white absolute top-16 right-0 w-full sidebar z-50`}
         >
-          <ul className="list-none flex justify-end items-start flex-1 flex-col shad">
+          <ul className="list-none flex justify-end items-start flex-1 flex-col shad w-full">
           {navLinks.map((nav, index) => (
               <li 
                 key={nav.id} 
-                className={`font-bignoodle font-normal py-1 px-6 cursor-pointer text-[23px] hov text-black hover:text-white hover:bg-black ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10 borderb'} w-full`}
+                className={`font-bignoodle font-normal py-1 px-6 cursor-pointer text-[23px] hov text-black hover:text-white bg-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10 borderb'} w-full`}
               >
                 <a href={`${nav.id}`}>
                   {nav.title}
