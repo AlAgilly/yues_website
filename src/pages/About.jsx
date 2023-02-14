@@ -34,13 +34,18 @@ function Contact() {
       {/* our club snip */}
       <div className="w-full bg-white z-20 overflow-hidden`">
         <div className={`grid grid-row-2 grid-flow-row `}>
-          <div className={`left xl:pt-40 xl:pl-96 mm:pt-50 mm:pl-10`}>
-            <img src={borderlines2} alt="" />
+          <div>
+            <img
+              className={`left xl:pt-40 xl:pl-96 `}
+              src={borderlines2}
+              alt=""
+            />
+            <img
+              src={rec50}
+              alt=""
+              className={`left pt-16 pl-[2000px] ml-[800px] w-full`}
+            />
           </div>
-          <div className={`right xl:pt-[30px] xl:pr-[580px] mm:pr-[300px]`}>
-            <img src={rec50} alt="" className={``} />
-          </div>
-
           <div className={`${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
               <div
@@ -67,6 +72,57 @@ function Contact() {
               </p>
             </div>
           </div>
+          <div className={`${styles.flexStart}`}>
+            <div className={`${styles.boxWidth}`}>
+              <div
+                className={`${styles.titleH3} text-red leading-10 text-black -ml-[20px] pt-5 pb-5`}
+              >
+                community event
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et
+                ratione doloribus omnis earum. Facere qui, ab ipsam tempora
+                veniam, culpa ea ipsum accusantium eligendi repellat saepe
+                soluta corporis ad dolor nulla molestias? Aperiam obcaecati
+                exercitationem ullam quae modi perferendis soluta alias
+                nesciunt! Unde hic voluptate facere dolorem placeat eaque
+              </p>
+            </div>
+          </div>
+          <div className={`${styles.flexStart}`}>
+            <div className={`${styles.boxWidth}`}>
+              <div
+                className={`${styles.titleH3} text-red leading-10 text-black -ml-[20px] pt-5 pb-5`}
+              >
+                competitive teams
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et
+                ratione doloribus omnis earum. Facere qui, ab ipsam tempora
+                veniam, culpa ea ipsum accusantium eligendi repellat saepe
+                soluta corporis ad dolor nulla molestias? Aperiam obcaecati
+                exercitationem ullam quae modi perferendis soluta alias
+                nesciunt! Unde hic voluptate facere dolorem placeat eaque
+              </p>
+            </div>
+          </div>
+          <div className={`${styles.flexStart}`}>
+            <div className={`${styles.boxWidth}`}>
+              <div
+                className={`${styles.titleH3} text-red leading-10 text-black -ml-[20px] pt-5 pb-5`}
+              >
+                club tournaments
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et
+                ratione doloribus omnis earum. Facere qui, ab ipsam tempora
+                veniam, culpa ea ipsum accusantium eligendi repellat saepe
+                soluta corporis ad dolor nulla molestias? Aperiam obcaecati
+                exercitationem ullam quae modi perferendis soluta alias
+                nesciunt! Unde hic voluptate facere dolorem placeat eaque
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       {/* our staff 2023 snip */}
@@ -75,7 +131,7 @@ function Contact() {
         <div className={`${styles.flexStart}`}>
           <div className={`${styles.boxWidth}`}>
             <div
-              className={`${styles.titleH3} leading-10 text-black -ml-[20px]`}
+              className={`${styles.titleH3} leading-10 text-black -ml-[20px] pt-10`}
             >
               2023 staff
               <div className={`${styles.titleLineBottom} pt-2`}></div>
@@ -88,9 +144,7 @@ function Contact() {
             {/* panel format */}
             <div className={`${styles.titleH4}  pt-10`}>
               co-presidents
-              <div
-                className={`grid xl:grid-cols-3 mm:grid-cols-2  gap-36 pb-10`}
-              >
+              <div className={`grid xl:grid-cols-3   gap-36 pb-10`}>
                 {coprezpanel.map((stf, index) => (
                   <div className={`staff pl-12 pt-14`}>
                     <p className={``}>{stf.pos}</p>
