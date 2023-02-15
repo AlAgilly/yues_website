@@ -58,17 +58,19 @@ function Home (){
             </div>
           </div>
           {/* About Snippet */}
-          <div className={`bg-primary ${styles.flexStart} aboutsec`}>
-            <div className={`p-0 ${styles.boxWidth}`}>
-            <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
-              <div className='aboutimg grid grid-cols-3 w-full'>
-                <div className='leftimg hidden mm:flex z-1'>
-                  <img src={ aboutsnip } alt="" />
+          {/* <div className={`bg-primary ${styles.flexStart} aboutsec z-10`}>
+            <div className={`p-0 ${styles.boxWidth}`}> */}
+            <div className={`bg-primary ${styles.flexStart} aboutsec overflow-hidden`}>
+            <div className={`p-0 max-w-[1140px] w-full p-0`}>
+              <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
+                <div className='aboutimg grid grid-cols-3 w-full'>
+                  <div className='leftimg hidden mm:flex'>
+                    <img src={ aboutsnip } alt="" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className='b4left xl:block hidden'></div>
-            <div className='fadeleft mm:block hidden'></div>
+              <div className='b4left xl:block hidden'></div>
+              <div className='fadeleft mm:block hidden'></div>
             <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12 px-0`}>
               <div className={`flex-1 ${styles.flexEnd} flex-col ${styles.paddingX}`}>
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
@@ -86,16 +88,16 @@ function Home (){
             </div>
           </div>
           {/* Events title */}
-          <div className='w-full overflow-hidden bg-red z-20'>
-            <div className={`idk ${styles.flexStart} z-20`}>
-              <div className={`p-0 ${styles.boxWidth} z-20 py-2`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white mx-8 ss:mx-24 z-20`}>Upcoming Events</h3>
+          <div className='w-full overflow-hidden bg-red '>
+            <div className={` ${styles.flexStart} z-20 idk`}>
+              <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
+                <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white  w-full`}>Upcoming Events</h3>
               </div>
-          </div>
+            </div>
           </div>
           {/* Events Snippet */}
           <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
-            <div className={`${styles.boxWidth} mx-8 xs:mx-20 ss:mx-24`}>
+            <div className={`${styles.boxWidth}`}>
               <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
                 <div className='aboutimg grid grid-cols-3 w-full'>
                   <div className='rightimg hidden me:flex'>
@@ -105,8 +107,11 @@ function Home (){
               </div>
               <div className='b4right xl:block hidden'></div>
               <div className='faderight me:block hidden'></div>
-              <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-0`}>
-                <div className={`flex-1 ${styles.flexStart} flex-col`}>
+              <div className='w-full overflow-hidden bg-white'>
+            <div className={`${styles.flexStart} `}>
+              <div className={`p-0 max-w-[1340px] w-full`}> 
+                <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full`}>
+                  <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
                   <div className='grid grid-cols-1 xm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left w-full me:w-2/3 my-4'>
                     {eventsList.map((events, index) => (
                         <TinyEvent key={events.id} title={ events.title } date={events.date} time={events.time} location={events.location} className={`${index > 1 ? 'hidden xm:block' : 'xm:block'}`} />
@@ -117,6 +122,7 @@ function Home (){
               </section>
             </div>
           </div>
+          </div> </div> </div>
           {/* Instagram Section */}
           <div className='w-full overflow-hidden bg-black'>
             <div className={`${styles.flexStart} `}>
