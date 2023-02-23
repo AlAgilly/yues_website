@@ -129,7 +129,7 @@ html, body {
   height: 2px;
   background-color: var(--red);
   overflow: hidden;
-  margin: 16px 0;
+  margin: 25px 0;
 }
 .btn {
   font-family: 'big_noodle_titling';
@@ -703,47 +703,67 @@ a {
   background-color: var(--black);
   text-align: center;
 }
-details {
-  font: 16px "Open Sans", Calibri, sans-serif;
-}
-
-details > summary {
-  width: 15em;
-  border: none;
-  cursor: pointer;
-  list-style: none;
-}
-
-details > p {
-  padding: 2px 6px;
-  margin: 0;
-}
-
-/* THE MAGIC 🧙‍♀️ */
-details[open] .dacoolting {
-  transform: rotate(180deg);
-  transition: 0.3s ease;
-}
 
 .dacoolting {
   transform: rotate(0deg);
   transition: 0.3s ease;
-  margin: 8px 0;
+  margin: 16px 0;
 }
 
-details[open] .staff {
-  transition: 0.3s ease;
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
-.staff {
-  transition: 0.3s ease;
+
+/* Accordion styles */
+.tabs {
+  overflow: hidden;
 }
-details summary {
+
+.tab {
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
   cursor: pointer;
-  transition: margin 0.5s ease-out;
-  margin-bottom: 0px;
 }
 
-details[open] summary {
-  margin-bottom: 10px;
+.tab-content {
+  max-height: 0;
+  transition: all 0.5s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+
+input:checked + .tab-label .dacoolting {
+  transform: rotate(180deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+.stiff {
+  position: relative;
+}
+
+.stiff .member {
+  position: absolute;
+  padding: 40px 25px;
+}
+.member h2::after {
+  content: '//';
+}
+.member h2 {
+line-height: 0;
+}
+.member h1 {
+
 }

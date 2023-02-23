@@ -1,25 +1,12 @@
 import { faYoutube } from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import { droparrow } from '../assets';
+import { droparrow, staffbox } from '../assets';
 import styles from '../style'
 
   
 function Contact (){
-    var acc = document.getElementsByClassName("accordion");
-    var i;
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.className === "block") {
-                panel.className = "hidden";
-            } else {
-                panel.className = "block";
-            }
-    });
-    }
     return (
         <>
           {/* Events title */}
@@ -66,34 +53,149 @@ function Contact (){
                 </div>
               </section>
               <section id='home' className={`flex flex-col pb-24 px-8 xs:px-20 ss:px-24 w-full`}>
-                  <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
+                <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
-                  <details>
-                    <summary class="question cursor-pointer select-none outline-none w-full">
-                        <div className='flex flex-row'>
-                            <h5 className={`${styles.titleH5} text-black bg-white flex-col pr-10`}>Club&nbsp;Tournaments</h5>
-                            <div className={`flex-col w-full bg-red ${styles.titleLineRight}`}>-</div>
+
+                    <div class="tabs">
+                      <div class="tab">
+                        <input type="checkbox" id="chck1"/>
+                        <label class="tab-label select-none" for="chck1">
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Club&nbsp;Tournaments</h5>
+                            <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
+                              <p className='bg-darkred pl-10'>
+                                  <img src={droparrow} alt="" className='dacoolting'/>
+                              </p>
+                        </label>
+                        <div class="tab-content">
+                          <div className='grid grid-cols-4 border-2 gap-x-8 gap-y-4 stiff'>
+                            <div className='border-2'>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            <div className=''>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                      </div>
+        </div>
+      </div>
+      <div class="tab">
+        <input type="checkbox" id="chck2"/>
+        <label class="tab-label select-none" for="chck2">
+        <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Club&nbsp;Tournaments</h5>
+                            <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
                             <p className='bg-darkred pl-10'>
                                 <img src={droparrow} alt="" className='dacoolting'/>
                             </p>
+        </label>
+        <div class="tab-content">
+        <div className='grid lg:grid-cols-4 ss:grid-cols-2 mm:grid-cols-3 grid-cols-1 border-2 gap-x-8 gap-y-4 stiff'>
+                        <div className='border-2'>
+                        <div className='member'>
+                          <h2 className='font-bevietnampro text-[12px] text-black'>Vice-President of Marketing</h2>
+                          <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
+                          </div>
+                          <img src={staffbox} alt="" className='w-full'/>
                         </div>
-                    </summary>
-                      <div className='grid'></div>
-                    </details>
-                    <details>
-                    <summary class="question cursor-pointer select-none outline-none w-full">
-                        <div className='flex flex-row'>
-                        <h5 className={`${styles.titleH5} text-black bg-white flex-col pr-10`}>Presidents</h5>
-                            <div className={`flex-col w-full bg-red ${styles.titleLineRight}`}>-</div>
-                            <p className='bg-darkred pl-10'>
-                                <img src={droparrow} alt="" className='dacoolting'/>
-                            </p>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
                         </div>
-                    </summary>
-                    <p class="pt-1 pb-3 staff">Of course. It's yours to use wherever and whenever you like.</p>
-                    </details>
-                    </div>
-                </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className=''>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                      </div>
+        </div>
+      </div>
+    </div>
+                    
+                  
+    </div>
+    </div>
               </section>
             </div>
           </div>
