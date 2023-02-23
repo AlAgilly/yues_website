@@ -1,7 +1,7 @@
 import { faYoutube } from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import { droparrow, staffbox } from '../assets';
+import { aboutsnip, droparrow, eventsnip, staffbox } from '../assets';
 import styles from '../style'
 
   
@@ -21,6 +21,33 @@ function Contact (){
         <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
+              {/* <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
+                <div className='aboutimg grid grid-cols-3 w-full'>
+                  <div className='rightimg hidden mm:flex'>
+                    <img src={ eventsnip } alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className='b4right xl:block hidden'></div>
+              <div className='faderight mm:block hidden'></div>
+              <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
+                <div className='aboutimg grid grid-cols-3 w-full'>
+                  <div className='rightimg hidden mm:flex'>
+                    <img src={ eventsnip } alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className='b4right xl:block hidden'></div>
+              <div className='faderight mm:block hidden'></div>
+              <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
+                <div className='aboutimg grid grid-cols-3 w-full'>
+                  <div className='leftimg hidden mm:flex'>
+                    <img src={ aboutsnip } alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className='b4left xl:block hidden'></div>
+              <div className='fadeleft mm:block hidden'></div> */}
                 <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 w-3/4`}>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
