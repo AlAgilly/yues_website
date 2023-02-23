@@ -1,4 +1,7 @@
+import { faYoutube } from '@fortawesome/fontawesome-free-brands';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
+import { droparrow } from '../assets';
 import styles from '../style'
 
   
@@ -65,21 +68,29 @@ function Contact (){
               <section id='home' className={`flex flex-col pb-24 px-8 xs:px-20 ss:px-24 w-full`}>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
-                    <details>
-                    <summary class="question cursor-pointer select-none w-full outline-none">
-                        <h4 className={`${styles.titleH5} text-black`}>Club Tournaments</h4>
+                  <details>
+                    <summary class="question cursor-pointer select-none outline-none w-full">
+                        <div className='flex flex-row'>
+                            <h5 className={`${styles.titleH5} text-black bg-white flex-col pr-10`}>Club&nbsp;Tournaments</h5>
+                            <div className={`flex-col w-full bg-red ${styles.titleLineRight}`}>-</div>
+                            <p className='bg-darkred pl-10'>
+                                <img src={droparrow} alt="" className='dacoolting'/>
+                            </p>
+                        </div>
                     </summary>
-                    <p class="pt-1 pb-3">With the HTML5 <code class="text-sm text-red-500">details</code> element and some Tailwind for showcase.</p>
+                      <div className='grid'></div>
                     </details>
                     <details>
                     <summary class="question cursor-pointer select-none outline-none w-full">
                         <div className='flex flex-row'>
-                            <p className={`${styles.titleH5} text-black bg-white flex-col pr-10`}>Club&nbsp;Tournaments</p>
+                        <h5 className={`${styles.titleH5} text-black bg-white flex-col pr-10`}>Presidents</h5>
                             <div className={`flex-col w-full bg-red ${styles.titleLineRight}`}>-</div>
-                            <p className='flex-col bg-darkred pl-10'>-</p>
+                            <p className='bg-darkred pl-10'>
+                                <img src={droparrow} alt="" className='dacoolting'/>
+                            </p>
                         </div>
                     </summary>
-                    <p class="pt-1 pb-3">Of course. It's yours to use wherever and whenever you like.</p>
+                    <p class="pt-1 pb-3 staff">Of course. It's yours to use wherever and whenever you like.</p>
                     </details>
                     </div>
                 </div>

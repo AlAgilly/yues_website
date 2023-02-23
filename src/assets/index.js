@@ -37,6 +37,7 @@ import yuesports from "./yuesports.svg"
 import bordercenters from './bordercenters.svg'
 import borderlines from './borderlines.svg'
 import borderlines2 from './borderlines2.svg'
+import droparrow from './droparrow.svg'
 
 export {
   aboutsnip,
@@ -75,4 +76,5 @@ export {
   out,
   grey,
   yuesports,
+  droparrow,
 };
