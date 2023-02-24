@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '../style'
-import { Button, HoverImage, TinyEvent } from '../components';
+import { Button, TinyEvent } from '../components';
 import { eventsList, upcoming, recent } from '../constants';
-import { bordercenter, borderline, borderlines2, eventsnip, yulion, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, instagram1g, instagram2g, instagram3g, instagram4g, instagram5g, instagram6g, instagram7g, instagram8g, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
+import { borderlines2, eventsnip, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
 
@@ -10,7 +10,7 @@ import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
 function Home (){
     return (
         <>
-          {/* Hero Section */}
+{/* Hero Section */}
           <div className={`bg-black ${styles.flexStart} hero overflow-hidden z-10`}>
             <div className={`px-6 xs:px-16 max-w-[1140px] xs:w-full`}>
               <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
@@ -57,10 +57,8 @@ function Home (){
               </section>
             </div>
           </div>
-          {/* About Snippet */}
-          {/* <div className={`bg-primary ${styles.flexStart} aboutsec z-10`}>
-            <div className={`p-0 ${styles.boxWidth}`}> */}
-            <div className={`bg-primary ${styles.flexStart} aboutsec overflow-hidden`}>
+{/* About Snippet */}
+          <div className={`bg-primary ${styles.flexStart} aboutsec overflow-hidden`}>
             <div className={`p-0 max-w-[1140px] w-full p-0`}>
               <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
                 <div className='aboutimg grid grid-cols-3 w-full'>
@@ -87,7 +85,7 @@ function Home (){
             </section>
             </div>
           </div>
-          {/* Events title */}
+{/* Events title */}
           <div className='w-full overflow-hidden bg-red '>
             <div className={` ${styles.flexStart} z-20 idk`}>
               <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
@@ -95,7 +93,7 @@ function Home (){
               </div>
             </div>
           </div>
-          {/* Events Snippet */}
+{/* Events Snippet */}
           <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
             <div className={`${styles.boxWidth}`}>
               <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
@@ -123,7 +121,7 @@ function Home (){
             </div>
           </div>
           </div> </div> </div>
-          {/* Instagram Section */}
+{/* Instagram Section */}
           <div className='w-full overflow-hidden bg-black'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
@@ -153,7 +151,7 @@ function Home (){
               </div>
             </div>
           </div>
-          {/* Upcoming and Recent Games */}
+{/* Upcoming and Recent Games */}
           <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full ${styles.paddingY}`}> 
@@ -164,22 +162,22 @@ function Home (){
                       <div className='my-4 grid grid-cols-1'>
                       {recent.map((rec, index) => (
                         <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
-                          <div className='justify-self-center text-left'>
+                          <div className=''>
                             <a href={`/${rec.gameid}`}>
                               <h2>{rec.game}</h2>
                               <h3>{rec.team}</h3>
                             </a>
                           </div>
-                          <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center mm:flex hidden`}>{rec.time}</h4>
-                          <img src={ team1 } alt="" className={`p-5 justify-self-center`}/>
-                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center `}> {rec.score} </p>
-                          <img src={ rec.opp } alt="" className={`p-5 justify-self-center`}/>
-                          <p className='location mm:col-span-2 col-span-1 justify-self-center xs:flex hidden'> {rec.title}</p>
+                          <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 mm:flex hidden`}>{rec.time}</h4>
+                          <img src={ team1 } alt="" className={`p-8 justify-self-center`}/>
+                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center `}>{rec.score}</p>
+                          <img src={ rec.opp } alt="" className={`p-8 justify-self-center`}/>
+                          <p className='location mm:col-span-2 col-span-1 xs:flex hidden'>{rec.title}</p>
                           <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
-                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                            <p className={`${rec.twitch = null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /> </a></p>
-                            <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /> </p>
-                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /> </a></p>
+                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.twitch = null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /></a></p>
+                            <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden select-none"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /></a></p>
                           </div>
                         </div>
                       ))}
@@ -205,15 +203,15 @@ function Home (){
                       <div className='my-4 grid grid-cols-1'>
                         {upcoming.map((up, index) => (
                         <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
-                        <div className='justify-self-center'>
+                        <div className=''>
                               <h2>Game</h2>
                               <h3>Team A</h3>
                             </div>
-                            <h4 className={`${styles.titleH4} xm:col-span-2 justify-self-center xm:flex hidden`}>{up.time}</h4>
-                            <img src={ team1 } alt="" className={`p-5 justify-self-center`}/>
+                            <h4 className={`${styles.titleH4} xm:col-span-2 xm:flex hidden`}>{up.time}</h4>
+                            <img src={ team1 } alt="" className={`p-8 justify-self-center`}/>
                             <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> vs. </p>
-                            <img src={ up.opp } alt="" className={`p-5 justify-self-center`}/>
-                            <p className='location mm:col-span-3 col-span-1 xs:col-span-2 justify-self-center'> {up.title}</p>
+                            <img src={ up.opp } alt="" className={`p-8 justify-self-center`}/>
+                            <p className='location mm:col-span-3 col-span-1 xs:col-span-2'> {up.title}</p>
                           </div>
                         ))}
                       </div>
