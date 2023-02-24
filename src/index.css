@@ -335,6 +335,7 @@ html, body {
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   /* z-index: 99; */
 }
+
 .footer {
   position:relative;
   left:0;
@@ -507,25 +508,24 @@ html, body {
   }
   .leftimg {
     position: absolute;
-    left: -875px;
+    left: -1375px;
     z-index: 6 !important;
   }
   .b4left{
     background: var(--black);
     position: absolute;
-    z-index: 2;
     left: 0;
-    height: 595px;
-    width: calc(50vw - 500px);
+    height: 750px;
+    width: calc(50vw - 600px);
     opacity: 1;
   }
 
   .fadeleft {
   background-image: linear-gradient(to right, var(--black) 2vw, rgba(0,0,0,0));
     position: absolute;
-    z-index: 20;
+    z-index: 8;
     left: 0;
-    height: 595px;
+    height: 750px;
     width: 10vw;
     opacity: .5;
   }
@@ -636,7 +636,8 @@ html, body {
     background-repeat: no-repeat;
     background-position:  top 40%  left 0%;
     background-size: 50%;
-    z-index: 99 !important;
+    /* z-index: 99; */
+    position: relative;
   }
     .idk2 {
     background-image: url(./assets/grey.png);
@@ -686,4 +687,12 @@ html, body {
   }
 a {
   z-index: 20;
+}
+.sidebar li{
+  background-color: var(--white);
+  text-align: center;
+}
+.sidebar li:hover{
+  background-color: var(--black);
+  text-align: center;
 }

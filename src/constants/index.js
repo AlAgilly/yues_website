@@ -175,7 +175,7 @@ export const recent = [
     score: "3 - 2",
     opp: team2,
     title: "Event Name",
-    twitch: "events",
+    // twitch: "events",
     vod: "events",
   },
   {

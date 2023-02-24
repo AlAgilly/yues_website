@@ -13,38 +13,45 @@ const SocialBar = () => {
   const [toggle, setToggle] = useState(false)
 
   return (
-    <nav className='w-full flex py-2 items-center social'>
+    <nav className='w-full flex items-center social'>
       <ul className='list-none flex justify-center items-center flex-1'>
-        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 p-0 `}>
-          <a target="_blank" href="https://www.instagram.com/yorkesports/">
+        <a target="_blank" href="https://www.instagram.com/yorkesports/">
+          <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 py-2 `}>
             <FontAwesomeIcon icon={faInstagram} />
-          </a>
-        </li>
-        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 p-0 `}>
-          <a target="_blank" href="https://twitter.com/YorkEsports">
+          
+          </li>
+        </a>
+        <a target="_blank" href="https://twitter.com/YorkEsports">
+
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 py-2 `}>
             <FontAwesomeIcon icon={faTwitter} />
-          </a>
         </li>
-        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 p-0 `}>
-          <a target="_blank" href="https://discord.com/invite/yorkesports">
+        </a>
+        <a target="_blank" href="https://discord.com/invite/yorkesports">
+
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 py-2 `}>
             <FontAwesomeIcon icon={faDiscord} />
-          </a>
         </li>
-        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 p-0 `}>
-          <a target="_blank" href="https://twitter.com/YorkEsports">
+        </a>
+        <a target="_blank" href="https://twitter.com/YorkEsports">
+
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 py-2 `}>
             <FontAwesomeIcon icon={faYoutube} />
-          </a>
         </li> 
-        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 p-0 `}>
-          <a target="_blank" href="https://www.twitch.tv/yuesports">
+        </a>
+        <a target="_blank" href="https://www.twitch.tv/yuesports">
+
+        <li className={`font-normal cursor-pointer xm:text-[18px] text-[25px] mx-3 py-2 `}>
             <FontAwesomeIcon icon={faTwitch} />
-          </a>
         </li>
-        <li className={`text-bebasneue font-normal cursor-pointer xm:text-[16px] text-[25px] mx-3 p-0 mt-[7px]`}>
-          <a target="_blank" href="https://yorku.campuslabs.ca/engage/organization/yorkesports">
+        </a>
+        <a target="_blank" href="https://yorku.campuslabs.ca/engage/organization/yorkesports">
+
+        <li className={`text-bebasneue font-normal cursor-pointer xm:text-[16px] text-[25px] mx-3 py-2 mt-[7px]`}>
             YUConnect
-          </a>
         </li> 
+        </a>
+
       </ul>
     </nav>
   )
