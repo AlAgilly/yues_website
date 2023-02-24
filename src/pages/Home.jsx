@@ -161,7 +161,7 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Recent Results </h3>
                       <div className='my-4 grid grid-cols-1'>
                       {recent.map((rec, index) => (
-                        <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                           <div className=''>
                             <a href={`/${rec.gameid}`}>
                               <h2>{rec.game}</h2>
@@ -169,9 +169,9 @@ function Home (){
                             </a>
                           </div>
                           <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 mm:flex hidden`}>{rec.time}</h4>
-                          <img src={ team1 } alt="" className={`p-8 justify-self-center`}/>
-                          <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center `}>{rec.score}</p>
-                          <img src={ rec.opp } alt="" className={`p-8 justify-self-center`}/>
+                          <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>
+                          <p className={`${styles.titleH4} text-[50px] justify-self-center `}>{rec.score}</p>
+                          <img src={ rec.opp } alt="" className={`h-16 justify-self-center`}/>
                           <p className='location mm:col-span-2 col-span-1 xs:flex hidden'>{rec.title}</p>
                           <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
                             <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
@@ -202,15 +202,15 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Upcoming Games</h3>
                       <div className='my-4 grid grid-cols-1'>
                         {upcoming.map((up, index) => (
-                        <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                         <div className=''>
                               <h2>Game</h2>
                               <h3>Team A</h3>
                             </div>
                             <h4 className={`${styles.titleH4} xm:col-span-2 xm:flex hidden`}>{up.time}</h4>
-                            <img src={ team1 } alt="" className={`p-8 justify-self-center`}/>
-                            <p className={`${styles.titleH4} text-[50px] mm:p-5 p-0 justify-self-center mm:flex hidden `}> vs. </p>
-                            <img src={ up.opp } alt="" className={`p-8 justify-self-center`}/>
+                            <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>
+                            <p className={`${styles.titleH4} text-[50px] mm:p-0 p-0 justify-self-center mm:flex hidden `}>vs.</p>
+                            <img src={ up.opp } alt="" className={`h-16 justify-self-center`}/>
                             <p className='location mm:col-span-3 col-span-1 xs:col-span-2'> {up.title}</p>
                           </div>
                         ))}
