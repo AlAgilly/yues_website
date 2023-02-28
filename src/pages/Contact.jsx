@@ -42,7 +42,7 @@ function Contact() {
           <div>
             {contact.map((w, index) => (
               <div>
-                <p className={` pt-4`}>
+                <p className={` pt-4 text-red `}>
                   {w.name} | {w.pos}
                 </p>
                 <p>{w.disc}</p>
