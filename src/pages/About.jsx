@@ -2,7 +2,7 @@ import { faYoutube } from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { aboutsnip, droparrow, eventsnip, staffbox } from '../assets';
-import { marketingstaff, operationsstaff, partnershipsstaff, competitivestaff } from '../constants';
+import { marketingstaff, operationsstaff, partnershipsstaff, competitivestaff, presidents } from '../constants';
 import styles from '../style'
 
   
@@ -56,7 +56,7 @@ function About (){
                     <div className={`${styles.titleLineBottom}`}>-</div>
                     <div className='py-5'>
                         <p className='py-2'>York University Esports (YUES) is a club that aims to bring together the community for gaming at York University. We hope to create a space for casual and competitive gamers alike through facilitating club events as well as managing our esports teams! We strive for inclusivity and part of our mission at YUES is to make sure our club is a safe space for everyone to have fun, free of judgement. We are also ratified as a club at York University so you can also check out our <a href='#'>YUConnect page</a>!</p>
-                        <p className='py-2'>Here are some ways to get involved!</p>
+                        <p className='py-2'>Here are some ways to get involved...</p>
                     </div>
                   </div>
                 </div>
@@ -83,8 +83,53 @@ function About (){
               <section id='home' className={`flex flex-col pb-24 px-8 xs:px-20 ss:px-24 w-full`}>
                 <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
-
+                  <h4 className={`${styles.titleH4}`}>Our Club</h4>
+                    <div className={`${styles.titleLineBottom}`}>-</div>
                     <div class="tabs">
+                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Co-Presidents</h5>
+                    <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                      {presidents.map((presidents, index) => (
+                        <div className={``}>
+                          <div className='member'>
+                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
+                            <h1 className={`font-bignoodle text-red ${ presidents.font }`}>{ presidents.name }</h1>
+                          </div>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                      ))}
+                    </div>
+                    <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <div className={``}>
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
+
+                          <div className='member'>
+                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
+                            <h1 className={`font-bignoodle text-red`}>sec</h1>
+                          </div>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                        <div className={``}>
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
+
+                          <div className='member'>
+                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
+                            <h1 className={`font-bignoodle text-red`}>sec</h1>
+                          </div>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                    </div>
+                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
+                    <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                      {presidents.map((presidents, index) => (
+                        <div className={``}>
+                          <div className='member'>
+                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
+                            <h1 className={`font-bignoodle text-red ${ presidents.font }`}>{ presidents.name }</h1>
+                          </div>
+                          <img src={staffbox} alt="" className='w-full'/>
+                        </div>
+                      ))}
+                    </div>
                     <div class="tab">
                         <input type="checkbox" id="chck1"/>
                         <label class="tab-label select-none" for="chck1">
@@ -95,7 +140,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                          <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                               <div className='member'>
                               <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Partnerships</span></p>
                                 <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
@@ -123,7 +168,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                          <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                             <div className='border-2'>
                               <div className='member'>
                               <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Competitive</span></p>
@@ -153,7 +198,7 @@ function About (){
                             </p>
                           </label>
                           <div class="tab-content">
-                            <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                            <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                               <div className='member'>
                               <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Operations</span></p>
                                 <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
@@ -181,7 +226,7 @@ function About (){
                             </p>
                           </label>
                           <div class="tab-content">
-                            <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                            <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                               <div className='member'>
                               <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Marketing</span></p>
                                 <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>

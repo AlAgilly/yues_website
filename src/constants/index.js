@@ -319,8 +319,36 @@ export const partnershipsstaff = [
     role: "",
     name: "Lynn",
   },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
 ]; 
 export const competitivestaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
   {
     role: "",
     name: "Lynn",
@@ -331,7 +359,47 @@ export const operationsstaff = [
     role: "",
     name: "Lynn",
   },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
 ]; 
+export const presidents = [
+{
+  name: "sarah"
+},
+{
+  name: "Alexander"
+},
+];
 export const marketingstaff = [
   {
     role: "",
