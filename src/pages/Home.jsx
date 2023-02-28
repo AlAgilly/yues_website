@@ -59,7 +59,7 @@ function Home (){
           </div>
 {/* About Snippet */}
           <div className={`bg-primary ${styles.flexStart} aboutsec overflow-hidden`}>
-            <div className={`p-0 max-w-[1140px] w-full p-0`}>
+            <div className={`max-w-[1140px] w-full p-0`}>
               <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
                 <div className='aboutimg grid grid-cols-3 w-full'>
                   <div className='leftimg hidden mm:flex'>
@@ -86,8 +86,8 @@ function Home (){
             </div>
           </div>
 {/* Events title */}
-          <div className='w-full overflow-hidden bg-red '>
-            <div className={` ${styles.flexStart} z-20 idk`}>
+          <div className='w-full overflow-hidden bg-red z-30 bgg'>
+            <div className={` ${styles.flexStart} idk`}>
               <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
                 <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white  w-full`}>Upcoming Events</h3>
               </div>
