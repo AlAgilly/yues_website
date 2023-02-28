@@ -276,7 +276,7 @@ export const resultsDec = [
   }
 ];
 
-  export const resultsOct = [
+export const resultsOct = [
     {
       datetime: "12th OCT | 2:00",
       score: "3-2",
@@ -314,3 +314,53 @@ export const resultsDec = [
     stats: "",
     },
 ];
+export const marketingstaff = [
+  {
+    role: "",
+    name: ". (Anuj) Anujpreet Singh",
+  },
+  {
+    role: "",
+    name: "Mateo Tompkins",
+  },
+  {
+    role: "",
+    name: "Mehrab Hematinejad-Kermani",
+  },
+  {
+    role: "",
+    name: "Nabil Ansari",
+  },
+  {
+    role: "",
+    name: "deiv madrid",
+  },
+  {
+    role: "",
+    name: "Roslyn Nip",
+  },
+  {
+    role: "",
+    name: "Huzaifa Taherali",
+  },
+  {
+    role: "",
+    name: "Guneet Jassal",
+  },
+  {
+    role: "",
+    name: "Rida Jafrani",
+  },
+  {
+    role: "",
+    name: "Ehsham Khan",
+  },
+  {
+    role: "",
+    name: "Noah",
+  },
+  {
+    role: "",
+    name: "Jillian Buentipo",
+  },
+]; 

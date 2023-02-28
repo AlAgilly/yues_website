@@ -2,18 +2,19 @@ import { faYoutube } from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { aboutsnip, droparrow, eventsnip, staffbox } from '../assets';
+import { marketingstaff } from '../constants';
 import styles from '../style'
 
   
-function Contact (){
+function About (){
 
     return (
         <>
-          {/* Events title */}
-          <div className='w-full overflow-hidden bg-white '>
-            <div className={` ${styles.flexStart} z-20 idk`}>
+          {/* Title */}
+          <div className='w-full overflow-hidden bg-white border-b-2	'>
+            <div className={` ${styles.flexStart} z-20 idk2`}>
               <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white  w-full`}>About us</h3>
+                <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black  w-full`}>About us</h3>
               </div>
             </div>
           </div>
@@ -87,14 +88,14 @@ function Contact (){
                       <div class="tab">
                         <input type="checkbox" id="chck1"/>
                         <label class="tab-label select-none" for="chck1">
-                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Club&nbsp;Tournaments</h5>
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
                             <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
                               <p className='bg-darkred pl-10'>
                                   <img src={droparrow} alt="" className='dacoolting'/>
                               </p>
                         </label>
                         <div class="tab-content">
-                          <div className='grid grid-cols-4 border-2 gap-x-8 gap-y-4 stiff'>
+                          <div className='grid grid-cols-4 border-2 gap-x-6 gap-y-4 stiff'>
                             <div className='border-2'>
                               <img src={staffbox} alt="" className='w-full'/>
                             </div>
@@ -146,89 +147,48 @@ function Contact (){
                             <div className=''>
                               <img src={staffbox} alt="" className='w-full'/>
                             </div>
-                      </div>
-        </div>
-      </div>
-      <div class="tab">
-        <input type="checkbox" id="chck2"/>
-        <label class="tab-label select-none" for="chck2">
-        <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Club&nbsp;Tournaments</h5>
-                            <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
-                            <p className='bg-darkred pl-10'>
-                                <img src={droparrow} alt="" className='dacoolting'/>
-                            </p>
-        </label>
-        <div class="tab-content">
-        <div className='grid lg:grid-cols-4 ss:grid-cols-2 mm:grid-cols-3 grid-cols-1 border-2 gap-x-8 gap-y-4 stiff'>
-                        <div className='border-2'>
-                        <div className='member'>
-                          <h2 className='font-bevietnampro text-[12px] text-black'>Vice-President of Marketing</h2>
-                          <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
                           </div>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                        <div className=''>
-                          <img src={staffbox} alt="" className='w-full'/>
                         </div>
                       </div>
-        </div>
-      </div>
-    </div>
-                    
-                  
-    </div>
-    </div>
+                      <div class="tab">
+                        <input type="checkbox" id="chck2"/>
+                        <label class="tab-label select-none" for="chck2">
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Club&nbsp;Tournaments</h5>
+                          <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
+                          <p className='bg-darkred pl-10'>
+                            <img src={droparrow} alt="" className='dacoolting'/>
+                          </p>
+                        </label>
+                        <div class="tab-content">
+                          <div className='grid lg:grid-cols-4 ss:grid-cols-2 mm:grid-cols-3 grid-cols-1 border-2 gap-x-6 gap-y-4 stiff'>
+                            <div className='border-2'>
+                              <div className='member'>
+                              <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Marketing</span></p>
+                                <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
+                              </div>
+                              <img src={staffbox} alt="" className='w-full'/>
+                            </div>
+                            {marketingstaff.map((marketing, index) => (
+                              <div className=''>
+                                <div className='member'>
+                                  <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Marketing Staff</span>{ marketing.role }</p>
+                                  <h1 className='font-bignoodle text-red text-[35px]'>{ marketing.name }</h1>
+                                </div>
+                                <img src={staffbox} alt="" className='w-full'/>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
             </div>
           </div>
-          </div> 
-        </>
+        </div> 
+      </>
     )
 }
   
-export default Contact;
+export default About;

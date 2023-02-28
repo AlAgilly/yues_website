@@ -86,8 +86,8 @@ function Home (){
             </div>
           </div>
 {/* Events title */}
-          <div className='w-full overflow-hidden bg-red '>
-            <div className={` ${styles.flexStart} z-20 idk`}>
+          <div className='w-full overflow-hidden bg-red z-30 bgg'>
+            <div className={` ${styles.flexStart} idk`}>
               <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
                 <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white  w-full`}>Upcoming Events</h3>
               </div>

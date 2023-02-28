@@ -22,6 +22,7 @@ import dota2 from './games/dota2.png'
 import dota2a from './games/dota2-active.png'
 import dota2g from './games/dota2-grey.png'
 import grey from './grey.png'
+import bgg from './bgg.png'
 
 // SVGs - Vectors
 import arrowup from "./arrow-up.svg"
@@ -81,4 +82,5 @@ export {
   droparrow,
   staffbox,
   staffbox2,
+  bgg,
 };

@@ -125,7 +125,7 @@ html, body {
   margin: 0px 0 10px 0;
 }
 .rightborder {
-  width: 100%;
+  /* width: 100%; */
   height: 2px;
   background-color: var(--red);
   overflow: hidden;
@@ -639,21 +639,22 @@ html, body {
   }
   .idk {
     background-image: url(./assets/headerimg.png);
-    /* min-height: 100px; */
     background-repeat: no-repeat;
-    background-position:  top 40%  left 0%;
+    background-position:  top 40%  left 10%;
     background-size: 50%;
-    /* z-index: 99; */
     position: relative;
   }
     .idk2 {
     background-image: url(./assets/grey.png);
-    /* min-height: 100px; */
     background-repeat: no-repeat;
-    background-position:  top 60%  right 40%;
-    background-size: 30%;
-    z-index: 99 !important;
-    border-bottom: 1px solid var(--grey);
+    background-position:  top 40%  right 10%;
+    background-size: 50%;
+    position: relative;
+  }
+  .bgg {
+    background-image: url(./assets/bgg.png);
+    background-repeat: repeat;
+    position: relative;
   }
   .aboutimg .left {
     position: absolute;
@@ -758,12 +759,13 @@ input:checked ~ .tab-content {
   position: absolute;
   padding: 40px 25px;
 }
-.member h2::after {
+.member .h2::after {
   content: '//';
 }
-.member h2 {
+.member p {
 line-height: 0;
 }
 .member h1 {
-
+line-height: 60px;
+font-size: 23px;
 }
