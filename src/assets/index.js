@@ -22,6 +22,10 @@ import dota2 from './games/dota2.png'
 import dota2a from './games/dota2-active.png'
 import dota2g from './games/dota2-grey.png'
 import grey from './grey.png'
+import contactDarkrect from './contactDarkrect.png'
+import contactLongrect from './contactLongrect.png'
+import line from './line.png'
+import slash from './slash.png'
 
 // SVGs - Vectors
 import arrowup from "./arrow-up.svg"
@@ -75,4 +79,8 @@ export {
   out,
   grey,
   yuesports,
+  contactLongrect,
+  contactDarkrect,
+  line,
+  slash,
 };

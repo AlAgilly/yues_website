@@ -314,3 +314,43 @@ export const resultsDec = [
     stats: "",
     },
 ];
+
+//contact section
+export const contact = [
+  {
+    name:"Alexander Saiko",
+    pos:"Co-President",
+    disc:"Lovesaik#1622 "
+  },
+  {
+    name:"name",
+    pos:"position",
+    disc:"discord id"
+  },,
+  {
+    name:"name",
+    pos:"position",
+    disc:"discord id"
+  },,
+  {
+    name:"name",
+    pos:"position",
+    disc:"discord id"
+  },,
+  {
+    name:"name",
+    pos:"position",
+    disc:"discord id"
+  },,
+  {
+    name:"name",
+    pos:"position",
+    disc:"discord id"
+  },,
+  {
+    name:"name",
+    pos:"position",
+    disc:"discord id"
+  },
+
+]
