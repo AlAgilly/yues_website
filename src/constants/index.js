@@ -314,10 +314,28 @@ export const resultsOct = [
     stats: "",
     },
 ];
+export const partnershipsstaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+]; 
+export const competitivestaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+]; 
+export const operationsstaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+]; 
 export const marketingstaff = [
   {
     role: "",
-    name: ". (Anuj) Anujpreet Singh",
+    name: "Anujpreet Singh",
   },
   {
     role: "",
@@ -326,6 +344,7 @@ export const marketingstaff = [
   {
     role: "",
     name: "Mehrab Hematinejad-Kermani",
+    font: "small"
   },
   {
     role: "",

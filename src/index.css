@@ -766,6 +766,10 @@ input:checked ~ .tab-content {
 line-height: 0;
 }
 .member h1 {
-line-height: 60px;
-font-size: 23px;
+line-height: 55px;
+font-size: 34px;
+}
+.small {
+  line-height: 45px !important;
+  font-size: 19px !important;
 }
