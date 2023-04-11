@@ -11,7 +11,7 @@ class App extends Component {
   // require('dotenv').config()
 
   render() {
-    require('dotenv').config()
+    // require('dotenv').config()
 
     return (
        <Router>
@@ -57,11 +57,13 @@ class App extends Component {
                 <Route exact path="/valorant" element={< UnderConstruction /> }></Route>
                 <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
                 <Route exact path="/rules" element={< UnderConstruction /> }></Route>
+                <Route exact path="/insta" element={<Insta />}></Route>
 
                 {/* 404 Error */}
                 <Route path='*' element={<NotFound />}/>
               </Routes>
               {/* <Insta token={process.env.REACT_APP_INS_TOKEN} limit={12}/> */}
+              
 
               <div className='w-full overflow-hidden bg-black'>
                 <div className={`bg-primary ${styles.flexStart}`}>
