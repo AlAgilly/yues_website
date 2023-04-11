@@ -110,7 +110,7 @@ function Home (){
               <div className={`p-0 max-w-[1340px] w-full`}> 
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
-                  <div className='grid grid-cols-1 xm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left w-full me:w-2/3 my-4'>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left w-full me:w-2/3 my-4'>
                     {eventsList.map((events, index) => (
                         <TinyEvent key={events.id} title={ events.title } date={events.date} time={events.time} location={events.location} className={`${index > 1 ? 'hidden xm:block' : 'xm:block'}`} />
                     ))}
@@ -161,7 +161,7 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Recent Results </h3>
                       <div className='my-4 grid grid-cols-1'>
                       {recent.map((rec, index) => (
-                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-8 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-8 gap-2 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                           <div className=''>
                             <a href={`/${rec.gameid}`}>
                               <h2>{rec.game}</h2>
@@ -174,10 +174,10 @@ function Home (){
                           <img src={ rec.opp } alt="" className={`h-16 justify-self-center`}/>
                           <p className='location mm:col-span-2 col-span-1 xs:flex hidden'>{rec.title}</p>
                           <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
-                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                            <p className={`${rec.twitch == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /></a></p>
+                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch&nbsp;VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.twitch == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch&nbsp;VOD&nbsp;<FontAwesomeIcon icon={faLink} /></a></p>
                             <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden select-none"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /></a></p>
+                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page&nbsp;<FontAwesomeIcon icon={faLink} /></a></p>
                           </div>
                         </div>
                       ))}
