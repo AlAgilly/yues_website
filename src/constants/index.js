@@ -126,8 +126,9 @@ export const eventsList = [
 export const upcoming = [
   {
     id: "game1",
-    team: "Lorem ipsum, description of event wow",
-    time: "Jan 13 • 10:30AM",
+    game: "Valorant",
+    team: "Team A",
+    time: "Jan 13 10:30AM",
     score: "3 - 2",
     opp: team2,
     title: "Event Name",
@@ -135,7 +136,7 @@ export const upcoming = [
   {
     id: "game2",
     team: "Lorem ipsum, description of event wow",
-    time: "Jan 13 • 10:30AM",
+    time: "Jan 13 10:30AM",
     score: "3 - 2",
     opp: team2,
     title: "Event Name",
@@ -145,7 +146,7 @@ export const upcoming = [
   {
     id: "game3",
     team: "Lorem ipsum, description of event wow",
-    time: "Jan 13 • 10:30AM",
+    time: "Jan 13 10:30AM",
     score: "3 - 2",
     opp: team2,
     title: "Event Name",

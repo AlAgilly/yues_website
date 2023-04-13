@@ -204,8 +204,8 @@ function Home (){
                         {upcoming.map((up, index) => (
                         <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-8 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                         <div className=''>
-                              <h2>Game</h2>
-                              <h3>Team A</h3>
+                              <h2>{up.game}</h2>
+                              <h3>{up.team}</h3>
                             </div>
                             <h4 className={`${styles.titleH4} xm:col-span-2 xm:flex hidden`}>{up.time}</h4>
                             <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>
