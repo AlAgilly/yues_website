@@ -142,6 +142,8 @@ html, body {
 }
 .ig img{
   border-radius: 10px;
+  aspect-ratio: 1;
+
 }
 .btn--primary {
   background-color: var(--red);
@@ -692,6 +694,9 @@ html, body {
     opacity: 1;
     transition: 0.3s ease-in-out;
 
+  }
+  .insta{
+    
   }
 a {
   z-index: 20;

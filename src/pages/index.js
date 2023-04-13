@@ -4,6 +4,7 @@ import Contact from "./Contact"
 import PastGames from "./PastGames"
 import NotFound from "./NotFound"
 import UnderConstruction from "./UnderConstruction"
+import Insta from "./Insta"
 
 export {
     About,
@@ -12,4 +13,5 @@ export {
     PastGames,
     NotFound,
     UnderConstruction,
+    Insta,
 };

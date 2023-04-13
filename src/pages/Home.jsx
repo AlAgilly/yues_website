@@ -2,9 +2,10 @@ import React from 'react'
 import styles from '../style'
 import { Button, TinyEvent } from '../components';
 import { eventsList, upcoming, recent } from '../constants';
-import { borderlines2, eventsnip, instagram1, instagram2, instagram3, instagram4, instagram5, instagram6, instagram7, instagram8, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
+import { borderlines2, eventsnip, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
+import Insta from './Insta';
 
 
 function Home (){
@@ -110,7 +111,7 @@ function Home (){
               <div className={`p-0 max-w-[1340px] w-full`}> 
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
-                  <div className='grid grid-cols-1 xm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left w-full me:w-2/3 my-4'>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left w-full me:w-2/3 my-4'>
                     {eventsList.map((events, index) => (
                         <TinyEvent key={events.id} title={ events.title } date={events.date} time={events.time} location={events.location} className={`${index > 1 ? 'hidden xm:block' : 'xm:block'}`} />
                     ))}
@@ -129,24 +130,9 @@ function Home (){
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
                     <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
                     <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
-                      {/* <a target="_blank" href="https://www.instagram.com/p/CnPrYfAul11/"><HoverImage src={instagram1g} hoverSrc={instagram1} /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/CnAqsmXJnpb/"><HoverImage src={instagram2g} hoverSrc={instagram2} /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/CmNEEbEuymF/"><HoverImage src={instagram3g} hoverSrc={instagram3} /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/Cl7DLdXu_cl/"><HoverImage src={instagram4g} hoverSrc={instagram4} /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/Cle2GCeLV5n/"><HoverImage src={instagram5g} hoverSrc={instagram5} className='hidden ss:flex' /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/ClMLGX8Ohbj/"><HoverImage src={instagram6g} hoverSrc={instagram6} className='hidden ss:flex' /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/CktqTDCOr-i/"><HoverImage src={instagram7g} hoverSrc={instagram7} className='hidden mm:flex xl:hidden' /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/Cj3I_7TrzpP/"><HoverImage src={instagram8g} hoverSrc={instagram8} className='hidden mm:flex xl:hidden' /></a> */}
-                      <a target="_blank" href="https://www.instagram.com/p/CnPrYfAul11/"><img src={instagram1}/></a>
-                      <a target="_blank" href="https://www.instagram.com/p/CnAqsmXJnpb/"><img src={instagram2}/></a>
-                      <a target="_blank" href="https://www.instagram.com/p/CmNEEbEuymF/"><img src={instagram3}/></a>
-                      <a target="_blank" href="https://www.instagram.com/p/Cl7DLdXu_cl/"><img src={instagram4}/></a>
-                      <a target="_blank" href="https://www.instagram.com/p/Cle2GCeLV5n/"><img src={instagram5} className='hidden ss:flex' /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/ClMLGX8Ohbj/"><img src={instagram6} className='hidden ss:flex' /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/CktqTDCOr-i/"><img src={instagram7} className='hidden mm:flex xl:hidden' /></a>
-                      <a target="_blank" href="https://www.instagram.com/p/Cj3I_7TrzpP/"><img src={instagram8} className='hidden mm:flex xl:hidden' /></a>
+                      <Insta />
                     </div>
-                  </div>
+                  </div> 
                 </section>
               </div>
             </div>
@@ -161,40 +147,40 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Recent Results </h3>
                       <div className='my-4 grid grid-cols-1'>
                       {recent.map((rec, index) => (
-                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-8 gap-2 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                           <div className=''>
                             <a href={`/${rec.gameid}`}>
                               <h2>{rec.game}</h2>
                               <h3>{rec.team}</h3>
                             </a>
                           </div>
-                          <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 mm:flex hidden`}>{rec.time}</h4>
+                          <h4 className={`${styles.titleH4} col-span-1 mm:flex hidden`}>{rec.time}</h4>
                           <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>
-                          <p className={`${styles.titleH4} text-[50px] justify-self-center `}>{rec.score}</p>
+                          <p className={`${styles.titleH4} text-[50px] justify-self-center `}><span className='text-red'>{rec.yorkscore}</span> - {rec.awayscore}</p>
                           <img src={ rec.opp } alt="" className={`h-16 justify-self-center`}/>
                           <p className='location mm:col-span-2 col-span-1 xs:flex hidden'>{rec.title}</p>
                           <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
-                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                            <p className={`${rec.twitch = null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch VOD <FontAwesomeIcon icon={faLink} /></a></p>
+                            <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch&nbsp;VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
+                            <p className={`${rec.twitch == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.twitch}>Twitch&nbsp;VOD&nbsp;<FontAwesomeIcon icon={faLink} /></a></p>
                             <p className={`${rec.stats != null ? "hidden" : "mm:flex hidden select-none"}`}>Stats Page&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>
-                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page <FontAwesomeIcon icon={faLink} /></a></p>
+                            <p className={`${rec.stats == null ? "hidden" : "mm:flex hidden"}`}><a href={rec.stats}>Stats Page&nbsp;<FontAwesomeIcon icon={faLink} /></a></p>
                           </div>
                         </div>
                       ))}
                     </div>
                     </div>
                     <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
-                    <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px] mb-10`}>
-                    <div className='left flex pt-20 mm:pt-0'>
+                    <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px] mb-16`}>
+                    <div className='left flex mt-20 mm:mt-0'>
                       <img src={ borderlines2 } alt="" />
                     </div>
                   </div>
                   </div> 
                 </section>
                 <section id='home' className={`flex mm:flex-row flex-col`}>
-                  <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}> 
+                  <div className={`flex-1 mm:${styles.flexEnd} flex-col mx-8 xs:mx-20 ss:mx-24`}> 
                   <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px]`}>
-                    <div className='right mm:flex hidden'>
+                    <div className='right mm:flex hidden pt-4'>
                       <img src={ borderlines2 } alt="" />
                     </div>
                   </div>
@@ -202,7 +188,7 @@ function Home (){
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Upcoming Games</h3>
                       <div className='my-4 grid grid-cols-1'>
                         {upcoming.map((up, index) => (
-                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-9 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-8 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                         <div className=''>
                               <h2>Game</h2>
                               <h3>Team A</h3>
@@ -211,7 +197,7 @@ function Home (){
                             <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>
                             <p className={`${styles.titleH4} text-[50px] mm:p-0 p-0 justify-self-center mm:flex hidden `}>vs.</p>
                             <img src={ up.opp } alt="" className={`h-16 justify-self-center`}/>
-                            <p className='location mm:col-span-3 col-span-1 xs:col-span-2'> {up.title}</p>
+                            <p className='location mm:col-span-2 col-span-1 xs:col-span-2'> {up.title}</p>
                           </div>
                         ))}
                       </div>

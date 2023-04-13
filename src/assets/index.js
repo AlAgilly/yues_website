@@ -10,14 +10,6 @@ import team1 from './team1.png'
 import team2 from './team2.png'
 import whitelion from './whitelion.png'
 import yulion from './yulion.png'
-import instagram1 from "./instagram1.png";
-import instagram2 from "./instagram2.png";
-import instagram3 from "./instagram3.png";
-import instagram4 from "./instagram4.png";
-import instagram5 from "./instagram5.png";
-import instagram6 from "./instagram6.png";
-import instagram7 from "./instagram7.png";
-import instagram8 from "./instagram8.png";
 import dota2 from './games/dota2.png'
 import dota2a from './games/dota2-active.png'
 import dota2g from './games/dota2-grey.png'
@@ -58,14 +50,6 @@ export {
   whitelion,
   yulion,
   greyoutline,
-  instagram1,
-  instagram2,
-  instagram3,
-  instagram4,
-  instagram5,
-  instagram6,
-  instagram7,
-  instagram8,
   dota2,
   dota2a,
   arrowup,

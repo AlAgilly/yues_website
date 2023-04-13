@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Button from "./Button";
 import HoverImage from "./HoverImage"
 import TinyEvent from './TinyEvent'
+import Feed from './Feed'
 
 export {
   Navbar,
@@ -12,4 +13,5 @@ export {
   Button,
   HoverImage,
   TinyEvent,
+  Feed,
 };
