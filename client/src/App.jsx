@@ -21,7 +21,7 @@ class App extends Component {
               <div className='fixed top-0 left-0 right-0 z-50'>
                 <div className='w-full overflow-hidden bg-red'>
                   <div className={`px-8 xs:px-10 ${styles.flexCenter}`}>
-                    <div className={`w-full`}>
+                    <div className={`w-full `}>
                       <Navbar />
                     </div>
                   </div>

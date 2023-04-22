@@ -9,7 +9,7 @@ import posts from "./data/index.js"
 
 const app = express();
 
-app.use(cors({origin: allowedDomains}))
+app.use(cors({origin: allowedDomains, credentials: true}))
 app.use(helmet())
 app.use(compression())
 
