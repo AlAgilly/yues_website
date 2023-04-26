@@ -53,7 +53,7 @@
 
 import React, { useEffect, useState } from "react";
 import { getPosts } from "../lib";
-// import Feed from "../components/Feed";
+import Feed from "../components/Feed";
 
 function Insta() {
     const [posts, setPosts] = useState([])
@@ -82,19 +82,11 @@ function Insta() {
 
     return (
         <>
-        {posts && posts.map((post) => (
-            // <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
-            //     <Post post={post} />
-            // </a>
-            <div key={post.id}>
-                <h1>{post.content}</h1>
-            </div>
-        ))}
-        {/* {posts.map((feed, index) => (
+        {posts.map((feed, index) => (
             <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
                 <Feed key={feed.id} feed={feed} />
             </a>
-        ))} */}
+        ))}
         </>
     )
 }
