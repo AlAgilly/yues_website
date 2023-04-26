@@ -2,6 +2,8 @@
 // import axios from 'axios'
 // import { Feed } from '../components'
 // import styles from '../style'
+// import dotenv from "dotenv";
+// dotenv.config();
 
 // const Insta = ({token, ...props}) => {
 //     const [feeds, setFeedsData] = useState([])
@@ -16,8 +18,9 @@
 //         async function fetchInstagramPost () {
 //           try{
 //             axios
-//                 .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=TOKENPLACEHOLDERWHILEIFIGUREOUTHOWTOSTOREITINNODE`)
-//                 .then((resp) => {
+//             // .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=TOKENPLACEHOLDERWHILEIFIGUREOUTHOWTOSTOREITINNODE`)
+//             .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${ process.env.REACT_APP_INSTA }`)
+//             .then((resp) => {
 //                     setFeedsData(resp.data.data)
 //                 })
 //           } catch (err) {
@@ -50,7 +53,7 @@
 
 import React, { useEffect, useState } from "react";
 import { getPosts } from "../lib";
-import Post from "../components/Post";
+// import Feed from "../components/Feed";
 
 function Insta() {
     const [posts, setPosts] = useState([])
@@ -59,9 +62,9 @@ function Insta() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await getPosts()
-            setIsError(res.error)
-            setPosts(res.data)
+            const { data, error } = await getPosts()
+            setIsError(error)
+            setPosts(data)
             setLoading(false)
         }
         fetchData()
@@ -69,26 +72,29 @@ function Insta() {
     }, [])
 
     if(loading) {
-        return(
-            <div>
-            </div>
-    )}
+        return <h1>Loading...</h1>
+    }
 
     if(!loading && isError) {
-        return (
-            <div>
-                <h1>oops!!</h1>
-            </div>
-        )
+        return <h1>An error!!</h1>
+
     }
 
     return (
         <>
         {posts && posts.map((post) => (
-            <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
-                <Post post={post} />
-            </a>
+            // <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
+            //     <Post post={post} />
+            // </a>
+            <div key={post.id}>
+                <h1>{post.content}</h1>
+            </div>
         ))}
+        {/* {posts.map((feed, index) => (
+            <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
+                <Feed key={feed.id} feed={feed} />
+            </a>
+        ))} */}
         </>
     )
 }
