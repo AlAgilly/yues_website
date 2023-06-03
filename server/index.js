@@ -1,11 +1,12 @@
-import express from "express";
-import http from "http";
-import cors from "cors";
-import helmet from "helmet";
-import compression from "compression";
-import {port, allowedDomains, instagram} from "./config/index.js";
-import posts from "./data/index.js"
-import fetch from 'cross-fetch';
+var express = require('express');
+var http = require('http');
+var cors = require('cors');
+var helmet = require('helmet');
+var compression = require('compression');
+var allowedDomains = require('./config/index.js');
+var instagram = require('./config/index.js');
+var posts = require('./data/index.js');
+var fetch = require('node-fetch');
 
 const app = express();
 
@@ -34,17 +35,17 @@ app.get('/api/posts', (req, res) => {
     return res.json(posts)
 })
 
-const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
+var apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${ instagram }`
 
 app.get('/api/insta', async(req, res) => {
 
-    const data = await fetch(apiURL).then(res => {
+    var data = await fetch(apiURL).then(res => {
         return res.json()
+    }).catch(() => {
+        return res.json("hello")
     })
     return res.json(data)
 })
 
 const server = http.createServer(app);
-server.listen(port, () => {
-    console.log(`Server is up and running on port ${port}`)
-})
+server.listen(5000);
