@@ -1,4 +1,4 @@
-var posts = [
+export default [
     {
         id: 1, 
         photoURL: 'photo',
@@ -9,6 +9,4 @@ var posts = [
         photoURL: 'photo',
         content: 'content'
     }
-];
-
-module.exports = { posts };
+]
