@@ -3,9 +3,15 @@ import http from "http";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
-import {port, allowedDomains, instagram} from "./config/index.js";
+import {port, allowedDomains, instagram, notionapi} from "./config/index.js";
 import posts from "./data/index.js"
-import fetch from 'cross-fetch';
+import { Client } from '@notionhq/client';
+import fetch from "node-fetch";
+
+var date = new Date();
+date.toISOString();
+
+const notion = new Client({ auth: notionapi });
 
 const app = express();
 
@@ -28,8 +34,69 @@ app.use(cors({origin: true, credentials: true}))
 // app.use(cors(corsOptions))
 
 app.use(helmet())
-app.use(compression())
+app.use(compression());
 
+
+// NOTION START
+// get the pages
+let resu;
+(async () => {
+  const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+  const response = await notion.databases.query({
+    database_id: databaseId,
+    filter: {
+      or: [
+        {
+          property: 'Date',
+          date: {
+            after: date,
+        },
+        },
+      ],
+    },
+    sorts: [
+      {
+        property: 'Date',
+        direction: 'ascending',
+      },
+    ],
+  })
+  resu = response.results.map((resp) => resp.id)})
+  ();
+
+  app.get('/api/upcoming', async(req, res) => {
+    const full = [0,0,0]
+    for(let i = 0; i < 3; i++) {
+      const pageId = resu[i];
+      const game = "vq%7CF";
+      const gameres = await notion.pages.properties.retrieve({ page_id: pageId, property_id: game })
+
+      const team = "%3DbFt";
+      const teamres = await notion.pages.properties.retrieve({ page_id: pageId, property_id: team })
+
+      const date = "ynaI";
+      const dateres = await notion.pages.properties.retrieve({ page_id: pageId, property_id: date })
+
+      const eventname = "title";
+      const eventres = await notion.pages.properties.retrieve({ page_id: pageId, property_id: eventname })
+
+      if(eventres == null || dateres.date == null || teamres.select == null || gameres.select == null){
+        full[i] = {}
+      } else {
+        full[i] = {
+          eventname: eventres.results[0].title.text.content,
+          date: dateres.date.start,
+          team: teamres.select.name,
+          game: gameres.select.name,
+        };
+
+      }
+
+    }
+    
+    return res.send(full)
+})
+// NOTION END
 app.get('/api/posts', (req, res) => {
     return res.json(posts)
 })

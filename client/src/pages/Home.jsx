@@ -6,6 +6,7 @@ import { borderlines2, eventsnip, aboutsnip, team1, out, borderlines, bordercent
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
 import Insta from './Insta';
+import Upcoming from '../components/Upcoming';
 
 
 function Home (){
@@ -187,19 +188,7 @@ function Home (){
                     <div className='flex flex-col justify-between items-left w-full'>
                       <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Upcoming Games</h3>
                       <div className='my-4 grid grid-cols-1'>
-                        {upcoming.map((up, index) => (
-                        <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-5 mm:grid-cols-8 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
-                        <div className=''>
-                              <h2>Game</h2>
-                              <h3>Team A</h3>
-                            </div>
-                            <h4 className={`${styles.titleH4} xm:col-span-2 xm:flex hidden`}>{up.time}</h4>
-                            <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>
-                            <p className={`${styles.titleH4} text-[50px] mm:p-0 p-0 justify-self-center mm:flex hidden `}>vs.</p>
-                            <img src={ up.opp } alt="" className={`h-16 justify-self-center`}/>
-                            <p className='location mm:col-span-2 col-span-1 xs:col-span-2'> {up.title}</p>
-                          </div>
-                        ))}
+                        <Upcoming />
                       </div>
                     </div>
                       <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>

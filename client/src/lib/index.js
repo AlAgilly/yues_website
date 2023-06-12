@@ -20,3 +20,13 @@ export const getPosts = async () => {
 //         return { data: [], error: true }
 //     }
 // }
+
+export const getUpcoming = async () => {
+    try {
+        const res = await Axios.get('/upcoming')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
