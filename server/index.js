@@ -5,6 +5,7 @@ import helmet from "helmet";
 import compression from "compression";
 import {port, allowedDomains, instagram, notionapi} from "./config/index.js";
 import posts from "./data/index.js"
+import events from "./data/events.js"
 import {Client} from '@notionhq/client';
 import fetch from "node-fetch";
 
@@ -105,6 +106,23 @@ app.get('/api/upcoming', async(req, res) => {
 
     return res.send(full)
 })
+import fs from 'fs'
+
+// const content = 'Some content!';
+
+// try {
+//   fs.writeFile('./data/events.js', 'export default [');
+//   // file written successfully
+//   fs.appendFile('./data/events.js', ']');
+// } catch (err) {
+//   console.error(err);
+// }
+// fs.readFile('./data/events.js', 'utf8', function (err, data) {
+//   fs.writeFile('./data/events.js', data, function(err, result) {
+//      if(err) console.log('error', err);
+//    });
+//  });
+
 //recent games
 let recentres;
 (async() => {
@@ -270,6 +288,8 @@ app.get('/api/events', async(req, res) => {
 //   console.log(response);
 // })();
 // NOTION END
+
+
 app.get('/api/posts', (req, res) => {
     return res.json(posts)
 })
