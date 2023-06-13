@@ -14,6 +14,7 @@ import dota2 from './games/dota2.png'
 import dota2a from './games/dota2-active.png'
 import dota2g from './games/dota2-grey.png'
 import grey from './grey.png'
+import bgg from './bgg.png'
 
 // SVGs - Vectors
 import arrowup from "./arrow-up.svg"
@@ -29,6 +30,9 @@ import yuesports from "./yuesports.svg"
 import bordercenters from './bordercenters.svg'
 import borderlines from './borderlines.svg'
 import borderlines2 from './borderlines2.svg'
+import droparrow from './droparrow.svg'
+import staffbox from './staffbox.svg'
+import staffbox2 from './staffbox.png'
 
 export {
   aboutsnip,
@@ -59,4 +63,8 @@ export {
   out,
   grey,
   yuesports,
+  droparrow,
+  staffbox,
+  staffbox2,
+  bgg,
 };

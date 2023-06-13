@@ -281,7 +281,7 @@ export const resultsDec = [
   }
 ];
 
-  export const resultsOct = [
+export const resultsOct = [
     {
       datetime: "12th OCT | 2:00",
       score: "3-2",
@@ -319,3 +319,140 @@ export const resultsDec = [
     stats: "",
     },
 ];
+export const partnershipsstaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+]; 
+export const competitivestaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+]; 
+export const operationsstaff = [
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+  {
+    role: "",
+    name: "Lynn",
+  },
+]; 
+export const presidents = [
+{
+  name: "sarah"
+},
+{
+  name: "Alexander"
+},
+];
+export const marketingstaff = [
+  {
+    role: "",
+    name: "Anujpreet Singh",
+  },
+  {
+    role: "",
+    name: "Mateo Tompkins",
+  },
+  {
+    role: "",
+    name: "Mehrab Hematinejad-Kermani",
+    font: "small"
+  },
+  {
+    role: "",
+    name: "Nabil Ansari",
+  },
+  {
+    role: "",
+    name: "deiv madrid",
+  },
+  {
+    role: "",
+    name: "Roslyn Nip",
+  },
+  {
+    role: "",
+    name: "Huzaifa Taherali",
+  },
+  {
+    role: "",
+    name: "Guneet Jassal",
+  },
+  {
+    role: "",
+    name: "Rida Jafrani",
+  },
+  {
+    role: "",
+    name: "Ehsham Khan",
+  },
+  {
+    role: "",
+    name: "Noah",
+  },
+  {
+    role: "",
+    name: "Jillian Buentipo",
+  },
+]; 

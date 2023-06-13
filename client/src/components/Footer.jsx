@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <>
       
-      <footer class="text-left bg-black footer">
-  <div class="mx-6 py-10 text-center mm:text-left">
-    <div class="grid grid-1 mm:grid-cols-4 lg:grid-cols-6 gap-4">
+      <footer className="text-left bg-black footer">
+  <div className="mx-6 py-10 text-center mm:text-left">
+    <div className="grid grid-1 mm:grid-cols-4 lg:grid-cols-6 gap-4">
     <div className='mm:col-span-1 col-span-2'>
         <h6 class="font-semibold mb-4 flex justify-center mm:justify-start">
           Our Socials
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='col-span-2'>
-        <h6 class=" font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className=" font-semibold mb-4 flex justify-center mm:justify-start">
           Our Teams
         </h6>
         <div className='grid grid-cols-1 mm:grid-cols-2'>
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='mm:col-span-1 col-span-2'>
-        <h6 class=" font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className=" font-semibold mb-4 flex justify-center mm:justify-start">
           Useful Links
         </h6>
         <div className='grid grid-cols-1'>
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='col-span-2'>
-        <h6 class="font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className="font-semibold mb-4 flex justify-center mm:justify-start">
           Contact
         </h6>
         <div className='grid grid-cols-1 mm:grid-cols-2 lg:grid-cols-1'>
@@ -112,9 +112,9 @@ const Footer = () => {
       </div>
     </div>
   </div>
-  <div class="text-center p-6 bg-black">
+  <div className="text-center p-6 bg-black">
     <span>© 2023 Copyright: </span>
-    <a class="text-white font-semibold" href="/">York University Esports</a>
+    <a className="text-white font-semibold" href="/">York University Esports</a>
   </div>
 </footer>
 
