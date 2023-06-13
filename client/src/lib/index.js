@@ -30,3 +30,21 @@ export const getUpcoming = async () => {
         return { data: [], error: true }
     }
 }
+export const getRecent = async () => {
+    try {
+        const res = await Axios.get('/recent')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+export const getEvents = async () => {
+    try {
+        const res = await Axios.get('/events')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}

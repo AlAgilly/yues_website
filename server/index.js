@@ -64,6 +64,7 @@ let upcomingres;
             ]
         })
         upcomingres = response.results.map((resp) => resp.id)
+        console.log(upcomingres)
 })();
 
 app.get('/api/upcoming', async(req, res) => {
@@ -144,6 +145,8 @@ let recentres;
         recentres = response
         .results
         .map((resp) => resp.id)
+        console.log(recentres)
+
 })();
 
 app.get('/api/recent', async(req, res) => {
@@ -223,7 +226,7 @@ let eventsres;
 
 app.get('/api/events', async(req, res) => {
     const eve = [0, 0, 0]
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
         const pageId = eventsres[i];
         const room = "WAf%3F";
         const roomres = await notion
@@ -250,11 +253,12 @@ app.get('/api/events', async(req, res) => {
             .retrieve({page_id: pageId, property_id: eventname})
 
         eve[i] = {
-                  eventname: eventres.results[0].title.text.content,
-                  date: dateres.date.start.substring(0,10),
-                  time: timeres.date.start.substring(11,16) + " - " + timeres.date.end.substring(11,16),
-                  room : roomres.results[0].rich_text.text.content,
-              };
+          id: pageId,
+          eventname: eventres.results[0].title.text.content,
+          date: dateres.date.start.substring(0,10),
+          time: timeres.date.start.substring(11,16) + " - " + timeres.date.end.substring(11,16),
+          room : roomres.results[0].rich_text.text.content,
+        };
 
     }
 
