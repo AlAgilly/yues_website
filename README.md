@@ -4,15 +4,19 @@
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
+- add the links to the recent and upcoming games
+- remind ppl to add things to notion when updating it
+- add an "opponent" prop
+- fix website speed and api speed
 
 ### Requests for Sasha and Sarah and others
 - What is our youtube channel?
     -  https://youtube.com/@YorkEsports
 - What do we want our emails to be?
-- Need some recent games and upcoming games (3 each at least)
-    - Team pictures for opponent of each game too!
+- Need some team pictures for opponent of each game
 
 ### Requests for Roslyn
+- loading and error formatting
 
 ### Suggestions:
 - Make the prehover games fully grey and white
@@ -20,7 +24,6 @@
 ### Restraints for the first itteration:
 - Cant make Discord icon new ??
 - Cant make active navbar :((
-- the aboutus and event img has to be added to assets already cropped 
 
 ### Requests
 - can you make the hero border imgs/svgs a 850 x 10 (the center one should stay 280 x 10)
@@ -49,13 +52,17 @@
 ### Setting up and running the project on your local machine (In Progress...)
 
 1. Make a github account and a figma account 
-2. Request access to this repository (from now on referred to as repo)
+2. Request access to this repository (repo)
 3. Download:
     - git bash (https://git-scm.com/downloads)
     - github desktop (https://desktop.github.com)
     - Visual Studio Code (https://code.visualstudio.com)
     - node (https://nodejs.org/en/download/)
 4. Open github desktop and click "Clone Repository" (or hold ctrl+shift+o). Click the "URL" tab and paste `https://github.com/AlAgilly/yues_website.git` in the input 
+5. In Visual Studio Code (vsc) navigate to the folder you downloaded and add it to your workspace
+6. Open up the console (ctrl + `) and navigate to the folder
+7. Run `npm i`
+8. Run `npm run dev`
 
 
 ### Upload the files to the server (In Progress...)
@@ -68,7 +75,6 @@
 
 ### Things to look into:
 - Google Calendar
-- IG post 
 - Database
 - Auto post to socials
 - change the teams dir
@@ -92,14 +98,7 @@
     - Student Number
     - twitch
     - Twitter
-- Match History
-    - Game
-    - Team
-    - Opposition 
-    - Score
-    - Links
-        - Twitch
-        - Stats
+
 - Team
     - players
     - subs
