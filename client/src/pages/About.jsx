@@ -109,7 +109,7 @@ function About (){
                           <img src={staffbox} alt="" className='w-full'/>
                         </div>
                         <div className={``}>
-                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Treasurer</h5>
 
                           <div className='member'>
                             <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>

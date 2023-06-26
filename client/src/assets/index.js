@@ -31,8 +31,8 @@ import bordercenters from './bordercenters.svg'
 import borderlines from './borderlines.svg'
 import borderlines2 from './borderlines2.svg'
 import droparrow from './droparrow.svg'
-import staffbox from './staffbox.svg'
-import staffbox2 from './staffbox.png'
+import staffbox2 from './staffbox.svg'
+import staffbox from './staffbox.png'
 
 export {
   aboutsnip,
