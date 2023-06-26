@@ -233,7 +233,7 @@ async function eventsUpdate() {
                 event: event.results[0].title.text.content,
                 date: date.date.start.substring(0,10),
                 time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room : room.results[0],
+                room : room.results[0].rich_text.content,
             }
         }
     }
@@ -254,8 +254,8 @@ async function gateway() {
     }
 };
 
-cron.schedule('0 * * * *', () => {
-    console.log('Updating from notion (every hour)');
+cron.schedule('*/10 * * * *', () => {
+    console.log('Updating from notion (every 10 mins)');
     gateway();
 });
 
