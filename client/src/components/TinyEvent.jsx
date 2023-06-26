@@ -3,6 +3,7 @@ import { eventsList } from '../constants'
 import styles from '../style'
 
 export const TinyEvent = ({
+    key,
     className,
     title,
     date,
