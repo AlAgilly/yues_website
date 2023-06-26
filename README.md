@@ -7,6 +7,7 @@
 - add the links to the recent and upcoming games
 - remind ppl to add things to notion when updating it
 - add an "opponent" prop
+- fix website speed and api speed
 
 ### Requests for Sasha and Sarah and others
 - What is our youtube channel?
@@ -15,7 +16,7 @@
 - Need some team pictures for opponent of each game
 
 ### Requests for Roslyn
-- loading and 
+- loading and error formatting
 
 ### Suggestions:
 - Make the prehover games fully grey and white

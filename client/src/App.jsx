@@ -50,7 +50,7 @@ class App extends Component {
                 <Route exact path="/csgo" element={< UnderConstruction /> }></Route>
                 <Route exact path="/dota2" element={< UnderConstruction /> }></Route>
                 <Route exact path="/hearthstone" element={< UnderConstruction /> }></Route>
-                <Route exact path="/leagueoflegends" element={< UnderConstruction /> }></Route>
+                <Route exact path="/league of legends" element={< UnderConstruction /> }></Route>
                 <Route exact path="/overwatch" element={< UnderConstruction /> }></Route>
                 <Route exact path="/rainbowsixsiege" element={< UnderConstruction /> }></Route>
                 <Route exact path="/rocketleague" element={< UnderConstruction /> }></Route>
