@@ -32,7 +32,7 @@ function Events() {
     return (
         <>
             {events.map((events, index) => (
-                <TinyEvent key={events.id} title={ events.eventname } date={events.date} time={events.time} location={events.room} className={`${index > 1 ? 'hidden xm:block' : 'xm:block'}`} />
+                <TinyEvent key={events.id} title={ events.event } date={events.date} time={events.time} location={events.room} className={`${index > 1 ? 'hidden xm:block' : 'xm:block'}`} />
             ))}
         </>
     )

@@ -15,7 +15,7 @@ const Footer = () => {
   <div className="mx-6 py-10 text-center mm:text-left">
     <div className="grid grid-1 mm:grid-cols-4 lg:grid-cols-6 gap-4">
     <div className='mm:col-span-1 col-span-2'>
-        <h6 class="font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className="font-semibold mb-4 flex justify-center mm:justify-start">
           Our Socials
         </h6>
         <div className='grid grid-cols-4'>
