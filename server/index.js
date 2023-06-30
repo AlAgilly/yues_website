@@ -233,7 +233,7 @@ async function eventsUpdate() {
                 event: event.results[0].title.text.content,
                 date: date.date.start.substring(0,10),
                 time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room : room.results[0].rich_text.content,
+                room : room.results[0],
             }
         }
     }
@@ -254,10 +254,24 @@ async function gateway() {
     }
 };
 
-cron.schedule('*/10 * * * *', () => {
-    console.log('Updating from notion (every 10 mins)');
+cron.schedule('0 * * * *', () => {
+    console.log('Updating from notion (every hour)');
     gateway();
 });
+
+cron.schedule('5 * * * *', () => {
+    console.log('Updating from notion (every hour)');
+    staff();
+});
+
+const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
+
+app.get('/api/insta', async(req, res) => {
+    const data = await fetch(apiURL).then(res => {
+        return res.json()
+    })
+    return res.json(data)
+})
 
 app.get('/api/upcoming', async(req, res) => {
     return res.json(upcoming)
@@ -273,16 +287,6 @@ app.get('/api/events', async(req, res) => {
 
 app.get('/api/posts', (req, res) => {
     return res.json(posts)
-})
-
-const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
-
-app.get('/api/insta', async(req, res) => {
-
-    const data = await fetch(apiURL).then(res => {
-        return res.json()
-    })
-    return res.json(data)
 })
 
 const server = http.createServer(app);
