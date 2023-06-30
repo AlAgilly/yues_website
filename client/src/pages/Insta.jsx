@@ -52,7 +52,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import { getPosts } from "../lib";
+import { getInstaPosts } from "../lib";
 import Feed from "../components/Feed";
 
 function Insta() {
@@ -62,7 +62,7 @@ function Insta() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data, error } = await getPosts()
+            const { data, error } = await getInstaPosts()
             setIsError(error)
             setPosts(data)
             setLoading(false)

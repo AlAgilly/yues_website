@@ -8,6 +8,11 @@ import posts from "./data/index.js"
 import upcoming from "./data/upcoming.js"
 import recent from "./data/recent.js"
 import events from "./data/events.js"
+import admin from "./data/admin.js"
+import competitive from "./data/competitive.js"
+import marketing from "./data/marketing.js"
+import operations from "./data/operations.js"
+import partnerships from "./data/partnerships.js"
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
@@ -414,7 +419,6 @@ async function marketingUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team : team.multi_select[0].name,
             }
         }
     }
@@ -484,7 +488,6 @@ async function partnershipsUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team: team.multi_select[0].name,
             }
         }
     }
@@ -554,7 +557,6 @@ async function operationsUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team : team.multi_select[0].name,
             }
         }
     }
@@ -624,7 +626,6 @@ async function competitiveUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team : team.multi_select[0].name,
             }
         }
     }
@@ -693,6 +694,26 @@ app.get('/api/recent', async(req, res) => {
 
 app.get('/api/events', async(req, res) => {
     return res.json(events)
+})
+
+app.get('/api/admin', (req, res) => {
+    return res.json(admin)
+})
+
+app.get('/api/marketing', (req, res) => {
+    return res.json(marketing)
+})
+
+app.get('/api/partnerships', (req, res) => {
+    return res.json(partnerships)
+})
+
+app.get('/api/operations', (req, res) => {
+    return res.json(operations)
+})
+
+app.get('/api/competitive', (req, res) => {
+    return res.json(competitive)
 })
 
 app.get('/api/posts', (req, res) => {

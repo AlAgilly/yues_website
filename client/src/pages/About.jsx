@@ -4,6 +4,7 @@ import React from 'react'
 import { aboutsnip, droparrow, eventsnip, staffbox } from '../assets';
 import { marketingstaff, operationsstaff, partnershipsstaff, competitivestaff, presidents } from '../constants';
 import styles from '../style'
+import {Admin, Marketing, Partnerships, Operations, Competitive } from "../components/Staff";
 
   
 function About (){
@@ -22,33 +23,6 @@ function About (){
         <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
-              {/* <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
-                <div className='aboutimg grid grid-cols-3 w-full'>
-                  <div className='rightimg hidden mm:flex'>
-                    <img src={ eventsnip } alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className='b4right xl:block hidden'></div>
-              <div className='faderight mm:block hidden'></div>
-              <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
-                <div className='aboutimg grid grid-cols-3 w-full'>
-                  <div className='rightimg hidden mm:flex'>
-                    <img src={ eventsnip } alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className='b4right xl:block hidden'></div>
-              <div className='faderight mm:block hidden'></div>
-              <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
-                <div className='aboutimg grid grid-cols-3 w-full'>
-                  <div className='leftimg hidden mm:flex'>
-                    <img src={ aboutsnip } alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className='b4left xl:block hidden'></div>
-              <div className='fadeleft mm:block hidden'></div> */}
                 <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 w-3/4`}>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
@@ -120,15 +94,7 @@ function About (){
                     </div>
                     <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
                     <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                      {presidents.map((presidents, index) => (
-                        <div className={``}>
-                          <div className='member'>
-                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
-                            <h1 className={`font-bignoodle text-red ${ presidents.font }`}>{ presidents.name }</h1>
-                          </div>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                      ))}
+                      <Admin/>
                     </div>
                     <div class="tab">
                         <input type="checkbox" id="chck1"/>
@@ -141,20 +107,7 @@ function About (){
                         </label>
                         <div class="tab-content">
                           <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                              <div className='member'>
-                              <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Partnerships</span></p>
-                                <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
-                              </div>
-                              <img src={staffbox} alt="" className='w-full'/>
-                            {partnershipsstaff.map((partnerships, index) => (
-                              <div className={``}>
-                                <div className='member'>
-                                  <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Partnerships Staff</span>{ partnerships.role }</p>
-                                  <h1 className={`font-bignoodle text-red ${ partnerships.font }`}>{ partnerships.name }</h1>
-                                </div>
-                                <img src={staffbox} alt="" className='w-full'/>
-                              </div>
-                            ))}
+                              <Partnerships />
                           </div>
                         </div>
                       </div>
@@ -169,22 +122,7 @@ function About (){
                         </label>
                         <div class="tab-content">
                           <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                            <div className='border-2'>
-                              <div className='member'>
-                              <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Competitive</span></p>
-                                <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
-                              </div>
-                              <img src={staffbox} alt="" className='w-full'/>
-                            </div>
-                            {competitivestaff.map((competitive, index) => (
-                              <div className={``}>
-                                <div className='member'>
-                                  <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Competitive Staff</span>{ competitive.role }</p>
-                                  <h1 className={`font-bignoodle text-red ${ competitive.font }`}>{ competitive.name }</h1>
-                                </div>
-                                <img src={staffbox} alt="" className='w-full'/>
-                              </div>
-                            ))}
+                            <Competitive />
                           </div>
                         </div>
                       </div>
@@ -199,20 +137,8 @@ function About (){
                           </label>
                           <div class="tab-content">
                             <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                              <div className='member'>
-                              <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Operations</span></p>
-                                <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
-                              </div>
-                              <img src={staffbox} alt="" className='w-full'/>
-                            {operationsstaff.map((operations, index) => (
-                              <div className={``}>
-                                <div className='member'>
-                                  <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Operations Staff</span>{ operations.role }</p>
-                                  <h1 className={`font-bignoodle text-red ${ operations.font }`}>{ operations.name }</h1>
-                                </div>
-                                <img src={staffbox} alt="" className='w-full'/>
-                              </div>
-                            ))}
+                              <Operations />
+
                           </div>
                         </div>
                       </div>
@@ -227,20 +153,8 @@ function About (){
                           </label>
                           <div class="tab-content">
                             <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                              <div className='member'>
-                              <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Vice-President of Marketing</span></p>
-                                <h1 className='font-bignoodle text-red text-[35px]'>Lynn Al Agilly</h1>
-                              </div>
-                              <img src={staffbox} alt="" className='w-full'/>
-                            {marketingstaff.map((marketing, index) => (
-                              <div className={``}>
-                                <div className='member'>
-                                  <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Marketing Staff</span>{ marketing.role }</p>
-                                  <h1 className={`font-bignoodle text-red ${ marketing.font }`}>{ marketing.name }</h1>
-                                </div>
-                                <img src={staffbox} alt="" className='w-full'/>
-                              </div>
-                            ))}
+                            <Marketing />
+
                           </div>
                         </div>
                       </div>
