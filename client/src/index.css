@@ -772,7 +772,7 @@ line-height: 0;
 }
 .member h1 {
 line-height: 55px;
-font-size: 34px;
+/* font-size: 34px; */
 }
 .small {
   line-height: 45px !important;

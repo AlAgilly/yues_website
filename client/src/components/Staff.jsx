@@ -113,7 +113,7 @@ function Marketing() {
                 <div className={``}>
                     <div className='member'>
                     <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>{ marketing.position == "Staff" ? "Marketing " + marketing.position : (marketing.position == "Vice President" ? marketing.position + " of Marketing" : marketing.position)}</span></p>
-                    <h1 className={`font-bignoodle text-red`}>{ marketing.name }</h1>
+                    <h1 className={`font-bignoodle text-red ${(marketing.name).length > 20 ? 'text-[25px]' : 'text-[34px]'}`}>{ marketing.name }</h1>
                     </div>
                     <img src={staffbox} alt="" className='w-full'/>
                 </div>
