@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import styles from '../style'
 import { Button, TinyEvent } from '../components';
-import { eventsList, upcoming, recent } from '../constants';
 import { borderlines2, eventsnip, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
-import Insta from './Insta';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
+// import Insta from './Insta';
 import Upcoming from '../components/Upcoming';
 import Recent from '../components/Recent';
 import Events from '../components/Events';
+
+const Insta = lazy(() => import('./Insta'));
 
 
 function Home (){
@@ -131,7 +132,9 @@ function Home (){
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
                     <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
                     <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
-                      <Insta />
+                    <Suspense fallback={<div>Hi, This page is Loading...</div>}>
+                        <Insta />
+                      </Suspense>
                     </div>
                   </div> 
                 </section>

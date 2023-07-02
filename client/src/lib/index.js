@@ -39,9 +39,39 @@ export const getEvents = async () => {
     }
 }
 
-export const getAdmin = async () => {
+export const getCopres = async () => {
     try {
-        const res = await Axios.get('/admin')
+        const res = await Axios.get('/copresident')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+
+export const getSecretary = async () => {
+    try {
+        const res = await Axios.get('/secretary')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+
+export const getTreasurer = async () => {
+    try {
+        const res = await Axios.get('/treasurer')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+
+export const getHr = async () => {
+    try {
+        const res = await Axios.get('/hr')
         console.log(res)
         return { data: res.data, error: false }
     } catch(error) {

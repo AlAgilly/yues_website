@@ -4,7 +4,7 @@ import React from 'react'
 import { aboutsnip, droparrow, eventsnip, staffbox } from '../assets';
 import { marketingstaff, operationsstaff, partnershipsstaff, competitivestaff, presidents } from '../constants';
 import styles from '../style'
-import {Admin, Marketing, Partnerships, Operations, Competitive } from "../components/Staff";
+import {Marketing, Partnerships, Operations, Competitive, Hr, Treasurer, Secretary, Copres } from "../components/Staff";
 
   
 function About (){
@@ -20,32 +20,32 @@ function About (){
             </div>
           </div>
           {/* About Snippet */}
-        <div className='w-full overflow-hidden bg-white'>
+          <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
                 <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 w-3/4`}>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
-                  <div className={`w-full`}>
-                    <h4 className={`${styles.titleH4}`}>Our Club</h4>
-                    <div className={`${styles.titleLineBottom}`}>-</div>
-                    <div className='py-5'>
+                    <div className={`w-full`}>
+                      <h4 className={`${styles.titleH4}`}>Our Club</h4>
+                      <div className={`${styles.titleLineBottom}`}>-</div>
+                      <div className='py-5'>
                         <p className='py-2'>York University Esports (YUES) is a club that aims to bring together the community for gaming at York University. We hope to create a space for casual and competitive gamers alike through facilitating club events as well as managing our esports teams! We strive for inclusivity and part of our mission at YUES is to make sure our club is a safe space for everyone to have fun, free of judgement. We are also ratified as a club at York University so you can also check out our <a href='#'>YUConnect page</a>!</p>
                         <p className='py-2'>Here are some ways to get involved...</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
-                  <div className={`w-full`}>
-                    <h4 className={`${styles.titleH5} text-red`}>Community Events</h4>
-                    <p className='py-5'>Our community is also not limited to the online space as we hold weekly Chill Nites that are often held in person on campus! We welcome those looking to have fun and make new friends while participating in a variety of activities or holiday themed events. Our events include fun activities,  free snacks, and the opportunity to compete in various challenges to get a chance to win prizes!</p>
+                  <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
+                    <div className={`w-full`}>
+                      <h4 className={`${styles.titleH5} text-red`}>Community Events</h4>
+                      <p className='py-5'>Our community is also not limited to the online space as we hold weekly Chill Nites that are often held in person on campus! We welcome those looking to have fun and make new friends while participating in a variety of activities or holiday themed events. Our events include fun activities,  free snacks, and the opportunity to compete in various challenges to get a chance to win prizes!</p>
+                    </div>
                   </div>
-                </div>
-                <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
-                  <div className={`w-full`}>
-                    <h4 className={`${styles.titleH5} text-red`}>Competitive Teams</h4>
-                    <p className='py-5'>We have a range of varsity and junior varsity teams for games such as League of Legends, Valorant,  Overwatch, Rocket League, and more. Tryouts are typically held in the fall semester of each year and have the opportunity to play in the competitive collegiate field in various tournaments held across North America.</p>
+                  <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
+                    <div className={`w-full`}>
+                      <h4 className={`${styles.titleH5} text-red`}>Competitive Teams</h4>
+                      <p className='py-5'>We have a range of varsity and junior varsity teams for games such as League of Legends, Valorant,  Overwatch, Rocket League, and more. Tryouts are typically held in the fall semester of each year and have the opportunity to play in the competitive collegiate field in various tournaments held across North America.</p>
+                    </div>
                   </div>
-                </div>
                 <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
                     <h4 className={`${styles.titleH5} text-red`}>Club Tournaments</h4>
@@ -62,39 +62,25 @@ function About (){
                     <div class="tabs">
                     <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Co-Presidents</h5>
                     <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                      {presidents.map((presidents, index) => (
-                        <div className={``}>
-                          <div className='member'>
-                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
-                            <h1 className={`font-bignoodle text-red ${ presidents.font }`}>{ presidents.name }</h1>
-                          </div>
-                          <img src={staffbox} alt="" className='w-full'/>
-                        </div>
-                      ))}
+                      <Copres />
+
+                    </div>
+
+                    <div className='lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
+                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Treasurer</h5>
                     </div>
                     <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <div className={``}>
-                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
-
-                          <div className='member'>
-                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
-                            <h1 className={`font-bignoodle text-red`}>sec</h1>
-                          </div>
-                          <img src={staffbox} alt="" className='w-full'/>
+                          <Secretary />
                         </div>
                         <div className={``}>
-                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Treasurer</h5>
-
-                          <div className='member'>
-                            <p className='font-bevietnampro text-[12px] text-black'><span className='h2'>Co-President</span></p>
-                            <h1 className={`font-bignoodle text-red`}>sec</h1>
-                          </div>
-                          <img src={staffbox} alt="" className='w-full'/>
+                          <Treasurer />
                         </div>
                     </div>
                     <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
                     <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                      <Admin/>
+                      <Hr/>
                     </div>
                     <div class="tab">
                         <input type="checkbox" id="chck1"/>

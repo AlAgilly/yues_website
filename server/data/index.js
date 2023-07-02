@@ -1,12 +1,19 @@
-export default [
-    {
-        id: 1, 
-        photoURL: 'photo',
-        content: 'content'
-    },
-    {
-        id: 2, 
-        photoURL: 'photo',
-        content: 'content'
-    }
-]
+import copresident from "./copresident.js";
+import secretary from './secretary.js'
+import treasurer from './treasurer.js'
+import hr from './hr.js'
+import competitive from "./competitive.js";
+import operations from "./operations.js";
+import partnerships from "./partnerships.js";
+import marketing from "./marketing.js"
+
+export {
+    copresident,
+    secretary,
+    treasurer,
+    competitive,
+    operations,
+    partnerships,
+    marketing,
+    hr,
+};
