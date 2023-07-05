@@ -59,30 +59,30 @@ function About (){
                   <div className={`w-full`}>
                   <h4 className={`${styles.titleH4}`}>Our Club</h4>
                     <div className={`${styles.titleLineBottom}`}>-</div>
-                    <div class="tabs">
-                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Co-Presidents</h5>
-                    <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                      <Copres />
-
-                    </div>
-
-                    <div className='lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
-                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
-                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Treasurer</h5>
-                    </div>
-                    <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                        <div className={``}>
-                          <Secretary />
+                    <div class="tabs mm:block hidden">
+                      <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Co-Presidents</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Copres />
+                      </div>
+                      <div className="mm:block hidden">
+                        <div className='lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Treasurer</h5>
                         </div>
-                        <div className={``}>
-                          <Treasurer />
+                        <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                            <div className={``}>
+                              <Secretary />
+                            </div>
+                            <div className={``}>
+                              <Treasurer />
+                            </div>
                         </div>
-                    </div>
-                    <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
-                    <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-                      <Hr/>
-                    </div>
-                    <div class="tab">
+                      </div>
+                      <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Hr/>
+                      </div>
+                      <div class="tab">
                         <input type="checkbox" id="chck1"/>
                         <label class="tab-label select-none" for="chck1">
                           <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Partnerships Department</h5>
@@ -92,7 +92,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                               <Partnerships />
                           </div>
                         </div>
@@ -107,7 +107,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                             <Competitive />
                           </div>
                         </div>
@@ -122,7 +122,7 @@ function About (){
                             </p>
                           </label>
                           <div class="tab-content">
-                            <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                               <Operations />
 
                           </div>
@@ -130,21 +130,54 @@ function About (){
                       </div>
                       <div class="tab">
                         <input type="checkbox" id="chck4"/>
-                          <label class="tab-label select-none" for="chck4">
-                            <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Marketing Department</h5>
-                            <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
-                            <p className='bg-darkred pl-10'>
-                              <img src={droparrow} alt="" className='dacoolting'/>
-                            </p>
-                          </label>
-                          <div class="tab-content">
-                            <div className='hidden lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <label class="tab-label select-none" for="chck4">
+                          <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Marketing Department</h5>
+                          <div className={`flex-col grow ${styles.titleLineRight}`}>-</div>
+                          <p className='bg-darkred pl-10'>
+                            <img src={droparrow} alt="" className='dacoolting'/>
+                          </p>
+                        </label>
+                        <div class="tab-content">
+                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                             <Marketing />
-
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div className="block mm:hidden">
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Co-Presidents</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Copres />
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Secretary</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Secretary />
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Treasurer</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Treasurer />
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Human Resources Department</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Hr/>
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Competitive Department</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Competitive/>
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Operations Department</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Operations/>
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Partnerships Department</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Partnerships/>
+                      </div>
+                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Marketing Department</h5>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <Marketing/>
+                      </div>
+                      </div>
                   </div>
                 </div>
               </section>

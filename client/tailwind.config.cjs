@@ -18,7 +18,8 @@ module.exports = {
       fontFamily: {
         heynovember: ["HeyNovember", "serif"],
         bebasneue: ["BebasNeue-Regular", "sans-serif"],
-        bevietnampro:["BeVietnamPro-Black", "sans-serif"],
+        bevietnampblack:["BeVietnamPro-Black", "sans-serif"],
+        bevietnam:["BeVietnamPro", "sans-serif"],
         bignoodle:["big_noodle_titling", "sans-serif"],
       }
     },

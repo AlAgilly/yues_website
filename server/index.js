@@ -237,7 +237,7 @@ async function eventsUpdate() {
                 event: event.results[0].title.text.content,
                 date: date.date.start.substring(0,10),
                 time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room : room.results[0].rich_text.content,
+                room: room.results[0].rich_text.text.content,
             }
         }
     }
@@ -863,12 +863,12 @@ async function staff() {
 };
 
 cron.schedule('0 * * * *', () => {
-    console.log('Updating from notion (every hour)');
+    console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
 
 cron.schedule('10 * * * *', () => {
-    console.log('Updating from notion (every hour)');
+    console.log('Updating staff from notion (every hour)');
     staff();
 });
 

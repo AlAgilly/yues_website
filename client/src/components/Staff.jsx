@@ -171,7 +171,7 @@ function Partnerships() {
         <>
             {partnerships.map((partnerships, index) => (
                 <TinyStaff key={partnerships.id} name={ partnerships.name } position={partnerships.position} team={partnerships.team} />
-
+                
             ))}
         </>
     )

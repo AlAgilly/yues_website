@@ -778,3 +778,17 @@ line-height: 55px;
   line-height: 45px !important;
   font-size: 19px !important;
 }
+
+.staffteam{
+ color: var(--red);
+}
+.staffteam::before{
+  content: '|';
+ }
+.staffposition{
+  color: var(--red);
+  font-weight: 400;
+ }
+ .staffposition::before{
+  content: '/';
+ }
