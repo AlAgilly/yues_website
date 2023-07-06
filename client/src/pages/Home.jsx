@@ -4,12 +4,10 @@ import { Button, TinyEvent } from '../components';
 import { borderlines2, eventsnip, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
-// import Insta from './Insta';
+import Insta from '../components/Insta';
 import Upcoming from '../components/Upcoming';
 import Recent from '../components/Recent';
 import Events from '../components/Events';
-
-const Insta = lazy(() => import('./Insta'));
 
 
 function Home (){

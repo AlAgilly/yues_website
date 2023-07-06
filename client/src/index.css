@@ -44,27 +44,27 @@ html, body {
 @font-face {
     font-family: 'HeyNovember';
     font-weight: 900;
-    src: url("assets/HeyNovember.ttf") format("truetype");
+    src: url("assets/fonts/HeyNovember.ttf") format("truetype");
 }
 @font-face {
     font-family: 'BebasNeue-Regular';
     font-weight: 900;
-    src: url("assets/BebasNeue-Regular.ttf") format("truetype");
+    src: url("assets/fonts/BebasNeue-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: 'BeVietnamPro-Black';
     font-weight: 900;
-    src: url("assets/BeVietnamPro-SemiBold.ttf") format("truetype");
+    src: url("assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-family: 'BeVietnamPro';
   font-weight: 100;
-  src: url("assets/BeVietnamPro-Regular.ttf") format("truetype");
+  src: url("assets/fonts/BeVietnamPro-ExtraLight.ttf") format("truetype");
 }
 @font-face {
   font-family: 'big_noodle_titling';
   font-weight: 900;
-  src: url("assets/big_noodle_titling.ttf") format("truetype");
+  src: url("assets/fonts/big_noodle_titling.ttf") format("truetype");
 }
 .navbar li:hover {
   background-color: var(--darkred);

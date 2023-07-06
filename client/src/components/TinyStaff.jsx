@@ -18,7 +18,8 @@ export const TinyStaff = ({
           </div>
           <img src={ staffbox } alt="" className='w-full'/>
       </div>
-      <h2 className={`font-bevietnam block mm:hidden`}>{ name } <span className='staffteam'> { position == "Staff" ? team + " " + position : (position == "Vice President" ? position + " of " + team : position)} </span><span className='staffposition'>{position }</span></h2>
+      <h2 className={`font-bevietnam block mm:hidden`}>{ name } <span className='staffteam'> { position == "Staff" ? team + " " + position : (position == "Vice President" ? position + " of " + team : position)} </span></h2>
+      {/* <h2 className={`font-bevietnam block mm:hidden`}>{ name } <span className='staffteam'> { position == "Staff" ? team + " " + position : (position == "Vice President" ? position + " of " + team : position)} </span><span className='staffposition'>{position }</span></h2> */}
     </>
   )
 }

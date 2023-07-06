@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Navbar, SocialBar, Footer } from './components'
-import { Home, About, Contact, PastGames, NotFound, UnderConstruction, Insta } from './pages/index';
+import { Home, About, Contact, PastGames, NotFound, UnderConstruction } from './pages/index';
 import './index.css';
 import styles from './style'
 // require('dotenv').config()
@@ -57,7 +57,7 @@ class App extends Component {
                 <Route exact path="/valorant" element={< UnderConstruction /> }></Route>
                 <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
                 <Route exact path="/rules" element={< UnderConstruction /> }></Route>
-                <Route exact path="/insta" element={<Insta />}></Route>
+                {/* <Route exact path="/insta" element={<Insta />}></Route> */}
 
                 {/* 404 Error */}
                 <Route path='*' element={<NotFound />}/>
