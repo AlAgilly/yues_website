@@ -8,31 +8,34 @@ import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
-
+  // Mobile nav toggle
   const [toggle, setToggle] = useState(false)
-      //assigning location variable
-      const location = useLocation();
+  //assigning location variable
+  const location = useLocation();
+  //destructuring pathname from location
+  const { pathname } = location;
+  //Javascript split method to get the name of the path in array
+  const splitLocation = pathname.split("/");
 
-      //destructuring pathname from location
-      const { pathname } = location;
-  
-      //Javascript split method to get the name of the path in array
-      const splitLocation = pathname.split("/");
+//active link
+const active = "activenav"
+const normal = ""
 
   return (
     <nav className='w-full flex justify-end items-center navbar'>
       <a href="/"><img src={ yuesports } alt="YUES" className='w-[42px] h-[44px]'/></a>
       <ul className='list-none xm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
-          <a href={`${nav.id}`}>
+
+          <NavLink to={`${nav.id}`} className={({ isActive }) => isActive ? active : normal}>
           <li 
             key={nav.id} 
-            className={`py-4 px-4 font-bignoodle font-normal cursor-pointer text-[23px] text-white`}
+            className={`py-2 cursor-pointer`}
           >
-              {nav.title}
+              <div className={`py-2 px-4 font-bignoodle font-normal cursor-pointer text-[23px] text-white`}>{nav.title}</div>
             
           </li>
-          </a>
+          </NavLink>
           
         ))}
       </ul>

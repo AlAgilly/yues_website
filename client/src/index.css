@@ -52,14 +52,20 @@ html, body {
     src: url("assets/fonts/BebasNeue-Regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'BeVietnamPro-Black';
+    font-family: 'BVP-Black';
     font-weight: 900;
     src: url("assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'BeVietnamPro';
+  font-family: 'BVP';
   font-weight: 100;
-  src: url("assets/fonts/BeVietnamPro-ExtraLight.ttf") format("truetype");
+  src: url("assets/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'BV';
+  font-weight: 100;
+  src: url("assets/fonts/BeVietnam-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: 'big_noodle_titling';
@@ -74,6 +80,29 @@ html, body {
   background-color: var(--red);
   transition: 0.3s ease-in-out;
 }
+
+.navbar li div {
+  border-bottom: 3px solid var(--red);
+  transition: 0.3s ease-in-out;
+
+}
+.navbar li:hover div {
+  transition: 0.3s ease-in-out;
+
+  border-bottom: 3px solid var(--darkred);
+}
+.activenav li div {
+  border-bottom: 3px solid #000;
+}
+
+.activenav li:hover div {
+  border-bottom: 3px solid #000;
+}
+.activenav li:hover {
+  background-color: var(--red);
+  transition: 0.3s ease-in-out;
+}
+
 .social {
   color: var(--white);
   transition: 0.3s ease-in-out;
@@ -563,20 +592,20 @@ html, body {
   }
   .footer {
     color: var(--grey);
-    font-family: 'BeVietnamPro';
+    font-family: 'BVP';
     font-weight: 100;
   }
   .footer h6{
     color: var(--white);
   }
   p {
-    font-family: 'BeVietnamPro';
+    font-family: 'BV';
     font-weight: 100;
     font-size: 17px;
   }
   p a {
     color: var(--red);
-    font-family: 'BeVietnamPro-black';
+    font-family: 'BVP-black';
   }
   p a:hover {
     color: var(--darkred);
@@ -585,11 +614,11 @@ html, body {
   .description p {
     font-size: 15px;
     color: var(--darkgrey);
-    font-family: 'BeVietnamPro-black';
+    font-family: 'BVP-black';
   }
   .description a {
     color: var(--red);
-    font-family: 'BeVietnamPro-black';
+    font-family: 'BVP-black';
   }
   .description a:hover {
     color: var(--darkred);
