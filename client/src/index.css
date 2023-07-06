@@ -87,7 +87,7 @@ html, body {
   color: var(--white);
 }
 .hero {
-  background-image: url("./assets/herobg.png");
+  background-image: url("./assets/imgs/herobg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
