@@ -16,6 +16,7 @@ Home
 - fix date and time formats
 - connect score to notion
 - add an "opponent" prop
+- fix img horizontals 
 
 
 About
@@ -55,11 +56,6 @@ About
 
 ### Restraints for the first itteration:
 - Cant make Discord icon new ??
-
-### Requests
-- can you make the hero border imgs/svgs a 850 x 10 (the center one should stay 280 x 10)
-    - Make them have an end pls
-* refer to Figma for more
 
 ### Things to look for when testing:
 - the URL for all the pages

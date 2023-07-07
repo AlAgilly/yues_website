@@ -518,17 +518,9 @@ html, body {
 /* TESTING */
 
 .image-container {
-  /* overflow:hidden;
-  min-height: 500px;
-  height: 100%;
-  max-width: 100%;
-  display:block;
-  float: right;
-  background-clip: border-box;
-  position: relative;
-  right: 0; */
   width: 100%;
   }
+  
   .image-container > img {
   height: 500px;
   width: 100%;
