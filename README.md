@@ -1,32 +1,60 @@
 # yues_website
 
 ### To do:
+<table>
+<tr>
+<th> Lynn's To Do </th>
+<th> Requests for Roslyn </th>
+</tr>
+<tr>
+<td>
+
+Home
+---
+- add the links to the recent and upcoming games
+- add loading adn error states for api
+- fix date and time formats
+- connect score to notion
+- add an "opponent" prop
+
+
+About
+---
+- add about pictures
+
+Other
+---
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
-- add the links to the recent and upcoming games
 - remind ppl to add things to notion when updating it
-- add an "opponent" prop
-- fix website speed and api speed
-- add about pictures
-- connect score to notion
-- fix date and time formats
-- add loading adn error states for api
+
+</td>
+<td>
+
+Home
+---
+- opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
+- error image for instagram reels
+
+About
+---
+- Choose the images we want for the about page (even if theyre just filler for now)
+
+</td>
+</tr>
+</table>
 
 ### Requests for Sasha and Sarah and others
 - What is our youtube channel?
     -  https://youtube.com/@YorkEsports
 - What do we want our emails to be?
-- Need some team pictures for opponent of each game
-
-### Requests for Roslyn
 
 ### Suggestions:
 - Make the prehover games fully grey and white
 
 ### Restraints for the first itteration:
 - Cant make Discord icon new ??
-- Cant make active navbar :((
 
 ### Requests
 - can you make the hero border imgs/svgs a 850 x 10 (the center one should stay 280 x 10)
@@ -100,4 +128,3 @@
     - Student Number
     - twitch
     - Twitter
-

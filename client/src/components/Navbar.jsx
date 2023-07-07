@@ -52,14 +52,23 @@ const normal = ""
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col shad w-full">
           {navLinks.map((nav, index) => (
-              <li 
-                key={nav.id} 
-                className={`font-bignoodle font-normal py-1 px-6 cursor-pointer text-[23px] hov text-black hover:text-white bg-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10 borderb'} w-full`}
-              >
-                <a href={`${nav.id}`}>
-                  {nav.title}
-                </a>
-              </li>
+              // <li 
+              //   key={nav.id} 
+              //   className={``}
+              // >
+              //   <a href={`${nav.id}`}>
+              //     {nav.title}
+              //   </a>
+              // </li>
+                        <NavLink to={`${nav.id}`} className={`font-bignoodle font-normal py-1 px-6 cursor-pointer text-[23px] hov text-black hover:text-white bg-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10 borderb'} w-full ${({ isActive }) => isActive ? active : normal}`}>
+                        <li 
+                          key={nav.id} 
+                          className={``}
+                        >
+                            {nav.title}
+                          
+                        </li>
+                        </NavLink>
             ))}
           </ul>
         </div>

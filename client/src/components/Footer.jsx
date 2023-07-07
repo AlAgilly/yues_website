@@ -1,12 +1,12 @@
 import React from 'react'
-import {logo} from '../assets'
+// import {logo} from '../assets'
 import { gameLinks } from '../constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { faDiscord, faInstagram, faTwitter, faYoutube, faTwitch } from '@fortawesome/fontawesome-free-brands'
-import { faCoffee  } from '@fortawesome/fontawesome-free-solid'
+// import { faCoffee  } from '@fortawesome/fontawesome-free-solid'
 // import { faCoffee  } from '@fortawesome/fontawesome-free-regular'
-
+ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
@@ -58,9 +58,9 @@ const Footer = () => {
             key={game.id} 
             className={``}
           >
-            <a href={`${game.id}`}>
+            <NavLink href={`${game.id}`}>
               {game.title}
-            </a>
+            </NavLink>
           </div>
           
         ))}
