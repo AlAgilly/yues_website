@@ -228,10 +228,7 @@ html, body {
   color: var(--red);
   border: 3px solid var(--white);
 }
-.active{
-  background-color: red;
-  color: #fff;
-}
+
 .text-november {
   font-family: 'HeyNovember', serif;
 }
