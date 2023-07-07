@@ -20,11 +20,12 @@
 - connect score to notion
 - fix date and time formats
 - add loading adn error states for api
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </td>
 <td>
 
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 </td>
 </tr>
