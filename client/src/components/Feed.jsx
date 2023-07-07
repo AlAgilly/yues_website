@@ -18,10 +18,10 @@ const Feed = (props) => {
             post = (
                 <video
                     width='100%'
-                    height='auto' 
+                    height='100' 
                     src={media_url} 
-                    type="video/mp4" 
-                    controls playsinline>
+                    type="image" 
+                    >
                 </video>
             )
             break;

@@ -8,6 +8,10 @@
 - remind ppl to add things to notion when updating it
 - add an "opponent" prop
 - fix website speed and api speed
+- add about pictures
+- connect score to notion
+- fix date and time formats
+- add loading adn error states for api
 
 ### Requests for Sasha and Sarah and others
 - What is our youtube channel?
@@ -16,7 +20,6 @@
 - Need some team pictures for opponent of each game
 
 ### Requests for Roslyn
-- loading and error formatting
 
 ### Suggestions:
 - Make the prehover games fully grey and white
@@ -74,7 +77,6 @@
 ## LATER
 
 ### Things to look into:
-- Google Calendar
 - Database
 - Auto post to socials
 - change the teams dir
@@ -98,12 +100,4 @@
     - Student Number
     - twitch
     - Twitter
-
-- Team
-    - players
-    - subs
-    - Managers
-    - Coaches
-    - Competitive directors
-    - Game
 

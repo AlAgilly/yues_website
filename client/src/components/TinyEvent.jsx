@@ -1,5 +1,4 @@
 import React from 'react'
-import { eventsList } from '../constants'
 import styles from '../style'
 
 export const TinyEvent = ({

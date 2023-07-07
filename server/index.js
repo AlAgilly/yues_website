@@ -4,10 +4,11 @@ import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
 import { port, instagram, notionapi } from "./config/index.js";
-import posts from "./data/index.js"
+// import posts from "./data/index.js"
 import upcoming from "./data/upcoming.js"
 import recent from "./data/recent.js"
 import events from "./data/events.js"
+import { copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/index.js"
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
@@ -24,28 +25,7 @@ app.use(compression());
 
 // NOTION START get the pages
 let upcomingPageIds;
-const upcomingArray = [0, 0, 0];
-
-let recentPageIds;
-const recentArray = [0, 0, 0];
-
-let eventsPageIds;
-const eventsArray = [0, 0, 0, 0];
-
-let adminPageIds;
-let adminArray = [];
-
-let marketingPageIds;
-let marketingArray = [];
-
-let partnershipsPageIds;
-let partnershipsArray = [];
-
-let operationsPageIds;
-let operationsArray = [];
-
-let competitivePageIds;
-let competitiveArray = [];
+let upcomingArray = [];
 
 async function upcomingUpdate() {
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
@@ -81,7 +61,8 @@ async function upcomingUpdate() {
         ]
     })
     upcomingPageIds = dbResponse.results.map((resp) => resp.id)
-    for (let i = 0; i < 3; i++) {
+    upcomingArray = [];
+    for (let i = 0; i < 3 && upcomingPageIds[i] != undefined; i++) {
         const pageId = upcomingPageIds[i];
 
         const gameId = "vq%7CF";
@@ -122,6 +103,9 @@ async function upcomingUpdate() {
     }
 };
 
+let recentPageIds;
+let recentArray = [];
+
 async function recentUpdate() {
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
@@ -156,6 +140,7 @@ async function recentUpdate() {
         ]
     })
     recentPageIds = dbResponse.results.map((resp) => resp.id)
+    recentArray = [];
     for (let i = 0; i < 3; i++) {
         const pageId = recentPageIds[i];
 
@@ -197,6 +182,9 @@ async function recentUpdate() {
     }
 };
 
+let eventsPageIds;
+let eventsArray = [];
+
 async function eventsUpdate() {
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
@@ -219,7 +207,8 @@ async function eventsUpdate() {
         ]
     })
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
-    for (let i = 0; i < 4; i++) {
+    eventsArray = [];
+    for (let i = 0; i < 4 && eventsPageIds[i] != undefined; i++) {
         const pageId = eventsPageIds[i];
 
         const roomId = "WAf%3F";
@@ -248,13 +237,16 @@ async function eventsUpdate() {
                 event: event.results[0].title.text.content,
                 date: date.date.start.substring(0,10),
                 time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room : room.results[0].rich_text.content,
+                room: room.results[0].rich_text.text.content,
             }
         }
     }
 };
 
-async function adminUpdate() {
+let copresidentPageIds;
+let copresidentArray = [];
+
+async function copresidentUpdate() {
     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -267,55 +259,24 @@ async function adminUpdate() {
                     }
                 },
                 {
-                    or: [
-                        {
-                            property: 'Team',
-                            multi_select: {
-                                contains: "Administration"
-                            }
-                        },
-                        {
-                            property: 'Team',
-                            multi_select: {
-                                contains: "Secretary"
-                            }
-                        },
-                        {
-                            property: 'Team',
-                            multi_select: {
-                                contains: "Treasurer"
-                            }
-                        },
-                        {
-                            property: 'Team',
-                            multi_select: {
-                                contains: "Human Resources"
-                            }
-                        },
-                    ]
-                }
+                    property: 'Position',
+                    select: {
+                        equals: "Co-President"
+                    }
+                },
             ]
         },
         sorts:[
-            {
-                property: 'Team',
-                direction: 'ascending'
-            },
-            {
-                property: 'Position',
-                direction: 'ascending'
-            },
             {
                 property: 'Name',
                 direction: 'ascending'
             },
         ]
     })
-    partnershipsPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(partnershipsPageIds)
-    adminArray = [];
-    for (let i = 0; i < partnershipsPageIds.length; i++) {
-        const pageId = partnershipsPageIds[i];
+    copresidentPageIds = dbResponse.results.map((resp) => resp.id)
+    copresidentArray = [];
+    for (let i = 0; i < copresidentPageIds.length; i++) {
+        const pageId = copresidentPageIds[i];
 
         const nameId = "title";
         const name = await notion
@@ -338,9 +299,9 @@ async function adminUpdate() {
 
 
         if (name == null || position == null || team == undefined) {
-            adminArray[i] = {}
+            copresidentArray[i] = {}
         } else {
-            adminArray[i] = {
+            copresidentArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
@@ -349,6 +310,228 @@ async function adminUpdate() {
         }
     }
 };
+
+let secretaryPageIds;
+let secretaryArray = [];
+
+async function secretaryUpdate() {
+    const databaseId = '02cb5f77092c413483cc744d04f6a87a';
+    const dbResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: {
+            and: [
+                {
+                    property: 'Status',
+                    select: {
+                        is_empty: true
+                    }
+                },
+                {
+                    property: 'Position',
+                    select: {
+                        equals: "Secretary"
+                    }
+                },
+            ]
+        },
+        sorts:[
+            {
+                property: 'Team',
+                direction: 'ascending'
+            },
+            {
+                property: 'Name',
+                direction: 'ascending'
+            },
+        ]
+    })
+    secretaryPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(secretaryPageIds)
+    secretaryArray = [];
+    for (let i = 0; i < secretaryPageIds.length; i++) {
+        const pageId = secretaryPageIds[i];
+
+        const nameId = "title";
+        const name = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: nameId})
+            
+        const teamId = "%7B%5Evf";
+        const team = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: teamId})
+
+        const positionId = "EkNg";
+        const position = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: positionId})
+
+
+
+        if (name == null || position == null || team == undefined) {
+            secretaryArray[i] = {}
+        } else {
+            secretaryArray[i] = {
+                id: pageId,
+                name: name.results[0].title.text.content,
+                position: position.select.name,
+                team : team.multi_select[0].name,
+            }
+        }
+    }
+};
+
+let treasurerPageIds;
+let treasurerArray = [];
+
+async function treasurerUpdate() {
+    const databaseId = '02cb5f77092c413483cc744d04f6a87a';
+    const dbResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: {
+            and: [
+                {
+                    property: 'Status',
+                    select: {
+                        is_empty: true
+                    }
+                },
+                {
+                    property: 'Position',
+                    select: {
+                        equals: "Treasurer"
+                    }
+                },
+            ]
+        },
+        sorts:[
+            {
+                property: 'Team',
+                direction: 'ascending'
+            },
+            {
+                property: 'Name',
+                direction: 'ascending'
+            },
+        ]
+    })
+    treasurerPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(treasurerPageIds)
+    treasurerArray = [];
+    for (let i = 0; i < treasurerPageIds.length; i++) {
+        const pageId = treasurerPageIds[i];
+
+        const nameId = "title";
+        const name = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: nameId})
+            
+        const teamId = "%7B%5Evf";
+        const team = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: teamId})
+
+        const positionId = "EkNg";
+        const position = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: positionId})
+
+
+
+        if (name == null || position == null || team == undefined) {
+            treasurerArray[i] = {}
+        } else {
+            treasurerArray[i] = {
+                id: pageId,
+                name: name.results[0].title.text.content,
+                position: position.select.name,
+                team : team.multi_select[0].name,
+            }
+        }
+    }
+};
+
+let hrPageIds;
+let hrArray = [];
+
+async function hrUpdate() {
+    const databaseId = '02cb5f77092c413483cc744d04f6a87a';
+    const dbResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: {
+            and: [
+                {
+                    property: 'Status',
+                    select: {
+                        is_empty: true
+                    }
+                },
+                {
+                    property: 'Position',
+                    select: {
+                        equals: "Human Resources"
+                    }
+                },
+            ]
+        },
+        sorts:[
+            {
+                property: 'Team',
+                direction: 'ascending'
+            },
+            {
+                property: 'Name',
+                direction: 'ascending'
+            },
+        ]
+    })
+    hrPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(hrPageIds)
+    hrArray = [];
+    for (let i = 0; i < hrPageIds.length; i++) {
+        const pageId = hrPageIds[i];
+
+        const nameId = "title";
+        const name = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: nameId})
+            
+        const teamId = "%7B%5Evf";
+        const team = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: teamId})
+
+        const positionId = "EkNg";
+        const position = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: positionId})
+
+
+
+        if (name == null || position == null || team == undefined) {
+            hrArray[i] = {}
+        } else {
+            hrArray[i] = {
+                id: pageId,
+                name: name.results[0].title.text.content,
+                position: position.select.name,
+                team : team.multi_select[0].name,
+            }
+        }
+    }
+};
+
+let marketingPageIds;
+let marketingArray = [];
 
 async function marketingUpdate() {
     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
@@ -414,11 +597,14 @@ async function marketingUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team : team.multi_select[0].name,
+                team: team.multi_select[0].name,
             }
         }
     }
 };
+
+let partnershipsPageIds;
+let partnershipsArray = [];
 
 async function partnershipsUpdate() {
     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
@@ -490,6 +676,9 @@ async function partnershipsUpdate() {
     }
 };
 
+let operationsPageIds;
+let operationsArray = [];
+
 async function operationsUpdate() {
     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
     const dbResponse = await notion.databases.query({
@@ -554,11 +743,14 @@ async function operationsUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team : team.multi_select[0].name,
+                team: team.multi_select[0].name,
             }
         }
     }
 };
+
+let competitivePageIds;
+let competitiveArray = [];
 
 async function competitiveUpdate() {
     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
@@ -624,7 +816,7 @@ async function competitiveUpdate() {
                 id: pageId,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
-                team : team.multi_select[0].name,
+                team: team.multi_select[0].name,
             }
         }
     }
@@ -647,7 +839,10 @@ async function gateway() {
 
 async function staff() {
     try {
-        await adminUpdate();
+        await copresidentUpdate();
+        await secretaryUpdate();
+        await treasurerUpdate();
+        await hrUpdate();
         await marketingUpdate();
         await partnershipsUpdate();
         await operationsUpdate();
@@ -656,7 +851,10 @@ async function staff() {
       console.log(err);
     }
     finally {
-        await fs.writeFile('./data/admin.js', "export default " + JSON.stringify(adminArray));
+        await fs.writeFile('./data/copresident.js', "export default " + JSON.stringify(copresidentArray));
+        await fs.writeFile('./data/secretary.js', "export default " + JSON.stringify(secretaryArray));
+        await fs.writeFile('./data/treasurer.js', "export default " + JSON.stringify(treasurerArray));
+        await fs.writeFile('./data/hr.js', "export default " + JSON.stringify(hrArray));
         await fs.writeFile('./data/marketing.js', "export default " + JSON.stringify(marketingArray));
         await fs.writeFile('./data/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
         await fs.writeFile('./data/operations.js', "export default " + JSON.stringify(operationsArray));
@@ -665,12 +863,12 @@ async function staff() {
 };
 
 cron.schedule('0 * * * *', () => {
-    console.log('Updating from notion (every hour)');
+    console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
 
-cron.schedule('5 * * * *', () => {
-    console.log('Updating from notion (every hour)');
+cron.schedule('10 * * * *', () => {
+    console.log('Updating staff from notion (every hour)');
     staff();
 });
 
@@ -683,21 +881,50 @@ app.get('/api/insta', async(req, res) => {
     return res.json(data)
 })
 
-app.get('/api/upcoming', async(req, res) => {
+app.get('/api/upcoming', (req, res) => {
     return res.json(upcoming)
 })
 
-app.get('/api/recent', async(req, res) => {
+app.get('/api/recent', (req, res) => {
     return res.json(recent)
 })
 
-app.get('/api/events', async(req, res) => {
+app.get('/api/events', (req, res) => {
     return res.json(events)
 })
 
-app.get('/api/posts', (req, res) => {
-    return res.json(posts)
+app.get('/api/copresident', (req, res) => {
+    return res.json(copresident)
 })
+
+app.get('/api/secretary', (req, res) => {
+    return res.json(secretary)
+})
+
+app.get('/api/treasurer', (req, res) => {
+    return res.json(treasurer)
+})
+
+app.get('/api/hr', (req, res) => {
+    return res.json(hr)
+})
+
+app.get('/api/marketing', (req, res) => {
+    return res.json(marketing)
+})
+
+app.get('/api/partnerships', (req, res) => {
+    return res.json(partnerships)
+})
+
+app.get('/api/operations', (req, res) => {
+    return res.json(operations)
+})
+
+app.get('/api/competitive', (req, res) => {
+    return res.json(competitive)
+})
+
 
 const server = http.createServer(app);
 server.listen(port, () => {
