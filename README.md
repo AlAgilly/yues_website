@@ -9,6 +9,13 @@
 <tr>
 <td>
 
+---
+Home
+---
+
+---
+About
+---
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
@@ -20,12 +27,11 @@
 - connect score to notion
 - fix date and time formats
 - add loading adn error states for api
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 </td>
 <td>
 
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 </td>
 </tr>
