@@ -1,16 +1,23 @@
 import React, { lazy, Suspense } from 'react'
 import styles from '../style'
-import { Button, TinyEvent } from '../components';
-import { borderlines2, eventsnip, aboutsnip, team1, out, borderlines, bordercenters } from '../assets'
+import { Button } from '../components';
+import { borderlines2, eventsnip, aboutsnip, out, borderlines, bordercenters } from '../assets'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
 import Insta from '../components/Insta';
 import Upcoming from '../components/Upcoming';
 import Recent from '../components/Recent';
 import Events from '../components/Events';
-
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Home (){
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
     return (
         <>
 {/* Hero Section */}

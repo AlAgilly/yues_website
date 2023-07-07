@@ -2,12 +2,18 @@ import { faYoutube } from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { aboutsnip, droparrow, eventsnip, staffbox } from '../assets';
-import { marketingstaff, operationsstaff, partnershipsstaff, competitivestaff, presidents } from '../constants';
 import styles from '../style'
 import {Marketing, Partnerships, Operations, Competitive, Hr, Treasurer, Secretary, Copres } from "../components/Staff";
-
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
   
 function About (){
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
     return (
         <>

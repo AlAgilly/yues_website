@@ -669,21 +669,21 @@ html, body {
     }
   }
   .idk {
-    background-image: url(./assets/headerimg.png);
+    background-image: url(./assets/imgs/headerimg.png);
     background-repeat: no-repeat;
     background-position:  top 40%  left 10%;
     background-size: 50%;
     position: relative;
   }
     .idk2 {
-    background-image: url(./assets/grey.png);
+    background-image: url(./assets/imgs/grey.png);
     background-repeat: no-repeat;
     background-position:  top 40%  right 10%;
     background-size: 50%;
     position: relative;
   }
   .bgg {
-    background-image: url(./assets/bgg.png);
+    background-image: url(./assets/imgs/bgg.png);
     background-repeat: repeat;
     position: relative;
   }
@@ -705,7 +705,7 @@ html, body {
     background: var(--black);
   }
   .aboutsec {
-    background-image: url(./assets/swirl.png);
+    background-image: url(./assets/imgs/swirl.png);
     background-size: cover;
     z-index: 10;
   }

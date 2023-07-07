@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, SocialBar, Footer } from './components'
-import { Home, About, Contact, PastGames, NotFound, UnderConstruction } from './pages/index';
 import './index.css';
 import styles from './style'
-// require('dotenv').config()
+import { lazy, Suspense } from 'react';
 
+const Home = lazy(() => import("./pages/Home"))
+const About = lazy(() => import("./pages/About"))
+const Contact = lazy(() => import("./pages/Contact"))
+const UnderConstruction = lazy(() => import("./pages/UnderConstruction"))
+const NotFound = lazy(() => import("./pages/NotFound"))
+const PastGames = lazy(() => import("./pages/PastGames"))
 
 class App extends Component {
-  // require('dotenv').config()
-
   render() {
-    // require('dotenv').config()
-
     return (
        <Router>
           <div className="App">
@@ -35,44 +36,46 @@ class App extends Component {
                 </div>
               </div>
             </div>
-            <div className='mt-[130px] xm:mt-[116px]'>
-              <Routes>
-                {/* Completed Pages */}
-                <Route exact path='/' element={< Home />}></Route>
-                <Route exact path='/about' element={< About />}></Route>
-                <Route exact path='/contact' element={< Contact />}></Route>
-                <Route exact path='/pastgames' element={< PastGames/>}></Route>
-                {/* Underconstruction Pages */}
-                <Route exact path='/events' element={< UnderConstruction />}></Route>
-                <Route exact path='/teams' element={< UnderConstruction />}></Route>
-                <Route exact path="/apexlegends" element={< UnderConstruction /> }></Route>
-                <Route exact path="/callofduty" element={< UnderConstruction /> }></Route>
-                <Route exact path="/csgo" element={< UnderConstruction /> }></Route>
-                <Route exact path="/dota2" element={< UnderConstruction /> }></Route>
-                <Route exact path="/hearthstone" element={< UnderConstruction /> }></Route>
-                <Route exact path="/league of legends" element={< UnderConstruction /> }></Route>
-                <Route exact path="/overwatch" element={< UnderConstruction /> }></Route>
-                <Route exact path="/rainbowsixsiege" element={< UnderConstruction /> }></Route>
-                <Route exact path="/rocketleague" element={< UnderConstruction /> }></Route>
-                <Route exact path="/valorant" element={< UnderConstruction /> }></Route>
-                <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
-                <Route exact path="/rules" element={< UnderConstruction /> }></Route>
-                {/* <Route exact path="/insta" element={<Insta />}></Route> */}
+            <Suspense fallback={<h1>Loading...</h1>}>
+              <div className='mt-[130px] xm:mt-[116px]'>
+                <Routes>
+                  {/* Completed Pages */}
+                  <Route exact path='/' element={< Home />}></Route>
+                  <Route exact path='/about' element={< About />}></Route>
+                  <Route exact path='/contact' element={< Contact />}></Route>
+                  <Route exact path='/pastgames' element={< PastGames/>}></Route>
+                  {/* Underconstruction Pages */}
+                  <Route exact path='/events' element={< UnderConstruction />}></Route>
+                  <Route exact path='/teams' element={< UnderConstruction />}></Route>
+                  <Route exact path="/apexlegends" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/callofduty" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/csgo" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/dota2" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/hearthstone" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/league of legends" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/overwatch" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/rainbowsixsiege" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/rocketleague" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/valorant" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/rules" element={< UnderConstruction /> }></Route>
+                  {/* <Route exact path="/insta" element={<Insta />}></Route> */}
 
-                {/* 404 Error */}
-                <Route path='*' element={<NotFound />}/>
-              </Routes>
-              {/* <Insta token={process.env.REACT_APP_INS_TOKEN} limit={12}/> */}
-              
+                  {/* 404 Error */}
+                  <Route path='*' element={<NotFound />}/>
+                </Routes>
+                {/* <Insta token={process.env.REACT_APP_INS_TOKEN} limit={12}/> */}
+                
 
-              <div className='w-full overflow-hidden bg-black'>
-                <div className={`bg-primary ${styles.flexStart}`}>
-                   <div className={`w-full px-10`}>
-                       <Footer />
-                    </div>
-                </div>
-            </div>
-            </div>
+                <div className='w-full overflow-hidden bg-black'>
+                  <div className={`bg-primary ${styles.flexStart}`}>
+                    <div className={`w-full px-10`}>
+                        <Footer />
+                      </div>
+                  </div>
+              </div>
+              </div>
+            </Suspense>
             {/* Version ONLY FOR TESTING */}
             <div className='version'>Version: 1.0.0</div>
           </div>

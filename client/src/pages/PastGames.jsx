@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../style'
 import { Button } from '../components';
-import { recent, resultsDec, resultsOct } from '../constants';
+// import { recent, resultsDec, resultsOct } from '../constants';
 import { aboutsnip, team1, team2 } from '../assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faUnlink } from '@fortawesome/fontawesome-free-solid'
@@ -20,7 +20,7 @@ function PastGames() {
                   <div className='my-4 grid grid-cols-1'>
                     {/* December results section start */}
                   <h4 className={`${styles.titleH4}justify-self-left mm:flex hidden pt-16`}>December</h4>
-                    {resultsDec.map((rec, index) => (
+                    {/* {resultsDec.map((rec, index) => (
                       <div className={`items-center justify-self-center `}>
                       <h4 className={`${styles.titleH4} col-span-1 mm:col-span-2 justify-self-center mm:flex hidden `}></h4>
                       <div className={`w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-9 items-center justify-self-center ${index === resultsDec.length - 1 ? '' : 'borderb'}`}>
@@ -37,7 +37,7 @@ function PastGames() {
                         </div>
                       </div>
                       </div>
-                    ))}
+                    ))} */}
                     {/* December results section end */}
                     {/* October results section start */}
                   <h4 className={`${styles.titleH4}justify-self-left mm:flex hidden pt-16`}>October</h4>
