@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../style'
+import { Button } from '../components';
 import { borderline, greyoutline } from '../assets'
 
 function UnderConstruction (){

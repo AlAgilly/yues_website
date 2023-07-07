@@ -72,6 +72,7 @@ class App extends Component {
                   <div className={`bg-primary ${styles.flexStart}`}>
                     <div className={`w-full px-10`}>
                     <Suspense fallback={<h1>Loading...</h1>}>
+
                         <Footer />
                         </Suspense>
                       </div>
