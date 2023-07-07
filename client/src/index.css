@@ -83,20 +83,24 @@ html, body {
 
 .navbar li div {
   border-bottom: 3px solid var(--red);
+  border-top: 3px solid var(--red);
   transition: 0.3s ease-in-out;
 
 }
 .navbar li:hover div {
   transition: 0.3s ease-in-out;
-
+  border-top: 3px solid var(--darkred);
   border-bottom: 3px solid var(--darkred);
 }
 .activenav li div {
   border-bottom: 3px solid #000;
+  border-top: 3px solid var(--red);
 }
 
 .activenav li:hover div {
   border-bottom: 3px solid #000;
+  border-top: 3px solid var(--red);
+
 }
 .activenav li:hover {
   background-color: var(--red);
