@@ -4,6 +4,7 @@ import { Navbar, SocialBar } from './components'
 import './index.css';
 import styles from './style'
 import { lazy, Suspense } from 'react';
+// import Home from './pages/Home';
 
 const Home = lazy(() => import("./pages/Home"))
 const About = lazy(() => import("./pages/About"))
@@ -11,7 +12,7 @@ const Contact = lazy(() => import("./pages/Contact"))
 const UnderConstruction = lazy(() => import("./pages/UnderConstruction"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 const PastGames = lazy(() => import("./pages/PastGames"))
-const Footer = lazy(() => import("./components"))
+const Footer = lazy(() => import("./components/Footer"))
 
 class App extends Component {
   render() {
@@ -37,8 +38,9 @@ class App extends Component {
                 </div>
               </div>
             </div>
+            <Suspense fallback={<h1>Loading...</h1>}>
+
               <div className='mt-[130px] xm:mt-[116px]'>
-              <Suspense fallback={<h1>Loading...</h1>}>
                 <Routes>
                   {/* Completed Pages */}
                   <Route exact path='/' element={< Home />}></Route>
@@ -65,20 +67,19 @@ class App extends Component {
                   {/* 404 Error */}
                   <Route path='*' element={<NotFound />}/>
                 </Routes>
-                </Suspense>
 
 
                 <div className='w-full overflow-hidden bg-black'>
                   <div className={`bg-primary ${styles.flexStart}`}>
                     <div className={`w-full px-10`}>
-                    <Suspense fallback={<h1>Loading...</h1>}>
 
                         <Footer />
-                        </Suspense>
                       </div>
                   </div>
               </div>
               </div>
+              </Suspense>
+
             {/* Version ONLY FOR TESTING */}
             <div className='version'>Version: 1.0.0</div>
           </div>
