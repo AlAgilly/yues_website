@@ -9,29 +9,37 @@
 <tr>
 <td>
 
-
 Home
 ---
+- add the links to the recent and upcoming games
+- add loading adn error states for api
+- fix date and time formats
+- connect score to notion
+- add an "opponent" prop
 
 
 About
 ---
+- add about pictures
+
+Other
+---
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
-- add the links to the recent and upcoming games
 - remind ppl to add things to notion when updating it
-- add an "opponent" prop
-- fix website speed and api speed
-- add about pictures
-- connect score to notion
-- fix date and time formats
-- add loading adn error states for api
 
 </td>
 <td>
 
+Home
+---
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
+- error image for instagram reels
+
+About
+---
+- Choose the images we want for the about page (even if theyre just filler for now)
 
 </td>
 </tr>
