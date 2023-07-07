@@ -18,6 +18,7 @@
 html, body {
   height: 100%;
 }
+
 .version {
   background-color: var(--black);
   color: var(--white);
