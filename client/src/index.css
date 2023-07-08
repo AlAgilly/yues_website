@@ -18,6 +18,7 @@
 html, body {
   height: 100%;
 }
+
 .version {
   background-color: var(--black);
   color: var(--white);
@@ -72,41 +73,76 @@ html, body {
   font-weight: 900;
   src: url("assets/fonts/big_noodle_titling.ttf") format("truetype");
 }
-.navbar li:hover {
+/* .navbar li:hover {
   background-color: var(--darkred);
   transition: 0.3s ease-in-out;
 }
 .navbar li {
   background-color: var(--red);
   transition: 0.3s ease-in-out;
+  color: var(--white);
 }
 
-.navbar li div {
+.navbar div {
   border-bottom: 3px solid var(--red);
   border-top: 3px solid var(--red);
   transition: 0.3s ease-in-out;
 
 }
-.navbar li:hover div {
+.navbar a:hover div {
   transition: 0.3s ease-in-out;
   border-top: 3px solid var(--darkred);
   border-bottom: 3px solid var(--darkred);
 }
-.activenav li div {
+.activenav div {
   border-bottom: 3px solid #000;
   border-top: 3px solid var(--red);
+  color: var(--black);
 }
 
-.activenav li:hover div {
+.activenav:hover div {
   border-bottom: 3px solid #000;
   border-top: 3px solid var(--red);
 
 }
-.activenav li:hover {
+.activenav:hover {
   background-color: var(--red);
   transition: 0.3s ease-in-out;
 }
 
+.activenav div:hover {
+  border-bottom: 3px solid #000;
+  border-top: 3px solid var(--red);
+  background-color: var(--red);
+  transition: 0.3s ease-in-out;
+} */
+.activenav div {
+  color: var(--black);
+}
+
+.navbar div div {
+  border-bottom: 3px solid var(--red);
+  border-top: 3px solid var(--red);
+}
+.navbar div:hover div {
+  border-bottom: 3px solid var(--darkred);
+  border-top: 3px solid var(--darkred);
+}
+.navbar div:hover {
+  background-color: var(--darkred);
+}
+.navbar .activenav div:hover {
+  background-color: var(--red);
+
+}
+.navbar .activenav div div {
+  border-bottom: 3px solid #000;
+  border-top: 3px solid var(--red);
+}
+.navbar .activenav div:hover div {
+  border-bottom: 3px solid #000;
+  border-top: 3px solid var(--red);
+}
 .social {
   color: var(--white);
   transition: 0.3s ease-in-out;
@@ -287,10 +323,10 @@ html, body {
   position:absolute;
   opacity: 0.3;
 }
-@media screen and (max-width: 843px) {
+@media screen and (max-width: 844px) {
   .lion2 {
     top: -20px;
-    right: -500px;
+    right: -50px;
     width: 500px;
   }
 }
@@ -309,23 +345,17 @@ html, body {
     right: -500px;
     left: 0;
     margin: auto;
-    width: 950px;
+    width: 600px;
   }
 }
-/* @media screen and (min-width: 844px) {
-  .lion {
-    top: -100px;
-    right: 500px;
-    width: 500px;
-  }
-} */
+
 @media screen and (min-width: 1155px) {
   .lion2 {
     top: -100px;
-    right: -100px;
+    right: -600px;
     left: 0;
     margin: auto;
-    width: 950px;
+    width: 650px;
   }
 }
 .bg-blue-gradient {
