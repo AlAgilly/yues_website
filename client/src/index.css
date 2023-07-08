@@ -323,10 +323,10 @@ html, body {
   position:absolute;
   opacity: 0.3;
 }
-@media screen and (max-width: 843px) {
+@media screen and (max-width: 844px) {
   .lion2 {
     top: -20px;
-    right: -500px;
+    right: -50px;
     width: 500px;
   }
 }
@@ -345,23 +345,17 @@ html, body {
     right: -500px;
     left: 0;
     margin: auto;
-    width: 950px;
+    width: 600px;
   }
 }
-/* @media screen and (min-width: 844px) {
-  .lion {
-    top: -100px;
-    right: 500px;
-    width: 500px;
-  }
-} */
+
 @media screen and (min-width: 1155px) {
   .lion2 {
     top: -100px;
-    right: -100px;
+    right: -600px;
     left: 0;
     margin: auto;
-    width: 950px;
+    width: 650px;
   }
 }
 .bg-blue-gradient {
