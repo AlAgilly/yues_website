@@ -39,7 +39,6 @@ class App extends Component {
               </div>
             </div>
             <Suspense fallback={<h1>Loading...</h1>}>
-
               <div className='mt-[130px] xm:mt-[116px]'>
                 <Routes>
                   {/* Completed Pages */}
@@ -62,8 +61,6 @@ class App extends Component {
                   <Route exact path="/valorant" element={< UnderConstruction /> }></Route>
                   <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
                   <Route exact path="/rules" element={< UnderConstruction /> }></Route>
-                  {/* <Route exact path="/insta" element={<Insta />}></Route> */}
-
                   {/* 404 Error */}
                   <Route path='*' element={<NotFound />}/>
                 </Routes>
