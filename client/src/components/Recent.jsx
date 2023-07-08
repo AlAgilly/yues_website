@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getRecent } from "../lib";
 import styles from "../style";
 import { team1, team2 } from "../assets";
+import { Link } from "react-router-dom";
 
 function Recent() {
     const [recent, setRecent] = useState([])
@@ -33,10 +34,10 @@ function Recent() {
             {recent.map((rec, index) => (
                 <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-4 mm:grid-cols-8 gap-2 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                     <div className=''>
-                    <a href={`/${rec.game}`}>
+                    <Link to={`/${rec.game}`}>
                         <h2>{rec.game}</h2>
                         <h3>{rec.team}</h3>
-                    </a>
+                    </Link>
                     </div>
                     <h4 className={`${styles.titleH4} col-span-1 mm:flex hidden`}>{rec.date}</h4>
                     <img src={ team1 } alt="" className={`h-16 justify-self-center`}/>

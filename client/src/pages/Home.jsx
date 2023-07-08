@@ -10,6 +10,7 @@ import Recent from '../components/Recent';
 import Events from '../components/Events';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Home (){
   const location = useLocation();
@@ -84,7 +85,7 @@ function Home (){
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
                   <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Who We Are</h3>
                   <div className='my-4'>
-                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <a href='/teams'>competitive teams</a>, and also facilitate <a href='/events'>in-person and online events</a>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
+                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Li>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
                   </div>
                 </div>
                 <div className='grid mm:grid-cols-2 grid-cols-1 mm:w-1/2 w-full'>
