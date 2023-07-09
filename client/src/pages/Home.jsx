@@ -121,9 +121,7 @@ function Home (){
               <div className={`p-0 max-w-[1340px] w-full`}> 
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
-                  <div className='grid grid-cols-1 sm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left w-full me:w-2/3 my-4'>
                   <Events />
-                  </div>
                   <Button buttonStyle="btn--primarysmall" children="See more events" link="/events"/>
                 </div>
               </section>
@@ -137,9 +135,9 @@ function Home (){
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
                     <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
-                    <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
-                      <Insta />
-                    </div>
+                      <Suspense fallback={<div>Hi, This page is Loading...</div>}>
+                        <Insta />
+                      </Suspense>
                   </div> 
                 </section>
               </div>

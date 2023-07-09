@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getInstaPosts } from "../lib";
 import Feed from "../components/Feed";
+import Error from "./Error";
 
 function Insta() {
     const [posts, setPosts] = useState([])
@@ -23,17 +24,19 @@ function Insta() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
     return (
         <>
-            {posts.map((feed, index) => (
-                <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
-                    <Feed key={feed.id} feed={feed} />
-                </a>
-            ))}
+            <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
+                {posts.map((feed, index) => (
+                    <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
+                        <Feed key={feed.id} feed={feed} />
+                    </a>
+                ))}
+            </div>
         </>
     )
 }

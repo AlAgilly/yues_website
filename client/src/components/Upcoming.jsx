@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getUpcoming } from "../lib";
 import styles from "../style";
 import { team1, team2 } from "../assets";
+import Error from "./Error";
 
 function Upcoming() {
     const [upcoming, setUpcoming] = useState([])
@@ -24,7 +25,7 @@ function Upcoming() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
