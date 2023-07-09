@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getCopres, getSecretary, getTreasurer, getHr, getMarketing, getPartnerships, getCompetitive, getOperations } from "../lib";
 import { staffbox } from "../assets";
 import TinyStaff from "./TinyStaff";
+import Error from "./Error";
 
 function Copres() {
     const [copres, setCopres] = useState([])
@@ -30,9 +31,11 @@ function Copres() {
 
     return (
         <>
+
             {copres.map((copres, index) => (
                 <TinyStaff key={copres.id} name={ copres.name } position={copres.position} team={copres.team} />
             ))}
+            
         </>
     )
 }
@@ -163,16 +166,19 @@ function Partnerships() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return <Error />
 
     }
 
     return (
         <>
+                                  <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+
             {partnerships.map((partnerships, index) => (
                 <TinyStaff key={partnerships.id} name={ partnerships.name } position={partnerships.position} team={partnerships.team} />
                 
             ))}
+            </div>
         </>
     )
 }

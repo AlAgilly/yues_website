@@ -135,9 +135,7 @@ function Home (){
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
                     <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
-                      <Suspense fallback={<div>Hi, This page is Loading...</div>}>
                         <Insta />
-                      </Suspense>
                   </div> 
                 </section>
               </div>

@@ -97,9 +97,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                               <Partnerships />
-                          </div>
                         </div>
                       </div>
                       <div class="tab">

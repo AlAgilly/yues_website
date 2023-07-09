@@ -11,7 +11,7 @@ const About = lazy(() => import("./pages/About"))
 const Contact = lazy(() => import("./pages/Contact"))
 const UnderConstruction = lazy(() => import("./pages/UnderConstruction"))
 const NotFound = lazy(() => import("./pages/NotFound"))
-const PastGames = lazy(() => import("./pages/PastGames"))
+// const PastGames = lazy(() => import("./pages/PastGames"))
 const Footer = lazy(() => import("./components/Footer"))
 
 class App extends Component {
@@ -46,7 +46,7 @@ class App extends Component {
                   <Route exact path='/' element={< Home />}></Route>
                   <Route exact path='/about' element={< About />}></Route>
                   <Route exact path='/contact' element={< Contact />}></Route>
-                  <Route exact path='/pastgames' element={< PastGames/>}></Route>
+                  {/* <Route exact path='/pastgames' element={< PastGames/>}></Route> */}
                   {/* Underconstruction Pages */}
                   <Route exact path='/events' element={< UnderConstruction />}></Route>
                   <Route exact path='/teams' element={< UnderConstruction />}></Route>
