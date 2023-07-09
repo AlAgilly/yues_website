@@ -1,4 +1,6 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
+import { useLocation, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import styles from '../style'
 import { Button } from '../components';
 import { borderlines2, eventsnip, aboutsnip, out, borderlines, bordercenters } from '../assets'
@@ -8,9 +10,7 @@ import Insta from '../components/Insta';
 import Upcoming from '../components/Upcoming';
 import Recent from '../components/Recent';
 import Events from '../components/Events';
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+
 
 function Home (){
   const location = useLocation();
@@ -85,7 +85,7 @@ function Home (){
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
                   <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Who We Are</h3>
                   <div className='my-4'>
-                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Li>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
+                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Link>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
                   </div>
                 </div>
                 <div className='grid mm:grid-cols-2 grid-cols-1 mm:w-1/2 w-full'>
@@ -138,9 +138,7 @@ function Home (){
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
                     <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
                     <div className='grid grid-cols-2 ss:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
-                      <Suspense fallback={<div>Hi, This page is Loading...</div>}>
-                        <Insta />
-                      </Suspense>
+                      <Insta />
                     </div>
                   </div> 
                 </section>
