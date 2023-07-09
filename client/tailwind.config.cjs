@@ -14,6 +14,7 @@ module.exports = {
         darkGrey: "#CACACA",
         grey: "#D9D9D9",
         white: "#ffffff",
+        darkGray: "#7A7878",
       },
       fontFamily: {
         heynovember: ["HeyNovember", "serif"],
