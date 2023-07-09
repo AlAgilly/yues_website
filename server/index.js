@@ -225,18 +225,22 @@ async function eventsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
 
+
+
+            d=date.date.start.substring(0,10);
+
         if (event == null || date.date == null || room.results[0] == undefined) {
             eventsArray[i] = {}
         } else {
             eventsArray[i] = {
                 id: pageId,
-                event: event.results[0].title.text.content,
-                date: date.date.start.substring(0,10),
-                time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room : room.results[0],
+                event:  event.results[0].title.text.content,
+                date:   date.date.start.substring(7,8) + "{$d}" + date.date.start.substring(8,10),
+                time:   date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
+                room :  room.results[0].rich_text.content,
             }
         }
-    }
+    }    
 };
 
 async function gateway() {
@@ -254,7 +258,7 @@ async function gateway() {
     }
 };
 
-cron.schedule('0 * * * *', () => {
+cron.schedule('* * * * *', () => {
     console.log('Updating from notion (every hour)');
     gateway();
 });
@@ -289,3 +293,18 @@ const server = http.createServer(app);
 server.listen(port, () => {
     console.log(`Server is up and running on port ${port}`)
 })
+
+function getMonthName(monthNumber) {
+    const date = new Date();
+    date.setMonth(monthNumber - 1);
+  
+    return date.toLocaleString('en-US', {
+      month: 'short',
+    });
+  }
+
+  function getDayName(dateString){
+    const day = dateString.getDay();
+    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return dayNames;
+  }
