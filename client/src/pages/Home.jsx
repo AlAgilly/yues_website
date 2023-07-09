@@ -48,7 +48,7 @@ function Home (){
                       Welcome to York University’s Hub for esports, gaming, and club events! We welcome everyone interested of all levels in gaming. We are also home to esports teams including Valorant, CS:GO, League of Legends and much more!
                     </p>
                   </div>
-                  <div className='grid grid-rows-1 mm:w-1/2 w-full grid-cols-2 xm:gap-6 gap-4 items-center'>
+                  <div className='grid mm:w-1/2 w-full xs:grid-cols-2 grid-cols-1 xm:gap-6 xs:gap-4 gap-0 items-center'>
                     <Button buttonStyle="btn--primary" children="Our Teams" link="/teams"/>
                     <Button buttonStyle="btn--secondary" children="Upcoming Events" link="/events"/>
                   </div>
