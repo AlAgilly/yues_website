@@ -21,6 +21,7 @@ import arrowup from "./imgs/arrow-up.svg"
 import close from "./imgs/close.svg"
 import logo from "./imgs/logo.svg"
 import greyoutline from "./imgs/greyoutline.svg"
+import lionoutline from "./imgs/lionoutline.svg"
 import logoline from "./imgs/logoline.svg"
 import outline from "./imgs/logo-outline.svg"
 import mainlogo from "./imgs/mainlogo.svg"
@@ -67,4 +68,5 @@ export {
   staffbox,
   staffbox2,
   bgg,
+  lionoutline,
 };

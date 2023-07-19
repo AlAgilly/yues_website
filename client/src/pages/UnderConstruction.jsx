@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style'
-import { borderlines, greyoutline } from '../assets'
+import { borderlines, lionoutline } from '../assets'
 import { Link } from 'react-router-dom';
 
 // This page is used to replace the pages that
@@ -14,8 +14,8 @@ function UnderConstruction (){
             <div className={`px-6 xs:px-24 max-w-[1140px] xs:w-full`}>
               <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
                 <div className={`flex-1 mm:${styles.flexStart} flex-col mm:p-0`}>
-                  <div className='lion2 overflow-x-hidden z-2'>
-                    <img src={ greyoutline } alt="" />
+                  <div className='lion2 lion3 overflow-x-hidden z-2 opacity-100	'>
+                    <img src={ lionoutline } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full z-30`}>
                     <h1 className='z-30'>

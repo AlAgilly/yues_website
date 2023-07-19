@@ -323,6 +323,11 @@ html, body {
   position:absolute;
   opacity: 0.3;
 }
+
+.lion3 {
+  position:absolute;
+  opacity: 1;
+}
 @media screen and (max-width: 844px) {
   .lion2 {
     top: -20px;

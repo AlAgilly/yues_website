@@ -17,11 +17,13 @@ Home
 - fix date and time formats
 - add loading for api
 - add dropdowns on navigation
+- cleanup lion css
 
 About
 ---
 - add about pictures
 - add loading for api
+- redirect links to their respective urls
 
 Other
 ---
