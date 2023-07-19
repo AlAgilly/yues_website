@@ -825,7 +825,7 @@ input:checked ~ .tab-content {
   padding: 40px 25px;
 }
 .member .h2::after {
-  content: '//';
+  content: ' //';
 }
 .member p {
 line-height: 0;

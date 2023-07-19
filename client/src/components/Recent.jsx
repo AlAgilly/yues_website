@@ -3,6 +3,7 @@ import { getRecent } from "../lib";
 import styles from "../style";
 import { team1, team2 } from "../assets";
 import Error from "./Error";
+import { Link } from "react-router-dom";
 
 function Recent() {
     const [recent, setRecent] = useState([])

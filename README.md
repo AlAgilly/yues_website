@@ -3,8 +3,8 @@
 ### To do:
 <table>
 <tr>
-<th> Lynn's To Do </th>
-<th> Requests for Roslyn </th>
+<th> Dev's To Do </th>
+<th> Design's To Do </th>
 </tr>
 <tr>
 <td>
@@ -12,25 +12,30 @@
 
 Home
 ---
-
+- add the links to the recent and upcoming games
+- connect score to notion
+- fix date and time formats
+- add loading for api
+- add dropdowns on navigation
 
 About
+---
+- add about pictures
+- add loading for api
+
+Other
 ---
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
-- add the links to the recent and upcoming games
 - remind ppl to add things to notion when updating it
 - add an "opponent" prop
-- fix website speed and api speed
-- add about pictures
-- connect score to notion
-- fix date and time formats
-- add loading adn error states for api
 
 </td>
 <td>
 
+Home
+---
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
 
 </td>
@@ -90,7 +95,7 @@ About
 
 ### Upload the files to the server (In Progress...)
 
-1. `npm run build`
+We are using DigitalOcean to run this project. Once we push our changed to main, the app will (read should) build itself :)
 
 --------------------------------------
 
