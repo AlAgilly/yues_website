@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom"
 import styles from '../style'
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   // Mobile nav toggle
@@ -27,7 +28,7 @@ useEffect(() => {
 
   return (
     <nav className='w-full flex justify-end items-center'>
-      <a href="/"><img src={ yuesports } alt="YUES" className='xm:w-[40px] xm:h-[42px] w-[30px] h-[32px] my-1'/></a>
+      <Link to="/"><img src={ yuesports } alt="YUES" className='xm:w-[40px] xm:h-[42px] w-[30px] h-[32px] my-1'/></Link>
       <ul className='list-none xm:flex hidden justify-end items-center flex-1 navbar'>
         {navLinks.map((nav, index) => (
           <li key={nav.id}>

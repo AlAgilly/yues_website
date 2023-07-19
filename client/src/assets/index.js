@@ -10,9 +10,9 @@ import team1 from './imgs/team1.png'
 import team2 from './imgs/team2.png'
 import whitelion from './imgs/whitelion.png'
 import yulion from './imgs/yulion.png'
-import dota2 from './games/dota2.png'
-import dota2a from './games/dota2-active.png'
-import dota2g from './games/dota2-grey.png'
+import dota2 from './imgs/games/dota2.png'
+import dota2a from './imgs/games/dota2-active.png'
+import dota2g from './imgs/games/dota2-grey.png'
 import grey from './imgs/grey.png'
 import bgg from './imgs/bgg.png'
 
@@ -21,6 +21,7 @@ import arrowup from "./imgs/arrow-up.svg"
 import close from "./imgs/close.svg"
 import logo from "./imgs/logo.svg"
 import greyoutline from "./imgs/greyoutline.svg"
+import lionoutline from "./imgs/lionoutline.svg"
 import logoline from "./imgs/logoline.svg"
 import outline from "./imgs/logo-outline.svg"
 import mainlogo from "./imgs/mainlogo.svg"
@@ -67,4 +68,5 @@ export {
   staffbox,
   staffbox2,
   bgg,
+  lionoutline,
 };

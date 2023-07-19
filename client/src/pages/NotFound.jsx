@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../style'
 import { Button } from '../components';
-import { borderline, greyoutline } from '../assets'
+import { borderlines, greyoutline } from '../assets'
   
 function NotFound (){
     return (
@@ -25,7 +25,7 @@ function NotFound (){
                   </div>
                   <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px]`}>
                     <div className='left2'>
-                      <img src={ borderline } alt="" />
+                      <img src={ borderlines } alt="" />
                     </div>
                   </div>
                   <div className='flex flex-row items-left w-full mm:w-full'>
@@ -38,7 +38,7 @@ function NotFound (){
                   </div>
                   <div className={`flex-row w-full items-center ${styles.flexCenter} relative mt-20 h-[20px]`}>
                     <div className='right2'>
-                        <img src={ borderline } alt="" />
+                        <img src={ borderlines } alt="" />
                     </div>
                   </div>
                 </div>

@@ -274,6 +274,7 @@ async function copresidentUpdate() {
         ]
     })
     copresidentPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log("copres:" + copresidentPageIds.length)
     copresidentArray = [];
     for (let i = 0; i < copresidentPageIds.length; i++) {
         const pageId = copresidentPageIds[i];
@@ -346,7 +347,7 @@ async function secretaryUpdate() {
         ]
     })
     secretaryPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(secretaryPageIds)
+    console.log("secretary" + secretaryPageIds.length)
     secretaryArray = [];
     for (let i = 0; i < secretaryPageIds.length; i++) {
         const pageId = secretaryPageIds[i];
@@ -419,7 +420,7 @@ async function treasurerUpdate() {
         ]
     })
     treasurerPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(treasurerPageIds)
+    console.log("treasurer" + treasurerPageIds.length)
     treasurerArray = [];
     for (let i = 0; i < treasurerPageIds.length; i++) {
         const pageId = treasurerPageIds[i];
@@ -492,7 +493,7 @@ async function hrUpdate() {
         ]
     })
     hrPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(hrPageIds)
+    console.log("hr: " + hrPageIds.length)
     hrArray = [];
     for (let i = 0; i < hrPageIds.length; i++) {
         const pageId = hrPageIds[i];
@@ -565,7 +566,7 @@ async function marketingUpdate() {
         ]
     })
     marketingPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(marketingPageIds)
+    console.log("marketing: " + marketingPageIds.length)
     marketingArray = [];
     for (let i = 0; i < marketingPageIds.length; i++) {
         const pageId = marketingPageIds[i];
@@ -638,7 +639,7 @@ async function partnershipsUpdate() {
         ]
     })
     partnershipsPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log("partnerships: " + partnershipsPageIds)
+    console.log("partnerships: " + partnershipsPageIds.length)
     partnershipsArray = [];
     for (let i = 0; i < partnershipsPageIds.length; i++) {
         const pageId = partnershipsPageIds[i];
@@ -711,7 +712,7 @@ async function operationsUpdate() {
         ]
     })
     operationsPageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(operationsPageIds)
+    console.log("operations: " + operationsPageIds.length)
     operationsArray = [];
     for (let i = 0; i < operationsPageIds.length; i++) {
         const pageId = operationsPageIds[i];
@@ -784,7 +785,7 @@ async function competitiveUpdate() {
         ]
     })
     competitivePageIds = dbResponse.results.map((resp) => resp.id)
-    console.log(competitivePageIds)
+    console.log("competitive: " + competitivePageIds.length)
     competitiveArray = [];
     for (let i = 0; i < competitivePageIds.length; i++) {
         const pageId = competitivePageIds[i];
@@ -867,8 +868,8 @@ cron.schedule('0 * * * *', () => {
     gateway();
 });
 
-cron.schedule('10 * * * *', () => {
-    console.log('Updating staff from notion (every hour)');
+cron.schedule('30 0 * * *', () => {
+    console.log('Updating staff from notion (every day)');
     staff();
 });
 

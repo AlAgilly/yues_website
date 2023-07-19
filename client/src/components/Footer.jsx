@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faInstagram, faTwitter, faYoutube, faTwitch } from '@fortawesome/fontawesome-free-brands'
 // import { faCoffee  } from '@fortawesome/fontawesome-free-solid'
 // import { faCoffee  } from '@fortawesome/fontawesome-free-regular'
- import { NavLink } from 'react-router-dom'
+ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
@@ -58,9 +58,9 @@ const Footer = () => {
             key={game.id} 
             className={``}
           >
-            <NavLink href={`${game.id}`}>
+            <Link to={`${game.id}`}>
               {game.title}
-            </NavLink>
+            </Link>
           </div>
           
         ))}
@@ -83,14 +83,14 @@ const Footer = () => {
           
         ))} */}
           <div className={``}>
-            <a href="/constitution">
+            <Link to="/constitution">
               Our Constitution
-            </a>
+            </Link>
           </div>
           <div className={``}>
-            <a href="/rules">
+            <Link to="/rules">
               Rules
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Footer = () => {
   </div>
   <div className="text-center p-6 bg-black">
     <span>© 2023 Copyright: </span>
-    <a className="text-white font-semibold" href="/">York University Esports</a>
+    <Link className="text-white font-semibold" to="/">York University Esports</Link>
   </div>
 </footer>
 
