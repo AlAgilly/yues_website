@@ -5,19 +5,18 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-
 // This page is used to replace the pages that
 // do exist but are currently underconstruction
 // and we dont want the public to see yet.
 
-function UnderConstruction (){
-  const location = useLocation();
+function Teams (){
+    const location = useLocation();
 
-  useEffect(() => {
-    // Scroll top when location changes
-    window.scrollTo(0, 0);
-  }, [location]);
-    return (
+    useEffect(() => {
+      // Scroll top when location changes
+      window.scrollTo(0, 0);
+    }, [location]);
+      return (
         <>
           <div className={`bg-white ${styles.flexStart} relative overflow-hidden z-10`}>
             <div className={`px-6 xs:px-24 max-w-[1140px] xs:w-full`}>
@@ -62,4 +61,4 @@ function UnderConstruction (){
     )
 }
   
-export default UnderConstruction;
+export default Teams;

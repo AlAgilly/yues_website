@@ -2,8 +2,17 @@ import React from 'react'
 import styles from '../style'
 import { Button } from '../components';
 import { borderlines, greyoutline } from '../assets'
-  
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
+
 function NotFound (){
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
     return (
         <>
           <div className={`bg-white ${styles.flexStart} overflow-hidden z-10 py-20`}>

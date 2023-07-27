@@ -4,6 +4,7 @@ import { Navbar, SocialBar } from './components'
 import './index.css';
 import styles from './style'
 import { lazy, Suspense } from 'react';
+import Teams from './pages/Teams';
 // import Home from './pages/Home';
 
 const Home = lazy(() => import("./pages/Home"))
@@ -49,17 +50,18 @@ class App extends Component {
                   {/* <Route exact path='/pastgames' element={< PastGames/>}></Route> */}
                   {/* Underconstruction Pages */}
                   <Route exact path='/events' element={< UnderConstruction />}></Route>
-                  <Route exact path='/teams' element={< UnderConstruction />}></Route>
-                  <Route exact path="/apexlegends" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/callofduty" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/csgo" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/dota2" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/hearthstone" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/league of legends" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/overwatch" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/rainbowsixsiege" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/rocketleague" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/valorant" element={< UnderConstruction /> }></Route>
+                  
+                  <Route exact path='/teams' element={< Teams />}></Route>
+                  <Route exact path="/teams/apexlegends" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/callofduty" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/csgo" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/dota2" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/hearthstone" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/league of legends" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/overwatch" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/rainbowsixsiege" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/rocketleague" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/teams/valorant" element={< UnderConstruction /> }></Route>
                   <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
                   <Route exact path="/rules" element={< UnderConstruction /> }></Route>
                   {/* 404 Error */}
