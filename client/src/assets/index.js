@@ -34,6 +34,7 @@ import borderlines2 from './imgs/borderlines2.svg'
 import droparrow from './imgs/droparrow.svg'
 import staffbox2 from './imgs/staffbox.svg'
 import staffbox from './imgs/staffbox.png'
+import video from './imgs/video.png'
 
 export {
   aboutsnip,
@@ -69,4 +70,5 @@ export {
   staffbox2,
   bgg,
   lionoutline,
+  video,
 };

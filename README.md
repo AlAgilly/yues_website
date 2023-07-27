@@ -12,7 +12,6 @@
 
 Home
 ---
-- add the links to the recent and upcoming games
 - connect score to notion
 - fix date and time formats
 - add loading for api
@@ -24,6 +23,7 @@ About
 - add about pictures
 - add loading for api
 - redirect links to their respective urls
+- bold the mobile staff titles
 
 Other
 ---

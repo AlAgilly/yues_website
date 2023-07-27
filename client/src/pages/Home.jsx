@@ -153,7 +153,7 @@ function Home (){
                       <Recent />
                     </div>
                     </div>
-                    <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
+                    <Button buttonStyle="btn--primarysmall" children="See our teams" link="/teams"/>
                     <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px] mb-16`}>
                     <div className='left flex mt-20 mm:mt-0'>
                       <img src={ borderlines2 } alt="" />
@@ -174,7 +174,7 @@ function Home (){
                         <Upcoming />
                       </div>
                     </div>
-                      <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
+                      <Button buttonStyle="btn--primarysmall" children="See our teams" link="/teams"/>
                   </div> 
                 </section>
               </div>

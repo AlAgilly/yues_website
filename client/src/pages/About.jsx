@@ -148,35 +148,35 @@ function About (){
                       </div>
                     </div>
                     <div className="block mm:hidden">
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Co-Presidents</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Co-Presidents</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Copres />
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Secretary</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Secretary</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Secretary />
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Treasurer</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Treasurer</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Treasurer />
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Human Resources Department</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Human Resources Department</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Hr/>
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Competitive Department</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Competitive Department</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Competitive/>
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Operations Department</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Operations Department</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Operations/>
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Partnerships Department</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Partnerships Department</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Partnerships/>
                       </div>
-                      <h5 className={`font-bevietnampblack text-black flex-col pr-10`}>Marketing Department</h5>
+                      <h5 className={`font-bevietnambold text-black flex-col pr-10`}>Marketing Department</h5>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
                         <Marketing/>
                       </div>
