@@ -42,8 +42,7 @@ function Teams (){
                   </div>
                   <div className='flex flex-row items-left w-full mm:w-full'>
                     <p className='ml-5 mt-10 text-[15px]'>
-                    check back later and it might be up!
-                    </p>
+\                    </p>
                   </div>
                   <div className='flex flex-row items-left w-full mm:w-full z-40'>
                     <p><Link to="/" className='ml-5 pb-5 text-[15px] z-40'>Return to home page</Link></p>

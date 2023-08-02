@@ -31,7 +31,7 @@ function Home (){
                       <img src={ borderlines } alt="" />
                     </div>
                   </div>
-                  <div className='lion w-1/2'>
+                  <div className='lionfinal opacity-30 w-1/2'>
                     <img src={ out } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full title`}>

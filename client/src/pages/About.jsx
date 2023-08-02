@@ -1,11 +1,12 @@
 import { faYoutube } from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import { aboutsnip, droparrow, eventsnip } from '../assets';
+import { aboutsnip, droparrow, eventsnip, grey } from '../assets';
 import styles from '../style'
 import {Marketing, Partnerships, Operations, Competitive, Hr, Treasurer, Secretary, Copres } from "../components/Staff";
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { lionoutline } from '../assets';
   
 function About (){
   const location = useLocation();
@@ -18,10 +19,13 @@ function About (){
         <>
           {/* Title */}
           <div className='w-full overflow-hidden bg-white border-b-2	'>
-            <div className={` ${styles.flexStart} z-20 idk2`}>
+            <div className={` ${styles.flexStart} z-20`}>
               <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black  w-full`}>About us</h3>
+                <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black w-full`}>About us</h3>
               </div>
+              <div className='lionfinal overflow-x-hidden z-2 opacity-100	'>
+              <img src={ grey } alt="" />
+            </div>
             </div>
           </div>
           {/* About Snippet */}

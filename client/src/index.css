@@ -274,95 +274,6 @@ html, body {
 .title {
   padding: 70px 0;
 }
-.lion {
-  position:absolute;
-  opacity: 0.3;
-}
-@media screen and (max-width: 844px) {
-  .lion {
-    top: -20px;
-    right: -500px;
-    width: 500px;
-  }
-}
-@media screen and (min-width: 844px) {
-  .lion {
-    top: -100px;
-    right: -500px;
-    left: 0;
-    margin: auto;
-    width: 500px;
-  }
-}
-@media screen and (min-width: 1060px) {
-  .lion {
-    top: -100px;
-    right: -500px;
-    left: 0;
-    margin: auto;
-    width: 600px;
-  }
-}
-/* @media screen and (min-width: 844px) {
-  .lion {
-    top: -100px;
-    right: 500px;
-    width: 500px;
-  }
-} */
-@media screen and (min-width: 1155px) {
-  .lion {
-    top: -100px;
-    right: -600px;
-    left: 0;
-    margin: auto;
-    width: 650px;
-  }
-}
-.lion2 {
-  position:absolute;
-  opacity: 0.3;
-}
-
-.lion3 {
-  position:absolute;
-  opacity: 1;
-}
-@media screen and (max-width: 844px) {
-  .lion2 {
-    top: -20px;
-    right: -50px;
-    width: 500px;
-  }
-}
-@media screen and (min-width: 844px) {
-  .lion2 {
-    top: -100px;
-    right: -500px;
-    left: 0;
-    margin: auto;
-    width: 500px;
-  }
-}
-@media screen and (min-width: 1060px) {
-  .lion2 {
-    top: -100px;
-    right: -500px;
-    left: 0;
-    margin: auto;
-    width: 600px;
-  }
-}
-
-@media screen and (min-width: 1155px) {
-  .lion2 {
-    top: -100px;
-    right: -600px;
-    left: 0;
-    margin: auto;
-    width: 650px;
-  }
-}
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -857,3 +768,129 @@ line-height: 55px;
  .staffposition::before{
   content: '/';
  }
+ .lion {
+  position:absolute;
+  opacity: 0.3;
+}
+@media screen and (max-width: 844px) {
+  .lion {
+    top: -20px;
+    right: -500px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 844px) {
+  .lion {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .lion {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 600px;
+  }
+}
+/* @media screen and (min-width: 844px) {
+  .lion {
+    top: -100px;
+    right: 500px;
+    width: 500px;
+  }
+} */
+@media screen and (min-width: 1155px) {
+  .lion {
+    top: -100px;
+    right: -600px;
+    left: 0;
+    margin: auto;
+    width: 650px;
+  }
+}
+.lion2 {
+  position:absolute;
+  opacity: 0.3;
+}
+
+.lion3 {
+  position:absolute;
+  opacity: 1;
+}
+@media screen and (max-width: 844px) {
+  .lion2 {
+    top: -20px;
+    right: -50px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 844px) {
+  .lion2 {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .lion2 {
+    top: -100px;
+    right: -500px;
+    left: 0;
+    margin: auto;
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1155px) {
+  .lion2 {
+    top: -100px;
+    right: -600px;
+    left: 0;
+    margin: auto;
+    width: 650px;
+  }
+}
+.lionfinal {
+  position: absolute;
+}
+@media screen and (max-width: 844px) {
+  .lionfinal {
+    top: -20px;
+    right: -50px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 844px) {
+  .lionfinal {
+    top: -100px;
+    right: -200px;
+    left: 0;
+    margin: auto;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  .lionfinal {
+    top: -100px;
+    right: -400px;
+    left: 0;
+    margin: auto;
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1155px) {
+  .lionfinal {
+    top: -100px;
+    right: -600px;
+    left: 0;
+    margin: auto;
+    width: 650px;
+  }
+}

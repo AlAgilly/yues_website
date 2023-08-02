@@ -19,7 +19,7 @@ function NotFound (){
             <div className={`px-6 xs:px-24 max-w-[1140px] xs:w-full`}>
               <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
                 <div className={`flex-1 mm:${styles.flexStart} flex-col mm:p-0`}>
-                  <div className='lion2 overflow-x-hidden z-2'>
+                  <div className='lionfinal overflow-x-hidden z-2'>
                     <img src={ greyoutline } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full title mt-10 z-20`}>
