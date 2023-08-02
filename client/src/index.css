@@ -704,14 +704,14 @@ html, body {
       left: -600px;
     }
   }
-  .idk {
+  .headerr {
     background-image: url(./assets/imgs/headerimg.png);
     background-repeat: no-repeat;
-    background-position:  top 40%  left 10%;
+    background-position:  top 40%  right 10%;
     background-size: 50%;
     position: relative;
   }
-    .idk2 {
+    .headerw {
     background-image: url(./assets/imgs/grey.png);
     background-repeat: no-repeat;
     background-position:  top 40%  right 10%;

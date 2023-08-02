@@ -79,7 +79,7 @@ class App extends Component {
               </Suspense>
 
             {/* Version ONLY FOR TESTING */}
-            <div className='version'>Version: 1.0.0</div>
+            {/*<div className='version'>Version: 1.0.0</div>*/}
           </div>
        </Router>
    );

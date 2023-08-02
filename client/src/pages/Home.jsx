@@ -10,6 +10,7 @@ import Insta from '../components/Insta';
 import Upcoming from '../components/Upcoming';
 import Recent from '../components/Recent';
 import Events from '../components/Events';
+import Header from '../components/Header';
 
 
 function Home (){
@@ -97,13 +98,7 @@ function Home (){
             </div>
           </div>
 {/* Events title */}
-          <div className='w-full overflow-hidden bg-red z-30 bgg'>
-            <div className={` ${styles.flexStart} idk`}>
-              <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white  w-full`}>Upcoming Events</h3>
-              </div>
-            </div>
-          </div>
+          <Header title="Upcoming Events" colour="red"> </Header>
 {/* Events Snippet */}
           <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
             <div className={`${styles.boxWidth}`}>

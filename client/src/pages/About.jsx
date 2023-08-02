@@ -6,6 +6,7 @@ import styles from '../style'
 import {Marketing, Partnerships, Operations, Competitive, Hr, Treasurer, Secretary, Copres } from "../components/Staff";
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import Header from '../components/Header';
   
 function About (){
   const location = useLocation();
@@ -17,13 +18,7 @@ function About (){
     return (
         <>
           {/* Title */}
-          <div className='w-full overflow-hidden bg-white border-b-2	'>
-            <div className={` ${styles.flexStart} z-20 idk2`}>
-              <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black  w-full`}>About us</h3>
-              </div>
-            </div>
-          </div>
+          <Header title="About Us" colour="red"/>
           {/* About Snippet */}
           <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
