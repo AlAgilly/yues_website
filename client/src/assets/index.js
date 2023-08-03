@@ -11,6 +11,7 @@ import team2 from './imgs/team2.png'
 import whitelion from './imgs/whitelion.png'
 import yulion from './imgs/yulion.png'
 import dota2 from './imgs/games/dota2.png'
+import dota2r from './imgs/games/dota2r.png'
 import dota2a from './imgs/games/dota2-active.png'
 import dota2g from './imgs/games/dota2-grey.png'
 import grey from './imgs/grey.png'
@@ -53,6 +54,7 @@ export {
   yulion,
   greyoutline,
   dota2,
+  dota2r,
   dota2a,
   arrowup,
   close,

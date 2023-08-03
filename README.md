@@ -25,13 +25,17 @@ About
 - redirect links to their respective urls
 - bold the mobile staff titles
 
+Teams
+---
+- Figure out how to ease the hover transition in and out
+
 Other
 ---
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
 - remind ppl to add things to notion when updating it
-- add an "opponent" prop
+- add an "opponent" prop on notion
 
 </td>
 <td>
@@ -39,6 +43,12 @@ Other
 Home
 ---
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
+
+Teams
+---
+- Pictures for each game (both default and hover states)
+ - Maybe make the hover img changes less drastic until we find a way to ease-in-out the animations
+
 
 </td>
 </tr>
