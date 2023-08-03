@@ -36,6 +36,7 @@ Other
 - document steps to do shit!
 - remind ppl to add things to notion when updating it
 - add an "opponent" prop on notion
+- Update screen sizes to match Figma
 
 </td>
 <td>
