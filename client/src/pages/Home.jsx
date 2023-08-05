@@ -80,7 +80,7 @@ function Home (){
                 </div>
               </div>
               <div className='b4left xl:block hidden'></div>
-              <div className='fadeleft mm:block hidden'></div>
+              <div className='fadeleft mm:block hidden z-0'></div>
             <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12 px-0`}>
               <div className={`flex-1 ${styles.flexEnd} flex-col ${styles.paddingX}`}>
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>

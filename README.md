@@ -17,6 +17,7 @@ Home
 - add loading for api
 - add dropdowns on navigation
 - cleanup lion css
+- add "empty dataset" error state
 
 About
 ---

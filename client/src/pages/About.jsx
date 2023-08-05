@@ -7,6 +7,7 @@ import {Marketing, Partnerships, Operations, Competitive, Hr, Treasurer, Secreta
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from '../components/Header';
+import { borderlineshort } from '../assets';
   
 function About (){
   const location = useLocation();
@@ -18,7 +19,7 @@ function About (){
     return (
         <>
           {/* Title */}
-          <Header title="About Us" colour="red"/>
+          <Header title="About Us" colour="white"/>
           {/* About Snippet */}
           <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
@@ -33,6 +34,10 @@ function About (){
                         <p className='py-2'>Here are some ways to get involved...</p>
                       </div>
                     </div>
+                  </div>
+                  <div className='relative'>
+                  <img src={ borderlineshort } alt="" className='absolute right-[calc(100%+50px)]'/>
+
                   </div>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                     <div className={`w-full`}>

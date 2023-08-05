@@ -26,7 +26,6 @@ function Upcoming() {
 
     if(!loading && isError) {
         return (<Error />)
-
     }
 
     return (

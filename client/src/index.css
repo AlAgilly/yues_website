@@ -503,6 +503,7 @@ html, body {
     height: 750px;
     width: calc(50vw - 600px);
     opacity: 1;
+    z-index: 0;
   }
 
   .fadeleft {
@@ -513,6 +514,10 @@ html, body {
     height: 750px;
     width: 10vw;
     opacity: .5;
+  }
+  .hee {
+    z-index: 20 !important;
+    position: relative;
   }
     .rightimg {
     position: absolute;
