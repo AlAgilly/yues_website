@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import styles from '../style'
 import { dota2r, dota2 } from '../assets'
@@ -21,9 +21,9 @@ function Teams (){
               <div className={`p-0 max-w-[1140px] w-full ${styles.paddingY}`}> 
                 <div className='grid grid-cols-4 gap-5'>
                   <div className=''>
-                    <a href="">
+                    <Link to="dota2">
                       <HoverImage src={dota2r} hoverSrc={dota2} />
-                    </a>
+                    </Link>
                   </div>
                   <div className=''>
                     <a href="">
