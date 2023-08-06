@@ -2,12 +2,21 @@ import React from 'react'
 import styles from '../style'
 import { borderlines, lionoutline } from '../assets'
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 // This page is used to replace the pages that
 // do exist but are currently underconstruction
 // and we dont want the public to see yet.
 
 function UnderConstruction (){
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
     return (
         <>
           <div className={`bg-white ${styles.flexStart} relative overflow-hidden z-10`}>

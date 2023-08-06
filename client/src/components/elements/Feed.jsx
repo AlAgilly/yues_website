@@ -1,4 +1,5 @@
 import React from 'react'
+import { video } from '../../assets';
 
 const Feed = (props) => {
     const { id, caption, media_type, media_url} = props.feed
@@ -16,13 +17,11 @@ const Feed = (props) => {
     switch (media_type) {
         case "VIDEO":
             post = (
-                <video
-                    width='100%'
-                    height='100' 
-                    src={media_url} 
-                    type="image" 
-                    >
-                </video>
+                <img 
+                    id={id} 
+                    src={video} 
+                    alt={caption} 
+                />
             )
             break;
         case "CAROUSEL_ALBUM" || "IMAGE":

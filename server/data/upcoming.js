@@ -1,1 +1,1 @@
-export default [{"id":"23e0a060-3787-4ffc-b6ce-6c52c92f331d","eventname":"Website 1","date":"2023-08-01","team":"Varsity","game":"Valorant"},{"id":"75160fe1-9edb-4867-8f3f-9bb1d88c486b","eventname":"Website 2","date":"2023-08-02","team":"YorkU B","game":"Rocket League"}]
+export default []

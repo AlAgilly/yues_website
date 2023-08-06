@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getCopres, getSecretary, getTreasurer, getHr, getMarketing, getPartnerships, getCompetitive, getOperations } from "../lib";
-import { staffbox } from "../assets";
-import TinyStaff from "./TinyStaff";
-import Error from "./Error";
+import { getCopres, getSecretary, getTreasurer, getHr, getMarketing, getPartnerships, getCompetitive, getOperations } from "../../lib";
+import TinyStaff from "../elements/TinyStaff";
+import Error from "../elements/Error";
 
 function Copres() {
     const [copres, setCopres] = useState([])

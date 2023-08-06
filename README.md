@@ -12,18 +12,23 @@
 
 Home
 ---
-- add the links to the recent and upcoming games
 - connect score to notion
 - fix date and time formats
 - add loading for api
 - add dropdowns on navigation
 - cleanup lion css
+- add "empty dataset" error state
 
 About
 ---
 - add about pictures
 - add loading for api
 - redirect links to their respective urls
+- bold the mobile staff titles
+
+Teams
+---
+- Figure out how to ease the hover transition in and out
 
 Other
 ---
@@ -31,7 +36,8 @@ Other
 - add favicon
 - document steps to do shit!
 - remind ppl to add things to notion when updating it
-- add an "opponent" prop
+- add an "opponent" prop on notion
+- Update screen sizes to match Figma
 
 </td>
 <td>
@@ -39,6 +45,12 @@ Other
 Home
 ---
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
+
+Teams
+---
+- Pictures for each game (both default and hover states)
+ - Maybe make the hover img changes less drastic until we find a way to ease-in-out the animations
+
 
 </td>
 </tr>
@@ -70,15 +82,6 @@ Home
 
 ## Steps and Tutorials
 
-### Figma Prototype (In Progress...)
-#### Testing on Mobile & Tablet
-1. Download the Figma App.
-2. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
-
-#### Testing on Desktop
-1. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
-2. Click the play triangle located on the top left of the prototype screen.
-
 ### Setting up and running the project on your local machine (In Progress...)
 
 1. Make a github account and a figma account 
@@ -93,11 +96,19 @@ Home
 6. Open up the console (ctrl + `) and navigate to the folder
 7. Run `npm i`
 8. Run `npm run dev`
+### Figma Prototype (In Progress...)
+#### Testing on Mobile & Tablet
+1. Download the Figma App.
+2. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
+
+#### Testing on Desktop
+1. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
+2. Click the play triangle located on the top left of the prototype screen.
 
 
 ### Upload the files to the server (In Progress...)
 
-We are using DigitalOcean to run this project. Once we push our changed to main, the app will (read should) build itself :)
+We are using DigitalOcean to run this project. Once we make a pull request of our changed to main, the app will (should) build itself :)
 
 --------------------------------------
 

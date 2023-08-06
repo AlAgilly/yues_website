@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import { close, logo, menu, yuesports } from '../assets'
-import { navLinks } from '../constants'
+import { close, logo, menu, yuesports } from '../../assets'
+import { navLinks } from '../../constants'
 import { NavLink } from "react-router-dom"
-import styles from '../style'
+import styles from '../../style'
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'

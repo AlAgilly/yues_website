@@ -1,15 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom';
-import { useEffect } from 'react';
 import styles from '../style'
-import { Button } from '../components';
-import { borderlines2, eventsnip, aboutsnip, out, borderlines, bordercenters } from '../assets'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
-import Insta from '../components/Insta';
-import Upcoming from '../components/Upcoming';
-import Recent from '../components/Recent';
-import Events from '../components/Events';
+import { Insta, Upcoming, Recent, Events, Header, Button } from '../components';
+import { borderlines2, eventsnip, aboutsnip, out, borderlines, bordercenters } from '../assets'
+import Title1 from '../components/elements/Title1';
 
 
 function Home (){
@@ -31,7 +27,7 @@ function Home (){
                       <img src={ borderlines } alt="" />
                     </div>
                   </div>
-                  <div className='lion w-1/2'>
+                  <div className='lionfinal opacity-30 w-1/2'>
                     <img src={ out } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full title`}>
@@ -79,11 +75,11 @@ function Home (){
                 </div>
               </div>
               <div className='b4left xl:block hidden'></div>
-              <div className='fadeleft mm:block hidden'></div>
+              <div className='fadeleft mm:block hidden z-0'></div>
             <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} mm:px-12 px-0`}>
               <div className={`flex-1 ${styles.flexEnd} flex-col ${styles.paddingX}`}>
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
-                  <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Who We Are</h3>
+                  <Title1 title="Who we are"></Title1>
                   <div className='my-4'>
                   <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Link>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
                   </div>
@@ -97,13 +93,7 @@ function Home (){
             </div>
           </div>
 {/* Events title */}
-          <div className='w-full overflow-hidden bg-red z-30 bgg'>
-            <div className={` ${styles.flexStart} idk`}>
-              <div className={`p-0 ${styles.boxWidth} py-2 px-8 xs:px-20 ss:px-24`}> 
-                <h3 className={`${styles.titleH3} leading-10 leftborder blackborder text-white  w-full`}>Upcoming Events</h3>
-              </div>
-            </div>
-          </div>
+          <Header title="Upcoming Events" colour="red"> </Header>
 {/* Events Snippet */}
           <div className={`bg-primary ${styles.flexStart} overflow-hidden`}>
             <div className={`${styles.boxWidth}`}>
@@ -134,8 +124,8 @@ function Home (){
               <div className={`p-0 max-w-[1340px] w-full`}> 
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col mx-8 xs:mx-20 ss:mx-24`}>    
-                    <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-white`}>Latest IG Posts</h3>
-                        <Insta />
+                    <Title1 title="Latest IG Posts" colour="black"></Title1>
+                    <Insta />
                   </div> 
                 </section>
               </div>
@@ -148,12 +138,12 @@ function Home (){
               <section id='home' className={`flex mm:flex-row flex-col`}>
                   <div className={`flex-1 mm:${styles.flexEnd} flex-col mx-8 xs:mx-20 ss:mx-24`}>
                     <div className='flex flex-col justify-between items-left w-full'>
-                      <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Recent Results </h3>
+                      <Title1 title="Recent Results"></Title1>
                       <div className='my-4 grid grid-cols-1'>
-                      <Recent />
+                        <Recent />
+                      </div>
                     </div>
-                    </div>
-                    <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
+                    <Button buttonStyle="btn--primarysmall" children="See our teams" link="/teams"/>
                     <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px] mb-16`}>
                     <div className='left flex mt-20 mm:mt-0'>
                       <img src={ borderlines2 } alt="" />
@@ -169,12 +159,12 @@ function Home (){
                     </div>
                   </div>
                     <div className='flex flex-col justify-between items-left w-full'>
-                      <h3 className={`${styles.titleH3} leading-10 leftborder redborder text-black`}>Upcoming Games</h3>
+                      <Title1 title="Upcoming Games"></Title1>
                       <div className='my-4 grid grid-cols-1'>
                         <Upcoming />
                       </div>
                     </div>
-                      <Button buttonStyle="btn--primarysmall" children="See our teams" link="/about"/>
+                      <Button buttonStyle="btn--primarysmall" children="See our teams" link="/teams"/>
                   </div> 
                 </section>
               </div>

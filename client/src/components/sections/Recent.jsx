@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getRecent } from "../lib";
-import styles from "../style";
-import { team1, team2 } from "../assets";
-import Error from "./Error";
+import { getRecent } from "../../lib";
+import styles from "../../style";
+import { team1, team2 } from "../../assets";
+import Error from "../elements/Error";
 import { Link } from "react-router-dom";
 
 function Recent() {

@@ -11,6 +11,7 @@ import team2 from './imgs/team2.png'
 import whitelion from './imgs/whitelion.png'
 import yulion from './imgs/yulion.png'
 import dota2 from './imgs/games/dota2.png'
+import dota2r from './imgs/games/dota2r.png'
 import dota2a from './imgs/games/dota2-active.png'
 import dota2g from './imgs/games/dota2-grey.png'
 import grey from './imgs/grey.png'
@@ -30,10 +31,12 @@ import out from "./imgs/outt.svg"
 import yuesports from "./imgs/yuesports.svg"
 import bordercenters from './imgs/bordercenters.svg'
 import borderlines from './imgs/borderlines.svg'
+import borderlineshort from './imgs/borderlineshort.svg'
 import borderlines2 from './imgs/borderlines2.svg'
 import droparrow from './imgs/droparrow.svg'
 import staffbox2 from './imgs/staffbox.svg'
 import staffbox from './imgs/staffbox.png'
+import video from './imgs/video.png'
 
 export {
   aboutsnip,
@@ -52,6 +55,7 @@ export {
   yulion,
   greyoutline,
   dota2,
+  dota2r,
   dota2a,
   arrowup,
   close,
@@ -69,4 +73,6 @@ export {
   staffbox2,
   bgg,
   lionoutline,
+  video,
+  borderlineshort
 };
