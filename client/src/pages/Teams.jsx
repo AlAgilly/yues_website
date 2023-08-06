@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import styles from '../style'
 import { dota2r, dota2 } from '../assets'
 import { HoverImage } from '../components';
-import Header from '../components/Header';
+import Header from '../components/sections/Header';
 
 function Teams (){
   const location = useLocation();

@@ -14,7 +14,7 @@ const Contact = lazy(() => import("./pages/Contact"))
 const UnderConstruction = lazy(() => import("./pages/UnderConstruction"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 // const PastGames = lazy(() => import("./pages/PastGames"))
-const Footer = lazy(() => import("./components/Footer"))
+const Footer = lazy(() => import("./components/sections/Footer"))
 
 class App extends Component {
   render() {

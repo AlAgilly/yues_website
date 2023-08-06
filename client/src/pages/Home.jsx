@@ -6,11 +6,11 @@ import { Button } from '../components';
 import { borderlines2, eventsnip, aboutsnip, out, borderlines, bordercenters } from '../assets'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faLink, faUnlink  } from '@fortawesome/fontawesome-free-solid'
-import Insta from '../components/Insta';
-import Upcoming from '../components/Upcoming';
-import Recent from '../components/Recent';
-import Events from '../components/Events';
-import Header from '../components/Header';
+import Insta from '../components/sections/Insta';
+import Upcoming from '../components/sections/Upcoming';
+import Recent from '../components/sections/Recent';
+import Events from '../components/sections/Events';
+import Header from '../components/sections/Header';
 
 
 function Home (){

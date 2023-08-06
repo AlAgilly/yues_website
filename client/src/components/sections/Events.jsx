@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getEvents } from "../lib";
-import styles from "../style";
-import { team1, team2 } from "../assets";
-import TinyEvent from "./TinyEvent";
-import Error from "./Error";
+import { getEvents } from "../../lib";
+import TinyEvent from "../elements/TinyEvent";
+import Error from "../elements/Error";
 
 function Events() {
     const [events, setEvents] = useState([])

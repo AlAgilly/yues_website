@@ -4,7 +4,7 @@ import { Button } from "../components";
 import { aboutsnip } from "../assets";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Header from "../components/Header";
+import Header from "../components/sections/Header";
 
 function Contact() {
   const location = useLocation();

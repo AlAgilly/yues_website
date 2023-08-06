@@ -1,6 +1,6 @@
 import React from 'react'
 // import {logo} from '../assets'
-import { gameLinks } from '../constants'
+import { gameLinks } from '../../constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { faDiscord, faInstagram, faTwitter, faYoutube, faTwitch } from '@fortawesome/fontawesome-free-brands'

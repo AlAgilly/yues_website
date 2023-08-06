@@ -1,10 +1,7 @@
 import React from 'react'
-import styles from '../style'
-import { staffbox } from '../assets'
+import { staffbox } from '../../assets'
 
 export const TinyStaff = ({
-    key,
-    className,
     name,
     position,
     team,

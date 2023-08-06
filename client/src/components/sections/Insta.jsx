@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getInstaPosts } from "../lib";
-import Feed from "../components/Feed";
-import Error from "./Error";
+import { getInstaPosts } from "../../lib";
+import Feed from "../elements/Feed";
+import Error from "../elements/Error";
 
 function Insta() {
     const [posts, setPosts] = useState([])
