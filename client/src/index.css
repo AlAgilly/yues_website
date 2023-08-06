@@ -15,6 +15,11 @@
   --white: #ffffff;
 
 }
+
+/* Approved Classes */
+
+/* Approved Classes */
+
 html, body {
   height: 100%;
 }
@@ -175,16 +180,7 @@ html, body {
   position: relative;
   height: 100vh;
 }
-.leftborder {
-  border-left: 6px solid;
-  border-radius: 1px;
-}
-.redborder {
-  border-color: var(--red);
-}
-.blackborder {
-  border-color: var(--black);
-}
+
 .bottomborder {
   border-bottom: 5px solid var(--red);
   border-radius: 1px;

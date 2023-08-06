@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../components/sections/Header'
+import Header from '../../components/elements/Header'
 import styles from '../../style'
 
 const Dota2 = () => {
