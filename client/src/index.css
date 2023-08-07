@@ -17,7 +17,24 @@
 }
 
 /* Approved Classes */
+.staff {
+  position: relative;
+}
 
+.staff .member {
+  position: absolute;
+  padding: 40px 25px;
+}
+.member .h2::after {
+  content: ' //';
+}
+.member p {
+line-height: 0;
+}
+.member h1 {
+line-height: 55px;
+/* font-size: 34px; */
+}
 /* Approved Classes */
 
 html, body {
@@ -672,9 +689,6 @@ html, body {
     transition: 0.3s ease-in-out;
 
   }
-  .insta{
-    
-  }
 a {
   z-index: 20;
 }
@@ -733,42 +747,11 @@ input:checked + .tab-label .dacoolting {
 input:checked ~ .tab-content {
   max-height: 100vh;
 }
-.stiff {
-  position: relative;
-}
 
-.stiff .member {
-  position: absolute;
-  padding: 40px 25px;
-}
-.member .h2::after {
-  content: ' //';
-}
-.member p {
-line-height: 0;
-}
-.member h1 {
-line-height: 55px;
-/* font-size: 34px; */
-}
 .small {
   line-height: 45px !important;
   font-size: 19px !important;
 }
-
-.staffteam{
- color: var(--red);
-}
-.staffteam::before{
-  content: '|';
- }
-.staffposition{
-  color: var(--red);
-  font-weight: 400;
- }
- .staffposition::before{
-  content: '/';
- }
  .lion {
   position:absolute;
   opacity: 0.3;

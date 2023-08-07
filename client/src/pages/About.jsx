@@ -9,11 +9,11 @@ import Title3 from '../components/elements/Title3';
 import Title4 from '../components/elements/Title4';
   
 function About (){
-  // const location = useLocation();
-  // useEffect(() => {
-  //   // Scroll top when location changes
-  //   window.scrollTo(0, 0);
-  // }, [location]);
+  const location = useLocation();
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
     return (
         <>
@@ -63,15 +63,15 @@ function About (){
                   <Title2 title="Our Staff"/>
                     <div class="tabs mm:block hidden">
                       <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Co-Presidents</h5>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                         <Copres />
                       </div>
                       <div className="mm:block hidden">
-                        <div className='lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff'>
+                        <div className='lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff'>
                           <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Secretary</h5>
                           <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Treasurer</h5>
                         </div>
-                        <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                        <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                             <div className={``}>
                               <Secretary />
                             </div>
@@ -81,7 +81,7 @@ function About (){
                         </div>
                       </div>
                       <h5 className={`${styles.titleH5} text-black flex-col pr-10`}>Human Resources Department</h5>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                         <Hr/>
                       </div>
                       <div class="tab">
@@ -94,7 +94,9 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                              <Partnerships />
+                        <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
+
+                              <Partnerships /> </div>
                         </div>
                       </div>
                       <div class="tab">
@@ -107,7 +109,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                             <Competitive />
                           </div>
                         </div>
@@ -122,7 +124,7 @@ function About (){
                             </p>
                           </label>
                           <div class="tab-content">
-                            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                               <Operations />
 
                           </div>
@@ -138,7 +140,7 @@ function About (){
                           </p>
                         </label>
                         <div class="tab-content">
-                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
+                          <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                             <Marketing />
                           </div>
                         </div>
@@ -146,35 +148,35 @@ function About (){
                     </div>
                     <div className="block mm:hidden mt-10">
                       <Title4 title="Co-Presidents"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Copres />
                       </div>
                       <Title4 title="Secretary"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Secretary />
                       </div>
                       <Title4 title="Treasurer"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Treasurer />
                       </div>
                       <Title4 title="Human Resources"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Hr/>
                       </div>
                       <Title4 title="Competitive"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Competitive/>
                       </div>
                       <Title4 title="Operations"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Operations/>
                       </div>
                       <Title4 title="Partnerships"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Partnerships/>
                       </div>
                       <Title4 title="Marketing"/>
-                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mb-3'>
+                      <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Marketing/>
                       </div>
                       </div>

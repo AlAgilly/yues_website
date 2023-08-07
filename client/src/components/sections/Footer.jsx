@@ -58,7 +58,7 @@ const Footer = () => {
             key={game.id} 
             className={``}
           >
-            <Link to={`${game.id}`}>
+            <Link to={`teams/${game.id}`}>
               {game.title}
             </Link>
           </div>

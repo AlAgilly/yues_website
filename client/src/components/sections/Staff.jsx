@@ -171,13 +171,9 @@ function Partnerships() {
 
     return (
         <>
-                                  <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 stiff mt-2 mb-6'>
-
             {partnerships.map((partnerships, index) => (
                 <TinyStaff key={partnerships.id} name={ partnerships.name } position={partnerships.position} team={partnerships.team} />
-                
             ))}
-            </div>
         </>
     )
 }
