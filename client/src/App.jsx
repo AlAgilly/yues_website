@@ -42,7 +42,7 @@ class App extends Component {
             </div>
             <Suspense fallback={<h1>Loading...</h1>}>
 
-              <div className='mt-[75px] xm:mt-[85px]'>
+              <div className='mt-[75px] xm:mt-[92px]'>
                 <Routes>
                   {/* Completed Pages */}
                   <Route exact path='/' element={< Home />}></Route>

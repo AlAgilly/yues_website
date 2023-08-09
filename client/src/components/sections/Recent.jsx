@@ -41,9 +41,9 @@ function Recent() {
                         </Link>
                     </div>
                     <h4 className={`${styles.titleH4} col-span-2 text-center mm:flex hidden`}>{rec.date}</h4>
-                    <img src={ team1 } alt="" className={`h-16 justify-self-center sm:flex hidden`}/>
+                    <img src={ team1 } alt="" className={`h-16 justify-self-center xm:flex hidden`}/>
                     <p className={`${styles.titleH4} text-[50px] justify-self-center`}><span className='text-red'>4</span> - 2</p>
-                    <img src={ team2 } alt="" className={`h-16 justify-self-center sm:flex hidden`}/>
+                    <img src={ team2 } alt="" className={`h-16 justify-self-center xm:flex hidden`}/>
                     <p className='location xm:col-span-2 col-span-1 xs:flex hidden'>{rec.eventname}</p>
                     {/* <div className='description justify-self-center xm:grid grid-rows-2 text-end hidden justify-items-end'>
                     <p className={`${rec.twitch != null ? "hidden" : "mm:flex hidden select-none"}`}>Twitch&nbsp;VOD&nbsp;<FontAwesomeIcon icon={faUnlink} /></p>

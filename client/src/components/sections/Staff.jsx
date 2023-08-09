@@ -24,16 +24,17 @@ function Copres() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
     return (
         <>
+                                                  <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
 
             {copres.map((copres, index) => (
                 <TinyStaff key={copres.id} name={ copres.name } position={copres.position} team={copres.team} />
-            ))}
+            ))}</div>
             
         </>
     )
@@ -60,12 +61,12 @@ function Secretary() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return ("Error :(")
 
     }
 
     return (
-        <>
+        <>                            
             {secretary.map((secretary, index) => (
                 <TinyStaff key={secretary.id} name={ secretary.name } position={secretary.position} team={secretary.team} />
 
@@ -95,12 +96,12 @@ function Treasurer() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return ("Error :(")
 
     }
 
     return (
-        <>
+        <>                          
             {treasurer.map((treasurer, index) => (
                 <TinyStaff key={treasurer.id} name={ treasurer.name } position={treasurer.position} team={treasurer.team} />
 
@@ -130,16 +131,18 @@ function Hr() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
     return (
         <>
+                              <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
+
             {hr.map((hr, index) => (
                 <TinyStaff key={hr.id} name={ hr.name } position={hr.position} team={hr.team} />
 
-            ))}
+            ))}</div>
         </>
     )
 }
@@ -171,9 +174,11 @@ function Partnerships() {
 
     return (
         <>
-            {partnerships.map((partnerships, index) => (
-                <TinyStaff key={partnerships.id} name={ partnerships.name } position={partnerships.position} team={partnerships.team} />
-            ))}
+            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
+                {partnerships.map((partnerships) => (
+                    <TinyStaff key={partnerships.id} name={ partnerships.name } position={partnerships.position} team={partnerships.team} />
+                ))}
+            </div>
         </>
     )
 }
@@ -199,15 +204,16 @@ function Marketing() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
     return (
-        <>
+        <>            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
+
             {marketing.map((marketing, index) => (
                 <TinyStaff key={marketing.id} name={ marketing.name } position={marketing.position} team={marketing.team} />
-            ))}
+            ))}</div>
         </>
     )
 }
@@ -233,15 +239,16 @@ function Operations() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
     return (
-        <>
+        <>                            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
+
             {operations.map((operations, index) => (
                 <TinyStaff key={operations.id} name={ operations.name } position={operations.position} team={operations.team} />
-            ))}
+            ))}</div>
         </>
     )
 }
@@ -267,15 +274,16 @@ function Competitive() {
     }
 
     if(!loading && isError) {
-        return <h1>An error!!</h1>
+        return (<Error />)
 
     }
 
     return (
-        <>
+        <>                            <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
+
             {competitive.map((competitive, index) => (
                 <TinyStaff key={competitive.id} name={ competitive.name } position={competitive.position} team={competitive.team} />
-            ))}
+            ))}</div>
         </>
     )
 }

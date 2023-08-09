@@ -109,7 +109,7 @@ function Home (){
               <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
-                <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full`}>
+                <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full me:w-2/3`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
                   <Events />
                   <Button buttonStyle="btn--primarysmall" children="See more events" link="/events"/>

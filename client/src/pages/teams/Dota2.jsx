@@ -4,6 +4,7 @@ import styles from '../../style'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Title2 from '../../components/elements/Title2'
+import Title3 from "../../components/elements/Title3"
 
 const Dota2 = () => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const Dota2 = () => {
         <Header title="YGE Dota2" colour="red"></Header>
         <div className={`${styles.paddingX} ${ styles.paddingY} max-w-[1140px] m-auto`}>
             <Title2 title="Varsity" />
+            <Title3 title="Players"></Title3>
             <div className='grid grid-cols-3'>
                 <div>
                     hello
