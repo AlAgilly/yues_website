@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from '../style'
+import styles from '../../style'
+import Title2 from './Title2'
 
 export const TinyEvent = ({
     className,
@@ -12,8 +13,7 @@ export const TinyEvent = ({
     <>
     <div className={`w-full ${className}`}>
       {/* <h4 className={`${styles.titleH4}`}><a href={ link }>{title}</a> </h4> */}
-      <h4 className={`${styles.titleH4}`}>{title}</h4>
-          <div className={`${styles.titleLineBottom}`}>-</div>
+          <Title2 title={title}></Title2>
           <p className='date'> {date}</p>
           <p className='time'> {time}</p>
           <p className='location'> {location}</p>

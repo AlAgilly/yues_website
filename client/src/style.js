@@ -23,6 +23,13 @@ const styles = {
     titleH4: "font-bignoodle text-[37px] m-0 p-0",
     titleH5: "font-bignoodle text-[33px]",
 
+    // New styles
+    title1: "",
+    title2: "",
+    title3: "",
+    title4: "",
+    title5: "",
+
   };
   
   export const layout = {

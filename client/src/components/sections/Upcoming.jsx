@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getUpcoming } from "../lib";
-import styles from "../style";
-import { team1, team2 } from "../assets";
-import Error from "./Error";
+import { getUpcoming } from "../../lib";
+import styles from "../../style";
+import { team1, team2 } from "../../assets";
+import Error from "../elements/Error";
 
 function Upcoming() {
     const [upcoming, setUpcoming] = useState([])

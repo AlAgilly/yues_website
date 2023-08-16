@@ -1,5 +1,5 @@
 import React from 'react'
-import { video } from '../assets';
+import { video } from '../../assets';
 
 const Feed = (props) => {
     const { id, caption, media_type, media_url} = props.feed
