@@ -5,10 +5,10 @@ import helmet from "helmet";
 import compression from "compression";
 import { port, instagram, notionapi } from "./config/index.js";
 // import posts from "./data/index.js"
-import upcoming from "./data/upcoming.js"
-import recent from "./data/recent.js"
-import events from "./data/events.js"
-import { copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/index.js"
+// import upcoming from "./data/upcoming.js"
+// import recent from "./data/recent.js"
+// import events from "./data/events.js"
+import { upcoming, recent, events, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
@@ -206,9 +206,7 @@ async function eventsUpdate() {
     })
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
     eventsArray = [];
-    console.log('Got from notion:' + eventsPageIds)
     for (let i = 0; i < 4 && eventsPageIds[i] != undefined; i++) {
-        console.log(i + " for loop")
         const pageId = eventsPageIds[i];
 
         const roomId = "WAf%3F";
@@ -225,16 +223,15 @@ async function eventsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
 
-        let dateDisp = date.date == null ? '' : date.date.start.substring(0,10)
-        date.date == null ? '' : console.log(date.date)
-        let timeDisp = date.date == null ? '' : 'console.log(date.date)'
+        let dateDisp = date.date == null ? '' : (date.date.end == null ? date.date.start.substring(0,10) : (date.date.start.substring(0,10) + " - " + date.date.end.substring(0,10)))
+        let timeDisp = date.date == null ? '' : (date.date.start.length > 10 ? (date.date.end != null ? (date.date.start.substring(11,16) + ' - ' + date.date.end.substring(11,16)): date.date.start.substring(11,16)): '')
 
         const eventId = "title";
         const event = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
-            console.log(event)
+            // console.log(event)
         
         let titleDisp = event == null ? '' : event.results[0].title.text.content
         
@@ -836,7 +833,6 @@ async function gateway() {
     try {
         await upcomingUpdate();
         await recentUpdate();
-        console.log('events...')
         await eventsUpdate();
     } catch (err) {
       console.log(err);
