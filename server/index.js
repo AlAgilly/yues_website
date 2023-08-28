@@ -189,16 +189,14 @@ async function eventsUpdate() {
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
-        filter: {
-            or: [
+        filter: 
                 {
                     property: 'Status',
                     status: {
                         equals: "Upcoming"
                     }
-                }
-            ]
-        },
+                },
+        
         sorts: [
             {
                 property: 'Date',
