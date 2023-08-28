@@ -190,6 +190,11 @@ html, body {
 .date{
   font-weight: bold;
 }
+.date2{
+  font-weight: bold;
+  font-size: 15px;
+  
+}
 .teams * {
   padding: 8px;
 }
@@ -200,6 +205,14 @@ html, body {
 
 .bottomborder {
   border-bottom: 5px solid var(--red);
+  border-radius: 1px;
+  width: 45px;
+  height: 0;
+  overflow: hidden;
+  margin: 0px 0 10px 0;
+}
+.bottomborderblack {
+  border-bottom: 5px solid var(--black);
   border-radius: 1px;
   width: 45px;
   height: 0;
@@ -881,4 +894,55 @@ input:checked ~ .tab-content {
     margin: auto;
     width: 650px;
   }
+}
+.bigeventred {
+  /* border:3px solid var(--red); */
+
+  clip-path: 
+    polygon(
+      0% 45px,     /* top left */
+      45px 0%,     /* top left */
+      100% 0%,    /* top right */
+      100% 0%,   /* top right */
+      100% calc(100% - 45px),  /* bottom right */
+      calc(100% - 45px) 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+  background-color: var(--red);
+  padding: 2px;
+}
+.bigeventgrey {
+  /* border:3px solid var(--red); */
+
+  clip-path: 
+    polygon(
+      0% 45px,     /* top left */
+      45px 0%,     /* top left */
+      100% 0%,    /* top right */
+      100% 0%,   /* top right */
+      100% calc(100% - 45px),  /* bottom right */
+      calc(100% - 45px) 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+  background-color: var(--grey);
+  padding: 2px;
+}
+.bigeventred2 {
+  /* border:3px solid var(--red); */
+
+  clip-path: 
+    polygon(
+      0% 44px,     /* top left */
+      44px 0%,     /* top left */
+      100% 0%,    /* top right */
+      100% 0%,   /* top right */
+      100% calc(100% - 44px),  /* bottom right */
+      calc(100% - 44px) 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+  background-color: var(--white);
+  padding: 20px 100px;
 }

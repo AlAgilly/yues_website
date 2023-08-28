@@ -9,6 +9,7 @@ import Dota2 from './pages/teams/Dota2';
 // import Home from './pages/Home';
 
 const Home = lazy(() => import("./pages/Home"))
+const EventsPage = lazy(() => import("./pages/EventsPage"))
 const About = lazy(() => import("./pages/About"))
 const Contact = lazy(() => import("./pages/Contact"))
 const UnderConstruction = lazy(() => import("./pages/UnderConstruction"))
@@ -50,9 +51,10 @@ class App extends Component {
                   <Route exact path='/contact' element={< Contact />}></Route>
                   {/* <Route exact path='/pastgames' element={< PastGames/>}></Route> */}
                   {/* Underconstruction Pages */}
-                  <Route exact path='/events' element={< UnderConstruction />}></Route>
+                  <Route exact path='/events' element={< EventsPage />}></Route>
                   
                   <Route exact path='/teams' element={< Teams />}></Route>
+                  {/* <Route exact path='/teams' element={< UnderConstruction />}></Route> */}
                   <Route exact path="/teams/apexlegends" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/callofduty" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/csgo" element={< UnderConstruction /> }></Route>
