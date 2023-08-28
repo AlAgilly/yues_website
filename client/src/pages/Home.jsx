@@ -27,7 +27,7 @@ function Home (){
                       <img src={ borderlines } alt="" />
                     </div>
                   </div>
-                  <div className='lionfinal opacity-30 w-1/2'>
+                  <div className='lionfinal opacity-30 w-1/2 xm:flex hidden'>
                     <img src={ out } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full title`}>
@@ -119,7 +119,7 @@ function Home (){
           </div>
           </div> </div> </div>
 {/* Instagram Section */}
-          <div className='w-full overflow-hidden bg-black'>
+          {/* <div className='w-full overflow-hidden bg-black'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
                 <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
@@ -130,7 +130,7 @@ function Home (){
                 </section>
               </div>
             </div>
-          </div>
+          </div> */}
 {/* Upcoming and Recent Games */}
           <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>

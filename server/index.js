@@ -206,7 +206,9 @@ async function eventsUpdate() {
     })
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
     eventsArray = [];
+    console.log('Got from notion:' + eventsPageIds)
     for (let i = 0; i < 4 && eventsPageIds[i] != undefined; i++) {
+        console.log(i + " for loop")
         const pageId = eventsPageIds[i];
 
         const roomId = "WAf%3F";
@@ -215,29 +217,35 @@ async function eventsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: roomId})
 
+        let roomDisp = room.results[0] == undefined ? '' : room.results[0].rich_text.text.content
+
         const dateId = "mh%7D%5E";
         const date = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
 
+        let dateDisp = date.date == null ? '' : date.date.start.substring(0,10)
+        date.date == null ? '' : console.log(date.date)
+        let timeDisp = date.date == null ? '' : 'console.log(date.date)'
+
         const eventId = "title";
         const event = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
-
-        if (event == null || date.date == null || room.results[0] == undefined) {
-            eventsArray[i] = {}
-        } else {
-            eventsArray[i] = {
-                id: pageId,
-                event: event.results[0].title.text.content,
-                date: date.date.start.substring(0,10),
-                time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room: room.results[0].rich_text.text.content,
-            }
+            console.log(event)
+        
+        let titleDisp = event == null ? '' : event.results[0].title.text.content
+        
+        eventsArray[i] = {
+            id: pageId,
+            event: titleDisp,
+            date: dateDisp,
+            time: timeDisp,
+            room: roomDisp,
         }
+        
     }
 };
 
@@ -566,6 +574,7 @@ async function marketingUpdate() {
     marketingPageIds = dbResponse.results.map((resp) => resp.id)
     console.log("marketing: " + marketingPageIds.length)
     marketingArray = [];
+    // console.log('Got Notion')
     for (let i = 0; i < marketingPageIds.length; i++) {
         const pageId = marketingPageIds[i];
 
@@ -586,11 +595,12 @@ async function marketingUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
-
+        // console.log('In for loop')
 
 
         if (name == null || position == null || team == undefined) {
             marketingArray[i] = {}
+            // console.log('oop')
         } else {
             marketingArray[i] = {
                 id: pageId,
@@ -598,6 +608,7 @@ async function marketingUpdate() {
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
+            // console.log(marketingArray[i])
         }
     }
 };
@@ -825,14 +836,15 @@ async function gateway() {
     try {
         await upcomingUpdate();
         await recentUpdate();
+        console.log('events...')
         await eventsUpdate();
     } catch (err) {
       console.log(err);
     }
     finally {
-        await fs.writeFile('./data/upcoming.js', "export default " + JSON.stringify(upcomingArray));
-        await fs.writeFile('./data/recent.js', "export default " + JSON.stringify(recentArray));
-        await fs.writeFile('./data/events.js', "export default " + JSON.stringify(eventsArray));
+        await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
+        await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
+        await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
     }
 };
 
@@ -850,24 +862,24 @@ async function staff() {
       console.log(err);
     }
     finally {
-        await fs.writeFile('./data/copresident.js', "export default " + JSON.stringify(copresidentArray));
-        await fs.writeFile('./data/secretary.js', "export default " + JSON.stringify(secretaryArray));
-        await fs.writeFile('./data/treasurer.js', "export default " + JSON.stringify(treasurerArray));
-        await fs.writeFile('./data/hr.js', "export default " + JSON.stringify(hrArray));
-        await fs.writeFile('./data/marketing.js', "export default " + JSON.stringify(marketingArray));
-        await fs.writeFile('./data/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
-        await fs.writeFile('./data/operations.js', "export default " + JSON.stringify(operationsArray));
-        await fs.writeFile('./data/competitive.js', "export default " + JSON.stringify(competitiveArray));
+        await fs.writeFile('./data/yge/copresident.js', "export default " + JSON.stringify(copresidentArray));
+        await fs.writeFile('./data/yge/secretary.js', "export default " + JSON.stringify(secretaryArray));
+        await fs.writeFile('./data/yge/treasurer.js', "export default " + JSON.stringify(treasurerArray));
+        await fs.writeFile('./data/yge/hr.js', "export default " + JSON.stringify(hrArray));
+        await fs.writeFile('./data/yge/marketing.js', "export default " + JSON.stringify(marketingArray));
+        await fs.writeFile('./data/yge/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
+        await fs.writeFile('./data/yge/operations.js', "export default " + JSON.stringify(operationsArray));
+        await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
     }
 };
 
-cron.schedule('0 * * * *', () => {
+cron.schedule('*/5 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
 
 cron.schedule('30 0 * * *', () => {
-    console.log('Updating staff from notion (every day)');
+    console.log('Updating staff from notion (every day at 12:30 AM)');
     staff();
 });
 

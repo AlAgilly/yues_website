@@ -67,6 +67,8 @@ class App extends Component {
                   <Route exact path="/teams/valorant" element={< UnderConstruction /> }></Route>
                   <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
                   <Route exact path="/rules" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/privacy" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/terms" element={< UnderConstruction /> }></Route>
                   {/* 404 Error */}
                   <Route path='*' element={<NotFound />}/>
                 </Routes>
