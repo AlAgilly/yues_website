@@ -4,10 +4,6 @@ import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
 import { port, instagram, notionapi } from "./config/index.js";
-// import posts from "./data/index.js"
-// import upcoming from "./data/upcoming.js"
-// import recent from "./data/recent.js"
-// import events from "./data/events.js"
 import { upcoming, recent, events, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
@@ -62,7 +58,7 @@ async function upcomingUpdate() {
     })
     upcomingPageIds = dbResponse.results.map((resp) => resp.id)
     upcomingArray = [];
-    for (let i = 0; i < 3 && upcomingPageIds[i] != undefined; i++) {
+    for (let i = 0; i < upcomingPageIds.length; i++) {
         const pageId = upcomingPageIds[i];
 
         const gameId = "vq%7CF";
@@ -82,6 +78,10 @@ async function upcomingUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
+            
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'upcoming')
+        let timeDisp = ((date.date == null) || (date.date.start < 11)) ? '' : timeFormater(date.date, 'upcoming')
+
 
         const eventId = "title";
         const event = await notion
@@ -95,7 +95,7 @@ async function upcomingUpdate() {
             upcomingArray[i] = {
                 id: pageId,
                 eventname: event.results[0].title.text.content,
-                date: date.date.start,
+                date: dateDisp + timeDisp,
                 team: team.select.name,
                 game: game.select.name
             }
@@ -141,7 +141,7 @@ async function recentUpdate() {
     })
     recentPageIds = dbResponse.results.map((resp) => resp.id)
     recentArray = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < recentPageIds.length; i++) {
         const pageId = recentPageIds[i];
 
         const gameId = "vq%7CF";
@@ -161,6 +161,8 @@ async function recentUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
+    
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'recent')
 
         const eventId = "title";
         const event = await notion
@@ -174,8 +176,7 @@ async function recentUpdate() {
             recentArray[i] = {
                 id: pageId,
                 eventname: event.results[0].title.text.content,
-                date: date.date.start,
-                team: team.select.name,
+                date: dateDisp,
                 game: game.select.name
             };
         }
@@ -206,7 +207,7 @@ async function eventsUpdate() {
     })
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
     eventsArray = [];
-    for (let i = 0; i < 4 && eventsPageIds[i] != undefined; i++) {
+    for (let i = 0; i < eventsPageIds.length; i++) {
         const pageId = eventsPageIds[i];
 
         const roomId = "WAf%3F";
@@ -222,10 +223,9 @@ async function eventsUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
-
-        let dateDisp = date.date == null ? '' : (date.date.end == null ? date.date.start.substring(0,10) : (date.date.start.substring(0,10) + " - " + date.date.end.substring(0,10)))
-        let timeDisp = date.date == null ? '' : (date.date.start.length > 10 ? (date.date.end != null ? (date.date.start.substring(11,16) + ' - ' + date.date.end.substring(11,16)): date.date.start.substring(11,16)): '')
-
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'events')
+        let timeDisp = (date.date == null) || (date.date.start < 11) ? '' : timeFormater(date.date, 'events')
+        
         const eventId = "title";
         const event = await notion
             .pages
@@ -828,6 +828,47 @@ async function competitiveUpdate() {
         }
     }
 };
+
+function dateFormater(dateStr, options){
+    let newDate = new Date(dateStr)
+    let returnDate = ''
+    switch(options){
+        case 'events':
+            returnDate = newDate.toLocaleString('en-US', {weekday: 'long'})
+            returnDate += ' ' + newDate.toLocaleString('en-US', {month: 'short', day: "numeric"})
+            break;
+        case 'recent':
+            returnDate = newDate.toLocaleString('en-US', {month: 'short', day: "numeric"})
+            break;
+        case 'update':
+            returnDate = newDate.toLocaleString('en-US', {month: 'short', day: "numeric"})
+            break;
+        default:
+            returnDate = 'TBD'
+    }
+    return returnDate;  
+}
+
+function timeFormater(dateObj, options){
+    let timeStart = new Date(dateObj.start)
+    let timeEnd = dateObj.end == null ? '' : new Date(dateObj.end)
+    let returnTime = ''
+    switch(options){
+        case 'events':
+            returnTime = timeStart.toLocaleString('en-US', {hour12: true, hour: 'numeric', minute:'2-digit'})
+            returnTime = returnTime.replace(/ AM/g, '').replace(/ PM/g, '')
+            let returnTime2 = timeEnd == '' ? '' : ' - ' + timeEnd.toLocaleString('en-US', {hour12: true, hour: 'numeric', minute:'2-digit'})
+            returnTime += returnTime2.replace(/ AM/g, '').replace(/ PM/g, '')
+            break;
+        case 'update':
+            returnTime = timeStart.toLocaleString('en-US', {hour12: true, hour: 'numeric', minute:'2-digit'})
+            returnTime = returnTime.replace(/ /g, '').replace(/ /g, '')
+            break;
+        default:
+            returnTime = 'XX:XX'
+    }
+    return returnTime;   
+}
 
 async function gateway() {
     try {

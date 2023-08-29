@@ -32,15 +32,15 @@ function Recent() {
 
     return (
         <>
-            {recent.map((rec, index) => (
-                <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-6 mm:grid-cols-8 gap-2 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+            {recent.slice(0, 3).map((rec, index) => (
+                <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-6 mm:grid-cols-7 gap-2 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
                     <div className=''>
                         <Link to={`/${rec.game}`}>
                             <h2>{rec.game}</h2>
                             <h3>{rec.team}</h3>
                         </Link>
                     </div>
-                    <h4 className={`${styles.titleH4} col-span-2 text-center mm:flex hidden`}>{rec.date}</h4>
+                    <h4 className={`${styles.titleH4} text-center mm:flex hidden`}>{rec.date}</h4>
                     <img src={ team1 } alt="" className={`h-16 justify-self-center xm:flex hidden`}/>
                     <p className={`${styles.titleH4} text-[50px] justify-self-center`}><span className='text-red'>4</span> - 2</p>
                     <img src={ team2 } alt="" className={`h-16 justify-self-center xm:flex hidden`}/>

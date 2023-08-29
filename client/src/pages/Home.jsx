@@ -81,7 +81,7 @@ function Home (){
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
                   <Title1 title="Who we are"></Title1>
                   <div className='my-4'>
-                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Link>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
+                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Link>. We also have our <a target='_black' href='https://discord.gg/yorkesports'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels and interests to join our community!</p>
                   </div>
                 </div>
                 <div className='grid mm:grid-cols-2 grid-cols-1 mm:w-1/2 w-full'>

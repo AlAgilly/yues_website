@@ -1,1 +1,1 @@
-export default [{"id":"bab459b6-6a64-4676-b65d-cf143f8e4a19","event":"Icebreaker","date":"2023-09-22 - 2023-09-29","time":"00:00 - 00:00","room":"TBD"},{"id":"4e655a5c-3b14-4b41-b13c-8ae53501a3c0","event":"YorkFest Tabling","date":"2023-09-19 - 2023-09-19","time":"00:00 - 01:00","room":"TBD"},{"id":"36a30ea4-c0f4-4fb8-8556-42786ac27602","event":"Dream Setup Submissions Open","date":"2023-09-18 - 2023-09-19","time":"","room":"TBD"},{"id":"ef67bc04-6e2c-4d64-937d-538036090dc3","event":"First Event","date":"2023-09-15","time":"00:00","room":"TBD"}]
+export default []
