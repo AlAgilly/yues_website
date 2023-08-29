@@ -15,7 +15,7 @@ import fs from 'fs/promises'
 import cron from 'node-cron'
 
 
-var date = new Date().toISOString().substring(0,10);
+var todaysDate = new Date().toISOString().substring(0,10);
 const notion = new Client({auth: notionapi});
 const app = express();
 
@@ -36,7 +36,7 @@ async function upcomingUpdate() {
                 {
                     property: 'Date',
                     date: {
-                        on_or_after: date,
+                        on_or_after: todaysDate,
                     },
                 },
                 {
@@ -115,7 +115,7 @@ async function recentUpdate() {
                 {
                     property: 'Date',
                     date: {
-                        before: date
+                        before: todaysDate
                     },
                 }, 
                 {
@@ -869,7 +869,7 @@ async function staff() {
     }
 };
 
-cron.schedule('*/5 * * * *', () => {
+cron.schedule('0 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
