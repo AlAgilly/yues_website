@@ -27,7 +27,7 @@ function Home (){
                       <img src={ borderlines } alt="" />
                     </div>
                   </div>
-                  <div className='lionfinal opacity-30 w-1/2'>
+                  <div className='lionfinal opacity-30 w-1/2 xm:flex hidden'>
                     <img src={ out } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full title`}>
@@ -81,7 +81,7 @@ function Home (){
                 <div className='flex flex-col justify-between items-left w-full mm:w-1/2'>
                   <Title1 title="Who we are"></Title1>
                   <div className='my-4'>
-                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Link>. We also have our <a href='#'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels or interests to join our community!</p>
+                  <p className='mb-4'>York University Gaming and Esports (YGE) is a club that aims to bring together a community for gaming at York University. We strive to have a space for competitive and casual gamers alike. We manage <Link to='/teams'>competitive teams</Link>, and also facilitate <Link to='/events'>in-person and online events</Link>. We also have our <a target='_black' href='https://discord.gg/yorkesports'>Discord</a> for anyone looking for others to play games with online. Whatever it may be, YGE has something to offer you, and we welcome anyone at all skill levels and interests to join our community!</p>
                   </div>
                 </div>
                 <div className='grid mm:grid-cols-2 grid-cols-1 mm:w-1/2 w-full'>
@@ -109,7 +109,7 @@ function Home (){
               <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
-                <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full`}>
+                <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full me:w-2/3`}>
                   <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
                   <Events />
                   <Button buttonStyle="btn--primarysmall" children="See more events" link="/events"/>

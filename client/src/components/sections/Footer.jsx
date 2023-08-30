@@ -58,7 +58,7 @@ const Footer = () => {
             key={game.id} 
             className={``}
           >
-            <Link to={`${game.id}`}>
+            <Link to={`teams/${game.id}`}>
               {game.title}
             </Link>
           </div>
@@ -82,16 +82,18 @@ const Footer = () => {
           </div>
           
         ))} */}
-          <div className={``}>
             <Link to="/constitution">
               Our Constitution
             </Link>
-          </div>
-          <div className={``}>
             <Link to="/rules">
               Rules
             </Link>
-          </div>
+            <Link to="/privacy">
+              Privacy Policy
+            </Link>
+            <Link to="/terms">
+              Terms of Use
+            </Link>
         </div>
       </div>
       <div className='col-span-2'>
@@ -99,14 +101,14 @@ const Footer = () => {
           Contact
         </h6>
         <div className='grid grid-cols-1 mm:grid-cols-2 lg:grid-cols-1'>
-            <div><a href="https://www.google.com/maps/place/Second+Student+Centre/@43.7714923,-79.5037118,15z/data=!4m2!3m1!1s0x0:0x55e10c9ba7b8b997?sa=X&ved=2ahUKEwigwqiAisP8AhWnkYkEHSWlB_EQ_BJ6BAhlEAg">Second Student Center</a> <br />Room 316 </div>
+            <div><a target='_blank' href="https://www.google.com/maps/place/Second+Student+Centre/@43.7714923,-79.5037118,15z/data=!4m2!3m1!1s0x0:0x55e10c9ba7b8b997?sa=X&ved=2ahUKEwigwqiAisP8AhWnkYkEHSWlB_EQ_BJ6BAhlEAg">Second Student Center <br /> 15 Library Ln, North York, ON <br /> M3J 2S5</a> <br />Room 316 </div>
             <div><br className='flex mm:hidden lg:flex' />
-            <strong> Community: </strong><br />
+            <strong> Email Us: </strong><br />
             <a href="mailto:yorkesports@gmail.com">yorkesports@gmail.com</a> <br /><br />
-            <strong> Competitive: </strong><br />
+            {/* <strong> Competitive: </strong><br />
             <a href="mailto:esports@my.yorku.ca">esports@my.yorku.ca</a> <br /><br />
             <strong> Sponsorships: </strong><br />
-            <a href="mailto:hello@yorkesports.ca">hello@yorkesports.ca</a> <br /><br />
+            <a href="mailto:hello@yorkesports.ca">hello@yorkesports.ca</a> <br /><br /> */}
             </div>
         </div>
       </div>
@@ -114,7 +116,7 @@ const Footer = () => {
   </div>
   <div className="text-center p-6 bg-black">
     <span>© 2023 Copyright: </span>
-    <Link className="text-white font-semibold" to="/">York University Esports</Link>
+    <Link className="text-white font-semibold" to="/">York University Gaming & Esports</Link>
   </div>
 </footer>
 

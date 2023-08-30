@@ -1,0 +1,1 @@
+export default [{"id":"e3655da1-a7a8-4e0b-b6ae-b3e157053e7c","name":"Jacilyn Sau","position":"Vice President","team":"Partnerships"},{"id":"ce633238-41df-4791-8504-1e9fd0685475","name":"Evan Foster ","position":"Staff","team":"Partnerships"},{"id":"a7a09833-69df-4e82-b69b-3a18bb79aa86","name":"Raymond Duan","position":"Staff","team":"Partnerships"}]

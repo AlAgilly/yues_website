@@ -7,8 +7,8 @@ const Title2 = ({
 }) => {
   return (
       <>
-        <h4 className={`font-bignoodle text-[37px] m-0 p-0`}>{ title }</h4>
-        <div className={`bottomborder`}></div>
+        <h4 className={`font-bignoodle text-[40px] m-0 p-0`}>{ title }</h4>
+        <div className={`${colour == "black" ? "bottomborderblack" : "bottomborder"}`}></div>
       </>
     )
 }

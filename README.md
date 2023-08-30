@@ -13,11 +13,14 @@
 Home
 ---
 - connect score to notion
-- fix date and time formats
+- fix date and time format for upcoming games
 - add loading for api
 - add dropdowns on navigation
 - cleanup lion css
 - add "empty dataset" error state
+- fix event default times
+- fix default rooms for events
+- image clip instead of crop
 
 About
 ---
