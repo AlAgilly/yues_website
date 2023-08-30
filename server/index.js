@@ -1024,8 +1024,8 @@ cron.schedule('30 0 * * *', () => {
     staff();
 });
 
-cron.schedule('*/2 * * * *', () => {
-    console.log('Updating Microsoft stuff every 2min');
+cron.schedule('45 1 1 * *', () => {
+    console.log('Updating Microsoft stuff every month on the first at 1:45AM');
     exchange();
 });
 
