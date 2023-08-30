@@ -33,7 +33,7 @@ function Recent() {
     return (
         <>
             {recent.slice(0, 3).map((rec, index) => (
-                <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-6 mm:grid-cols-7 gap-2 items-center justify-self-center ${index === recent.length - 1 ? '' : 'borderb'}`}>
+                <div className={`p-5 w-full grid grid-cols-2 xs:grid-cols-3 xm:grid-cols-6 mm:grid-cols-7 gap-2 items-center justify-self-center ${index === recent.slice(0,3).length - 1 ? '' : 'borderb'}`}>
                     <div className=''>
                         <Link to={`/${rec.game}`}>
                             <h2>{rec.game}</h2>

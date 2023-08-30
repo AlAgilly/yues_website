@@ -1,0 +1,1 @@
+export default ["outlook.office.com","outlook.office365.com","outlook.office365.com","smtp.office365.com","*.outlook.com","autodiscover.*.onmicrosoft.com","*.protection.outlook.com","*.mail.protection.outlook.com"]

@@ -1,0 +1,1 @@
+export default ["*.sharepoint.com","ssw.live.com","storage.live.com","*.search.production.apac.trafficmanager.net","*.search.production.emea.trafficmanager.net","*.search.production.us.trafficmanager.net","*.wns.windows.com","admin.onedrive.com","officeclient.microsoft.com","g.live.com","oneclient.sfx.ms","*.sharepointonline.com","spoprod-a.akamaihd.net","*.svc.ms"]
