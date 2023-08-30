@@ -5,6 +5,7 @@ import helmet from "helmet";
 import compression from "compression";
 import { port, instagram, notionapi } from "./config/index.js";
 import { upcoming, recent, events, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
+import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
@@ -909,7 +910,110 @@ async function staff() {
         await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
     }
 };
+// YGE End
+//ATS
 
+
+let microsoftAPI = ''
+let exchangeURLsArray = [];
+let exchangeIPsArray = [];
+let skypeURLsArray = [];
+let skypeIPsArray = [];
+let sharePointURLsArray = [];
+let sharePointIPsArray = [];
+let commonURLsArray = [];
+let commonIPsArray = [];
+
+async function microsoftParse() {
+    console.log('we\'re in')
+    microsoftAPI = await fetch(microURL).then(res => {
+        console.log('get it. got it? good.')
+        return res.json()
+    })
+    for (let i = 0; i < microsoftAPI.length; i++) {
+        if (microsoftAPI[i].serviceArea == "Exchange"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    exchangeURLsArray[exchangeURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                    exchangeIPsArray[exchangeIPsArray.length] = microsoftAPI[i].ips[x]
+                    }
+                }
+            }
+        } else if (microsoftAPI[i].serviceArea == "Skype"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    skypeURLsArray[skypeURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                    skypeIPsArray[skypeIPsArray.length] = microsoftAPI[i].ips[x]
+                }}
+            }
+        } else if (microsoftAPI[i].serviceArea == "SharePoint"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    sharePointURLsArray[sharePointURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                        sharePointIPsArray[sharePointIPsArray.length] = microsoftAPI[i].ips[x]
+                    }
+                }
+            }
+        } else if (microsoftAPI[i].serviceArea == "Common"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    commonURLsArray[commonURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                    commonIPsArray[commonIPsArray.length] = microsoftAPI[i].ips[x]
+                    }
+                }
+            }
+        } else {
+            console.log(microsoftAPI[i].serviceArea)
+        }
+    }
+
+}
+
+async function exchange() {
+    try {
+        await microsoftParse();
+    } catch (err) {
+      console.log(err);
+    }
+    finally {
+        await fs.writeFile('./data/ats/ExchangeURLs.js', "export default " + JSON.stringify(exchangeURLsArray));
+        await fs.writeFile('./data/ats/ExchangeIPs.js', "export default " + JSON.stringify(exchangeIPsArray));
+        await fs.writeFile('./data/ats/SkypeURLs.js', "export default " + JSON.stringify(skypeURLsArray));
+        await fs.writeFile('./data/ats/SkypeIPs.js', "export default " + JSON.stringify(skypeIPsArray));
+        await fs.writeFile('./data/ats/SharePointURLs.js', "export default " + JSON.stringify(sharePointURLsArray));
+        await fs.writeFile('./data/ats/SharePointIPs.js', "export default " + JSON.stringify(sharePointIPsArray));
+        await fs.writeFile('./data/ats/CommonURLs.js', "export default " + JSON.stringify(commonURLsArray));
+        await fs.writeFile('./data/ats/CommonIPs.js', "export default " + JSON.stringify(commonIPsArray));
+    }
+};
 cron.schedule('0 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
@@ -918,6 +1022,11 @@ cron.schedule('0 * * * *', () => {
 cron.schedule('30 0 * * *', () => {
     console.log('Updating staff from notion (every day at 12:30 AM)');
     staff();
+});
+
+cron.schedule('*/2 * * * *', () => {
+    console.log('Updating Microsoft stuff every 2min');
+    exchange();
 });
 
 const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
@@ -929,6 +1038,37 @@ app.get('/api/insta', async(req, res) => {
     return res.json(data)
 })
 
+const microURL = `https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7`
+
+app.get('/api/exchangeURLs', async(req, res) => {
+    return res.json(exchangeURLs)
+})
+
+app.get('/api/exchangeIPs', async(req, res) => {
+    return res.json(exchangeIPs)
+})
+
+app.get('/api/skypeIPs', async(req, res) => {
+    return res.json(skypeIPs)
+})
+
+app.get('/api/skypeURLs', async(req, res) => {
+    return res.json(skypeURLs)
+})
+app.get('/api/sharePointIPs', async(req, res) => {
+    return res.json(sharePointIPs)
+})
+
+app.get('/api/sharePointURLs', async(req, res) => {
+    return res.json(sharePointURLs)
+})
+app.get('/api/commonIPs', async(req, res) => {
+    return res.json(commonIPs)
+})
+
+app.get('/api/commonURLs', async(req, res) => {
+    return res.json(commonURLs)
+})
 app.get('/api/upcoming', (req, res) => {
     return res.json(upcoming)
 })
