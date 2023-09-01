@@ -4,7 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
 import { port, instagram, notionapi } from "./config/index.js";
-import { upcoming, recent, events, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
+import { upcoming, recent, events, pastevents, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
 import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
@@ -202,10 +202,11 @@ async function eventsUpdate() {
         sorts: [
             {
                 property: 'Date',
-                direction: 'descending'
+                direction: 'ascending'
             }
         ]
     })
+    // console.log(dbResponse)
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
     eventsArray = [];
     for (let i = 0; i < eventsPageIds.length; i++) {
@@ -225,7 +226,87 @@ async function eventsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
         let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'events')
-        let timeDisp = (date.date == null) || (date.date.start < 11) ? '' : timeFormater(date.date, 'events')
+        let timeDisp = (date.date == null) || (date.date.start.length < 11) ? '' : timeFormater(date.date, 'events')
+        
+        const eventId = "title";
+        const event = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: eventId})
+        
+        let titleDisp = event == null ? '' : event.results[0].title.text.content
+        
+        const descId = "cdbQ";
+        const desc = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: descId})
+
+        let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
+
+        const signupId = "rm%7CY";
+        const signup = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: signupId})
+
+        let signupDisp = signup.url == null ? "" : signup.url
+
+        eventsArray[i] = {
+            id: pageId,
+            event: titleDisp,
+            date: dateDisp,
+            time: timeDisp,
+            room: roomDisp,
+            desc: descDisp,
+            signup: signupDisp,
+        }
+        
+    }
+};
+
+let pasteventsPageIds;
+let pasteventsArray = [];
+
+async function pasteventsUpdate() {
+    const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
+    const dbResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: 
+                {
+                    property: 'Status',
+                    status: {
+                        equals: "Done"
+                    }
+                },
+        
+        sorts: [
+            {
+                property: 'Date',
+                direction: 'descending'
+            }
+        ]
+    })
+    pasteventsPageIds = dbResponse.results.map((resp) => resp.id)
+    pasteventsArray = [];
+    for (let i = 0; i < pasteventsPageIds.length; i++) {
+        const pageId = pasteventsPageIds[i];
+
+        const roomId = "WAf%3F";
+        const room = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: roomId})
+
+        let roomDisp = room.results[0] == undefined ? '' : room.results[0].rich_text.text.content
+
+        const dateId = "mh%7D%5E";
+        const date = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: dateId})
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'events')
+        let timeDisp = (date.date == null) || (date.date.start.length < 11) ? '' : timeFormater(date.date, 'events')
         
         const eventId = "title";
         const event = await notion
@@ -236,12 +317,30 @@ async function eventsUpdate() {
         
         let titleDisp = event == null ? '' : event.results[0].title.text.content
         
-        eventsArray[i] = {
+        const descId = "cdbQ";
+        const desc = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: descId})
+
+            let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
+            
+        const galleryId = "cNMT";
+        const gallery = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: galleryId})
+
+        let galleryDisp = gallery.url == null ? "" : gallery.url
+
+        pasteventsArray[i] = {
             id: pageId,
             event: titleDisp,
             date: dateDisp,
             time: timeDisp,
             room: roomDisp,
+            desc: descDisp,
+            gallery: galleryDisp
         }
         
     }
@@ -876,6 +975,7 @@ async function gateway() {
         await upcomingUpdate();
         await recentUpdate();
         await eventsUpdate();
+        await pasteventsUpdate();
     } catch (err) {
       console.log(err);
     }
@@ -883,6 +983,7 @@ async function gateway() {
         await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
         await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
         await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
+        await fs.writeFile('./data/yge/pastevents.js', "export default " + JSON.stringify(pasteventsArray));
     }
 };
 
@@ -1014,6 +1115,7 @@ async function exchange() {
         await fs.writeFile('./data/ats/CommonIPs.js', "export default " + JSON.stringify(commonIPsArray));
     }
 };
+
 cron.schedule('0 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
@@ -1079,6 +1181,10 @@ app.get('/api/recent', (req, res) => {
 
 app.get('/api/events', (req, res) => {
     return res.json(events)
+})
+
+app.get('/api/pastevents', (req, res) => {
+    return res.json(pastevents)
 })
 
 app.get('/api/copresident', (req, res) => {

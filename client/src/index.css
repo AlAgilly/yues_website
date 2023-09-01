@@ -589,6 +589,9 @@ html, body {
     color: var(--darkred);
     text-decoration: underline;
   }
+  .eventcard {
+    width: calc(100% - 100px);
+  }
   .description p {
     font-size: 15px;
     color: var(--darkgrey);
@@ -944,5 +947,5 @@ input:checked ~ .tab-content {
       0 100%      /* bottom left */
     );
   background-color: var(--white);
-  padding: 20px 100px;
+  padding: 20px 50px;
 }
