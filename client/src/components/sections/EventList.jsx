@@ -2,10 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getEvents, getPastEvents } from "../../lib";
 import Error from "../elements/Error";
 import Title2 from "../elements/Title2";
-import Button from "../elements/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faInstagram, faTwitter, faYoutube, faTwitch } from '@fortawesome/fontawesome-free-brands'
-
 
 function EventComponent() {
     const [events, setEvents] = useState([])
