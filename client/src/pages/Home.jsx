@@ -69,8 +69,8 @@ function Home (){
         <div className={`max-w-[1140px] w-full p-0`}>
           <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
             <div className='aboutimg grid grid-cols-3 w-full'>
-              <div className='leftimg hidden mm:flex'>
-                <img src={ aboutsnip } alt="" />
+              <div className='leftimgcrop hidden mm:flex'>
+                <div className='fadeleftimg mm:block hidden z-0'></div>
               </div>
             </div>
           </div>
@@ -99,8 +99,8 @@ function Home (){
         <div className={`${styles.boxWidth}`}>
           <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
             <div className='aboutimg grid grid-cols-3 w-full'>
-              <div className='rightimg hidden me:flex'>
-                <img src={ eventsnip } alt="" />
+            <div className='rightimgcrop hidden mm:flex justify-end'>
+                <div className='faderightimg mm:block hidden z-0'></div>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ function Home (){
             <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY} px-8 xs:px-20 ss:px-24 w-full me:w-2/3`}>
               <div className={`flex-1 mm:${styles.flexStart} flex-col`}>    
               <Events />
-              <Button buttonStyle="btn--primarysmall" children="See more events" link="/events"/>
+              <Button buttonStyle="btn--primarysmall" children="See more events" link="/events" className="mt-16"/>
             </div>
           </section>
         </div>

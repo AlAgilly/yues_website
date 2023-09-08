@@ -25,7 +25,7 @@ function EventsPage (){
           <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
-                <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 w-3/4`}>
+                <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 xm:w-3/4 w-full`}>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                     <div className={`w-full`}>
                       <Title2 title="Upcoming Events"/>

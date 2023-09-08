@@ -140,6 +140,7 @@ async function recentUpdate() {
             }
         ]
     })
+    // console.log(dbResponse)
     recentPageIds = dbResponse.results.map((resp) => resp.id)
     recentArray = [];
     for (let i = 0; i < recentPageIds.length; i++) {
@@ -171,12 +172,28 @@ async function recentUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
 
+        const winsId = "JID%3D"
+        const wins = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: winsId})
+        let winsDisp = wins.number == null ? "0" : wins.number
+
+        const lossesId = "tZ%7B%5C"
+        const losses = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: lossesId})
+        let lossesDisp = losses.number == null ? "0" : losses.number
+
         if (event == null || date.date == null || team.select == null || game.select == null) {
             recentArray[i] = {}
         } else {
             recentArray[i] = {
                 id: pageId,
                 eventname: event.results[0].title.text.content,
+                wins: winsDisp,
+                losses: lossesDisp,
                 date: dateDisp,
                 game: game.select.name
             };
@@ -1116,7 +1133,7 @@ async function exchange() {
     }
 };
 
-cron.schedule('0 * * * *', () => {
+cron.schedule('*/2 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
