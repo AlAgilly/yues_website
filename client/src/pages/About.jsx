@@ -36,11 +36,11 @@ function About (){
                   </div>
                   <div className='relative'>
                   {/* <img src={ borderlineshort } alt="" className='absolute right-[calc(100%+50px)]'/> */}
-                  <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px]`}>
+                  {/* <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px]`}>
                     <div className='left2 flex mt-20 mm:mt-0'>
                       <img src={ borderlines2 } alt="" />
                     </div>
-                  </div>
+                  </div> */}
                   </div>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                     <div className={`w-full`}>

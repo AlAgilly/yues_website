@@ -7,6 +7,7 @@ import operations from "./operations.js";
 import partnerships from "./partnerships.js";
 import marketing from "./marketing.js"
 import events from "./events.js"
+import pastevents from "./pastevents.js"
 import recent from "./recent.js"
 import upcoming from "./upcoming.js"
 
@@ -20,6 +21,7 @@ export {
     marketing,
     hr,
     events,
+    pastevents,
     recent,
     upcoming,
 };

@@ -1,5 +1,6 @@
 // PNGs - Images
-import aboutsnip from './imgs/aboutsnip.png'
+// import aboutsnip from './imgs/aboutsnip.png'
+import aboutsnip from './imgs/img-48421.png'
 import bordercenter from './imgs/bordercenter.png'
 import borderline from './imgs/borderline.png'
 import eventsnip from './imgs/eventsnip.png'

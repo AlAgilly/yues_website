@@ -21,6 +21,7 @@ Home
 - fix event default times
 - fix default rooms for events
 - image clip instead of crop
+- Gcal reminder for members
 
 About
 ---
