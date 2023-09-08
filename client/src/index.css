@@ -219,6 +219,22 @@ html, body {
   overflow: hidden;
   margin: 0px 0 10px 0;
 }
+.bottomborderlong {
+  border-bottom: 5px solid var(--red);
+  border-radius: 1px;
+  width: 90px;
+  height: 0;
+  overflow: hidden;
+  margin: 0px 0 10px 0;
+}
+.bottomborderblacklong {
+  border-bottom: 5px solid var(--black);
+  border-radius: 1px;
+  width: 90px;
+  height: 0;
+  overflow: hidden;
+  margin: 0px 0 10px 0;
+}
 .rightborder {
   /* width: 100%; */
   height: 2px;
@@ -552,7 +568,7 @@ html, body {
     right: 0;
     height: 720px;
     width: 10vw;
-    opacity: .5;
+    opacity: .7;
   }
   .footer {
     color: var(--grey);
@@ -577,6 +593,9 @@ html, body {
   }
   .eventcard {
     width: calc(100% - 100px);
+  }
+  .smalleventcard {
+    width: 100%;
   }
   .description p {
     font-size: 15px;
@@ -684,6 +703,7 @@ html, body {
   .aboutsec {
     background-image: url(./assets/imgs/swirl.png);
     background-size: cover;
+    background-attachment: fixed;
     z-index: 10;
   }
   .ig:hover a {
@@ -941,7 +961,58 @@ input:checked ~ .tab-content {
   background-color: var(--white);
   padding: 20px 50px;
 }
+.smalleventred {
+  /* border:3px solid var(--red); */
 
+  clip-path: 
+    polygon(
+      0% 20px,     /* top left */
+      20px 0%,     /* top left */
+      100% 0%,    /* top right */
+      100% 0%,   /* top right */
+      100% calc(100% - 20px),  /* bottom right */
+      calc(100% - 20px) 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+  background-color: var(--red);
+  padding: 2px;
+}
+.smalleventgrey {
+  /* border:3px solid var(--red); */
+
+  clip-path: 
+    polygon(
+      0% 20px,     /* top left */
+      20px 0%,     /* top left */
+      100% 0%,    /* top right */
+      100% 0%,   /* top right */
+      100% calc(100% - 20px),  /* bottom right */
+      calc(100% - 20px) 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+  background-color: var(--grey);
+  padding: 2px;
+}
+.smalleventred2 {
+  /* border:3px solid var(--red); */
+  background-image: url("./assets/imgs/swirl.png");
+  background-attachment: fixed;
+  clip-path: 
+    polygon(
+      0% 19px,     /* top left */
+      19px 0%,     /* top left */
+      100% 0%,    /* top right */
+      100% 0%,   /* top right */
+      100% calc(100% - 19px),  /* bottom right */
+      calc(100% - 19px) 100%,  /* bottom right */
+      0% 100%,   /* bottom left */
+      0 100%      /* bottom left */
+    );
+  background-color: var(--white);
+  padding: 10px 0px;
+}
 .leftimgcrop{
   background-image: url(./assets/imgs/img-48421.png);
   background-size: cover;
@@ -973,7 +1044,7 @@ input:checked ~ .tab-content {
     left: 0;
     height: 750px;
     width: 10vw;
-    opacity: .5;
+    opacity: .7;
     
   }
   .fadeleftimg {
@@ -1018,7 +1089,7 @@ input:checked ~ .tab-content {
     right: 0;
     height: 750px;
     width: 10vw;
-    opacity: .5;
+    opacity: .7;
     
   }
   .faderightimg {
@@ -1031,3 +1102,22 @@ input:checked ~ .tab-content {
       /* opacity: .5; */
       
     }
+    .smalleventred:hover .teamimg, .smalleventred .textty {
+      opacity: 0;
+      transition: .3s ease-in-out;
+
+    }
+
+    .smalleventred .teamimg, .smalleventred:hover .textty{
+      transition: .3s ease-in-out;
+      opacity: 1;
+    }
+    .smalleventred .teamimg{
+      height: 80px;
+      width: auto;
+    }
+.temm {
+  position: absolute;
+  height: 100px;
+  padding: 10px;
+}

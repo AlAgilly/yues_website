@@ -12,9 +12,18 @@ import team2 from './imgs/team2.png'
 import whitelion from './imgs/whitelion.png'
 import yulion from './imgs/yulion.png'
 import dota2 from './imgs/games/dota2.png'
-import dota2r from './imgs/games/dota2r.png'
-import dota2a from './imgs/games/dota2-active.png'
-import dota2g from './imgs/games/dota2-grey.png'
+import league from './imgs/games/league.png'
+import rocketleague from './imgs/games/rocketleague.png'
+import hearthstone from './imgs/games/hearthstone.png'
+import valorant from './imgs/games/valorant.png'
+import overwatch from './imgs/games/overwatch.png'
+import r6s from './imgs/games/r6s.png'
+import csgo from './imgs/games/csgo.png'
+import cod from './imgs/games/cod.png'
+import apex from './imgs/games/apex.png'
+// import dota2r from './imgs/games/dota2r.png'
+// import dota2a from './imgs/games/dota2-active.png'
+// import dota2g from './imgs/games/dota2-grey.png'
 import grey from './imgs/grey.png'
 import bgg from './imgs/bgg.png'
 
@@ -55,9 +64,9 @@ export {
   whitelion,
   yulion,
   greyoutline,
-  dota2,
-  dota2r,
-  dota2a,
+  // dota2r,
+  // dota2a,
+  // dota2g,
   arrowup,
   close,
   logo,
@@ -65,7 +74,6 @@ export {
   outline,
   mainlogo,
   menu,
-  dota2g,
   out,
   grey,
   yuesports,
@@ -75,5 +83,15 @@ export {
   bgg,
   lionoutline,
   video,
-  borderlineshort
+  borderlineshort,
+  apex,
+  dota2,
+  csgo,
+  rocketleague,
+  league,
+  valorant,
+  hearthstone,
+  cod,
+  overwatch,
+  r6s
 };

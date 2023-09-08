@@ -9,7 +9,7 @@ const Title2 = ({
   return (
       <>
         <h4 className={`font-bignoodle ${size == "small" ? "text-[30px]" : "text-[40px]"} m-0 p-0`}>{ title }</h4>
-        <div className={`${colour == "black" ? "bottomborderblack" : "bottomborder"}`}></div>
+        <div className={`${colour == "black" ? (size == "small" ? "bottomborderblacklong" : "bottomborderblack") : (size == "small" ? "bottomborderlong" : "bottomborder") }`}></div>
       </>
     )
 }
