@@ -1150,7 +1150,7 @@ async function exchange() {
     }
 };
 
-cron.schedule('*/3 * * * *', () => {
+cron.schedule('0 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
