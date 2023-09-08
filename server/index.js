@@ -157,6 +157,7 @@ async function recentUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: teamId})
+        
 
         const dateId = "ynaI";
         const date = await notion
@@ -195,7 +196,8 @@ async function recentUpdate() {
                 wins: winsDisp,
                 losses: lossesDisp,
                 date: dateDisp,
-                game: game.select.name
+                game: game.select.name,
+                team: team.select.name,
             };
         }
     }
@@ -291,10 +293,25 @@ async function pasteventsUpdate() {
         database_id: databaseId,
         filter: 
                 {
-                    property: 'Status',
-                    status: {
-                        equals: "Done"
+                    and: [ {
+                        property: 'Status',
+                        status: {
+                            equals: "Done"
                     }
+                }, {
+                    property: 'Tags',
+                    multi_select: {
+                        does_not_contain: "Tabling"
+                    }
+                }, {
+                    property: 'Tags',
+                    multi_select: {
+                        does_not_contain: "Tryout"
+                    }
+                }
+                    ]
+                    
+                    
                 },
         
         sorts: [
@@ -1133,7 +1150,7 @@ async function exchange() {
     }
 };
 
-cron.schedule('0 * * * *', () => {
+cron.schedule('*/3 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
