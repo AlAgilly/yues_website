@@ -6,7 +6,7 @@ const Title3 = ({
     style
 }) => {
   return (
-    <h4 className={`${style} font-bignoodle text-[30px] ${colour == "red" ? "text-red" : (colour == "white" ? "text-white" :"text-black")}`}>{ title }</h4>
+    <h4 className={`${style} relative font-bignoodle text-[30px] ${colour == "red" ? "text-red" : (colour == "white" ? "text-white" :"text-black")}`}>{ title }</h4>
     )
 }
 
