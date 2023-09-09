@@ -26,6 +26,8 @@ import apex from './imgs/games/apex.png'
 // import dota2g from './imgs/games/dota2-grey.png'
 import grey from './imgs/grey.png'
 import bgg from './imgs/bgg.png'
+import arrowlink from './imgs/arrowlink.png'
+import arrowlinksvg from './imgs/arrowlink.svg'
 
 // SVGs - Vectors
 import arrowup from "./imgs/arrow-up.svg"
@@ -42,6 +44,7 @@ import yuesports from "./imgs/yuesports.svg"
 import bordercenters from './imgs/bordercenters.svg'
 import borderlines from './imgs/borderlines.svg'
 import borderlineshort from './imgs/borderlineshort.svg'
+import borderlineshortblack from './imgs/borderlineshortblack.svg'
 import borderlines2 from './imgs/borderlines2.svg'
 import droparrow from './imgs/droparrow.svg'
 import staffbox2 from './imgs/staffbox.svg'
@@ -93,5 +96,8 @@ export {
   hearthstone,
   cod,
   overwatch,
-  r6s
+  r6s,
+  arrowlink,
+  arrowlinksvg,
+  borderlineshortblack,
 };

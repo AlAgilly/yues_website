@@ -22,7 +22,7 @@ function Teams (){
             <div className={`${styles.flexStart} px-8 xs:px-20 ss:px-24`}>
               <div className={`p-0 max-w-[1140px] w-full ${styles.paddingY} `}> 
                 <div className='grid mm:grid-cols-4 xm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-5'>
-                  <a href="/" className='smalleventred my-3'>
+                  <Link to="/teams/apexlegends" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -33,8 +33,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/leagueoflegends" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -45,8 +45,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/valorant" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -57,8 +57,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/csgo" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -69,8 +69,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/rainbow6seige" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -81,8 +81,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/hearthstone" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -93,8 +93,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/rocketleague" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -105,8 +105,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/dota2" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -117,8 +117,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/callofduty" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -129,8 +129,8 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a href="/" className='smalleventred my-3'>
+                  </Link>
+                  <Link to="/teams/overwatch" className='smalleventred my-3'>
                     <div className='smalleventred2 relative'>
                       <div className="justify-center items-center relative">
                         <div class="relative">
@@ -141,7 +141,7 @@ function Teams (){
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
