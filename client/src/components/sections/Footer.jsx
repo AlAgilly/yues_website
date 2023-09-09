@@ -20,29 +20,29 @@ const Footer = () => {
         </h6>
         <div className='grid grid-cols-4'>
         <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://instagram.com/YorkEsports" target='_blank'>
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           </div>        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://twitter.com/YorkEsports" target='_blank'>
             <FontAwesomeIcon icon={faTwitter} />
           </a>
           </div>        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://discord.gg/YorkEsports" target='_blank'>
             <FontAwesomeIcon icon={faDiscord} />
           </a>
           </div>        <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://youtube.com/YorkEsports" target='_blank'>
             <FontAwesomeIcon icon={faYoutube} />
           </a>
           </div>
         <div className={`font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://twitch.com/YUEsports" target='_blank'>
             <FontAwesomeIcon icon={faTwitch} />
           </a>
           </div>
         <div className={`text-bebasneue font-normal cursor-pointer text-[25px] text-white mx-3 p-0 `}>
-          <a href="https://twitter.com/YorkEsports">
+          <a href="https://yorku.campuslabs.ca/engage/organization/yorkesports" target='_blank'>
             YUConnect
           </a>
           </div>
