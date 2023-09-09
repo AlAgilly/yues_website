@@ -12,10 +12,10 @@ const Footer = () => {
     <>
       
       <footer className="text-left bg-black footer">
-  <div className="mx-6 py-10 text-center mm:text-left">
-    <div className="grid grid-1 mm:grid-cols-4 lg:grid-cols-6 gap-4">
+  <div className="mx-0 xs:mx-2 ss:mx-5 py-10 text-left">
+    <div className="grid grid-1 mm:grid-cols-4 lg:grid-cols-6 gap-7">
     <div className='mm:col-span-1 col-span-2'>
-        <h6 className="font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className="font-semibold mb-2 flex justify-center mm:justify-start">
           Our Socials
         </h6>
         <div className='grid grid-cols-4'>
@@ -49,10 +49,10 @@ const Footer = () => {
         </div>
       </div>
       <div className='col-span-2'>
-        <h6 className=" font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className=" font-semibold mb-2 flex justify-start">
           Our Teams
         </h6>
-        <div className='grid grid-cols-1 mm:grid-cols-2'>
+        <div className='grid grid-cols-1 sm:grid-cols-2'>
             {gameLinks.map((game) => (
           <div 
             key={game.id} 
@@ -66,8 +66,8 @@ const Footer = () => {
         ))}
         </div>
       </div>
-      <div className='mm:col-span-1 col-span-2'>
-        <h6 className=" font-semibold mb-4 flex justify-center mm:justify-start">
+      <div className='sm:col-span-1 col-span-2'>
+        <h6 className=" font-semibold mb-2 flex justify-start">
           Useful Links
         </h6>
         <div className='grid grid-cols-1'>
@@ -97,10 +97,10 @@ const Footer = () => {
         </div>
       </div>
       <div className='col-span-2'>
-        <h6 className="font-semibold mb-4 flex justify-center mm:justify-start">
+        <h6 className="font-semibold mb-2 flex justify-start">
           Contact
         </h6>
-        <div className='grid grid-cols-1 mm:grid-cols-2 lg:grid-cols-1'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1'>
             <div><a target='_blank' href="https://www.google.com/maps/place/Second+Student+Centre/@43.7714923,-79.5037118,15z/data=!4m2!3m1!1s0x0:0x55e10c9ba7b8b997?sa=X&ved=2ahUKEwigwqiAisP8AhWnkYkEHSWlB_EQ_BJ6BAhlEAg">Second Student Center <br /> 15 Library Ln, North York, ON <br /> M3J 2S5</a> <br />Room 316 </div>
             <div><br className='flex mm:hidden lg:flex' />
             <strong> Email Us: </strong><br />
