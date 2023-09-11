@@ -128,3 +128,13 @@ export const getCompetitive = async () => {
         return { data: [], error: true }
     }
 }
+
+export const getValResults = async () => {
+    try {
+        const res = await Axios.get('/recent')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
