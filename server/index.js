@@ -538,9 +538,9 @@ async function treasurerUpdate() {
                     }
                 },
                 {
-                    property: 'Position',
-                    select: {
-                        equals: "Treasurer"
+                    property: 'Team',
+                    multi_select: {
+                        contains: "Finance"
                     }
                 },
             ]
