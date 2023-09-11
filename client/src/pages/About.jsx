@@ -72,7 +72,7 @@ function About (){
                       <div className="mm:block hidden">
                         <div className='lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff'>
                         <Title3 title="Secretary" style="pr-8"/>
-                        <Title3 title="Treasurer" style="pr-8"/>
+                        <Title3 title="Vice President of Finance" style="pr-8 col-span-2"/>
                         </div>
                         <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mt-2 mb-6'>
                             <div className={``}>
@@ -146,7 +146,7 @@ function About (){
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Secretary />
                       </div>
-                      <Title4 title="Treasurer"/>
+                      <Title4 title="Vice President of Finance"/>
                       <div className='grid-cols-1 lg:grid-cols-4 mm:grid mm:grid-cols-3 gap-x-6 gap-y-4 staff mb-3'>
                         <Treasurer />
                       </div>
