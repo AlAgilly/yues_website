@@ -39,6 +39,16 @@ export const getEvents = async () => {
     }
 }
 
+export const getPastEvents = async () => {
+    try {
+        const res = await Axios.get('/pastevents')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+
 export const getCopres = async () => {
     try {
         const res = await Axios.get('/copresident')

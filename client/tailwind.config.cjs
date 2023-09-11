@@ -14,12 +14,14 @@ module.exports = {
         darkGrey: "#CACACA",
         grey: "#D9D9D9",
         white: "#ffffff",
+        darkGray: "#7A7878",
       },
       fontFamily: {
         heynovember: ["HeyNovember", "serif"],
         bebasneue: ["BebasNeue-Regular", "sans-serif"],
-        bevietnampblack:["BeVietnamPro-Black", "sans-serif"],
-        bevietnam:["BeVietnamPro", "sans-serif"],
+        bevietnampblack:["BeVietnamPro-Regular", "sans-serif"],
+        bevietnam:["BeVietnam", "sans-serif"],
+        bevietnambold:["BeVietnam-Bold", "sans-serif"],
         bignoodle:["big_noodle_titling", "sans-serif"],
       }
     },

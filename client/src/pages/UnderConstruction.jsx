@@ -1,18 +1,30 @@
 import React from 'react'
 import styles from '../style'
-import { Button } from '../components';
-import { borderline, greyoutline } from '../assets'
+import { borderlines, lionoutline } from '../assets'
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
+
+// This page is used to replace the pages that
+// do exist but are currently underconstruction
+// and we dont want the public to see yet.
 
 function UnderConstruction (){
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
     return (
         <>
           <div className={`bg-white ${styles.flexStart} relative overflow-hidden z-10`}>
             <div className={`px-6 xs:px-24 max-w-[1140px] xs:w-full`}>
               <section id='home' className={`flex mm:flex-row flex-col ${styles.paddingY}`}>
                 <div className={`flex-1 mm:${styles.flexStart} flex-col mm:p-0`}>
-                  <div className='lion2 overflow-x-hidden z-2'>
-                    <img src={ greyoutline } alt="" />
+                  <div className='lion2 lion3 overflow-x-hidden z-2 opacity-100	'>
+                    <img src={ lionoutline } alt="" />
                   </div>
                   <div className={`flex flex-row justify-between items-center w-full z-30`}>
                     <h1 className='z-30'>
@@ -26,7 +38,7 @@ function UnderConstruction (){
                   </div>
                   <div className={`flex-row w-full items-center ${styles.flexCenter} relative h-[20px]`}>
                     <div className='left2'>
-                      <img src={ borderline } alt="" />
+                      <img src={ borderlines } alt="" />
                     </div>
                   </div>
                   <div className='flex flex-row items-left w-full mm:w-full'>
@@ -39,14 +51,13 @@ function UnderConstruction (){
                   </div>
                   <div className={`flex-row w-full items-center ${styles.flexCenter} relative mt-20 h-[20px]`}>
                     <div className='right2'>
-                        <img src={ borderline } alt="" />
+                        <img src={ borderlines } alt="" />
                     </div>
                   </div>
                 </div>
               </section>
             </div>
           </div>
-
         </>
     )
 }

@@ -3,8 +3,8 @@
 ### To do:
 <table>
 <tr>
-<th> Lynn's To Do </th>
-<th> Requests for Roslyn </th>
+<th> Dev's To Do </th>
+<th> Design's To Do </th>
 </tr>
 <tr>
 <td>
@@ -12,26 +12,49 @@
 
 Home
 ---
-
+- connect score to notion
+- fix date and time format for upcoming games
+- add loading for api
+- add dropdowns on navigation
+- cleanup lion css
+- add "empty dataset" error state
+- fix event default times
+- fix default rooms for events
+- image clip instead of crop
+- Gcal reminder for members
 
 About
+---
+- add about pictures
+- add loading for api
+- redirect links to their respective urls
+- bold the mobile staff titles
+
+Teams
+---
+- Figure out how to ease the hover transition in and out
+
+Other
 ---
 - Clean up finished files and add comments
 - add favicon
 - document steps to do shit!
-- add the links to the recent and upcoming games
 - remind ppl to add things to notion when updating it
-- add an "opponent" prop
-- fix website speed and api speed
-- add about pictures
-- connect score to notion
-- fix date and time formats
-- add loading adn error states for api
+- add an "opponent" prop on notion
+- Update screen sizes to match Figma
 
 </td>
 <td>
 
+Home
+---
 - opponent images for upcoming/recent games (just need a filler image incase we dont have their logo)
+
+Teams
+---
+- Pictures for each game (both default and hover states)
+ - Maybe make the hover img changes less drastic until we find a way to ease-in-out the animations
+
 
 </td>
 </tr>
@@ -63,15 +86,6 @@ About
 
 ## Steps and Tutorials
 
-### Figma Prototype (In Progress...)
-#### Testing on Mobile & Tablet
-1. Download the Figma App.
-2. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
-
-#### Testing on Desktop
-1. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
-2. Click the play triangle located on the top left of the prototype screen.
-
 ### Setting up and running the project on your local machine (In Progress...)
 
 1. Make a github account and a figma account 
@@ -86,11 +100,19 @@ About
 6. Open up the console (ctrl + `) and navigate to the folder
 7. Run `npm i`
 8. Run `npm run dev`
+### Figma Prototype (In Progress...)
+#### Testing on Mobile & Tablet
+1. Download the Figma App.
+2. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
+
+#### Testing on Desktop
+1. Navigate to the [Figma Prototype](https://www.figma.com/proto/U5EAS9EbPx4KpyezKQaguB/YUES-2022-23-WEBSITE?node-id=304%3A3189&scaling=scale-down-width&page-id=53%3A2&starting-point-node-id=304%3A3189) on your computer.
+2. Click the play triangle located on the top left of the prototype screen.
 
 
 ### Upload the files to the server (In Progress...)
 
-1. `npm run build`
+We are using DigitalOcean to run this project. Once we make a pull request of our changed to main, the app will (should) build itself :)
 
 --------------------------------------
 
