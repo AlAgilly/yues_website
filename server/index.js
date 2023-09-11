@@ -61,11 +61,13 @@ app.use(compression());
 // Variables to hold the relevent page IDs and information
 let upcomingPageIds;
 let upcomingArray = [];
+let recentPageIds;
+let recentArray = [];
 // Async function because fetching from Notion returns a promise
-async function upcomingUpdate() {
+async function gamesUpdate() {
     // This is the Database ID for our Events Calendar
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
-    const dbResponse = await notion.databases.query({
+    const upcomingResponse = await notion.databases.query({
         database_id: databaseId,
         filter: { 
             and: [
@@ -96,10 +98,43 @@ async function upcomingUpdate() {
             }
         ]
     })
+    const recentResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: {
+            and: [
+                {
+                    property: 'Date',
+                    date: {
+                        before: todaysDate
+                    },
+                }, 
+                {
+                    property: 'Game',
+                    select: { 
+                        is_not_empty: true 
+                    },
+                }, 
+                {
+                    property: 'Team',
+                    select: { 
+                    is_not_empty: true 
+                    },
+                },
+            ]
+        },
+        sorts: [
+            {
+                property: 'Date',
+                direction: 'descending'
+            }
+        ]
+    })
     // For every response we get, add that page's ID to the list
-    upcomingPageIds = dbResponse.results.map((resp) => resp.id)
+    upcomingPageIds = upcomingResponse.results.map((resp) => resp.id)
+    recentPageIds = recentResponse.results.map((resp) => resp.id)
     // Clear the current information we have about
     upcomingArray = [];
+    recentArray = [];
     // For all the IDs that we collected, do the following
     for (let i = 0; i < upcomingPageIds.length; i++) {
         // Get the page ID
@@ -145,48 +180,6 @@ async function upcomingUpdate() {
             game: game.select.name
         }
     }
-};
-
-// Variables to hold the relevent page IDs and information
-let recentPageIds;
-let recentArray = [];
-// Async function because fetching from Notion returns a promise
-async function recentUpdate() {
-    const databaseId = '3e4d3d86e5644511a000300583ecdb98';
-    const dbResponse = await notion.databases.query({
-        database_id: databaseId,
-        filter: {
-            and: [
-                {
-                    property: 'Date',
-                    date: {
-                        before: todaysDate
-                    },
-                }, 
-                {
-                    property: 'Game',
-                    select: { 
-                        is_not_empty: true 
-                    },
-                }, 
-                {
-                    property: 'Team',
-                    select: { 
-                    is_not_empty: true 
-                    },
-                },
-            ]
-        },
-        sorts: [
-            {
-                property: 'Date',
-                direction: 'descending'
-            }
-        ]
-    })
-    // console.log(dbResponse)
-    recentPageIds = dbResponse.results.map((resp) => resp.id)
-    recentArray = [];
     for (let i = 0; i < recentPageIds.length; i++) {
         const pageId = recentPageIds[i];
 
@@ -244,12 +237,106 @@ async function recentUpdate() {
     }
 };
 
+
+// Async function because fetching from Notion returns a promise
+// async function recentUpdate() {
+//     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+//     const dbResponse = await notion.databases.query({
+//         database_id: databaseId,
+//         filter: {
+//             and: [
+//                 {
+//                     property: 'Date',
+//                     date: {
+//                         before: todaysDate
+//                     },
+//                 }, 
+//                 {
+//                     property: 'Game',
+//                     select: { 
+//                         is_not_empty: true 
+//                     },
+//                 }, 
+//                 {
+//                     property: 'Team',
+//                     select: { 
+//                     is_not_empty: true 
+//                     },
+//                 },
+//             ]
+//         },
+//         sorts: [
+//             {
+//                 property: 'Date',
+//                 direction: 'descending'
+//             }
+//         ]
+//     })
+//     recentPageIds = dbResponse.results.map((resp) => resp.id)
+//     recentArray = [];
+//     for (let i = 0; i < recentPageIds.length; i++) {
+//         const pageId = recentPageIds[i];
+
+//         const gameId = "vq%7CF";
+//         const game = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: gameId})
+
+//         const teamId = "%3DbFt";
+//         const team = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: teamId})
+        
+
+//         const dateId = "ynaI";
+//         const date = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: dateId})
+    
+//         let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'recent')
+
+//         const eventId = "title";
+//         const event = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: eventId})
+//         // If the title is empty, replace it with "A super cool event"
+//         let titleDisp = event.results[0] == null ? "A Super Cool Event!" : event.results[0].title.text.content
+//         const winsId = "JID%3D"
+//         const wins = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: winsId})
+//         let winsDisp = wins.number == null ? "0" : wins.number
+
+//         const lossesId = "tZ%7B%5C"
+//         const losses = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: lossesId})
+//         let lossesDisp = losses.number == null ? "0" : losses.number
+
+//         recentArray[i] = {
+//             id: pageId,
+//             eventname: titleDisp,
+//             wins: winsDisp,
+//             losses: lossesDisp,
+//             date: dateDisp,
+//             game: game.select.name,
+//             team: team.select.name,
+//         }
+//     }
+// };
+
 let eventsPageIds;
 let eventsArray = [];
 
 async function eventsUpdate() {
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
-    const dbResponse = await notion.databases.query({
+    const soonEventsResponse = await notion.databases.query({
         database_id: databaseId,
         filter: 
                 {
@@ -266,9 +353,38 @@ async function eventsUpdate() {
             }
         ]
     })
-    // console.log(dbResponse)
-    eventsPageIds = dbResponse.results.map((resp) => resp.id)
+    const pastEventsResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: {
+            and: [ {
+                        property: 'Status',
+                        status: {
+                            equals: "Done"
+                    }
+                }, {
+                    property: 'Tags',
+                    multi_select: {
+                        does_not_contain: "Tabling"
+                    }
+                }, {
+                    property: 'Tags',
+                    multi_select: {
+                        does_not_contain: "Tryout"
+                    }
+                }
+            ]                    
+        },
+        sorts: [
+            {
+                property: 'Date',
+                direction: 'descending'
+            }
+        ]
+    })
+    eventsPageIds = soonEventsResponse.results.map((resp) => resp.id)
     eventsArray = [];
+    pasteventsPageIds = pastEventsResponse.results.map((resp) => resp.id)
+    pasteventsArray = [];
     for (let i = 0; i < eventsPageIds.length; i++) {
         const pageId = eventsPageIds[i];
 
@@ -323,47 +439,6 @@ async function eventsUpdate() {
         }
         
     }
-};
-
-let pasteventsPageIds;
-let pasteventsArray = [];
-
-async function pasteventsUpdate() {
-    const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
-    const dbResponse = await notion.databases.query({
-        database_id: databaseId,
-        filter: 
-                {
-                    and: [ {
-                        property: 'Status',
-                        status: {
-                            equals: "Done"
-                    }
-                }, {
-                    property: 'Tags',
-                    multi_select: {
-                        does_not_contain: "Tabling"
-                    }
-                }, {
-                    property: 'Tags',
-                    multi_select: {
-                        does_not_contain: "Tryout"
-                    }
-                }
-                    ]
-                    
-                    
-                },
-        
-        sorts: [
-            {
-                property: 'Date',
-                direction: 'descending'
-            }
-        ]
-    })
-    pasteventsPageIds = dbResponse.results.map((resp) => resp.id)
-    pasteventsArray = [];
     for (let i = 0; i < pasteventsPageIds.length; i++) {
         const pageId = pasteventsPageIds[i];
 
@@ -387,9 +462,7 @@ async function pasteventsUpdate() {
         const event = await notion
             .pages
             .properties
-            .retrieve({page_id: pageId, property_id: eventId})
-            // console.log(event)
-        
+            .retrieve({page_id: pageId, property_id: eventId})        
         let titleDisp = event == null ? '' : event.results[0].title.text.content
         
         const descId = "cdbQ";
@@ -398,7 +471,7 @@ async function pasteventsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: descId})
 
-            let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
+         let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
             
         const galleryId = "cNMT";
         const gallery = await notion
@@ -420,6 +493,100 @@ async function pasteventsUpdate() {
         
     }
 };
+
+// let pasteventsPageIds;
+// let pasteventsArray = [];
+
+// async function pasteventsUpdate() {
+//     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
+//     const dbResponse = await notion.databases.query({
+//         database_id: databaseId,
+//         filter: 
+//                 {
+//                     and: [ {
+//                         property: 'Status',
+//                         status: {
+//                             equals: "Done"
+//                     }
+//                 }, {
+//                     property: 'Tags',
+//                     multi_select: {
+//                         does_not_contain: "Tabling"
+//                     }
+//                 }, {
+//                     property: 'Tags',
+//                     multi_select: {
+//                         does_not_contain: "Tryout"
+//                     }
+//                 }
+//                     ]
+                    
+                    
+//                 },
+        
+//         sorts: [
+//             {
+//                 property: 'Date',
+//                 direction: 'descending'
+//             }
+//         ]
+//     })
+//     pasteventsPageIds = dbResponse.results.map((resp) => resp.id)
+//     pasteventsArray = [];
+//     for (let i = 0; i < pasteventsPageIds.length; i++) {
+//         const pageId = pasteventsPageIds[i];
+
+//         const roomId = "WAf%3F";
+//         const room = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: roomId})
+
+//         let roomDisp = room.results[0] == undefined ? '' : room.results[0].rich_text.text.content
+
+//         const dateId = "mh%7D%5E";
+//         const date = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: dateId})
+//         let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'events')
+//         let timeDisp = (date.date == null) || (date.date.start.length < 11) ? '' : timeFormater(date.date, 'events')
+        
+//         const eventId = "title";
+//         const event = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: eventId})        
+//         let titleDisp = event == null ? '' : event.results[0].title.text.content
+        
+//         const descId = "cdbQ";
+//         const desc = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: descId})
+
+//          let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
+            
+//         const galleryId = "cNMT";
+//         const gallery = await notion
+//             .pages
+//             .properties
+//             .retrieve({page_id: pageId, property_id: galleryId})
+
+//         let galleryDisp = gallery.url == null ? "" : gallery.url
+
+//         pasteventsArray[i] = {
+//             id: pageId,
+//             event: titleDisp,
+//             date: dateDisp,
+//             time: timeDisp,
+//             room: roomDisp,
+//             desc: descDisp,
+//             gallery: galleryDisp
+//         }
+        
+//     }
+// };
 
 let copresidentPageIds;
 let copresidentArray = [];
@@ -1047,8 +1214,7 @@ function timeFormater(dateObj, options){
 
 async function gateway() {
     try {
-        await upcomingUpdate();
-        await recentUpdate();
+        await gamesUpdate();
         await eventsUpdate();
         await pasteventsUpdate();
     } catch (err) {
