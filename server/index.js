@@ -1,30 +1,69 @@
+// These imports are what we need to run the server
 import express from "express";
 import http from "http";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
-import { port, instagram, notionapi } from "./config/index.js";
-import { upcoming, recent, events, pastevents, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
-import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
+// Other things we need
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
 import cron from 'node-cron'
+// These are just importing our API keys and other dotenv variables
+import { port, instagram, notionapi } from "./config/index.js";
+// These are the files that hold the information.
+// The way I set it up was:
+// 1. The app has files with data
+// 2. The app fetches the required information at scheduled intervals
+// 3. The app replaces the files it had originally with the new information 
+//    it fetched
+// 4. When the Client app tries to access the information, it will see 
+//    information that was recently updated without the need to fetch the 
+//    information every time the client is accessed.
+import { upcoming, recent, events, pastevents, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
+import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
 
+////////////////////////////////////////////////////////////////////////////
 
+// Just grabbing todays date so that we can update the notion information 
+// with info before/after today
 var todaysDate = new Date().toISOString().substring(0,10);
+// Connect to NotionAPI
 const notion = new Client({auth: notionapi});
+// Start the Express server
 const app = express();
-
 app.use(cors({origin: true, credentials: true}))
 app.use(helmet())
 app.use(compression());
 
-// NOTION START get the pages
+////////////////////////////////////////////////////////////////////////////
+
+// If you need to check the prop IDs, uncomment the next few lines
+
+// async function checkProps() {
+//     // Database for Games
+//     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+//     // Database for Events
+//     // const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
+//     // Database for Staff
+//     // const databaseId = '02cb5f77092c413483cc744d04f6a87a';
+//     const dbResponse = await notion.databases.retrieve({
+//         database_id: databaseId,
+//     })
+//     console.log(dbResponse)
+// }
+// checkProps()
+
+////////////////////////////////////////////////////////////////////////////
+
+// This is all the data that we are fetching from Notion
+
+// Variables to hold the relevent page IDs and information
 let upcomingPageIds;
 let upcomingArray = [];
-
+// Async function because fetching from Notion returns a promise
 async function upcomingUpdate() {
+    // This is the Database ID for our Events Calendar
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -45,7 +84,7 @@ async function upcomingUpdate() {
                 {
                     property: 'Team',
                     select: { 
-                    is_not_empty: true,
+                        is_not_empty: true,
                     },
                 },
             ],
@@ -57,56 +96,61 @@ async function upcomingUpdate() {
             }
         ]
     })
+    // For every response we get, add that page's ID to the list
     upcomingPageIds = dbResponse.results.map((resp) => resp.id)
+    // Clear the current information we have about
     upcomingArray = [];
+    // For all the IDs that we collected, do the following
     for (let i = 0; i < upcomingPageIds.length; i++) {
+        // Get the page ID
         const pageId = upcomingPageIds[i];
-
+        // Grab the game accosiated (idk how to spell that word)
         const gameId = "vq%7CF";
         const game = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: gameId})
-
+        // Grab the team accosiated (still cant spell it)
         const teamId = "%3DbFt";
         const team = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: teamId})
-
+        // Grab the Date
         const dateId = "ynaI";
         const date = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
-            
+        // Test to see if the date prop is empty
+        // If it is empty, leave the date + time as blank
+        // Else, parse it through our dateFormater function to format it
+        // the way it was designed
         let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'upcoming')
         let timeDisp = ((date.date == null) || (date.date.start < 11)) ? '' : timeFormater(date.date, 'upcoming')
-
-
+        // Grab the title
         const eventId = "title";
         const event = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
-
-        if (event == null || date.date == null || team.select == null || game.select == null) {
-            upcomingArray[i] = {}
-        } else {
-            upcomingArray[i] = {
-                id: pageId,
-                eventname: event.results[0].title.text.content,
-                date: dateDisp + timeDisp,
-                team: team.select.name,
-                game: game.select.name
-            }
+        // If the title is empty, replace it with "A super cool event"
+        let titleDisp = event.results[0] == null ? "A Super Cool Event!" : event.results[0].title.text.content
+        // Create an array with all the information
+        upcomingArray[i] = {
+            id: pageId,
+            eventname: titleDisp,
+            date: dateDisp + timeDisp,
+            team: team.select.name,
+            game: game.select.name
         }
     }
 };
 
+// Variables to hold the relevent page IDs and information
 let recentPageIds;
 let recentArray = [];
-
+// Async function because fetching from Notion returns a promise
 async function recentUpdate() {
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
@@ -172,7 +216,8 @@ async function recentUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
-
+        // If the title is empty, replace it with "A super cool event"
+        let titleDisp = event.results[0] == null ? "A Super Cool Event!" : event.results[0].title.text.content
         const winsId = "JID%3D"
         const wins = await notion
             .pages
@@ -187,18 +232,14 @@ async function recentUpdate() {
             .retrieve({page_id: pageId, property_id: lossesId})
         let lossesDisp = losses.number == null ? "0" : losses.number
 
-        if (event == null || date.date == null || team.select == null || game.select == null) {
-            recentArray[i] = {}
-        } else {
-            recentArray[i] = {
-                id: pageId,
-                eventname: event.results[0].title.text.content,
-                wins: winsDisp,
-                losses: lossesDisp,
-                date: dateDisp,
-                game: game.select.name,
-                team: team.select.name,
-            };
+        recentArray[i] = {
+            id: pageId,
+            eventname: titleDisp,
+            wins: winsDisp,
+            losses: lossesDisp,
+            date: dateDisp,
+            game: game.select.name,
+            team: team.select.name,
         }
     }
 };
