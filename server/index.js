@@ -1230,26 +1230,26 @@ async function gateway() {
 
 async function staff() {
     try {
-        await copresidentUpdate();
-        await secretaryUpdate();
+        // await copresidentUpdate();
+        // await secretaryUpdate();
         await treasurerUpdate();
-        await hrUpdate();
-        await marketingUpdate();
-        await partnershipsUpdate();
-        await operationsUpdate();
-        await competitiveUpdate();
+        // await hrUpdate();
+        // await marketingUpdate();
+        // await partnershipsUpdate();
+        // await operationsUpdate();
+        // await competitiveUpdate();
     } catch (err) {
       console.log(err);
     }
     finally {
-        await fs.writeFile('./data/yge/copresident.js', "export default " + JSON.stringify(copresidentArray));
-        await fs.writeFile('./data/yge/secretary.js', "export default " + JSON.stringify(secretaryArray));
+        // await fs.writeFile('./data/yge/copresident.js', "export default " + JSON.stringify(copresidentArray));
+        // await fs.writeFile('./data/yge/secretary.js', "export default " + JSON.stringify(secretaryArray));
         await fs.writeFile('./data/yge/treasurer.js', "export default " + JSON.stringify(treasurerArray));
-        await fs.writeFile('./data/yge/hr.js', "export default " + JSON.stringify(hrArray));
-        await fs.writeFile('./data/yge/marketing.js', "export default " + JSON.stringify(marketingArray));
-        await fs.writeFile('./data/yge/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
-        await fs.writeFile('./data/yge/operations.js', "export default " + JSON.stringify(operationsArray));
-        await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
+        // await fs.writeFile('./data/yge/hr.js', "export default " + JSON.stringify(hrArray));
+        // await fs.writeFile('./data/yge/marketing.js', "export default " + JSON.stringify(marketingArray));
+        // await fs.writeFile('./data/yge/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
+        // await fs.writeFile('./data/yge/operations.js', "export default " + JSON.stringify(operationsArray));
+        // await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
     }
 };
 // YGE End
