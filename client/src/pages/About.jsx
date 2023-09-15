@@ -24,12 +24,12 @@ function About (){
           <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
-                <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 w-3/4`}>
+                <section id='home' className={`flex flex-col pt-10 pb-12 px-8 xs:px-20 ss:px-24 xs:w-3/4 w-full`}>
                   <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                     <div className={`w-full`}>
                       <Title2 title="Our Club"/>
                       <div className='py-2'>
-                        <p className='pb-2'>York University Esports (YUES) is a club that aims to bring together the community for gaming at York University. We hope to create a space for casual and competitive gamers alike through facilitating club events as well as managing our esports teams! We strive for inclusivity and part of our mission at YUES is to make sure our club is a safe space for everyone to have fun, free of judgement. We are also ratified as a club at York University so you can also check out our <a href='#'>YUConnect page</a>!</p>
+                        <p className='pb-2'>York University Esports (YUES) is a club that aims to bring together the community for gaming at York University. We hope to create a space for casual and competitive gamers alike through facilitating club events as well as managing our esports teams! We strive for inclusivity and part of our mission at YUES is to make sure our club is a safe space for everyone to have fun, free of judgement. We are also ratified as a club at York University so you can also check out our <a target='_blank' href='https://yorku.campuslabs.ca/engage/organization/yorkesports'>YUConnect page</a>!</p>
                         <p className='pb-3'>Here are some ways to get involved...</p>
                       </div>
                     </div>
@@ -58,7 +58,7 @@ function About (){
                   <div className={`w-full`}>
                     <Title3 title="Club Tournaments" colour="red" />
                     <p className='pt-2 pb-2'>We also hold tournaments for popular games such as League of Legends and Valorant! Tournament rules  vary however we typically offer the opportunity for teams to apply together or to be placed in a team as an individual. Winner(s) receive a cash prize, get bragging rights, and are showcased on our social media!</p>
-                    <p className='pt-2 pb-5'>For updates about all club events and to become a part of the community, join our discord server and follow us on <a href='#'>Twitter</a> or <a href='#'>Instagram</a> to learn about upcoming events</p>
+                    <p className='pt-2 pb-5'>For updates about all club events and to become a part of the community, join our discord server and follow us on <a target='_blank' href='https://twitter.com/yorkesports'>Twitter</a> or <a target='_blank' href='https://instagram.com/yorkesports'>Instagram</a> to learn about upcoming events</p>
                   </div>
                 </div>
               </section>
