@@ -99,7 +99,7 @@ function Home (){
         <div className={`${styles.boxWidth}`}>
           <div className={`flex-row w-full items-center ${styles.flexCenter}`}>
             <div className='aboutimg grid grid-cols-3 w-full'>
-            <div className='rightimgcrop hidden mm:flex justify-end'>
+              <div className='rightimgcrop hidden mm:flex justify-end'>
                 <div className='faderightimg mm:block hidden z-0'></div>
               </div>
             </div>

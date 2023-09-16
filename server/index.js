@@ -1,26 +1,65 @@
+// These imports are what we need to run the server
 import express from "express";
 import http from "http";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
-import { port, instagram, notionapi } from "./config/index.js";
-import { upcoming, recent, events, pastevents, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
-import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
+// Other things we need
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
 import cron from 'node-cron'
+// These are just importing our API keys and other dotenv variables
+import { port, instagram, notionapi } from "./config/index.js";
+// These are the files that hold the information.
+// The way I set it up was:
+// 1. The app has files with data
+// 2. The app fetches the required information at scheduled intervals
+// 3. The app replaces the files it had originally with the new information 
+//    it fetched
+// 4. When the Client app tries to access the information, it will see 
+//    information that was recently updated without the need to fetch the 
+//    information every time the client is accessed.
+import { upcoming, recent, events, pastevents, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
+import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
 
+////////////////////////////////////////////////////////////////////////////
 
+// Just grabbing todays date so that we can update the notion information 
+// with info before/after today
 var todaysDate = new Date().toISOString().substring(0,10);
+// Connect to NotionAPI
 const notion = new Client({auth: notionapi});
+// Start the Express server
 const app = express();
 
 app.use(cors({origin: true, credentials: true}))
 app.use(helmet())
 app.use(compression());
 
-// NOTION START get the pages
+////////////////////////////////////////////////////////////////////////////
+
+// If you need to check the prop IDs, uncomment the next few lines
+
+// async function checkProps() {
+//     // Database for Games
+//     // const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+//     // Database for Events
+//     // const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
+//     // Database for Staff
+//     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
+//     const dbResponse = await notion.databases.retrieve({
+//         database_id: databaseId,
+//     })
+//     console.log(dbResponse)
+// }
+// checkProps()
+
+////////////////////////////////////////////////////////////////////////////
+
+// This is all the data that we are fetching from Notion
+
+// Variables to hold the relevent page IDs and information
 let upcomingPageIds;
 let upcomingArray = [];
 
@@ -434,7 +473,12 @@ async function copresidentUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+        const discordId = "J%60%3Db"
+        const discord = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: discordId})
+        
 
         if (name == null || position == null || team == undefined) {
             copresidentArray[i] = {}
@@ -442,6 +486,7 @@ async function copresidentUpdate() {
             copresidentArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team : team.multi_select[0].name,
             }
@@ -580,13 +625,19 @@ async function treasurerUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             treasurerArray[i] = {}
         } else {
             treasurerArray[i] = {
                 id: pageId,
+                discord: discord.results[0].rich_text.text.content,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
                 team : team.multi_select[0].name,
@@ -728,6 +779,12 @@ async function marketingUpdate() {
             .retrieve({page_id: pageId, property_id: positionId})
         // console.log('In for loop')
 
+        const discordId = "J%60%3Db"
+        const discord = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: discordId})
+        
 
         if (name == null || position == null || team == undefined) {
             marketingArray[i] = {}
@@ -736,6 +793,7 @@ async function marketingUpdate() {
             marketingArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -802,7 +860,12 @@ async function partnershipsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             partnershipsArray[i] = {}
@@ -810,6 +873,7 @@ async function partnershipsUpdate() {
             partnershipsArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -875,7 +939,12 @@ async function operationsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             operationsArray[i] = {}
@@ -883,6 +952,7 @@ async function operationsUpdate() {
             operationsArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -948,7 +1018,12 @@ async function competitiveUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             competitiveArray[i] = {}
@@ -956,6 +1031,7 @@ async function competitiveUpdate() {
             competitiveArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -1005,6 +1081,7 @@ function timeFormater(dateObj, options){
 }
 
 async function gateway() {
+    console.log("YES")
     try {
         await upcomingUpdate();
         await recentUpdate();
@@ -1258,3 +1335,4 @@ const server = http.createServer(app);
 server.listen(port, () => {
     console.log(`Server is up and running on port ${port}`)
 })
+// staff()
