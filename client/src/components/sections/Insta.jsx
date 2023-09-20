@@ -30,9 +30,9 @@ function Insta() {
 
     return (
         <>
-            <div className='grid grid-cols-1 ss:grid-cols-2 sm:grid-cols-3 mm:grid-cols-4 xl:grid-cols-6 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
+            <div className='grid grid-cols-1 ss:grid-cols-2 sm:grid-cols-3 mm:grid-cols-4 justify-between gap-x-6 gap-y-6 items-left w-full my-10 ig'>
                 {posts.map((feed, index) => (
-                    <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex xl:hidden' : 'hidden ss:flex') : ''}`}>
+                    <a target="_blank" href="https://www.instagram.com/yorkesports/" className={`${index > 3 ? (index > 5 ? 'hidden mm:flex ' : 'hidden ss:flex') : ''}`}>
                         <Feed key={feed.id} feed={feed} />
                     </a>
                 ))}
