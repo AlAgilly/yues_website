@@ -249,13 +249,23 @@ async function eventsUpdate() {
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
-        filter: 
-                {
-                    property: 'Status',
-                    status: {
-                        equals: "Upcoming"
-                    }
-                },
+        filter:{
+            and: [
+        
+            {
+                property: 'Status',
+                status: {
+                    equals: "Upcoming"
+                }
+            },
+            {
+                property: 'Tags',
+                multi_select: {
+                    does_not_contain: "Tabling"
+                }
+            }
+        ]},
+
         
         sorts: [
             {
@@ -1227,7 +1237,7 @@ async function exchange() {
     }
 };
 
-cron.schedule('0 * * * *', () => {
+cron.schedule('22 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });
@@ -1336,3 +1346,4 @@ server.listen(port, () => {
     console.log(`Server is up and running on port ${port}`)
 })
 // staff()
+// gateway()

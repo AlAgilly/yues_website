@@ -644,6 +644,16 @@ html, body {
     color: var(--darkred);
     text-decoration: underline;
   }
+
+  a .asvghover, a:hover .asvg {
+    display: none;
+  }
+  a:hover .asvghover, a .asvg {
+    display: block;
+  }
+  .player:hover h1 {
+    color: var(--darkred);
+  }
   .eventcard {
     width: calc(100% - 100px);
   }
