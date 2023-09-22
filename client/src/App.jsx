@@ -7,6 +7,7 @@ import { lazy, Suspense } from 'react';
 import Teams from './pages/Teams';
 import Dota2 from './pages/teams/Dota2';
 import Valorant from './pages/teams/Valorant';
+import Constitution from './pages/documents/Constitution';
 // import Home from './pages/Home';
 
 const Home = lazy(() => import("./pages/Home"))
@@ -66,7 +67,7 @@ class App extends Component {
                   <Route exact path="/teams/rainbow6siege" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/rocketleague" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/valorant" element={< Valorant /> }></Route>
-                  <Route exact path="/constitution" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/documents/constitution" element={< Constitution /> }></Route>
                   <Route exact path="/rules" element={< UnderConstruction /> }></Route>
                   <Route exact path="/privacy" element={< UnderConstruction /> }></Route>
                   <Route exact path="/terms" element={< UnderConstruction /> }></Route>

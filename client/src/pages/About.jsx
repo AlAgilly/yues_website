@@ -29,7 +29,7 @@ function About (){
                     <div className={`w-full`}>
                       <Title2 title="Our Club"/>
                       <div className='py-2'>
-                        <p className='pb-2'>York University Esports (YUES) is a club that aims to bring together the community for gaming at York University. We hope to create a space for casual and competitive gamers alike through facilitating club events as well as managing our esports teams! We strive for inclusivity and part of our mission at YUES is to make sure our club is a safe space for everyone to have fun, free of judgement. We are also ratified as a club at York University so you can also check out our <a target='_blank' href='https://yorku.campuslabs.ca/engage/organization/yorkesports'>YUConnect page</a>!</p>
+                        <p className='pb-2'>YorkU Gaming & Esports (YGE) is a club that aims to bring together the community for gaming at York University. We hope to create a space for casual and competitive gamers alike through facilitating club events as well as managing our esports teams! We strive for inclusivity and part of our mission at YUES is to make sure our club is a safe space for everyone to have fun, free of judgement. We are also ratified as a club at York University so you can also check out our <a target='_blank' href='https://yorku.campuslabs.ca/engage/organization/yorkesports'>YUConnect page</a>!</p>
                         <p className='pb-3'>Here are some ways to get involved...</p>
                       </div>
                     </div>

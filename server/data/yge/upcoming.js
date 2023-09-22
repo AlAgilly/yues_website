@@ -1,1 +1,1 @@
-export default [{"id":"85f79b86-2a92-408d-a59c-155e5db97817","eventname":"Red Bull Campus Clutch Canada Qualifier 1","date":"TBDXX:XX","team":"Varsity","game":"Valorant"}]
+export default [{"id":"b617aabc-e7f5-441f-87fa-b9a85627ff55","eventname":"Collegiate","date":"TBDXX:XX","team":"Varsity","game":"Overwatch"}]

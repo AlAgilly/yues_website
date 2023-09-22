@@ -1296,3 +1296,6 @@ content: " //";
   color: var(--white);
   line-height: 60px;
 }
+.oop {
+  cursor:not-allowed;
+}

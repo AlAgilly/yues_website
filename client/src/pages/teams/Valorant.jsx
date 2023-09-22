@@ -81,7 +81,7 @@ const Valorant = () => {
                         <img src={borderlineshortwhite} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Coach</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Jellyfashe<a href="/"><img src={arrowlinkwhitesvg} alt="" className='ml-3 w-[20px]'/></a></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>orioneb<a href="/"><img src={arrowlinkwhitesvg} alt="" className='ml-3 w-[20px]'/></a></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightWhite}`}>-</div>
                         <Title5 title="Full name here" style="pl-4" colour="white"/>
