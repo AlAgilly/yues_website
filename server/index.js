@@ -423,7 +423,6 @@ async function pasteventsUpdate() {
             .retrieve({page_id: pageId, property_id: galleryId})
 
         let galleryDisp = gallery.url == null ? "" : gallery.url
-
         pasteventsArray[i] = {
             id: pageId,
             event: titleDisp,
@@ -433,8 +432,9 @@ async function pasteventsUpdate() {
             desc: descDisp,
             gallery: galleryDisp
         }
-        
+        console.log(pasteventsArray[i])
     }
+    console.log("event update done!")
 };
 
 let copresidentPageIds;
@@ -1098,19 +1098,30 @@ function timeFormater(dateObj, options){
     return returnTime;   
 }
 
-async function gateway() {
+async function games() {
     try {
         console.log("try")
-        // await upcomingUpdate();
-        // await recentUpdate();
-        await eventsUpdate();
-        await pasteventsUpdate();
+        await upcomingUpdate();
+        await recentUpdate();
     } catch (err) {
       console.log(err);
     }
     finally {
         await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
         await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
+    }
+};
+
+async function eventsEdit() {
+    try {
+        console.log("try")
+        await eventsUpdate();
+        await pasteventsUpdate();
+    } catch (err) {
+      console.log(err);
+    }
+    finally {
+        console.log("writing files!")
         await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
         await fs.writeFile('./data/yge/pastevents.js', "export default " + JSON.stringify(pasteventsArray));
     }
@@ -1245,9 +1256,13 @@ async function exchange() {
     }
 };
 
-cron.schedule('* * * * *', () => {
+cron.schedule('7 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
-    gateway();
+    games();
+});
+cron.schedule('22 * * * *', () => {
+    console.log('Updating Events and games from notion (every hour)');
+    eventsEdit();
 });
 
 cron.schedule('30 0 * * *', () => {
