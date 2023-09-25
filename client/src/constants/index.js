@@ -51,43 +51,43 @@ export const sociallinks = [
 
 export const gameLinks = [
   {
-    id: "/apexlegends",
+    id: "apexlegends",
     title: "Apex Legends",
   },
   {
-    id: "/callofduty",
+    id: "callofduty",
     title: "Call of Duty",
   },
   {
-    id: "/csgo",
+    id: "csgo",
     title: "CS:GO",
   },
   {
-    id: "/dota2",
+    id: "dota2",
     title: "Dota 2",
   },
   {
-    id: "/hearthstone",
+    id: "hearthstone",
     title: "Hearthstone",
   },
   {
-    id: "/leagueoflegends",
+    id: "leagueoflegends",
     title: "League of Legends",
   },
   {
-    id: "/overwatch",
+    id: "overwatch",
     title: "Overwatch",
   },
   {
-    id: "/rainbowsixsiege",
+    id: "rainbowsixsiege",
     title: "Rainbow 6: Siege",
   },
   {
-    id: "/rocketleague",
+    id: "rocketleague",
     title: "Rocket League",
   },
   {
-    id: "/valorant",
+    id: "valorant",
     title: "Valorant",
   },
 ];

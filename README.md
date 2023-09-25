@@ -12,32 +12,21 @@
 
 Home
 ---
-- connect score to notion
-- fix date and time formats
 - add loading for api
 - add dropdowns on navigation
-- cleanup lion css
 - add "empty dataset" error state
+- Gcal reminder for members
 
 About
 ---
 - add about pictures
 - add loading for api
-- redirect links to their respective urls
-- bold the mobile staff titles
-
-Teams
----
-- Figure out how to ease the hover transition in and out
 
 Other
 ---
 - Clean up finished files and add comments
-- add favicon
 - document steps to do shit!
 - remind ppl to add things to notion when updating it
-- add an "opponent" prop on notion
-- Update screen sizes to match Figma
 
 </td>
 <td>

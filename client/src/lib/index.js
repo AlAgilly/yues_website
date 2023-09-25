@@ -39,6 +39,16 @@ export const getEvents = async () => {
     }
 }
 
+export const getPastEvents = async () => {
+    try {
+        const res = await Axios.get('/pastevents')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+
 export const getCopres = async () => {
     try {
         const res = await Axios.get('/copresident')
@@ -112,6 +122,16 @@ export const getOperations = async () => {
 export const getCompetitive = async () => {
     try {
         const res = await Axios.get('/competitive')
+        console.log(res)
+        return { data: res.data, error: false }
+    } catch(error) {
+        return { data: [], error: true }
+    }
+}
+
+export const getValResults = async () => {
+    try {
+        const res = await Axios.get('/recent')
         console.log(res)
         return { data: res.data, error: false }
     } catch(error) {

@@ -10,7 +10,8 @@ export const Button = ({
   onClick,
   buttonStyle,
   buttonSize, 
-  link
+  link,
+  className
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -19,9 +20,9 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
   const checkLink = link;
   return (
-    <Link to={`${checkLink}`} className='my-4'>
+    <Link to={`${checkLink}`} className={`my-4 ${className}`}>
       <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize} ${ checkButtonStyle != "btn--primarysmall"  ? "w-full" : "" }  mm:py-0 py-2`}
+        className={`btn ${checkButtonStyle} ${checkButtonSize} ${ checkButtonStyle != "btn--primarysmall"  ? "w-full" : "" }  py-2`}
         onClick={onClick}
         type={type}
       >

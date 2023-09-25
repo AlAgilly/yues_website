@@ -1,1 +1,0 @@
-export default [{"id":"679c559b-9ca7-4837-a2c0-a7f05a0b1a37","name":"Kristen Lam","position":"Human Resources","team":"Administration"},{"id":"ebb73af9-d7cd-4601-a29a-f7e4d03e9395","name":"Saad Khan","position":"Human Resources","team":"Administration"}]

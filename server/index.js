@@ -1,29 +1,65 @@
+// These imports are what we need to run the server
 import express from "express";
 import http from "http";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
-import { port, instagram, notionapi } from "./config/index.js";
-// import posts from "./data/index.js"
-import upcoming from "./data/upcoming.js"
-import recent from "./data/recent.js"
-import events from "./data/events.js"
-import { copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/index.js"
+// Other things we need
 import { Client } from '@notionhq/client';
 import fetch from "node-fetch";
 import fs from 'fs/promises'
 import cron from 'node-cron'
+// These are just importing our API keys and other dotenv variables
+import { port, instagram, notionapi } from "./config/index.js";
+// These are the files that hold the information.
+// The way I set it up was:
+// 1. The app has files with data
+// 2. The app fetches the required information at scheduled intervals
+// 3. The app replaces the files it had originally with the new information 
+//    it fetched
+// 4. When the Client app tries to access the information, it will see 
+//    information that was recently updated without the need to fetch the 
+//    information every time the client is accessed.
+import { upcoming, recent, events, pastevents, copresident, secretary, treasurer, hr, competitive, marketing, operations, partnerships } from "./data/yge/index.js"
+import { commonIPs, commonURLs, sharePointIPs, sharePointURLs, skypeIPs, skypeURLs, exchangeIPs, exchangeURLs } from './data/ats/index.js'
 
+////////////////////////////////////////////////////////////////////////////
 
-var date = new Date().toISOString().substring(0,10);
+// Just grabbing todays date so that we can update the notion information 
+// with info before/after today
+var todaysDate = new Date().toISOString().substring(0,10);
+// Connect to NotionAPI
 const notion = new Client({auth: notionapi});
+// Start the Express server
 const app = express();
 
 app.use(cors({origin: true, credentials: true}))
 app.use(helmet())
 app.use(compression());
 
-// NOTION START get the pages
+////////////////////////////////////////////////////////////////////////////
+
+// If you need to check the prop IDs, uncomment the next few lines
+
+// async function checkProps() {
+//     // Database for Games
+//     // const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+//     // Database for Events
+//     // const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
+//     // Database for Staff
+//     const databaseId = '02cb5f77092c413483cc744d04f6a87a';
+//     const dbResponse = await notion.databases.retrieve({
+//         database_id: databaseId,
+//     })
+//     console.log(dbResponse)
+// }
+// checkProps()
+
+////////////////////////////////////////////////////////////////////////////
+
+// This is all the data that we are fetching from Notion
+
+// Variables to hold the relevent page IDs and information
 let upcomingPageIds;
 let upcomingArray = [];
 
@@ -36,7 +72,7 @@ async function upcomingUpdate() {
                 {
                     property: 'Date',
                     date: {
-                        on_or_after: date,
+                        on_or_after: todaysDate,
                     },
                 },
                 {
@@ -62,7 +98,7 @@ async function upcomingUpdate() {
     })
     upcomingPageIds = dbResponse.results.map((resp) => resp.id)
     upcomingArray = [];
-    for (let i = 0; i < 3 && upcomingPageIds[i] != undefined; i++) {
+    for (let i = 0; i < upcomingPageIds.length; i++) {
         const pageId = upcomingPageIds[i];
 
         const gameId = "vq%7CF";
@@ -82,6 +118,10 @@ async function upcomingUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
+            
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'upcoming')
+        let timeDisp = ((date.date == null) || (date.date.start < 11)) ? '' : timeFormater(date.date, 'upcoming')
+
 
         const eventId = "title";
         const event = await notion
@@ -95,7 +135,7 @@ async function upcomingUpdate() {
             upcomingArray[i] = {
                 id: pageId,
                 eventname: event.results[0].title.text.content,
-                date: date.date.start,
+                date: dateDisp + timeDisp,
                 team: team.select.name,
                 game: game.select.name
             }
@@ -115,7 +155,7 @@ async function recentUpdate() {
                 {
                     property: 'Date',
                     date: {
-                        before: date
+                        before: todaysDate
                     },
                 }, 
                 {
@@ -139,9 +179,10 @@ async function recentUpdate() {
             }
         ]
     })
+    // console.log(dbResponse)
     recentPageIds = dbResponse.results.map((resp) => resp.id)
     recentArray = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < recentPageIds.length; i++) {
         const pageId = recentPageIds[i];
 
         const gameId = "vq%7CF";
@@ -155,12 +196,15 @@ async function recentUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: teamId})
+        
 
         const dateId = "ynaI";
         const date = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
+    
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'recent')
 
         const eventId = "title";
         const event = await notion
@@ -168,15 +212,31 @@ async function recentUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
 
+        const winsId = "JID%3D"
+        const wins = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: winsId})
+        let winsDisp = wins.number == null ? "0" : wins.number
+
+        const lossesId = "tZ%7B%5C"
+        const losses = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: lossesId})
+        let lossesDisp = losses.number == null ? "0" : losses.number
+
         if (event == null || date.date == null || team.select == null || game.select == null) {
             recentArray[i] = {}
         } else {
             recentArray[i] = {
                 id: pageId,
                 eventname: event.results[0].title.text.content,
-                date: date.date.start,
+                wins: winsDisp,
+                losses: lossesDisp,
+                date: dateDisp,
+                game: game.select.name,
                 team: team.select.name,
-                game: game.select.name
             };
         }
     }
@@ -189,26 +249,25 @@ async function eventsUpdate() {
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
-        filter: {
-            or: [
+        filter: 
                 {
                     property: 'Status',
                     status: {
                         equals: "Upcoming"
                     }
-                }
-            ]
-        },
+                },
+        
         sorts: [
             {
                 property: 'Date',
-                direction: 'descending'
+                direction: 'ascending'
             }
         ]
     })
+    // console.log(dbResponse)
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
     eventsArray = [];
-    for (let i = 0; i < 4 && eventsPageIds[i] != undefined; i++) {
+    for (let i = 0; i < eventsPageIds.length; i++) {
         const pageId = eventsPageIds[i];
 
         const roomId = "WAf%3F";
@@ -217,29 +276,146 @@ async function eventsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: roomId})
 
+        let roomDisp = room.results[0] == undefined ? '' : room.results[0].rich_text.text.content
+
         const dateId = "mh%7D%5E";
         const date = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: dateId})
-
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'events')
+        let timeDisp = (date.date == null) || (date.date.start.length < 11) ? '' : timeFormater(date.date, 'events')
+        
         const eventId = "title";
         const event = await notion
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: eventId})
+        
+        let titleDisp = event == null ? '' : event.results[0].title.text.content
+        
+        const descId = "cdbQ";
+        const desc = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: descId})
 
-        if (event == null || date.date == null || room.results[0] == undefined) {
-            eventsArray[i] = {}
-        } else {
-            eventsArray[i] = {
-                id: pageId,
-                event: event.results[0].title.text.content,
-                date: date.date.start.substring(0,10),
-                time: date.date.start.substring(11,16) + " - " + date.date.end.substring(11,16),
-                room: room.results[0].rich_text.text.content,
-            }
+        let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
+
+        const signupId = "rm%7CY";
+        const signup = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: signupId})
+
+        let signupDisp = signup.url == null ? "" : signup.url
+
+        eventsArray[i] = {
+            id: pageId,
+            event: titleDisp,
+            date: dateDisp,
+            time: timeDisp,
+            room: roomDisp,
+            desc: descDisp,
+            signup: signupDisp,
         }
+        
+    }
+};
+
+let pasteventsPageIds;
+let pasteventsArray = [];
+
+async function pasteventsUpdate() {
+    const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
+    const dbResponse = await notion.databases.query({
+        database_id: databaseId,
+        filter: 
+                {
+                    and: [ {
+                        property: 'Status',
+                        status: {
+                            equals: "Done"
+                    }
+                }, {
+                    property: 'Tags',
+                    multi_select: {
+                        does_not_contain: "Tabling"
+                    }
+                }, {
+                    property: 'Tags',
+                    multi_select: {
+                        does_not_contain: "Tryout"
+                    }
+                }
+                    ]
+                    
+                    
+                },
+        
+        sorts: [
+            {
+                property: 'Date',
+                direction: 'descending'
+            }
+        ]
+    })
+    pasteventsPageIds = dbResponse.results.map((resp) => resp.id)
+    pasteventsArray = [];
+    for (let i = 0; i < pasteventsPageIds.length; i++) {
+        const pageId = pasteventsPageIds[i];
+
+        const roomId = "WAf%3F";
+        const room = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: roomId})
+
+        let roomDisp = room.results[0] == undefined ? '' : room.results[0].rich_text.text.content
+
+        const dateId = "mh%7D%5E";
+        const date = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: dateId})
+        let dateDisp = date.date == null ? '' : dateFormater(date.date.start, 'events')
+        let timeDisp = (date.date == null) || (date.date.start.length < 11) ? '' : timeFormater(date.date, 'events')
+        
+        const eventId = "title";
+        const event = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: eventId})
+            // console.log(event)
+        
+        let titleDisp = event == null ? '' : event.results[0].title.text.content
+        
+        const descId = "cdbQ";
+        const desc = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: descId})
+
+            let descDisp = desc.results[0] == null ? "" : desc.results[0].rich_text.text.content
+            
+        const galleryId = "cNMT";
+        const gallery = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: galleryId})
+
+        let galleryDisp = gallery.url == null ? "" : gallery.url
+
+        pasteventsArray[i] = {
+            id: pageId,
+            event: titleDisp,
+            date: dateDisp,
+            time: timeDisp,
+            room: roomDisp,
+            desc: descDisp,
+            gallery: galleryDisp
+        }
+        
     }
 };
 
@@ -297,7 +473,12 @@ async function copresidentUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+        const discordId = "J%60%3Db"
+        const discord = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: discordId})
+        
 
         if (name == null || position == null || team == undefined) {
             copresidentArray[i] = {}
@@ -305,6 +486,7 @@ async function copresidentUpdate() {
             copresidentArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team : team.multi_select[0].name,
             }
@@ -401,9 +583,9 @@ async function treasurerUpdate() {
                     }
                 },
                 {
-                    property: 'Position',
-                    select: {
-                        equals: "Treasurer"
+                    property: 'Team',
+                    multi_select: {
+                        contains: "Finance"
                     }
                 },
             ]
@@ -443,13 +625,19 @@ async function treasurerUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             treasurerArray[i] = {}
         } else {
             treasurerArray[i] = {
                 id: pageId,
+                discord: discord.results[0].rich_text.text.content,
                 name: name.results[0].title.text.content,
                 position: position.select.name,
                 team : team.multi_select[0].name,
@@ -568,6 +756,7 @@ async function marketingUpdate() {
     marketingPageIds = dbResponse.results.map((resp) => resp.id)
     console.log("marketing: " + marketingPageIds.length)
     marketingArray = [];
+    // console.log('Got Notion')
     for (let i = 0; i < marketingPageIds.length; i++) {
         const pageId = marketingPageIds[i];
 
@@ -588,18 +777,27 @@ async function marketingUpdate() {
             .pages
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
+        // console.log('In for loop')
 
-
+        const discordId = "J%60%3Db"
+        const discord = await notion
+            .pages
+            .properties
+            .retrieve({page_id: pageId, property_id: discordId})
+        
 
         if (name == null || position == null || team == undefined) {
             marketingArray[i] = {}
+            // console.log('oop')
         } else {
             marketingArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
+            // console.log(marketingArray[i])
         }
     }
 };
@@ -662,7 +860,12 @@ async function partnershipsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             partnershipsArray[i] = {}
@@ -670,6 +873,7 @@ async function partnershipsUpdate() {
             partnershipsArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -735,7 +939,12 @@ async function operationsUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             operationsArray[i] = {}
@@ -743,6 +952,7 @@ async function operationsUpdate() {
             operationsArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -808,7 +1018,12 @@ async function competitiveUpdate() {
             .properties
             .retrieve({page_id: pageId, property_id: positionId})
 
-
+            const discordId = "J%60%3Db"
+            const discord = await notion
+                .pages
+                .properties
+                .retrieve({page_id: pageId, property_id: discordId})
+            
 
         if (name == null || position == null || team == undefined) {
             competitiveArray[i] = {}
@@ -816,6 +1031,7 @@ async function competitiveUpdate() {
             competitiveArray[i] = {
                 id: pageId,
                 name: name.results[0].title.text.content,
+                discord: discord.results[0].rich_text.text.content,
                 position: position.select.name,
                 team: team.multi_select[0].name,
             }
@@ -823,18 +1039,62 @@ async function competitiveUpdate() {
     }
 };
 
+function dateFormater(dateStr, options){
+    let newDate = new Date(dateStr)
+    let returnDate = ''
+    switch(options){
+        case 'events':
+            returnDate = newDate.toLocaleString('en-US', {weekday: 'long'})
+            returnDate += ' ' + newDate.toLocaleString('en-US', {month: 'short', day: "numeric"})
+            break;
+        case 'recent':
+            returnDate = newDate.toLocaleString('en-US', {month: 'short', day: "numeric"})
+            break;
+        case 'update':
+            returnDate = newDate.toLocaleString('en-US', {month: 'short', day: "numeric"})
+            break;
+        default:
+            returnDate = 'TBD'
+    }
+    return returnDate;  
+}
+
+function timeFormater(dateObj, options){
+    let timeStart = new Date(dateObj.start)
+    let timeEnd = dateObj.end == null ? '' : new Date(dateObj.end)
+    let returnTime = ''
+    switch(options){
+        case 'events':
+            returnTime = timeStart.toLocaleString('en-US', {hour12: true, hour: 'numeric', minute:'2-digit'})
+            returnTime = returnTime.replace(/ AM/g, '').replace(/ PM/g, '')
+            let returnTime2 = timeEnd == '' ? '' : ' - ' + timeEnd.toLocaleString('en-US', {hour12: true, hour: 'numeric', minute:'2-digit'})
+            returnTime += returnTime2.replace(/ AM/g, '').replace(/ PM/g, '')
+            break;
+        case 'update':
+            returnTime = timeStart.toLocaleString('en-US', {hour12: true, hour: 'numeric', minute:'2-digit'})
+            returnTime = returnTime.replace(/ /g, '').replace(/ /g, '')
+            break;
+        default:
+            returnTime = 'XX:XX'
+    }
+    return returnTime;   
+}
+
 async function gateway() {
+    console.log("YES")
     try {
         await upcomingUpdate();
         await recentUpdate();
         await eventsUpdate();
+        await pasteventsUpdate();
     } catch (err) {
       console.log(err);
     }
     finally {
-        await fs.writeFile('./data/upcoming.js', "export default " + JSON.stringify(upcomingArray));
-        await fs.writeFile('./data/recent.js', "export default " + JSON.stringify(recentArray));
-        await fs.writeFile('./data/events.js', "export default " + JSON.stringify(eventsArray));
+        await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
+        await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
+        await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
+        await fs.writeFile('./data/yge/pastevents.js', "export default " + JSON.stringify(pasteventsArray));
     }
 };
 
@@ -852,14 +1112,118 @@ async function staff() {
       console.log(err);
     }
     finally {
-        await fs.writeFile('./data/copresident.js', "export default " + JSON.stringify(copresidentArray));
-        await fs.writeFile('./data/secretary.js', "export default " + JSON.stringify(secretaryArray));
-        await fs.writeFile('./data/treasurer.js', "export default " + JSON.stringify(treasurerArray));
-        await fs.writeFile('./data/hr.js', "export default " + JSON.stringify(hrArray));
-        await fs.writeFile('./data/marketing.js', "export default " + JSON.stringify(marketingArray));
-        await fs.writeFile('./data/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
-        await fs.writeFile('./data/operations.js', "export default " + JSON.stringify(operationsArray));
-        await fs.writeFile('./data/competitive.js', "export default " + JSON.stringify(competitiveArray));
+        await fs.writeFile('./data/yge/copresident.js', "export default " + JSON.stringify(copresidentArray));
+        await fs.writeFile('./data/yge/secretary.js', "export default " + JSON.stringify(secretaryArray));
+        await fs.writeFile('./data/yge/treasurer.js', "export default " + JSON.stringify(treasurerArray));
+        await fs.writeFile('./data/yge/hr.js', "export default " + JSON.stringify(hrArray));
+        await fs.writeFile('./data/yge/marketing.js', "export default " + JSON.stringify(marketingArray));
+        await fs.writeFile('./data/yge/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
+        await fs.writeFile('./data/yge/operations.js', "export default " + JSON.stringify(operationsArray));
+        await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
+    }
+};
+// YGE End
+//ATS
+
+
+let microsoftAPI = ''
+let exchangeURLsArray = [];
+let exchangeIPsArray = [];
+let skypeURLsArray = [];
+let skypeIPsArray = [];
+let sharePointURLsArray = [];
+let sharePointIPsArray = [];
+let commonURLsArray = [];
+let commonIPsArray = [];
+
+async function microsoftParse() {
+    console.log('we\'re in')
+    microsoftAPI = await fetch(microURL).then(res => {
+        console.log('get it. got it? good.')
+        return res.json()
+    })
+    for (let i = 0; i < microsoftAPI.length; i++) {
+        if (microsoftAPI[i].serviceArea == "Exchange"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    exchangeURLsArray[exchangeURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                    exchangeIPsArray[exchangeIPsArray.length] = microsoftAPI[i].ips[x]
+                    }
+                }
+            }
+        } else if (microsoftAPI[i].serviceArea == "Skype"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    skypeURLsArray[skypeURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                    skypeIPsArray[skypeIPsArray.length] = microsoftAPI[i].ips[x]
+                }}
+            }
+        } else if (microsoftAPI[i].serviceArea == "SharePoint"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    sharePointURLsArray[sharePointURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                        sharePointIPsArray[sharePointIPsArray.length] = microsoftAPI[i].ips[x]
+                    }
+                }
+            }
+        } else if (microsoftAPI[i].serviceArea == "Common"){
+            if(microsoftAPI[i].urls != undefined) {
+                for(let x = 0; x < microsoftAPI[i].urls.length; x++) {
+                    commonURLsArray[commonURLsArray.length] = microsoftAPI[i].urls[x]
+                }
+            }
+            if(microsoftAPI[i].ips != undefined) {
+                for(let x = 0; x < microsoftAPI[i].ips.length; x++) {
+                    if(microsoftAPI[i].ips[x].includes(':')) {
+                        break;
+                    } else {
+                    commonIPsArray[commonIPsArray.length] = microsoftAPI[i].ips[x]
+                    }
+                }
+            }
+        } else {
+            console.log(microsoftAPI[i].serviceArea)
+        }
+    }
+
+}
+
+async function exchange() {
+    try {
+        await microsoftParse();
+    } catch (err) {
+      console.log(err);
+    }
+    finally {
+        await fs.writeFile('./data/ats/ExchangeURLs.js', "export default " + JSON.stringify(exchangeURLsArray));
+        await fs.writeFile('./data/ats/ExchangeIPs.js', "export default " + JSON.stringify(exchangeIPsArray));
+        await fs.writeFile('./data/ats/SkypeURLs.js', "export default " + JSON.stringify(skypeURLsArray));
+        await fs.writeFile('./data/ats/SkypeIPs.js', "export default " + JSON.stringify(skypeIPsArray));
+        await fs.writeFile('./data/ats/SharePointURLs.js', "export default " + JSON.stringify(sharePointURLsArray));
+        await fs.writeFile('./data/ats/SharePointIPs.js', "export default " + JSON.stringify(sharePointIPsArray));
+        await fs.writeFile('./data/ats/CommonURLs.js', "export default " + JSON.stringify(commonURLsArray));
+        await fs.writeFile('./data/ats/CommonIPs.js', "export default " + JSON.stringify(commonIPsArray));
     }
 };
 
@@ -869,8 +1233,13 @@ cron.schedule('0 * * * *', () => {
 });
 
 cron.schedule('30 0 * * *', () => {
-    console.log('Updating staff from notion (every day)');
+    console.log('Updating staff from notion (every day at 12:30 AM)');
     staff();
+});
+
+cron.schedule('45 1 1 * *', () => {
+    console.log('Updating Microsoft stuff every month on the first at 1:45AM');
+    exchange();
 });
 
 const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
@@ -882,6 +1251,37 @@ app.get('/api/insta', async(req, res) => {
     return res.json(data)
 })
 
+const microURL = `https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7`
+
+app.get('/api/exchangeURLs', async(req, res) => {
+    return res.json(exchangeURLs)
+})
+
+app.get('/api/exchangeIPs', async(req, res) => {
+    return res.json(exchangeIPs)
+})
+
+app.get('/api/skypeIPs', async(req, res) => {
+    return res.json(skypeIPs)
+})
+
+app.get('/api/skypeURLs', async(req, res) => {
+    return res.json(skypeURLs)
+})
+app.get('/api/sharePointIPs', async(req, res) => {
+    return res.json(sharePointIPs)
+})
+
+app.get('/api/sharePointURLs', async(req, res) => {
+    return res.json(sharePointURLs)
+})
+app.get('/api/commonIPs', async(req, res) => {
+    return res.json(commonIPs)
+})
+
+app.get('/api/commonURLs', async(req, res) => {
+    return res.json(commonURLs)
+})
 app.get('/api/upcoming', (req, res) => {
     return res.json(upcoming)
 })
@@ -892,6 +1292,10 @@ app.get('/api/recent', (req, res) => {
 
 app.get('/api/events', (req, res) => {
     return res.json(events)
+})
+
+app.get('/api/pastevents', (req, res) => {
+    return res.json(pastevents)
 })
 
 app.get('/api/copresident', (req, res) => {
@@ -931,3 +1335,4 @@ const server = http.createServer(app);
 server.listen(port, () => {
     console.log(`Server is up and running on port ${port}`)
 })
+// staff()

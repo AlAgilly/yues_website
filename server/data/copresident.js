@@ -1,1 +1,0 @@
-export default [{"id":"d7d62165-4633-4e1f-8068-6de68bf338fb","name":"Alexander Saiko ","position":"Co-President","team":"Administration"},{"id":"b1283d23-b953-4758-b18a-d511a49ed14b","name":"Sarah Miller","position":"Co-President","team":"Administration"}]
