@@ -64,6 +64,7 @@ let upcomingPageIds;
 let upcomingArray = [];
 
 async function upcomingUpdate() {
+    console.log("upcoming")
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -97,6 +98,7 @@ async function upcomingUpdate() {
         ]
     })
     upcomingPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(upcomingPageIds)
     upcomingArray = [];
     for (let i = 0; i < upcomingPageIds.length; i++) {
         const pageId = upcomingPageIds[i];
@@ -147,6 +149,7 @@ let recentPageIds;
 let recentArray = [];
 
 async function recentUpdate() {
+    console.log("recent")
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -181,6 +184,7 @@ async function recentUpdate() {
     })
     // console.log(dbResponse)
     recentPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(recentPageIds)
     recentArray = [];
     for (let i = 0; i < recentPageIds.length; i++) {
         const pageId = recentPageIds[i];
@@ -246,6 +250,7 @@ let eventsPageIds;
 let eventsArray = [];
 
 async function eventsUpdate() {
+    console.log("events")
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -276,6 +281,7 @@ async function eventsUpdate() {
     })
     // console.log(dbResponse)
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(eventsPageIds)
     eventsArray = [];
     for (let i = 0; i < eventsPageIds.length; i++) {
         const pageId = eventsPageIds[i];
@@ -337,6 +343,7 @@ let pasteventsPageIds;
 let pasteventsArray = [];
 
 async function pasteventsUpdate() {
+    console.log("past events")
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -371,6 +378,7 @@ async function pasteventsUpdate() {
         ]
     })
     pasteventsPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(pasteventsPageIds)
     pasteventsArray = [];
     for (let i = 0; i < pasteventsPageIds.length; i++) {
         const pageId = pasteventsPageIds[i];
@@ -1091,10 +1099,10 @@ function timeFormater(dateObj, options){
 }
 
 async function gateway() {
-    console.log("YES")
     try {
-        await upcomingUpdate();
-        await recentUpdate();
+        console.log("try")
+        // await upcomingUpdate();
+        // await recentUpdate();
         await eventsUpdate();
         await pasteventsUpdate();
     } catch (err) {
@@ -1237,7 +1245,7 @@ async function exchange() {
     }
 };
 
-cron.schedule('22 * * * *', () => {
+cron.schedule('* * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     gateway();
 });

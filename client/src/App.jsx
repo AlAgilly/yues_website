@@ -55,12 +55,12 @@ class App extends Component {
                   {/* Underconstruction Pages */}
                   <Route exact path='/events' element={< EventsPage />}></Route>
                   
-                  <Route exact path='/teams' element={< Teams />}></Route>
+                  <Route exact path='/teams' element={< UnderConstruction />}></Route>
                   {/* <Route exact path='/teams' element={< UnderConstruction />}></Route> */}
                   <Route exact path="/teams/apexlegends" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/callofduty" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/csgo" element={< UnderConstruction /> }></Route>
-                  <Route exact path="/teams/dota2" element={< Dota2 /> }></Route>
+                  <Route exact path="/teams/dota2" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/hearthstone" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/leagueoflegends" element={< UnderConstruction /> }></Route>
                   <Route exact path="/teams/overwatch" element={< UnderConstruction /> }></Route>
