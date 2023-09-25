@@ -1,1 +1,1 @@
-export default [{"id":"b617aabc-e7f5-441f-87fa-b9a85627ff55","eventname":"Collegiate","date":"TBDXX:XX","team":"Varsity","game":"Overwatch"}]
+export default []
