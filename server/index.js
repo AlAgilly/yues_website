@@ -142,6 +142,7 @@ async function upcomingUpdate() {
                 game: game.select.name
             }
         }
+        console.log(upcomingArray[i])
     }
 };
 
@@ -230,7 +231,7 @@ async function recentUpdate() {
             .retrieve({page_id: pageId, property_id: lossesId})
         let lossesDisp = losses.number == null ? "0" : losses.number
 
-        if (event == null || date.date == null || team.select == null || game.select == null) {
+        if (event == null ||  team.select == null || game.select == null) {
             recentArray[i] = {}
         } else {
             recentArray[i] = {
@@ -243,6 +244,7 @@ async function recentUpdate() {
                 team: team.select.name,
             };
         }
+        console.log(recentArray[i])
     }
 };
 
@@ -268,7 +270,13 @@ async function eventsUpdate() {
                 multi_select: {
                     does_not_contain: "Tabling"
                 }
-            }
+            },
+            {
+                property: 'Date',
+                date: {
+                    on_or_after: todaysDate,
+                },
+            },
         ]},
 
         
@@ -349,22 +357,31 @@ async function pasteventsUpdate() {
         database_id: databaseId,
         filter: 
                 {
-                    and: [ {
-                        property: 'Status',
-                        status: {
-                            equals: "Done"
-                    }
-                }, {
-                    property: 'Tags',
-                    multi_select: {
-                        does_not_contain: "Tabling"
-                    }
-                }, {
-                    property: 'Tags',
-                    multi_select: {
-                        does_not_contain: "Tryout"
-                    }
-                }
+                    and: [ 
+                        {
+                            property: 'Status',
+                            status: {
+                                equals: "Done"
+                            }
+                        }, 
+                        {
+                            property: 'Tags',
+                            multi_select: {
+                                does_not_contain: "Tabling"
+                            }
+                        }, 
+                        {
+                            property: 'Tags',
+                            multi_select: {
+                                does_not_contain: "Tryout"
+                            }
+                        },
+                        {
+                            property: 'Date',
+                            date: {
+                                before: todaysDate,
+                            },
+                        },
                     ]
                     
                     
@@ -1256,7 +1273,7 @@ async function exchange() {
     }
 };
 
-cron.schedule('7 * * * *', () => {
+cron.schedule('*/2 * * * *', () => {
     console.log('Updating Events and games from notion (every hour)');
     games();
 });
