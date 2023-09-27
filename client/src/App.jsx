@@ -17,6 +17,7 @@ const Contact = lazy(() => import("./pages/Contact"))
 const UnderConstruction = lazy(() => import("./pages/UnderConstruction"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 // const PastGames = lazy(() => import("./pages/PastGames"))
+const Battlepass = lazy(() => import("./pages/Battlepass"))
 const Footer = lazy(() => import("./components/sections/Footer"))
 
 class App extends Component {
@@ -71,6 +72,7 @@ class App extends Component {
                   <Route exact path="/rules" element={< UnderConstruction /> }></Route>
                   <Route exact path="/privacy" element={< UnderConstruction /> }></Route>
                   <Route exact path="/terms" element={< UnderConstruction /> }></Route>
+                  <Route exact path="/battlepass" element={< Battlepass /> }></Route>
                   {/* 404 Error */}
                   <Route path='*' element={<NotFound />}/>
                 </Routes>
