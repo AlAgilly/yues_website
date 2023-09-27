@@ -12,12 +12,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/fontawesome-free-regular';
 
 function Battlepass() {
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    // Scroll top when location changes
-    window.scrollTo(0, 0);
-  }, [location]);
+  // useEffect(() => {
+  //   // Scroll top when location changes
+  //   window.scrollTo(0, 0);
+  // }, [location]);
 
 
   
@@ -28,34 +28,34 @@ function Battlepass() {
         <div className='w-full overflow-hidden bg-white'>
             <div className={`${styles.flexStart} `}>
               <div className={`p-0 max-w-[1340px] w-full`}> 
-              <section id='home' className={`flex flex-col pb-24 px-8 xs:px-20 ss:px-24 w-full`}>
+              <section id='battlepass' className={`flex flex-col pb-24 px-8 xs:px-20 ss:px-24 mm:w-4/5 w-full`}>
                 <div className={`flex-1 mm:${styles.flexStart} py-3`}>    
                   <div className={`w-full`}>
                     <div className="block mt-10">
                     <h2 className={`font-bevietnam block`}>Welcome to the York Gaming & Esports Battle Pass!</h2>
-                    <h2 className={`font-bevietnam block mb-5`}>This exciting membership allows you to earn rewards while participating in our events. </h2>
+                    <h2 className={`font-bevietnam block mb-5`}>This exciting membership allows you to earn rewards while participating in events hosted by YGE (thats us!).</h2>
                     <Title2 title="How it works" />
-                    <h2 className={`font-bevietnam block my-5`}>When you attend our events, you earn XP; the more XP you gain, the higher level you will be, earning you rewards at each level up! You gain the XP at the end of the event.</h2>
+                    <p className={`font-bevietnam block my-5`}>When you attend our events you earn XP, leveling you up and earning you unique rewards at each tier!</p>
                     <Title3 title="Earning XP" />
                       <div className='my-3'>
                         <Title4 title="Collab Events // 2000XP *" colour="red" />
-                        <h2 className={`font-bevietnam block`}>We regularly collaborate with other clubs (Cullinary Association at York (CAY) and Computing Students Hub (CSHub) to name a few) to provide free events and tournaments open to our respective clubs. These events tend to be bigger events and have a limited number of seats; as a Battle Pass member, you get early access to the sign-up forms! For tournaments, you will also get the chance to earn the XP by just spectating.</h2>
+                        <p className={`font-bevietnam block`}>We regularly collaborate with other clubs (Cullinary Association at York (CAY) and Computing Students Hub (CSHub) to name a few) to provide free events and tournaments open to our respective communities. These events tend to be larger and have a limited number of seats; and as a Battle Pass member, you get early access to the sign-up forms, allowing you to snag a seat in advance! For tournaments, in-person spectators will also be eligible to earn XP at sign-in.</p>
                       </div>
                       <div className='my-3'>
                         <Title4 title="Chill Nites // 1000XP *" colour="red" />
-                        <h2 className={`font-bevietnam block`}>Chill Nites are weekly in-person events that usually run on Thursdays and Fridays at 6:30PM. It is free to attend, includes free food/drinks, and you do not need to be a YorkU student to attend. The doors will be open from 6:30 to 8:30; feel free to come whenever and stay as long as you would like but you must sign in with our staff to earn your XP.</h2>
+                        <p className={`font-bevietnam block`}>Chill Nites are weekly in-person events that are usually hosted on Thursday/Friday nights. Chill Nites are open from 6:30 - 9:00 PM, feel free to stop by, sign in, and stay as long as you'd like. Entry is free, open to the public, and food and drinks are provided for everyone. All participants will be eligible to earn XP at sign-in.</p>
                       </div>
                       <div className='my-3'>
                         <Title4 title="Tournaments // 1000XP *" colour="red" />
-                        <h2 className={`font-bevietnam block`}>Tournaments occur a couple of times throughout the school year. They usually focus on one game (most commonly League of Legends & Valorant) and while it is open to players of all skill levels, conditions to sign up vary per tournament. To earn this XP, you must be participating.</h2>
+                        <p className={`font-bevietnam block`}>Tournaments occur throughout the school year and focus on a specific game, such as League of Legends or Valorant. They are open to players of all skill levels, but sign up requirements vary per tournament. Only participants will be eligible to earn XP.</p>
                       </div>
                       <div className='my-3'>
                         <Title4 title="In-Houses // 250XP" colour="red" />
-                        <h2 className={`font-bevietnam block`}>In-houses are custom games where you play with and against YorkU students and other members of the Discord servers. Our Valorant and League of Legends in-houses run weekly and we are working on bringing other regularly reoccuring in-houses for other games in the near future. You must be actively participating in the games to earn XP.</h2>
+                        <p className={`font-bevietnam block`}>In-houses are custom games where you play with and against YorkU students as well as other members of our extended community. Currently only Valorant and League of Legends in-houses run weekly, but we are working to bring other games into rotation. Only active Battle Pass members will be eligible to earn XP.</p>
                       </div>
                       <div className='my-3'>
                         <Title4 title="Streams & Watch Parties // 250XP" colour="red" />
-                        <h2 className={`font-bevietnam block`}>We stream our teams' games on our <a href="/">Twitch channel</a> and sometimes in discord as well to watch with others. If you watch the twitch stream or join the discord and watch the Discord Watch Party, you will gain XP.</h2>
+                        <p className={`font-bevietnam block`}>We stream our competitive teams' games as well as some events listed above on our <a href="https://twitch.tv/yuesports">Twitch channel</a> and in <a href="https://discord.gg/yorkesports">Discord</a>. Stop by and support YorkU as we compete against some of NA's best collegiate teams, or your friends as they participate in YGE games. Only active Battle Pass members will be eligible to earn XP.</p>
                       </div>
                       <em>* If you attend these events before you buy the Battle Pass, you will retroactively get the XP at a 0.5x multiplier.</em>
                       <Title3 title="Levels" className="mt-5"/>
@@ -104,6 +104,7 @@ function Battlepass() {
                         <li>Discounted admission for paid events</li>
                         <li>Special role in Discord</li>
                         <li>Special role in our Minecraft SMP server</li>
+                        You gain the XP at the end of the event.
                           </ul>
                       </div>  
                       <Title2 title="Important Links" />

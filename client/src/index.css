@@ -537,7 +537,9 @@ html, body {
   overflow: hidden;
   float: right;
   }
-
+#battlepass p {
+  font-size: 16px;
+}
 .center {
     position: absolute;
     float: center;
