@@ -29,6 +29,8 @@ import bgg from './imgs/bgg.png'
 import arrowlink from './imgs/arrowlink.png'
 import arrowlinksvg from './imgs/arrowlink.svg'
 import arrowlinkwhitesvg from './imgs/arrowlinkwhite.svg'
+import arrowlinkhover from './imgs/arrowlinkhover.svg'
+import arrowlinkgrey from './imgs/arrowlinkgrey.svg'
 
 // SVGs - Vectors
 import arrowup from "./imgs/arrow-up.svg"
@@ -104,4 +106,6 @@ export {
   borderlineshortblack,
   borderlineshortwhite,
   arrowlinkwhitesvg,
+  arrowlinkhover,
+  arrowlinkgrey,
 };

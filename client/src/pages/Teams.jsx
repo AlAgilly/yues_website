@@ -10,11 +10,11 @@ import { apex, cod, csgo, dota2, hearthstone, league, overwatch, r6s, rocketleag
 
 function Teams (){
   const location = useLocation();
-
   useEffect(() => {
     // Scroll top when location changes
     window.scrollTo(0, 0);
   }, [location]);
+  
     return (
         <>
           <Header title="YGE Teams" colour="red"/>

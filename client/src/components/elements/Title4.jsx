@@ -5,7 +5,7 @@ const Title4 = ({
     colour, className,
 }) => {
   return (
-    <h5 className={`${className} font-bevietnambold font-bold flex-col ${colour == "red" ? "text-red" : (colour == "white" ? "text-white" :"text-black")}`}>{ title }</h5>
+    <h5 className={`${className} text-[18px] font-bevietnambold font-bold flex-col ${colour == "red" ? "text-red" : (colour == "white" ? "text-white" :"text-black")}`}>{ title }</h5>
     )
 }
 

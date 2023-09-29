@@ -41,6 +41,15 @@ useEffect(() => {
             </NavLink>
           </li>
         ))}
+        <li>
+          <NavLink to={`/battlepass`} className={({ isActive }) => isActive ? active : normal}>
+              <div className={`text-white py-2 px-2 font-bignoodle font-normal cursor-pointer text-[23px]`}>
+                <div className='px-2'>
+                Battle pass
+                </div>
+              </div>
+            </NavLink>
+        </li>
       </ul>
 
       <div className='xm:hidden flex flex-1 justify-end items-center'>

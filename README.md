@@ -17,6 +17,10 @@ Home
 - add "empty dataset" error state
 - Gcal reminder for members
 
+Insta
+---
+- have the img crop to square instead of stretchx
+
 About
 ---
 - add about pictures

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getEvents, getPastEvents } from "../../lib";
 import Error from "../elements/Error";
 import Title2 from "../elements/Title2";
-import { arrowlinksvg } from "../../assets";
+import { arrowlinkhover, arrowlinksvg } from "../../assets";
 
 function EventComponent() {
     const [events, setEvents] = useState([])
@@ -45,7 +45,7 @@ function EventComponent() {
                         <div className={`${events.signup == "" ? "hidden" : "absolute right-[50px] bottom-[20px]" } justify-end`}>
                             <p className="inline-flex items-center link">
                                 <a href={events.signup} className="inline-flex">
-                                    Sign up<img src={arrowlinksvg} alt="" className='ml-3 w-[12px]'/>
+                                    Sign up<img src={arrowlinkhover} alt="" className='ml-3 w-[12px] asvghover'/><img src={arrowlinksvg} alt="" className='ml-3 w-[12px] asvg'/>
                                 </a>
                             </p>
                         </div>
@@ -102,7 +102,7 @@ function PastEventComponent() {
                         <div className={`${pastevents.gallery == "" ? "hidden" : "absolute right-[50px] bottom-[20px]" } justify-end`}>
                             <p className="inline-flex items-center link">
                                 <a href={pastevents.gallery} className="inline-flex">
-                                    Gallery<img src={arrowlinksvg} alt="" className='ml-3 w-[12px]'/>
+                                Gallery<img src={arrowlinkhover} alt="" className='ml-3 w-[12px] asvghover'/><img src={arrowlinksvg} alt="" className='ml-3 w-[12px] asvg'/>
                                 </a>
                             </p>
                         </div>

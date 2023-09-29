@@ -64,6 +64,7 @@ let upcomingPageIds;
 let upcomingArray = [];
 
 async function upcomingUpdate() {
+    console.log("upcoming")
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -97,6 +98,7 @@ async function upcomingUpdate() {
         ]
     })
     upcomingPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(upcomingPageIds)
     upcomingArray = [];
     for (let i = 0; i < upcomingPageIds.length; i++) {
         const pageId = upcomingPageIds[i];
@@ -140,6 +142,7 @@ async function upcomingUpdate() {
                 game: game.select.name
             }
         }
+        console.log(upcomingArray[i])
     }
 };
 
@@ -147,6 +150,7 @@ let recentPageIds;
 let recentArray = [];
 
 async function recentUpdate() {
+    console.log("recent")
     const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
@@ -181,6 +185,7 @@ async function recentUpdate() {
     })
     // console.log(dbResponse)
     recentPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(recentPageIds)
     recentArray = [];
     for (let i = 0; i < recentPageIds.length; i++) {
         const pageId = recentPageIds[i];
@@ -226,7 +231,7 @@ async function recentUpdate() {
             .retrieve({page_id: pageId, property_id: lossesId})
         let lossesDisp = losses.number == null ? "0" : losses.number
 
-        if (event == null || date.date == null || team.select == null || game.select == null) {
+        if (event == null ||  team.select == null || game.select == null) {
             recentArray[i] = {}
         } else {
             recentArray[i] = {
@@ -239,6 +244,7 @@ async function recentUpdate() {
                 team: team.select.name,
             };
         }
+        console.log(recentArray[i])
     }
 };
 
@@ -246,16 +252,33 @@ let eventsPageIds;
 let eventsArray = [];
 
 async function eventsUpdate() {
+    console.log("events")
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
-        filter: 
-                {
-                    property: 'Status',
-                    status: {
-                        equals: "Upcoming"
-                    }
+        filter:{
+            and: [
+        
+            {
+                property: 'Status',
+                status: {
+                    equals: "Upcoming"
+                }
+            },
+            {
+                property: 'Tags',
+                multi_select: {
+                    does_not_contain: "Tabling"
+                }
+            },
+            {
+                property: 'Date',
+                date: {
+                    on_or_after: todaysDate,
                 },
+            },
+        ]},
+
         
         sorts: [
             {
@@ -266,6 +289,7 @@ async function eventsUpdate() {
     })
     // console.log(dbResponse)
     eventsPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(eventsPageIds)
     eventsArray = [];
     for (let i = 0; i < eventsPageIds.length; i++) {
         const pageId = eventsPageIds[i];
@@ -327,27 +351,37 @@ let pasteventsPageIds;
 let pasteventsArray = [];
 
 async function pasteventsUpdate() {
+    console.log("past events")
     const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     const dbResponse = await notion.databases.query({
         database_id: databaseId,
         filter: 
                 {
-                    and: [ {
-                        property: 'Status',
-                        status: {
-                            equals: "Done"
-                    }
-                }, {
-                    property: 'Tags',
-                    multi_select: {
-                        does_not_contain: "Tabling"
-                    }
-                }, {
-                    property: 'Tags',
-                    multi_select: {
-                        does_not_contain: "Tryout"
-                    }
-                }
+                    and: [ 
+                        {
+                            property: 'Status',
+                            status: {
+                                equals: "Done"
+                            }
+                        }, 
+                        {
+                            property: 'Tags',
+                            multi_select: {
+                                does_not_contain: "Tabling"
+                            }
+                        }, 
+                        {
+                            property: 'Tags',
+                            multi_select: {
+                                does_not_contain: "Tryout"
+                            }
+                        },
+                        {
+                            property: 'Date',
+                            date: {
+                                before: todaysDate,
+                            },
+                        },
                     ]
                     
                     
@@ -361,6 +395,7 @@ async function pasteventsUpdate() {
         ]
     })
     pasteventsPageIds = dbResponse.results.map((resp) => resp.id)
+    console.log(pasteventsPageIds)
     pasteventsArray = [];
     for (let i = 0; i < pasteventsPageIds.length; i++) {
         const pageId = pasteventsPageIds[i];
@@ -405,7 +440,6 @@ async function pasteventsUpdate() {
             .retrieve({page_id: pageId, property_id: galleryId})
 
         let galleryDisp = gallery.url == null ? "" : gallery.url
-
         pasteventsArray[i] = {
             id: pageId,
             event: titleDisp,
@@ -415,8 +449,9 @@ async function pasteventsUpdate() {
             desc: descDisp,
             gallery: galleryDisp
         }
-        
+        console.log(pasteventsArray[i])
     }
+    console.log("event update done!")
 };
 
 let copresidentPageIds;
@@ -1080,19 +1115,30 @@ function timeFormater(dateObj, options){
     return returnTime;   
 }
 
-async function gateway() {
-    console.log("YES")
+async function games() {
     try {
+        console.log("try")
         await upcomingUpdate();
         await recentUpdate();
-        await eventsUpdate();
-        await pasteventsUpdate();
     } catch (err) {
       console.log(err);
     }
     finally {
         await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
         await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
+    }
+};
+
+async function eventsEdit() {
+    try {
+        console.log("try")
+        await eventsUpdate();
+        await pasteventsUpdate();
+    } catch (err) {
+      console.log(err);
+    }
+    finally {
+        console.log("writing files!")
         await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
         await fs.writeFile('./data/yge/pastevents.js', "export default " + JSON.stringify(pasteventsArray));
     }
@@ -1227,20 +1273,24 @@ async function exchange() {
     }
 };
 
-cron.schedule('0 * * * *', () => {
-    console.log('Updating Events and games from notion (every hour)');
-    gateway();
-});
+// cron.schedule('*/2 * * * *', () => {
+//     console.log('Updating Events and games from notion (every hour)');
+//     games();
+// });
+// cron.schedule('22 * * * *', () => {
+//     console.log('Updating Events and games from notion (every hour)');
+//     eventsEdit();
+// });
 
-cron.schedule('30 0 * * *', () => {
-    console.log('Updating staff from notion (every day at 12:30 AM)');
-    staff();
-});
+// cron.schedule('30 0 * * *', () => {
+//     console.log('Updating staff from notion (every day at 12:30 AM)');
+//     staff();
+// });
 
-cron.schedule('45 1 1 * *', () => {
-    console.log('Updating Microsoft stuff every month on the first at 1:45AM');
-    exchange();
-});
+// cron.schedule('45 1 1 * *', () => {
+//     console.log('Updating Microsoft stuff every month on the first at 1:45AM');
+//     exchange();
+// });
 
 const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
 
@@ -1336,3 +1386,4 @@ server.listen(port, () => {
     console.log(`Server is up and running on port ${port}`)
 })
 // staff()
+// gateway()

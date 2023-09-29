@@ -537,7 +537,9 @@ html, body {
   overflow: hidden;
   float: right;
   }
-
+#battlepass p {
+  font-size: 16px;
+}
 .center {
     position: absolute;
     float: center;
@@ -643,6 +645,46 @@ html, body {
   p a:hover {
     color: var(--darkred);
     text-decoration: underline;
+  }
+  .link button {
+    color: var(--red);
+    font-family: 'BVP-black';
+    position: relative;
+  }
+
+ .link button:hover {
+    color: var(--darkred);
+    text-decoration: underline;
+  }
+  .copied {
+    display: none;
+    background-color: var(--black);
+    border-radius: 10px;
+    margin: 5px;
+    color: var(--white);
+    padding: 5px 10px;
+    position: absolute;
+    right: -110px;
+  }
+  .copied::before {
+    content: url("./assets/imgs/carrot.png");
+    color: var(--black);
+    position: absolute;
+    left: -10px;
+    top: 3px;
+  }
+  .copy:active > .copied {
+    display: block;
+
+  }
+  a .asvghover, a:hover .asvg {
+    display: none;
+  }
+  a:hover .asvghover, a .asvg {
+    display: block;
+  }
+  .player:hover h1 {
+    color: var(--darkred);
   }
   .eventcard {
     width: calc(100% - 100px);
@@ -1285,4 +1327,7 @@ content: " //";
   font-size: 80px;
   color: var(--white);
   line-height: 60px;
+}
+.oop {
+  cursor:not-allowed;
 }
