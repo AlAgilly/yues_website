@@ -21,6 +21,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "battlepass",
+    title: "Battle Pass",
+  },
 ];
 
 // NOT USED?

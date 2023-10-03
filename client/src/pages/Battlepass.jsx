@@ -12,12 +12,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/fontawesome-free-regular';
 
 function Battlepass() {
-  // const location = useLocation();
+  const location = useLocation();
 
-  // useEffect(() => {
-  //   // Scroll top when location changes
-  //   window.scrollTo(0, 0);
-  // }, [location]);
+  useEffect(() => {
+    // Scroll top when location changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
 
   
@@ -97,14 +97,13 @@ function Battlepass() {
                       </div>
                       <Title3 title="Other Perks" />
                       <div className='mt-2 mb-5'>
-                        <Title4 title="Level 9 // 15000XP" colour="red"/>
-                        <h2 className={`font-bevietnam block`}>Other perks you get with this battle pass include:</h2>
+                        <Title4 title="Other perks include:" colour="black"/>
                         <ul className={`font-bevietnam list`}> 
-                        <li>Priority seating at limited events (tournaments/dinners)</li>
-                        <li>Discounted admission for paid events</li>
-                        <li>Special role in Discord</li>
-                        <li>Special role in our Minecraft SMP server</li>
-                        You gain the XP at the end of the event.
+                        <li>- Priority seating at limited events (tournaments/dinners)</li>
+                        <li>- Discounted admission for paid events</li>
+                        <li>- Special role in Discord</li>
+                        <li>- Special role in our Minecraft SMP server</li>
+                        {/* You gain the XP at the end of the event. */}
                           </ul>
                       </div>  
                       <Title2 title="Important Links" />
