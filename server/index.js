@@ -1273,24 +1273,24 @@ async function exchange() {
     }
 };
 
-// cron.schedule('*/2 * * * *', () => {
-//     console.log('Updating Events and games from notion (every hour)');
-//     games();
-// });
-// cron.schedule('22 * * * *', () => {
-//     console.log('Updating Events and games from notion (every hour)');
-//     eventsEdit();
-// });
+cron.schedule('10 * * * *', () => {
+    console.log('Updating games from notion (every hour)');
+    games();
+});
+cron.schedule('22 * * * *', () => {
+    console.log('Updating events from notion (every hour)');
+    eventsEdit();
+});
 
-// cron.schedule('30 0 * * *', () => {
-//     console.log('Updating staff from notion (every day at 12:30 AM)');
-//     staff();
-// });
+cron.schedule('30 0 * * *', () => {
+    console.log('Updating staff from notion (every day at 12:30 AM)');
+    staff();
+});
 
-// cron.schedule('45 1 1 * *', () => {
-//     console.log('Updating Microsoft stuff every month on the first at 1:45AM');
-//     exchange();
-// });
+cron.schedule('45 1 1 * *', () => {
+    console.log('Updating Microsoft stuff every month on the first at 1:45AM');
+    exchange();
+});
 
 const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`
 

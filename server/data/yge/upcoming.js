@@ -1,1 +1,1 @@
-export default [{"id":"6c9ba4ae-3d07-4324-bc24-1caf57749fc8","eventname":"Comp game","date":"2023-08-02","team":"Varsity","game":"Valorant"},{"id":"a38fa0f4-1d3b-4c6d-9fe1-fc0da4c78ff0","eventname":"Knights Gauntlet","date":"2023-01-28","team":"Varsity","game":"Valorant"},{"id":"ec64659a-02f5-4852-8212-b624a46d5e4e","eventname":"Victor Showcase","date":"2023-01-21","team":"Varsity","game":"Valorant"}]
+export default []
