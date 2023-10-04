@@ -142,11 +142,11 @@ html, body {
   color: var(--black);
 }
 
-.navbar div div {
+.navbar div .name {
   border-bottom: 3px solid var(--red);
   border-top: 3px solid var(--red);
 }
-.navbar div:hover div {
+.navbar div:hover .name {
   border-bottom: 3px solid var(--darkred);
   border-top: 3px solid var(--darkred);
 }
@@ -157,11 +157,11 @@ html, body {
   background-color: var(--red);
 
 }
-.navbar .activenav div div {
+.navbar .activenav div .name {
   border-bottom: 3px solid #000;
   border-top: 3px solid var(--red);
 }
-.navbar .activenav div:hover div {
+.navbar .activenav div:hover .name {
   border-bottom: 3px solid #000;
   border-top: 3px solid var(--red);
 }
@@ -1330,4 +1330,21 @@ content: " //";
 }
 .oop {
   cursor:not-allowed;
+}
+.dropdown .dropdown-links {
+  display: none;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.dropdown:hover .dropdown-links {
+  display:block;
+  opacity: 1;
+  position: absolute;
+  background-color: var(--white);
+  padding: 10px 100px;
+  right: auto;
+  top:56px;
+  border-bottom:1px solid #ccc;
+  transition: 0.3s ease-in-out;
+
 }

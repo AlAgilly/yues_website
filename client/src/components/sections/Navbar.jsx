@@ -29,7 +29,7 @@ useEffect(() => {
   return (
     <nav className='w-full flex justify-end items-center'>
       <Link to="/"><img src={ yuesports } alt="YUES" className='xm:w-[40px] xm:h-[42px] w-[30px] h-[32px] my-1'/></Link>
-      <ul className='list-none xm:flex hidden justify-end items-center flex-1 navbar'>
+      {/* <ul className='list-none xm:flex hidden justify-end items-center flex-1 navbar'>
         {navLinks.map((nav, index) => (
           <li key={nav.id}>
             <NavLink to={`${nav.id}`} className={({ isActive }) => isActive ? active : normal}>
@@ -41,7 +41,49 @@ useEffect(() => {
             </NavLink>
           </li>
         ))}
+      </ul> */}
+      {/* For test purposes */}
+
+      <ul className='list-none xm:flex hidden justify-end items-center flex-1 navbar'>
+          <li>
+            <NavLink to={`/`} className={({ isActive }) => isActive ? active : normal}>
+              <div className={`text-white py-2 px-2 font-bignoodle font-normal cursor-pointer text-[23px]`}>
+                <div className='px-2'>
+                  Home
+                </div>
+              </div>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={`/about`} className={({ isActive }) => isActive ? active : normal}>
+              <div className={`text-white py-2 px-2 font-bignoodle font-normal cursor-pointer text-[23px]`}>
+                <div className='px-2'>
+                  About
+                </div>
+              </div>
+            </NavLink>
+          </li>
+          <li className='dropdown items-center justify-center'>
+            <NavLink to={`/teams`} className={`${({ isActive }) => isActive ? active : normal}`}>
+              <div className={`text-white py-2 px-2 font-bignoodle font-normal cursor-pointer text-[23px]`}>
+                <div className='px-2 name'>
+                  Teams
+                </div>
+              </div>
+            </NavLink>
+            <div className='dropdown-links '>
+              <div className='grid grid-rows-3'>
+                  <a href='/'>csgo</a>
+                  <a href='/'>csgo</a>
+                  <a href='/'>csgo</a>
+                  <a href='/'>csgo</a>
+                  <a href='/'>csgo</a>
+              </div>
+              </div>
+          </li>
       </ul>
+
+      {/* End Testing section */}
 
       <div className='xm:hidden flex flex-1 justify-end items-center'>
           <img 
