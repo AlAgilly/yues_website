@@ -21,6 +21,7 @@ module.exports = {
         bebasneue: ["BebasNeue-Regular", "sans-serif"],
         bevietnampblack:["BeVietnamPro-Regular", "sans-serif"],
         bevietnam:["BeVietnam", "sans-serif"],
+        bevietnamregular:["BeVietnam-Regular", "sans-serif"],
         bevietnambold:["BeVietnam-Bold", "sans-serif"],
         bignoodle:["big_noodle_titling", "sans-serif"],
       }
