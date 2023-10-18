@@ -18,12 +18,12 @@ export const navLinks = [
     title: "Our Teams",
   },
   {
-    id: "contact",
-    title: "Contact",
-  },
-  {
     id: "battlepass",
     title: "Battle Pass",
+  },
+  {
+    id: "contact",
+    title: "Contact",
   },
 ];
 
