@@ -81,13 +81,13 @@ app.use(compression());
 
 async function checkProps() {
     // Database for Games
-    // const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+    const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     // Database for Events
     // const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     // Database for Staff
     // const databaseId = '02cb5f77092c413483cc744d04f6a87a';
     // Database for Players
-    const databaseId = 'b2e92fa2fde24844877f404772880ba1';
+    // const databaseId = 'b2e92fa2fde24844877f404772880ba1';
     const dbResponse = await notion.databases.retrieve({
         database_id: databaseId,
     })

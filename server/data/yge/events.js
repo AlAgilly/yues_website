@@ -1,1 +1,1 @@
-export default [{"id":"f42b7e18-d989-4b86-8808-434f02bf3030","event":"Spooky Nite","date":"Thursday Oct 26","time":"","room":"Room: ","desc":"","signup":""},{"id":"9ade09bb-61fa-498e-9aef-8ceb958ad676","event":"Karaoke Nite","date":"Thursday Nov 2","time":"","room":"Room: ","desc":"","signup":""}]
+export default [{"id":"9ade09bb-61fa-498e-9aef-8ceb958ad676","event":"Karaoke Nite","date":"Thursday Nov 2","time":"","room":"Room: ","desc":"","signup":""}]
