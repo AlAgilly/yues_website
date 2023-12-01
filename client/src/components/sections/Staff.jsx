@@ -289,7 +289,7 @@ function Competitive() {
 }
 
 
-export{
+export {
     Copres,
     Secretary,
     Treasurer,

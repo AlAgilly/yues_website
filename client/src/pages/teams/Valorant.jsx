@@ -32,7 +32,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <a href="/" className='player'><h1 className='font-bignoodle inline-flex items-start'>Nexus <img src={arrowlinkhover} alt="" className='ml-3 w-[20px] asvghover'/><img src={arrowlinksvg} alt="" className='ml-3 w-[20px] asvg'/></h1></a>
+                    <a href="/" className='player'><h1 className='font-bignoodle inline-flex items-start'>Shy <img src={arrowlinkhover} alt="" className='ml-3 w-[20px] asvghover'/><img src={arrowlinksvg} alt="" className='ml-3 w-[20px] asvg'/></h1></a>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -43,7 +43,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <a href="/" className='player'><img src={arrowlinkhover} alt="" className='ml-3 w-[20px] asvghover'/><img src={arrowlinksvg} alt="" className='ml-3 w-[20px] asvg'/></a></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <a href="/" className='player'><img src={arrowlinkhover} alt="" className='ml-3 w-[20px] asvghover'/><img src={arrowlinksvg} alt="" className='ml-3 w-[20px] asvg'/></a></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -54,7 +54,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <a href="/"><img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></a></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <a href="/"><img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></a></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -120,7 +120,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <a href="/"><img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></a></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <a href="/"><img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></a></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -131,7 +131,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -142,7 +142,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -153,7 +153,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
@@ -164,7 +164,7 @@ const Valorant = () => {
                         <img src={borderlineshortblack} alt="" className='absolute right-[-50px] w-[50%]'/>
                     </div>
                     <h3 className='font-bevietnamblack font-bold'>Player</h3>
-                    <h1 className='font-bignoodle inline-flex items-start'>Nexus <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
+                    <h1 className='font-bignoodle inline-flex items-start'>Shy <img src={arrowlinksvg} alt="" className='ml-3 w-[20px]'/></h1>
                     <div class="flex items-center">
                         <div className={`flex-col grow ${styles.titleLineRightBlack}`}>-</div>
                         <Title5 title="Full name here" style="pl-4"/>
