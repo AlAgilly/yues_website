@@ -64,6 +64,7 @@ import {
     exchangeIPs, 
     exchangeURLs 
 } from './data/ats/index.js'
+import { playersUpdate, structuredData } from "./functions/players.js";
 ////////////////////////////////////////////////////////////////////////////
 
 // Connect to NotionAPI
@@ -81,76 +82,88 @@ app.use(compression());
 
 async function checkProps() {
     // Database for Games
-    const databaseId = '3e4d3d86e5644511a000300583ecdb98';
+    // const databaseId = '3e4d3d86e5644511a000300583ecdb98';
     // Database for Events
     // const databaseId = '218b1eb243774e5b8c23b29a23db0df6';
     // Database for Staff
     // const databaseId = '02cb5f77092c413483cc744d04f6a87a';
     // Database for Players
-    // const databaseId = 'b2e92fa2fde24844877f404772880ba1';
+    const databaseId = 'b2e92fa2fde24844877f404772880ba1';
     const dbResponse = await notion.databases.retrieve({
         database_id: databaseId,
     })
     console.log(dbResponse)
 }
-checkProps()
+// checkProps()
 
 ////////////////////////////////////////////////////////////////////////////
 
 
-async function games() {
-    try {
-        console.log("try")
-        await upcomingUpdate();
-        await recentUpdate();
-    } catch (err) {
-      console.log(err);
-    }
-    finally {
-        await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
-        await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
-    }
-};
+// async function games() {
+//     try {
+//         console.log("try")
+//         await upcomingUpdate();
+//         await recentUpdate();
+//     } catch (err) {
+//       console.log(err);
+//     }
+//     finally {
+//         await fs.writeFile('./data/yge/upcoming.js', "export default " + JSON.stringify(upcomingArray));
+//         await fs.writeFile('./data/yge/recent.js', "export default " + JSON.stringify(recentArray));
+//     }
+// };
 
-async function eventsEdit() {
+// async function eventsEdit() {
+//     try {
+//         console.log("try")
+//         await eventsUpdate();
+//         await pasteventsUpdate();
+//     } catch (err) {
+//       console.log(err);
+//     }
+//     finally {
+//         console.log("writing files!")
+//         await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
+//         await fs.writeFile('./data/yge/pastevents.js', "export default " + JSON.stringify(pasteventsArray));
+//     }
+// };
+async function playaEdit() {
     try {
         console.log("try")
-        await eventsUpdate();
-        await pasteventsUpdate();
+        await playersUpdate();
     } catch (err) {
       console.log(err);
     }
     finally {
         console.log("writing files!")
-        await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(eventsArray));
-        await fs.writeFile('./data/yge/pastevents.js', "export default " + JSON.stringify(pasteventsArray));
+        await fs.writeFile('./data/yge/events.js', "export default " + JSON.stringify(structuredData));
     }
 };
 
-async function staff() {
-    try {
-        await copresidentUpdate();
-        await secretaryUpdate();
-        await treasurerUpdate();
-        await hrUpdate();
-        await marketingUpdate();
-        await partnershipsUpdate();
-        await operationsUpdate();
-        await competitiveUpdate();
-    } catch (err) {
-      console.log(err);
-    }
-    finally {
-        await fs.writeFile('./data/yge/copresident.js', "export default " + JSON.stringify(copresidentArray));
-        await fs.writeFile('./data/yge/secretary.js', "export default " + JSON.stringify(secretaryArray));
-        await fs.writeFile('./data/yge/treasurer.js', "export default " + JSON.stringify(treasurerArray));
-        await fs.writeFile('./data/yge/hr.js', "export default " + JSON.stringify(hrArray));
-        await fs.writeFile('./data/yge/marketing.js', "export default " + JSON.stringify(marketingArray));
-        await fs.writeFile('./data/yge/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
-        await fs.writeFile('./data/yge/operations.js', "export default " + JSON.stringify(operationsArray));
-        await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
-    }
-};
+// async function staff() {
+//     try {
+//         await copresidentUpdate();
+//         await secretaryUpdate();
+//         await treasurerUpdate();
+//         await hrUpdate();
+//         await marketingUpdate();
+//         await partnershipsUpdate();
+//         await operationsUpdate();
+//         await competitiveUpdate();
+//     } catch (err) {
+//       console.log(err);
+//     }
+//     finally {
+//         await fs.writeFile('./data/yge/copresident.js', "export default " + JSON.stringify(copresidentArray));
+//         await fs.writeFile('./data/yge/secretary.js', "export default " + JSON.stringify(secretaryArray));
+//         await fs.writeFile('./data/yge/treasurer.js', "export default " + JSON.stringify(treasurerArray));
+//         await fs.writeFile('./data/yge/hr.js', "export default " + JSON.stringify(hrArray));
+//         await fs.writeFile('./data/yge/marketing.js', "export default " + JSON.stringify(marketingArray));
+//         await fs.writeFile('./data/yge/partnerships.js', "export default " + JSON.stringify(partnershipsArray));
+//         await fs.writeFile('./data/yge/operations.js', "export default " + JSON.stringify(operationsArray));
+//         await fs.writeFile('./data/yge/competitive.js', "export default " + JSON.stringify(competitiveArray));
+//     }
+// };
 // YGE End
 //ATS
 
@@ -273,6 +286,11 @@ cron.schedule('30 0 * * *', () => {
 cron.schedule('45 1 1 * *', () => {
     console.log('Updating Microsoft stuff every month on the first at 1:45AM');
     exchange();
+});
+
+cron.schedule('* * * * *', () => {
+    console.log('WEEWOOO');
+    playaEdit();
 });
 
 const apiURL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&limit=8&access_token=${instagram}`

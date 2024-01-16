@@ -31,7 +31,7 @@ function Events() {
     return (
         <>
             <div className='grid grid-cols-1 sm:grid-cols-2 justify-between gap-y-10 gap-x-10 items-left my-4'>
-                {events.slice(0, 4).map((events, index) => (
+                {events.slice(3).map((events, index) => (
                     <TinyEvent key={events.id} title={ events.event } date={events.date} time={events.time} location={events.room} className={`${index > 1 ? 'hidden xm:block' : 'xm:block'}`} />
                 ))}
             </div>
